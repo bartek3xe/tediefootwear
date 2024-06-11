@@ -1,0 +1,11 @@
+@import "~flag-icons/css/flag-icons.min.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Public Sans, 'sans-serif';
+
+  @media only screen and (width < 960px) {
+  }
+}
