@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Enum\LanguageEnum;
 
 #[Route('/')]
 class LanguageController extends AbstractController
@@ -17,7 +18,7 @@ class LanguageController extends AbstractController
     #[Route('/{locale}', name: 'app_language_changer', methods: ['GET'])]
     public function changeLanguage(Request $request, string $locale = 'pl'): Response
     {
-        $availableLocales = ['pl', 'en', 'de', 'fr', 'es', 'it', 'ru', 'nl'];
+        $availableLocales = array_map(fn(LanguageEnum $lang) => $lang->value, LanguageEnum::cases());
 
         if (in_array($locale, $availableLocales, true)) {
             $request->getSession()->set('_locale', $locale);

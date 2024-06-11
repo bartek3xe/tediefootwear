@@ -23,7 +23,6 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('js/navbar', './assets/js/navbar.js')
     .addEntry('js/recaptcha', './assets/js/recaptcha.js')
     .addEntry('js/flash', './assets/js/flash.js')
 
