@@ -18,6 +18,24 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+            {{ include('partials/navbar.html.twig') }}
+
+            <div class="main-content">
+                <div class="page-content">
+                    {% include 'partials/flashes.html.twig' with { 'flashes': app.flashes } %}
+
+                    <!-- CONTENT -->
+                    {% block body %}
+                    {% endblock %}
+                    <!-- CONTENT CLOSED-->
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            {{ include('partials/footer.html.twig') }}
+            <!-- FOOTER CLOSED-->
+        </div>
     </body>
 </html>

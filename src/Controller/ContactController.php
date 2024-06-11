@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Routing\Attribute\Route;
 
+#[Route(name: 'app_')]
 class ContactController extends AbstractController
 {
     public function __construct(
@@ -27,7 +28,7 @@ class ContactController extends AbstractController
      * @throws RuntimeException
      * @throws LogicException
      */
-    #[Route('/contact', name: 'app')]
+    #[Route('/contact', name: 'contact')]
     public function index(Request $request, MailerInterface $mailer): Response
     {
         $form = $this->createForm(ContactType::class);
@@ -53,7 +54,7 @@ class ContactController extends AbstractController
             $this->addFlash('error', 'There was a problem with your submission. Please check the form for errors and try again.');
         }
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('contact/index.html.twig', [
             'form' => $form->createView(),
             'recaptcha_site_key' => $this->getParameter('recaptcha_site_key'),
         ]);

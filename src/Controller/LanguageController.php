@@ -29,6 +29,6 @@ class LanguageController extends AbstractController
             return new RedirectResponse($referer);
         }
 
-        return $this->redirectToRoute('app');
+        return $this->redirectToRoute('homepage', ['_locale' => $locale]);
     }
 }
