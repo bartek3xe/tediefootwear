@@ -10,11 +10,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/change-language', name: 'app_language_')]
+#[Route('/')]
 class LanguageController extends AbstractController
 {
-    #[Route('/{locale}', name: 'changer', methods: ['GET'])]
-    public function changeLanguage(Request $request, string $locale): Response
+    #[Route('', name: 'root_redirect', methods: ['GET'])]
+    #[Route('/{locale}', name: 'app_language_changer', methods: ['GET'])]
+    public function changeLanguage(Request $request, string $locale = 'pl'): Response
     {
         $availableLocales = ['pl', 'en', 'de', 'fr', 'es', 'it', 'ru', 'nl'];
 

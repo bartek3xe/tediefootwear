@@ -9,8 +9,8 @@ _locale_prefix:
     type: attribute
     prefix: /{_locale}
     requirements:
-        _locale: en|pl
-    defaults: { _locale: pl}
+        _locale: en|pl|de|fr|es|it|ru|nl
+    defaults: { _locale: pl }
 
 root_redirect:
     path: /
