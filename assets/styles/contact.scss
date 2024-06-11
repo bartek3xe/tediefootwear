@@ -1,0 +1,75 @@
+.contact-section {
+    width: 100%;
+    margin-top: 20px;
+    margin-right: auto;
+}
+
+.contact-form {
+    width: 100%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid #c3c3c3;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.textarea-form-input {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border: 1px solid #c3c3c3;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
+    resize: none;
+}
+
+.send-input {
+    padding: 20px 20px;
+    margin: 20px 0;
+    background-color: #21DE21;
+    border: none;
+    border-radius: 12px;
+    font-family: Manrope, serif;
+    font-weight: 700;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.send-input:hover {
+    opacity: 0.9;
+}
+
+.g-recaptcha {
+    margin-top: 20px;
+}
+
+::placeholder {
+    color: #4F944F;
+    text-align: left;
+    font-family: Manrope, 'serif';
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}

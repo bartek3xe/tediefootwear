@@ -1,0 +1,25 @@
+parameters:
+    contact_email: '%env(CONTACT_EMAIL)%'
+    google_recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
+    recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
+    recaptcha_secret_key: '%env(GOOGLE_RECAPTCHA_SECRET)%'
+
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    App\Service\MailerService:
+        arguments:
+            $contactEmail: '%contact_email%'
+
+    App\Service\RecaptchaService:
+        arguments:
+            $secretKey: '%recaptcha_secret_key%'

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {{ include('home/navigation.html.twig') }}
+    <div class="main-container">
+        {{ include('home/welcome.html.twig') }}
+        {{ include('home/services.html.twig') }}
+        {{ include('home/aboutus.html.twig') }}
+        {{ include('home/contact.html.twig', {
+            'form': form,
+        }) }}
+
+    {% include 'partials/flashes.html.twig' %}
+    </div>
+    {{ include('home/footer.html.twig') }}
+{% endblock %}

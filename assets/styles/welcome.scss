@@ -1,0 +1,120 @@
+@import '_variables.scss';
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  margin: 100px 0 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary-background-color;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    padding: 10px 20px;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
+    font-family: Archivo Black, serif;
+  }
+
+  .input-container {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+  }
+
+  .input-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 48px;
+  }
+
+  .loop {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    height: 64px;
+  }
+
+  .get-started-button {
+    padding: 0 20px;
+    height: 64px;
+    background-color: #28a745;
+    color: $primary-text-color;
+    font-weight: bolder;
+    text-align: center;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  @media only screen and (width < 990px) {
+    .overlay-text {
+      width: 90%;
+    }
+
+    .input-field {
+      width: 224px;
+      padding: 10px 10px 10px 32px;
+    }
+
+    .input-field, .get-started-button {
+      height: 48px;
+    }
+  }
+}
