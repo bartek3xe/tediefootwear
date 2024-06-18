@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-    languageBtn.addEventListener('click', () => {
+    languageBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         languageDropdown.classList.toggle('active');
-    })
+    });
 });
