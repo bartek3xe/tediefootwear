@@ -27,9 +27,9 @@ enum LanguageEnum: string
     case RUSSIAN = 'ru';
     case GREEK = 'el';
 
-    public function getNativeName(): string
+    public static function getNativeName(LanguageEnum $enum): string
     {
-        return match($this) {
+        return match($enum) {
             self::POLISH => 'Polski',
             self::ENGLISH => 'English',
             self::GERMAN => 'Deutsch',
@@ -52,6 +52,34 @@ enum LanguageEnum: string
             self::SLOVENIAN => 'Slovenščina',
             self::RUSSIAN => 'Русский',
             self::GREEK => 'Ελληνικά',
+        };
+    }
+
+    public static function getFlagCode(LanguageEnum $enum): string
+    {
+        return match($enum) {
+            self::POLISH => 'pl',
+            self::ENGLISH => 'gb',
+            self::GERMAN => 'de',
+            self::FRENCH => 'fr',
+            self::SPANISH => 'es',
+            self::ITALIAN => 'it',
+            self::UKRAINIAN => 'ua',
+            self::DUTCH => 'nl',
+            self::LITHUANIAN => 'lt',
+            self::DANISH => 'dk',
+            self::ESTONIAN => 'ee',
+            self::CZECH => 'cz',
+            self::SLOVAK => 'sk',
+            self::LATVIAN => 'lv',
+            self::ROMANIAN => 'ro',
+            self::CROATIAN => 'hr',
+            self::HUNGARIAN => 'hu',
+            self::BULGARIAN => 'bg',
+            self::SERBIAN => 'rs',
+            self::SLOVENIAN => 'si',
+            self::RUSSIAN => 'ru',
+            self::GREEK => 'gr',
         };
     }
 }
