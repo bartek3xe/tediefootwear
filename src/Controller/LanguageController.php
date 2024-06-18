@@ -50,7 +50,7 @@ class LanguageController extends AbstractController
     #[Route('/', name: 'app_default_redirect')]
     public function redirectToDefaultLanguage(Request $request): Response
     {
-        $locale = $request->getSession()->get('_locale', 'pl');
+        $locale = $request->getSession()->get('_locale', 'en');
         return $this->redirectToRoute('app', ['_locale' => $locale]);
     }
 }

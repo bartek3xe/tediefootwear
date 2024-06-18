@@ -11,6 +11,9 @@ enum LanguageEnum: string
     case SPANISH = 'es';
     case ITALIAN = 'it';
     case UKRAINIAN = 'uk';
+    case SWEDISH = 'sv';
+    case FINNISH = 'fi';
+    case NORWEGIAN = 'no';
     case DUTCH = 'nl';
     case LITHUANIAN = 'lt';
     case DANISH = 'da';
@@ -37,6 +40,9 @@ enum LanguageEnum: string
             self::SPANISH => 'Español',
             self::ITALIAN => 'Italiano',
             self::UKRAINIAN => 'Українська',
+            self::SWEDISH => 'Svenska',
+            self::FINNISH => 'Suomi',
+            self::NORWEGIAN => 'Norsk',
             self::DUTCH => 'Nederlands',
             self::LITHUANIAN => 'Lietuvių',
             self::DANISH => 'Dansk',
@@ -65,6 +71,9 @@ enum LanguageEnum: string
             self::SPANISH => 'es',
             self::ITALIAN => 'it',
             self::UKRAINIAN => 'ua',
+            self::SWEDISH => 'se',
+            self::FINNISH => 'fi',
+            self::NORWEGIAN => 'no',
             self::DUTCH => 'nl',
             self::LITHUANIAN => 'lt',
             self::DANISH => 'dk',
