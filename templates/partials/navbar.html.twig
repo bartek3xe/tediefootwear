@@ -1,0 +1,68 @@
+<header id="page-navbar">
+    {# --- LOGO --- #}
+    <div class="logo">
+        <a class="link-logo" href="{{ path('app') }}">TEDIE</a>
+    </div>
+    {# --- END LOGO --- #}
+    <div class="navigation">
+        {# --- LANGUAGE --- #}
+        <div class="nav-lang">
+            <button class="nav-lang-button link-btn">
+                <i class="fi fi-{{ get_locale_flag(app.locale) }} fis fi-lang"></i>
+                {{ get_locale_name(app.locale) }}
+            </button>
+            <ul class="flag-dropdown">
+                {% for locale in get_all_locales() %}
+                    {% if app.locale != locale.code %}
+                        <li>
+                            <a class="nav-lang-link link" href="{{ path('app_language_changer', { 'locale': locale.code }) }}">
+                                <i class="fi fi-{{ locale.flag }} fis fi-lang"></i>
+                                {{ locale.name }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        {# --- END LANGUAGE --- #}
+        {# --- NAVIGATION LINKS --- #}
+        <a href="{{ path('app') }}" class="link-btn active">{{ 'navigation.home'|trans }}</a>
+        <a href="{{ path('app_about') }}" class="link-btn">{{ 'navigation.about'|trans }}</a>
+        <div class="dropdown">
+            {# --- PRODUCTS DROPDOWN --- #}
+            <a href="{{ path('app_products') }}" class="dropdown-btn link-btn">{{ 'navigation.products'|trans }}</a>
+            <div class="dropdown-content">
+                <div class="column">
+                    <a class="link-btn" href="#">{{ 'navigation.products.women.slippers'|trans }}</a>
+                    <a class="link-btn" href="#">{{ 'navigation.products.men.slippers'|trans }}</a>
+                </div>
+                <div class="column">
+                    <a class="link-btn" href="#">{{ 'navigation.products.women.clogs'|trans }}</a>
+                    <a class="link-btn" href="#">{{ 'navigation.products.men.clogs'|trans }}</a>
+                </div>
+                <div class="column">
+                    <a class="link-btn" href="#">{{ 'navigation.products.children.slippers'|trans }}</a>
+                </div>
+                <div class="column">
+                    <a class="link-btn" href="#">{{ 'navigation.products.special'|trans }}</a>
+                </div>
+            </div>
+            {# --- END PRODUCTS DROPDOWN --- #}
+        </div>
+        <a href="{{ path('app_wholesale') }}" class="link-btn">{{ 'navigation.wholesale'|trans }}</a>
+        <a href="{{ path('app_contact') }}" class="link-btn">{{ 'navigation.contact'|trans }}</a>
+        <a href="{{ path('app_faq') }}" class="link-btn">{{ 'navigation.faq'|trans }}</a>
+        {# --- END NAVIGATION LINKS --- #}
+        {# --- SEARCH INPUT --- #}
+        <span class="search-btn">
+            <button>
+                <img src="{{ asset('build/images/icons/loop.svg') }}" alt="loop icon as search button"/>
+            </button>
+            <label>
+                <input class="search-input" type="text">
+            </label>
+        </span>
+        {# --- END SEARCH INPUT --- #}
+    </div>
+    <div class="mobile-menu-btn">&#9776;</div>
+</header>

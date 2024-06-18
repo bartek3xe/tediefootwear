@@ -9,9 +9,9 @@ _locale_prefix:
     type: attribute
     prefix: /{_locale}
     requirements:
-        _locale: en|pl|de|fr|es|it|uk|nl|lt|da|et|cs|sk|lv|ro|hr|hu|bg|sr|sl|ru|el
+        _locale: pl|en|de|fr|es|it|uk|nl|lt|da|et|cs|sk|lv|ro|hr|hu|bg|sr|sl|ru|el
     defaults: { _locale: pl }
 
-root_redirect:
+default_redirect:
     path: /
-    controller: App\Controller\LanguageController::changeLanguage
+    controller: App\Controller\LanguageController::redirectToDefaultLanguage
