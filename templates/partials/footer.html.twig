@@ -1,0 +1,15 @@
+<footer>
+    <div class="navigation">
+        {# --- NAVIGATION LINKS --- #}
+        <a href="{{ path('app') }}" class="link-btn active">{{ 'navigation.home'|trans }}</a>
+        <a href="{{ path('app_about') }}" class="link-btn">{{ 'navigation.about'|trans }}</a>
+        <a href="{{ path('app_products') }}" class="link-btn">{{ 'navigation.products'|trans }}</a>
+        <a href="{{ path('app_wholesale') }}" class="link-btn">{{ 'navigation.wholesale'|trans }}</a>
+        <a href="{{ path('app_contact') }}" class="link-btn">{{ 'navigation.contact'|trans }}</a>
+        <a href="{{ path('app_faq') }}" class="link-btn">{{ 'navigation.faq'|trans }}</a>
+        {# --- END NAVIGATION LINKS --- #}
+    </div>
+    <div class="footer-bottom">
+        &copy; {{ "now"|date("Y") }} TEDIE. All rights reserved.
+    </div>
+</footer>

@@ -1,5 +1,73 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+    <section class="home">
+        <div class="home-image-container">
+            <span class="home-image-overlay"></span>
+            <img class="home-image" src="{{ asset('images/home.png') }}" alt="{{ 'home.image.alt'|trans }}">
+            <div class="home-text">
+                <h1>{{ 'home.image.title'|trans }}</h1>
+                <p>{{ 'home.image.description'|trans }}</p>
+                <a class="btn btn-primary" href="{{ path('app_products') }}">{{ 'home.image.button.products'|trans }}</a>
+            </div>
+        </div>
+        <h2 class="home-header">{{ 'home.category.header'|trans }}</h2>
+        <div class="home-categories-container">
+            <a class="home-category" href="{{ path('app_products') }}">
+                <img class="home-category-image" src="{{ asset('images/category/category-ws.png') }}"
+                     alt="{{ 'home.categories.ws.alt'|trans }}">
+                <p class="home-category-text">{{ 'home.categories.ws.text'|trans }}</p>
+                <p class="home-category-description">{{ 'home.categories.ws.description'|trans }}</p>
+            </a>
+            <a class="home-category" href="{{ path('app_products') }}">
+                <img class="home-category-image" src="{{ asset('images/category/category-ms.png') }}"
+                     alt="{{ 'home.categories.ms.alt'|trans }}">
+                <p class="home-category-text">{{ 'home.categories.ms.text'|trans }}</p>
+                <p class="home-category-description">{{ 'home.categories.ms.description'|trans }}</p>
+            </a>
+            <a class="home-category" href="{{ path('app_products') }}">
+                <img class="home-category-image" src="{{ asset('images/category/category-wc.png') }}"
+                     alt="{{ 'home.categories.wc.alt'|trans }}">
+                <p class="home-category-text">{{ 'home.categories.wc.text'|trans }}</p>
+                <p class="home-category-description">{{ 'home.categories.wc.description'|trans }}</p>
+            </a>
+            <a class="home-category" href="{{ path('app_products') }}">
+                <img class="home-category-image" src="{{ asset('images/category/category-mc.png') }}"
+                     alt="{{ 'home.categories.mc.alt'|trans }}">
+                <p class="home-category-text">{{ 'home.categories.mc.text'|trans }}</p>
+                <p class="home-category-description">{{ 'home.categories.mc.description'|trans }}</p>
+            </a>
+            <a class="home-category" href="{{ path('app_products') }}">
+                <img class="home-category-image" src="{{ asset('images/category/category-ks.png') }}"
+                     alt="{{ 'home.categories.ks.alt'|trans }}">
+                <p class="home-category-text">{{ 'home.categories.ks.text'|trans }}</p>
+                <p class="home-category-description">{{ 'home.categories.ks.description'|trans }}</p>
+            </a>
+        </div>
+        <div class="home-order-container">
+            <div class="home-order-section">
+                <div class="home-order-section-left">
+                    <img class="home-order-image" src="{{ asset('images/retail.png') }}"
+                         alt="{{ 'home.order.retail.alt'|trans }}">
+                </div>
+                <div class="home-order-section-right">
+                    <h1>{{ 'home.order.retail.header'|trans }}</h1>
+                    <p>{{ 'home.order.retail.description'|trans }}</p>
+                    <a class="btn btn-primary" href="{{ path('app_products') }}">{{ 'home.order.retail.button'|trans }}</a>
+                </div>
+            </div>
+            <div class="home-order-section">
+                <div class="home-order-section-left">
+                    <img class="home-order-image" src="{{ asset('images/wholesale.png') }}"
+                         alt="{{ 'home.order.wholesale.alt'|trans }}">
+                </div>
+                <div class="home-order-section-right">
+                    <h1>{{ 'home.order.wholesale.header'|trans }}</h1>
+                    <p>{{ 'home.order.wholesale.description'|trans }}</p>
+                    <a class="btn btn-primary" href="{{ path('app_wholesale') }}">{{ 'home.order.wholesale.button'|trans }}</a>
+                    <a class="btn btn-primary" href="{{ path('app_contact') }}">{{ 'home.order.contact.button'|trans }}</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
