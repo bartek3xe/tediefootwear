@@ -4,10 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.navigation a');
     const languageBtn = document.querySelector('.nav-lang button');
     const languageDropdown = document.querySelector('.flag-dropdown');
+    const navigation = document.querySelector('#page-navbar .navigation');
+    const mobileNavBtn = document.querySelector('.mobile-menu-btn');
 
     productsDropdownBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        productsDropdownContent.classList.toggle('active');
+        if (window.innerWidth >= 1000) {
+            e.stopPropagation();
+            productsDropdownContent.classList.toggle('active');
+        }
     });
 
     document.addEventListener('click', (e) => {
@@ -28,5 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     languageBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         languageDropdown.classList.toggle('active');
+    });
+
+    mobileNavBtn.addEventListener('click', () => {
+        mobileNavBtn.classList.toggle('active');
+        navigation.classList.toggle('active');
     });
 });
