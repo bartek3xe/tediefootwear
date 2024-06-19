@@ -1,15 +1,62 @@
 @import "~flag-icons/css/flag-icons.min.css";
-@import "navbar.scss";
 @import "_variables.scss";
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Public Sans, sans-serif;
+  font-family: FreeSans, sans-serif;
   background-color: $background-color-primary;
+  position: relative;
 
-  @media only screen and (width < 960px) {
+  #page-navbar {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+    z-index: 99;
+  }
+
+  .main-content {
+      margin: 65px 10% 0 10%;
+  }
+
+  .btn {
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.8rem;
+
+    &.btn-primary {
+      font-weight: bold;
+      color: white;
+      background-color: $button-color-primary;
+      border: 1px solid $button-color-primary;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        color: $button-color-primary;
+        background: none;
+        border: 1px solid $button-color-primary;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .btn {
+      font-size: 0.5rem;
+    }
   }
 }
 
+@import "navbar.scss";
+@import "home.scss";
+@import "footer.scss";
