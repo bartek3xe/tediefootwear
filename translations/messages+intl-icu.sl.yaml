@@ -10,3 +10,30 @@ navigation.products.special: Posebne ponudbe
 navigation.wholesale: Veleprodaja
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Ozadje glavnega dela dobrodošlice vsebuje risbe copat v različnih barvah
+home.image.title: Udobje na vsakem koraku
+home.image.description: Tedie je družinsko podjetje, ki že več kot 20 let izdeluje kakovostne copate in cokle. Specializirani smo za udobno obutev premium razreda, ki vključuje dodatno oblazinjenje in podporo za lok. Naši izdelki so narejeni iz trajnostnih materialov in zasnovani za celodnevno udobje.
+home.categories.ws.alt: Ženski copati - kategorija izdelkov
+home.categories.ms.alt: Moški copati - kategorija izdelkov
+home.categories.wc.alt: Ženski cokli - kategorija izdelkov
+home.categories.mc.alt: Moški cokli - kategorija izdelkov
+home.categories.ks.alt: Otroški copati - kategorija izdelkov
+home.categories.ws.text: Ženski copati
+home.categories.ms.text: Moški copati
+home.categories.wc.text: Ženski cokli
+home.categories.mc.text: Moški cokli
+home.categories.ks.text: Otroški copati
+home.image.button.products: Preverite izdelke
+home.categories.ws.description: Elegantna in udobna domača obutev, narejena iz mehkih, zračnih materialov, ki zagotavljajo udobje.
+home.categories.ms.description: Trdna in udobna domača obutev, narejena iz vzdržljivih materialov, ki zagotavljajo dolgotrajno udobje.
+home.categories.wc.description: Elegantna in praktična obutev, narejena iz naravnih materialov, idealna tako za domačo kot zunanjo uporabo.
+home.categories.mc.description: Vzdržljiva in udobna obutev, ki združuje tradicionalni slog z modernim udobjem, primerna za vsakodnevno uporabo.
+home.categories.ks.description: Mehka in varna domača obutev za otroke, na voljo v številnih barvitih vzorcih, ki zagotavljajo udobje in zaščito majhnim stopalom.
+home.category.header: Naša Ponudba
+home.order.retail.header: Maloprodajna Naročila
+home.order.retail.description: Ponujamo konkurenčne cene za posamezne stranke, ki jih zanimajo naši izdelki. Vsi izdelki na naši spletni strani vodijo do ponudb na Allegro. Za nakup v maloprodaji obiščite naš račun Allegro. Pošiljamo v vse države EU. Kliknite spodnji gumb za ogled naše ponudbe.
+home.order.wholesale.header: Veleprodajna Naročila
+home.order.wholesale.description: Ponujamo privlačne veleprodajne cene za podjetja, ki želijo prodajati naše izdelke v svojih fizičnih ali spletnih trgovinah. Na voljo je mednarodna pošiljka. Če vas zanimajo veleprodajni nakupi, nas kontaktirajte. Več informacij o veleprodaji najdete na namenski strani ali nas kontaktirajte preko ustreznega gumba.
+home.order.retail.button: Preverite Izdelke
+home.order.wholesale.button: Veleprodaja
+home.order.contact.button: Kontaktirajte Nas

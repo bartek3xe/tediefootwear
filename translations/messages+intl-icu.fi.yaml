@@ -10,3 +10,30 @@ navigation.products.special: Erikoistarjoukset
 navigation.wholesale: Tukkumyynti
 navigation.contact: Yhteystiedot
 navigation.faq: FAQ
+home.image.alt: Tervetuloa-osan taustalla on piirroksia eri värisistä tohveleista
+home.image.title: Mukavuutta joka askeleella
+home.image.description: Tedie on perheomisteinen yritys, joka on valmistanut laadukkaita tohveleita ja puukenkien yli 20 vuoden ajan. Olemme erikoistuneet premium-mukavuusjalkineisiin, joissa on lisäpehmuste ja jalkaholvin tuki. Tuotteemme on valmistettu kestävistä materiaaleista ja suunniteltu koko päivän mukavuutta ajatellen.
+home.categories.ws.alt: Naisten tohvelit - tuotekategoria
+home.categories.ms.alt: Miesten tohvelit - tuotekategoria
+home.categories.wc.alt: Naisten puukengät - tuotekategoria
+home.categories.mc.alt: Miesten puukengät - tuotekategoria
+home.categories.ks.alt: Lasten tohvelit - tuotekategoria
+home.categories.ws.text: Naisten tohvelit
+home.categories.ms.text: Miesten tohvelit
+home.categories.wc.text: Naisten puukengät
+home.categories.mc.text: Miesten puukengät
+home.categories.ks.text: Lasten tohvelit
+home.image.button.products: Tutustu tuotteisiin
+home.categories.ws.description: Tyylikkäät ja mukavat kotikengät, valmistettu pehmeistä ja hengittävistä materiaaleista, jotka takaavat mukavuuden.
+home.categories.ms.description: Tukevat ja mukavat kotikengät, valmistettu kestävistä materiaaleista, jotka tarjoavat pitkäkestoista mukavuutta.
+home.categories.wc.description: Tyylikkäät ja käytännölliset kengät, valmistettu luonnonmateriaaleista, ihanteelliset sekä koti- että ulkokäyttöön.
+home.categories.mc.description: Kestävät ja mukavat kengät, jotka yhdistävät perinteisen tyylin ja modernin mukavuuden, sopivat jokapäiväiseen käyttöön.
+home.categories.ks.description: Pehmeät ja turvalliset kotikengät lapsille, saatavilla monissa värikkä
+home.category.header: Tarjouksemme
+home.order.retail.header: Vähittäistilaukset
+home.order.retail.description: Tarjoamme kilpailukykyiset hinnat yksittäisille asiakkaille, jotka ovat kiinnostuneita tuotteistamme. Kaikki sivustomme artikkelit johtavat Allegro-tarjouksiin. Tehdäksesi vähittäisoston, käy Allegro-tilillämme. Toimitamme kaikkiin EU-maihin. Napsauta alla olevaa painiketta nähdäksesi tarjouksemme.
+home.order.wholesale.header: Tukkutilaukset
+home.order.wholesale.description: Tarjoamme houkuttelevia tukkumyyntihintoja yrityksille, jotka haluavat myydä tuotteitamme kivijalka- tai verkkokaupoissaan. Kansainvälinen toimitus saatavilla. Jos olet kiinnostunut tukkutilauksista, ota meihin yhteyttä. Lisätietoja tukkumyynnistä löydät omistetulta sivulta tai ottamalla meihin yhteyttä oikean painikkeen kautta.
+home.order.retail.button: Tarkista Tuotteet
+home.order.wholesale.button: Tukkumyynti
+home.order.contact.button: Ota Yhteyttä

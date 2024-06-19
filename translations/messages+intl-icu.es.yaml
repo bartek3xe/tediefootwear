@@ -10,3 +10,30 @@ navigation.products.special: Ofertas especiales
 navigation.wholesale: Venta al por mayor
 navigation.contact: Contacto
 navigation.faq: FAQ
+home.image.alt: El fondo de la sección principal de bienvenida contiene dibujos de pantuflas en diferentes colores
+home.image.title: Comodidad en cada paso
+home.image.description: Tedie es una empresa familiar que lleva más de 20 años fabricando pantuflas y zuecos de calidad. Nos especializamos en calzado de comodidad premium, con acolchado adicional y soporte para el arco. Nuestros productos están hechos de materiales sostenibles y diseñados para brindar comodidad durante todo el día.
+home.categories.ws.alt: Zapatillas de mujer - categoría de productos
+home.categories.ms.alt: Zapatillas de hombre - categoría de productos
+home.categories.wc.alt: Zuecos de mujer - categoría de productos
+home.categories.mc.alt: Zuecos de hombre - categoría de productos
+home.categories.ks.alt: Zapatillas de niños - categoría de productos
+home.categories.ws.text: Zapatillas de mujer
+home.categories.ms.text: Zapatillas de hombre
+home.categories.wc.text: Zuecos de mujer
+home.categories.mc.text: Zuecos de hombre
+home.categories.ks.text: Zapatillas de niños
+home.image.button.products: Ver productos
+home.categories.ws.description: Calzado de interior elegante y cómodo, hecho de materiales suaves y transpirables, que brinda confort.
+home.categories.ms.description: Calzado de interior sólido y cómodo, hecho de materiales duraderos que brindan comodidad duradera.
+home.categories.wc.description: Calzado estiloso y práctico, hecho de materiales naturales, ideal tanto para uso doméstico como para uso exterior.
+home.categories.mc.description: Calzado duradero y cómodo, que combina estilo tradicional con comodidad moderna, adecuado para el uso diario.
+home.categories.ks.description: Calzado de interior suave y seguro para niños, disponible en muchos patrones coloridos, que brinda comodidad y protección a los pies pequeños.
+home.category.header: Nuestra Oferta
+home.order.retail.header: Pedidos al por Menor
+home.order.retail.description: Ofrecemos precios competitivos para clientes individuales interesados en nuestros productos. Todos los artículos de nuestro sitio llevan a ofertas disponibles en Allegro. Para realizar una compra al por menor, visite nuestra cuenta de Allegro. Enviamos a todos los países de la UE. Haga clic en el botón de abajo para ver nuestra oferta.
+home.order.wholesale.header: Pedidos al por Mayor
+home.order.wholesale.description: Ofrecemos precios mayoristas atractivos para empresas que deseen vender nuestros productos en sus tiendas físicas o en línea. Envío internacional disponible. Si está interesado en compras al por mayor, contáctenos. Más información sobre ventas al por mayor se encuentra en la página dedicada o contactándonos a través del botón correspondiente.
+home.order.retail.button: Verificar productos
+home.order.wholesale.button: Ventas al por mayor
+home.order.contact.button: Contáctenos

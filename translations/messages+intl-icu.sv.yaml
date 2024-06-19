@@ -10,3 +10,30 @@ navigation.products.special: Specialerbjudanden
 navigation.wholesale: Grossist
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Bakgrunden till huvuddelen av välkomstsektionen innehåller teckningar av tofflor i olika färger
+home.image.title: Komfort i varje steg
+home.image.description: Tedie är ett familjeägt företag som har tillverkat kvalitetstofflor och -tofflor i över 20 år. Vi specialiserar oss på premium komfortskor med extra dämpning och hålfotsstöd. Våra produkter är tillverkade av hållbara material och designade för att ge komfort hela dagen.
+home.categories.ws.alt: Damtofflor - produktkategori
+home.categories.ms.alt: Herrtofflor - produktkategori
+home.categories.wc.alt: Damträskor - produktkategori
+home.categories.mc.alt: Herrträskor - produktkategori
+home.categories.ks.alt: Barntofflor - produktkategori
+home.categories.ws.text: Damtofflor
+home.categories.ms.text: Herrtofflor
+home.categories.wc.text: Damträskor
+home.categories.mc.text: Herrträskor
+home.categories.ks.text: Barntofflor
+home.image.button.products: Kolla in produkterna
+home.categories.ws.description: Eleganta och bekväma tofflor för hemmabruk, tillverkade av mjuka, andningsbara material som ger komfort.
+home.categories.ms.description: Stadiga och bekväma tofflor för hemmabruk, tillverkade av hållbara material som ger långvarig komfort.
+home.categories.wc.description: Stiliga och praktiska skor tillverkade av naturliga material, idealiska för både hemmabruk och utomhusbruk.
+home.categories.mc.description: Hållbara och bekväma skor som kombinerar traditionell stil med modern komfort, lämpliga för daglig användning.
+home.categories.ks.description: Mjuka och säkra tofflor för barn, tillgängliga i många färgglada mönster som ger komfort och skydd för små fötter.
+home.category.header: Vårt Erbjudande
+home.order.retail.header: Detaljhandelsbeställningar
+home.order.retail.description: Vi erbjuder konkurrenskraftiga priser för enskilda kunder som är intresserade av våra produkter. Alla artiklar på vår sida leder till erbjudanden på Allegro. För att göra ett detaljhandelsköp, besök vårt Allegro-konto. Vi skickar till alla EU-länder. Klicka på knappen nedan för att se vårt erbjudande.
+home.order.wholesale.header: Grossistbeställningar
+home.order.wholesale.description: Vi erbjuder attraktiva grossistpriser för företag som vill sälja våra produkter i sina fysiska eller onlinebutiker. Internationell frakt tillgänglig. Om du är intresserad av grossistinköp, kontakta oss. Mer information om grossistförsäljning finns på den dedikerade sidan eller genom att kontakta oss via rätt knapp.
+home.order.retail.button: Kontrollera Produkter
+home.order.wholesale.button: Partiförsäljning
+home.order.contact.button: Kontakta Oss

@@ -10,3 +10,30 @@ navigation.products.special: Spesialtilbud
 navigation.wholesale: Engros
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Bakgrunnen til hovedvelkomstseksjonen inneholder tegninger av tøfler i forskjellige farger
+home.image.title: Komfort i hvert steg
+home.image.description: Tedie er en familieeid bedrift som har laget kvalitetstøfler og tresko i over 20 år. Vi spesialiserer oss på komfortsko av høy kvalitet, med ekstra polstring og buestøtte. Våre produkter er laget av bærekraftige materialer og designet for komfort hele dagen.
+home.categories.ws.alt: Dame tøfler - produktkategori
+home.categories.ms.alt: Herre tøfler - produktkategori
+home.categories.wc.alt: Dame tresko - produktkategori
+home.categories.mc.alt: Herre tresko - produktkategori
+home.categories.ks.alt: Barne tøfler - produktkategori
+home.categories.ws.text: Dame tøfler
+home.categories.ms.text: Herre tøfler
+home.categories.wc.text: Dame tresko
+home.categories.mc.text: Herre tresko
+home.categories.ks.text: Barne tøfler
+home.image.button.products: Sjekk produktene
+home.categories.ws.description: Elegante og komfortable tøfler for hjemmebruk, laget av myke, pustende materialer som gir komfort.
+home.categories.ms.description: Solid og komfortabelt fottøy for hjemmebruk, laget av slitesterke materialer som gir langvarig komfort.
+home.categories.wc.description: Stilfulle og praktiske sko laget av naturlige materialer, ideelle for både hjemmebruk og utendørs bruk.
+home.categories.mc.description: Holdbart og komfortabelt fottøy som kombinerer tradisjonell stil med moderne komfort, egnet for daglig bruk.
+home.categories.ks.description: Mykt og sikkert fottøy for barn, tilgjengelig i mange fargerike mønstre som gir komfort og beskyttelse for små føtter.
+home.category.header: Vårt Tilbud
+home.order.retail.header: Detaljhandel Bestillinger
+home.order.retail.description: Vi tilbyr konkurransedyktige priser for individuelle kunder som er interessert i våre produkter. Alle artikler på vår side fører til tilbud tilgjengelig på Allegro. For å gjøre et detaljhandelkjøp, besøk vår Allegro-konto. Vi sender til alle EU-land. Klikk på knappen nedenfor for å se vårt tilbud.
+home.order.wholesale.header: Engrosbestillinger
+home.order.wholesale.description: Vi tilbyr attraktive engrospriser for selskaper som ønsker å selge våre produkter i sine fysiske eller nettbutikker. Internasjonal frakt tilgjengelig. Hvis du er interessert i engroskjøp, kontakt oss. Mer informasjon om engrosalg finner du på den dedikerte siden eller ved å kontakte oss via riktig knapp.
+home.order.retail.button: Sjekk Produkter
+home.order.wholesale.button: Engrossalg
+home.order.contact.button: Kontakt Oss

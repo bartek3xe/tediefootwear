@@ -10,3 +10,30 @@ navigation.products.special: Speciale aanbiedingen
 navigation.wholesale: Groothandel
 navigation.contact: Contact
 navigation.faq: FAQ
+home.image.alt: De achtergrond van het hoofdwelkomstgedeelte bevat tekeningen van slippers in verschillende kleuren
+home.image.title: Comfort bij elke stap
+home.image.description: Tedie is een familiebedrijf dat al meer dan 20 jaar kwaliteits pantoffels en klompen maakt. Wij specialiseren ons in premium comfort schoenen, met extra demping en ondersteuning van de voetboog. Onze producten zijn gemaakt van duurzame materialen en ontworpen voor de hele dag comfort.
+home.categories.ws.alt: Damesslippers - productcategorie
+home.categories.ms.alt: Herenslippers - productcategorie
+home.categories.wc.alt: Damesklompen - productcategorie
+home.categories.mc.alt: Herenklompen - productcategorie
+home.categories.ks.alt: Kinderpantoffels - productcategorie
+home.categories.ws.text: Damesslippers
+home.categories.ms.text: Herenslippers
+home.categories.wc.text: Damesklompen
+home.categories.mc.text: Herenklompen
+home.categories.ks.text: Kinderpantoffels
+home.image.button.products: Bekijk de producten
+home.categories.ws.description: Elegante en comfortabele pantoffels voor thuisgebruik, gemaakt van zachte, ademende materialen die comfort bieden.
+home.categories.ms.description: Stevige en comfortabele pantoffels voor thuisgebruik, gemaakt van duurzame materialen die langdurig comfort bieden.
+home.categories.wc.description: Stijlvolle en praktische schoenen, gemaakt van natuurlijke materialen, ideaal voor zowel thuis- als buitengebruik.
+home.categories.mc.description: Duurzame en comfortabele schoenen die traditionele stijl combineren met modern comfort, geschikt voor dagelijks gebruik.
+home.categories.ks.description: Zachte en veilige pantoffels voor kinderen,
+home.category.header: Ons Aanbod
+home.order.retail.header: Detailhandelsbestellingen
+home.order.retail.description: We bieden concurrerende prijzen voor individuele klanten die geïnteresseerd zijn in onze producten. Alle items op onze site leiden naar aanbiedingen op Allegro. Om een detailhandelsaankoop te doen, bezoekt u ons Allegro-account. We verzenden naar alle EU-landen. Klik op de onderstaande knop om ons aanbod te bekijken.
+home.order.wholesale.header: Groothandelsbestellingen
+home.order.wholesale.description: We bieden aantrekkelijke groothandelsprijzen voor bedrijven die onze producten willen verkopen in hun fysieke of online winkels. Internationale verzending beschikbaar. Als u geïnteresseerd bent in groothandelaankopen, neem dan contact met ons op. Meer informatie over groothandel vindt u op de speciale pagina of door contact met ons op te nemen via de juiste knop.
+home.order.retail.button: Controleer Producten
+home.order.wholesale.button: Groothandel Verkoop
+home.order.contact.button: Neem Contact Op

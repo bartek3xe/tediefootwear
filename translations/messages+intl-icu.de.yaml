@@ -10,3 +10,30 @@ navigation.products.special: Sonderangebote
 navigation.wholesale: Großhandel
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Der Hintergrund des Hauptbegrüßungsbereichs enthält Zeichnungen von Hausschuhen in verschiedenen Farben
+home.image.title: Komfort bei jedem Schritt
+home.image.description: Tedie ist ein familiengeführtes Unternehmen, das seit über 20 Jahren hochwertige Hausschuhe und Clogs herstellt. Wir sind auf komfortables Schuhwerk spezialisiert, das zusätzliche Polsterung und Fußgewölbeunterstützung bietet. Unsere Produkte bestehen aus nachhaltigen Materialien und sind für ganztägigen Tragekomfort konzipiert.
+home.categories.ws.alt: Damenhausschuhe - Produktkategorie
+home.categories.ms.alt: Herrenhausschuhe - Produktkategorie
+home.categories.wc.alt: Damenclogs - Produktkategorie
+home.categories.mc.alt: Herrenclogs - Produktkategorie
+home.categories.ks.alt: Kinderhausschuhe - Produktkategorie
+home.categories.ws.text: Damenhausschuhe
+home.categories.ms.text: Herrenhausschuhe
+home.categories.wc.text: Damenclogs
+home.categories.mc.text: Herrenclogs
+home.categories.ks.text: Kinderhausschuhe
+home.image.button.products: Überprüfen Sie Produkte
+home.categories.ws.description: Elegantes und bequemes Hausschuhwerk aus weichen, atmungsaktiven Materialien, das Komfort bietet.
+home.categories.ms.description: Robustes und bequemes Hausschuhwerk aus strapazierfähigen Materialien, die lang anhaltenden Komfort bieten.
+home.categories.wc.description: Stilvolles und praktisches Schuhwerk aus natürlichen Materialien, ideal sowohl für den Hausgebrauch als auch für den Außeneinsatz.
+home.categories.mc.description: Langlebiges und bequemes Schuhwerk, das traditionellen Stil mit modernem Komfort verbindet und für den täglichen Gebrauch geeignet ist.
+home.categories.ks.description: Weiches und sicheres Hausschuhwerk für Kinder, erhältlich in vielen bunten Mustern, das Komfort und Schutz für kleine Füße bietet.
+home.category.header: Unser Angebot
+home.order.retail.header: Einzelhandelsbestellungen
+home.order.retail.description: Wir bieten wettbewerbsfähige Preise für Einzelkunden, die an unseren Produkten interessiert sind. Alle Artikel auf unserer Seite führen zu Angeboten auf Allegro. Um einen Einzelhandelskauf zu tätigen, besuchen Sie unser Allegro-Konto. Wir versenden in alle EU-Länder. Klicken Sie auf die Schaltfläche unten, um unser Angebot zu sehen.
+home.order.wholesale.header: Großhandelsbestellungen
+home.order.wholesale.description: Wir bieten attraktive Großhandelspreise für Unternehmen, die unsere Produkte in ihren stationären oder Online-Shops verkaufen möchten. Internationaler Versand verfügbar. Wenn Sie an Großhandelskäufen interessiert sind, kontaktieren Sie uns. Weitere Informationen zum Großhandel finden Sie auf der entsprechenden Seite oder indem Sie uns über die entsprechende Schaltfläche kontaktieren.
+home.order.retail.button: Produkte überprüfen
+home.order.wholesale.button: Großhandelsverkauf
+home.order.contact.button: Kontaktieren Sie uns

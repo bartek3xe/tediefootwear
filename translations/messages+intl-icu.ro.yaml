@@ -10,3 +10,30 @@ navigation.products.special: Oferte speciale
 navigation.wholesale: Vânzare angro
 navigation.contact: Contact
 navigation.faq: FAQ
+home.image.alt: Fundalul secțiunii principale de bun venit conține desene cu papuci de casă în diferite culori
+home.image.title: Confort la fiecare pas
+home.image.description: Tedie este o afacere de familie care produce papuci și saboți de calitate de peste 20 de ani. Ne specializăm în încălțăminte de confort premium, cu amortizare suplimentară și suport pentru arc. Produsele noastre sunt realizate din materiale durabile și sunt proiectate pentru confort pe tot parcursul zilei.
+home.categories.ws.alt: Papuci de damă - categorie de produse
+home.categories.ms.alt: Papuci de bărbați - categorie de produse
+home.categories.wc.alt: Saboti de damă - categorie de produse
+home.categories.mc.alt: Saboti de bărbați - categorie de produse
+home.categories.ks.alt: Papuci de copii - categorie de produse
+home.categories.ws.text: Papuci de damă
+home.categories.ms.text: Papuci de bărbați
+home.categories.wc.text: Saboti de damă
+home.categories.mc.text: Saboti de bărbați
+home.categories.ks.text: Papuci de copii
+home.image.button.products: Verificați produsele
+home.categories.ws.description: Încălțăminte de casă elegantă și confortabilă, realizată din materiale moi și respirabile, oferind confort.
+home.categories.ms.description: Încălțăminte de casă solidă și confortabilă, realizată din materiale durabile care oferă confort de lungă durată.
+home.categories.wc.description: Încălțăminte stilată și practică, realizată din materiale naturale, ideală atât pentru uz casnic, cât și pentru exterior.
+home.categories.mc.description: Încălțăminte durabilă și confortabilă, care combină stilul tradițional cu confortul modern, potrivită pentru uz zilnic.
+home.categories.ks.description: Încălțăminte de casă moale și sigură pentru copii, disponibilă în multe modele colorate, oferind confort și protecție pentru picioarele mici.
+home.category.header: Oferta Noastră
+home.order.retail.header: Comenzi cu Amănuntul
+home.order.retail.description: Oferim prețuri competitive pentru clienții individuali interesați de produsele noastre. Toate articolele de pe site-ul nostru duc la oferte disponibile pe Allegro. Pentru a face o achiziție cu amănuntul, vizitați contul nostru de Allegro. Expediem către toate țările UE. Faceți clic pe butonul de mai jos pentru a vedea oferta noastră.
+home.order.wholesale.header: Comenzi cu Ridicata
+home.order.wholesale.description: Oferim prețuri atractive cu ridicata pentru companiile care doresc să vândă produsele noastre în magazinele lor fizice sau online. Expediere internațională disponibilă. Dacă sunteți interesat de achiziții cu ridicata, contactați-ne. Mai multe informații despre vânzările cu ridicata sunt disponibile pe pagina dedicată sau contactându-ne prin butonul corespunzător.
+home.order.retail.button: Verificați Produsele
+home.order.wholesale.button: Vânzări en Gros
+home.order.contact.button: Contactează-ne

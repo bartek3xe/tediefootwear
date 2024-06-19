@@ -10,3 +10,30 @@ navigation.products.special: Speciální nabídky
 navigation.wholesale: Velkoobchod
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Pozadí hlavní uvítací sekce obsahuje kresby pantoflí v různých barvách
+home.image.title: Pohodlí na každém kroku
+home.image.description: Tedie je rodinný podnik, který vyrábí kvalitní pantofle a dřeváky již více než 20 let. Specializujeme se na prémiovou komfortní obuv s extra polstrováním a podporou klenby. Naše produkty jsou vyrobeny z udržitelných materiálů a navrženy pro celodenní pohodlí.
+home.categories.ws.alt: Dámské pantofle - produktová kategorie
+home.categories.ms.alt: Pánské pantofle - produktová kategorie
+home.categories.wc.alt: Dámské dřeváky - produktová kategorie
+home.categories.mc.alt: Pánské dřeváky - produktová kategorie
+home.categories.ks.alt: Dětské pantofle - produktová kategorie
+home.categories.ws.text: Dámské pantofle
+home.categories.ms.text: Pánské pantofle
+home.categories.wc.text: Dámské dřeváky
+home.categories.mc.text: Pánské dřeváky
+home.categories.ks.text: Dětské pantofle
+home.image.button.products: Podívejte se na produkty
+home.categories.ws.description: Elegantní a pohodlná domácí obuv, vyrobená z měkkých, prodyšných materiálů, zajišťujících pohodlí.
+home.categories.ms.description: Pevná a pohodlná domácí obuv, vyrobená z odolných materiálů, které poskytují dlouhodobé pohodlí.
+home.categories.wc.description: Stylová a praktická obuv vyrobená z přírodních materiálů, ideální jak pro domácí, tak pro venkovní použití.
+home.categories.mc.description: Odolná a pohodlná obuv, která kombinuje tradiční styl s moderním komfortem, vhodná pro každodenní použití.
+home.categories.ks.description: Měkká a bezpečná domácí obuv pro děti, dostupná v mnoha barevných vzorech, poskytující pohodlí a ochranu malým nožičkám.
+home.category.header: Naše Nabídka
+home.order.retail.header: Maloobchodní Objednávky
+home.order.retail.description: Nabízíme konkurenceschopné ceny pro jednotlivé zákazníky, kteří mají zájem o naše produkty. Všechny položky na našem webu vedou k nabídkám dostupným na Allegro. Pro maloobchodní nákup navštivte náš účet na Allegro. Odesíláme do všech zemí EU. Kliknutím na tlačítko níže zobrazíte naši nabídku.
+home.order.wholesale.header: Velkoobchodní Objednávky
+home.order.wholesale.description: Nabízíme atraktivní velkoobchodní ceny pro firmy, které chtějí prodávat naše produkty ve svých kamenných nebo online obchodech. Mezinárodní doprava k dispozici. Pokud máte zájem o velkoobchodní nákupy, kontaktujte nás. Další informace o velkoobchodním prodeji naleznete na vyhrazené stránce nebo nás kontaktujte prostřednictvím příslušného tlačítka.
+home.order.retail.button: Zkontrolujte Produkty
+home.order.wholesale.button: Velkoobchodní Prodej
+home.order.contact.button: Kontaktujte Nás
