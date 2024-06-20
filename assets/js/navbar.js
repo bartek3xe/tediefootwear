@@ -38,4 +38,15 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileNavBtn.classList.toggle('active');
         navigation.classList.toggle('active');
     });
+
+    document.addEventListener('click', (e) => {
+        if (!navigation.contains(e.target) && !mobileNavBtn.contains(e.target)) {
+            navigation.classList.remove('active');
+            mobileNavBtn.classList.remove('active');
+        }
+    });
+
+    navigation.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 });
