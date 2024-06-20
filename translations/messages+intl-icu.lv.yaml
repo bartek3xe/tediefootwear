@@ -10,3 +10,30 @@ navigation.products.special: Īpašie piedāvājumi
 navigation.wholesale: Vairumtirdzniecība
 navigation.contact: Kontakts
 navigation.faq: FAQ
+home.image.alt: Galvenās uzņemšanas sadaļas fonā ir zīmējumi ar dažādu krāsu čībām
+home.image.title: Komforts katrā solī
+home.image.description: Tedie ir ģimenes uzņēmums, kas jau vairāk nekā 20 gadus ražo kvalitatīvas čības un koka kurpes. Mēs specializējamies augstākās kvalitātes komforta apavos ar papildu amortizāciju un arkas atbalstu. Mūsu produkti ir izgatavoti no ilgtspējīgiem materiāliem un paredzēti komfortam visas dienas garumā.
+home.categories.ws.alt: Sieviešu čības - produktu kategorija
+home.categories.ms.alt: Vīriešu čības - produktu kategorija
+home.categories.wc.alt: Sieviešu koka tupelītes - produktu kategorija
+home.categories.mc.alt: Vīriešu koka tupelītes - produktu kategorija
+home.categories.ks.alt: Bērnu čības - produktu kategorija
+home.categories.ws.text: Sieviešu čības
+home.categories.ms.text: Vīriešu čības
+home.categories.wc.text: Sieviešu koka tupelītes
+home.categories.mc.text: Vīriešu koka tupelītes
+home.categories.ks.text: Bērnu čības
+home.image.button.products: Pārbaudiet produktus
+home.categories.ws.description: Eleganti un ērti mājas apavi, izgatavoti no mīkstiem, elpojošiem materiāliem, nodrošinot komfortu.
+home.categories.ms.description: Stingri un ērti mājas apavi, izgatavoti no izturīgiem materiāliem, kas nodrošina ilgstošu komfortu.
+home.categories.wc.description: Stilīgi un praktiski apavi, izgatavoti no dabīgiem materiāliem, ideāli piemēroti gan mājās, gan ārā.
+home.categories.mc.description: Izturīgi un ērti apavi, kas apvieno tradicionālo stilu ar mūsdienīgu komfortu, piemēroti ikdienas lietošanai.
+home.categories.ks.description: Mīksti un droši mājas apavi bērniem, pieejami daudzos krāsainos rakstos, nodrošinot komfortu un aizsardzību mazajām kājām.
+home.category.header: Mūsu Piedāvājums
+home.order.retail.header: Mazumtirdzniecības Pasūtījumi
+home.order.retail.description: Mēs piedāvājam konkurētspējīgas cenas individuāliem klientiem, kuri interesējas par mūsu produktiem. Visi mūsu vietnes raksti ved uz piedāvājumiem, kas pieejami Allegro. Lai veiktu mazumtirdzniecības pirkumu, apmeklējiet mūsu Allegro kontu. Mēs piegādājam uz visām ES valstīm. Noklikšķiniet uz pogas zemāk, lai redzētu mūsu piedāvājumu.
+home.order.wholesale.header: Vairumtirdzniecības Pasūtījumi
+home.order.wholesale.description: Mēs piedāvājam pievilcīgas vairumtirdzniecības cenas uzņēmumiem, kas vēlas pārdot mūsu produktus savos stacionārajos vai tiešsaistes veikalos. Pieejama starptautiskā piegāde. Ja jūs interesē vairumtirdzniecības pirkumi, sazinieties ar mums. Vairāk informācijas par vairumtirdzniecību var atrast specializētajā lapā vai sazinoties ar mums, izmantojot attiecīgo pogu.
+home.order.retail.button: Pārbaudiet Produktus
+home.order.wholesale.button: Vairumtirdzniecība
+home.order.contact.button: Sazinieties ar Mums

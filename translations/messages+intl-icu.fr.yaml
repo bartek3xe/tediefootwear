@@ -10,3 +10,30 @@ navigation.products.special: Offres spéciales
 navigation.wholesale: Vente en gros
 navigation.contact: Contact
 navigation.faq: FAQ
+home.image.alt: L'arrière-plan de la section d'accueil principale contient des dessins de pantoufles de différentes couleurs
+home.image.title: Confort à chaque pas
+home.image.description: Tedie est une entreprise familiale qui fabrique des pantoufles et des sabots de qualité depuis plus de 20 ans. Nous sommes spécialisés dans les chaussures de confort haut de gamme, avec un amorti supplémentaire et un soutien de la voûte plantaire. Nos produits sont fabriqués à partir de matériaux durables et conçus pour un confort tout au long de la journée.
+home.categories.ws.alt: Chaussons pour femmes - catégorie de produits
+home.categories.ms.alt: Chaussons pour hommes - catégorie de produits
+home.categories.wc.alt: Sabots pour femmes - catégorie de produits
+home.categories.mc.alt: Sabots pour hommes - catégorie de produits
+home.categories.ks.alt: Chaussons pour enfants - catégorie de produits
+home.categories.ws.text: Chaussons pour femmes
+home.categories.ms.text: Chaussons pour hommes
+home.categories.wc.text: Sabots pour femmes
+home.categories.mc.text: Sabots pour hommes
+home.categories.ks.text: Chaussons pour enfants
+home.image.button.products: Découvrez les produits
+home.categories.ws.description: Chaussures d'intérieur élégantes et confortables, fabriquées à partir de matériaux doux et respirants, offrant un grand confort.
+home.categories.ms.description: Chaussures d'intérieur solides et confortables, fabriquées à partir de matériaux durables qui offrent un confort durable.
+home.categories.wc.description: Chaussures stylées et pratiques, fabriquées à partir de matériaux naturels, idéales pour une utilisation à la maison comme à l'extérieur.
+home.categories.mc.description: Chaussures durables et confortables, qui allient style traditionnel et confort moderne, adaptées à un usage quotidien.
+home.categories.ks.description: Chaussures d'intérieur douces et sûres pour enfants, disponibles dans de nombreux motifs colorés, offrant confort et protection aux petits pieds.
+home.category.header: Notre Offre
+home.order.retail.header: Commandes au Détail
+home.order.retail.description: Nous offrons des prix compétitifs pour les clients individuels intéressés par nos produits. Tous les articles de notre site mènent à des offres disponibles sur Allegro. Pour effectuer un achat au détail, visitez notre compte Allegro. Nous expédions vers tous les pays de l'UE. Cliquez sur le bouton ci-dessous pour voir notre offre.
+home.order.wholesale.header: Commandes en Gros
+home.order.wholesale.description: Nous offrons des prix de gros attractifs pour les entreprises souhaitant vendre nos produits dans leurs magasins physiques ou en ligne. Expédition internationale disponible. Si vous êtes intéressé par des achats en gros, contactez-nous. Plus d'informations sur les ventes en gros sont disponibles sur la page dédiée ou en nous contactant via le bouton approprié.
+home.order.retail.button: Vérifier les produits
+home.order.wholesale.button: Vente en gros
+home.order.contact.button: Contactez-nous

@@ -10,3 +10,30 @@ navigation.products.special: Eripakkumised
 navigation.wholesale: Hulgimüük
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Peamise tervitussektsiooni taustal on joonistused erinevat värvi sussidest
+home.image.title: Mugavus igal sammul
+home.image.description: Tedie on pereettevõte, mis on üle 20 aasta tootnud kvaliteetseid susse ja klompe. Meie spetsialiteet on esmaklassiline mugav jalanõu, mis sisaldab lisapehmendust ja jalavõlvi tuge. Meie tooted on valmistatud jätkusuutlikest materjalidest ja loodud kogu päeva mugavust silmas pidades.
+home.categories.ws.alt: Naiste sussid - tootekategooria
+home.categories.ms.alt: Meeste sussid - tootekategooria
+home.categories.wc.alt: Naiste puukingad - tootekategooria
+home.categories.mc.alt: Meeste puukingad - tootekategooria
+home.categories.ks.alt: Laste sussid - tootekategooria
+home.categories.ws.text: Naiste sussid
+home.categories.ms.text: Meeste sussid
+home.categories.wc.text: Naiste puukingad
+home.categories.mc.text: Meeste puukingad
+home.categories.ks.text: Laste sussid
+home.image.button.products: Vaadake tooteid
+home.categories.ws.description: Elegantne ja mugav kodujalats, mis on valmistatud pehmetest ja hingavatest materjalidest, pakkudes mugavust.
+home.categories.ms.description: Tugev ja mugav kodujalats, mis on valmistatud vastupidavatest materjalidest, pakkudes pikaajalist mugavust.
+home.categories.wc.description: Stiilne ja praktiline jalats, mis on valmistatud looduslikest materjalidest, ideaalne nii kodus kui ka väljas kandmiseks.
+home.categories.mc.description: Vastupidav ja mugav jalats, mis ühendab traditsioonilise stiili ja kaasaegse mugavuse, sobib igapäevaseks kasutamiseks.
+home.categories.ks.description: Pehme ja turvaline kodujalats lastele, saadaval paljudes värvilistes mustrites, pakkudes mugavust ja kaitset väikestele jalgadele.
+home.category.header: Meie Pakkumine
+home.order.retail.header: Jaemüügitellimused
+home.order.retail.description: Pakume konkurentsivõimelisi hindu üksikklientidele, kes on huvitatud meie toodetest. Kõik meie saidi artiklid viivad Allegro pakkumistele. Jaemüügi ostu sooritamiseks külastage meie Allegro kontot. Saadame kõigisse EL riikidesse. Klõpsake alloleval nupul, et näha meie pakkumist.
+home.order.wholesale.header: Hulgimüügitellimused
+home.order.wholesale.description: Pakume atraktiivseid hulgimüügi hindu ettevõtetele, kes soovivad müüa meie tooteid oma füüsilistes või veebipoodides. Rahvusvaheline saatmine saadaval. Kui olete huvitatud hulgimüügist, võtke meiega ühendust. Lisateavet hulgimüügi kohta leiate spetsiaalselt lehelt või võtke meiega ühendust vastava nupu kaudu.
+home.order.retail.button: Kontrollige Tooted
+home.order.wholesale.button: Hulgimüük
+home.order.contact.button: Võta Meiega Ühendust

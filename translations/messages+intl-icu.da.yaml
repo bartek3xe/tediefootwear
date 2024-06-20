@@ -10,3 +10,27 @@ navigation.products.special: Specialtilbud
 navigation.wholesale: Engros
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Baggrunden for hovedvelkomstsektionen indeholder tegninger af hjemmesko i forskellige farver
+home.image.title: Komfort i hvert skridt
+home.image.description: Tedie er en familieejet virksomhed, der har fremstillet kvalitetshjemmesko og træsko i over 20 år. Vi specialiserer os i komfortfodsko af høj kvalitet med ekstra polstring og svangstøtte. Vores produkter er lavet af bæredygtige materialer og designet til heldagskomfort.
+home.categories.ws.alt: Dametøfler - produktkategori
+home.categories.ms.alt: Herretøfler - produktkategori
+home.categories.wc.alt: Dametræsko - produktkategori
+home.categories.mc.alt: Herretræsko - produktkategori
+home.categories.ks.alt: Børnetøfler - produktkategori
+home.categories.ws.text: Dametøfler
+home.categories.ms.text: Herretøfler
+home.categories.wc.text: Dametræsko
+home.categories.mc.text: Herretræsko
+home.categories.ks.text: Børnetøfler
+home.image.button.products: Se produkterne
+home.categories.ws.description: Elegant og behageligt hjemmesko, lavet af bløde, åndbare materialer, der giver komfort.
+home.categories.ms.description: Solidt og komfortabelt hjemmesko, lavet af holdbare materialer, der giver langvarig komfort.
+home.categories.wc.description: Stilfulde og praktiske sko lavet af naturlige materialer, ideelle til både hjemmebrug og udendørs brug.
+home.categories.mc.description: Holdbart og komfortabelt fodtøj, der kombinerer traditionel stil med moderne komfort, velegnet til daglig brug.
+home.categories.ks.description: Bløde og sikre hjemmesko til børn, tilgængelige i mange farverige mønstre, der giver komfort og beskyttelse til små fødder.
+home.category.header: Vores Tilbud
+home.order.retail.header: Detailhandelsordrer
+home.order.retail.description: Vi tilbyder konkurrencedygtige priser for individuelle kunder, der er interesseret i vores produkter. Alle varer på vores side fører til tilbud, der er tilgængelige på Allegro. For at foretage et detailkøb, besøg vores Allegro-konto. Vi sender til alle EU-lande. Klik på knappen nedenfor for at se vores tilbud.
+home.order.wholesale.header: Engrosordrer
+home.order.wholesale.description: Vi tilbyder attraktive engrospriser for virksomheder, der ønsker at sælge vores produkter i deres fysiske eller online butikker. International forsendelse tilgængelig. Hvis du er interesseret i engroskøb, kontakt os. Mere information om engrosalg findes på den dedikerede side eller ved at kontakte os via den rette knap.

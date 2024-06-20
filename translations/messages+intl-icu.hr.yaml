@@ -10,3 +10,31 @@ navigation.products.special: Posebne ponude
 navigation.wholesale: Veleprodaja
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Pozadina glavnog dijela dobrodošlice sadrži crteže papuča u različitim bojama
+home.image.title: Udobnost na svakom koraku
+home.image.description: Tedie je obiteljski posao koji već više od 20 godina izrađuje kvalitetne papuče i klompe. Specijalizirani smo za obuću visokog komfora, s dodatnim jastučićima i potporom za luk stopala. Naši proizvodi izrađeni su od održivih materijala i dizajnirani za cjelodnevnu udobnost.
+home.categories.ws.alt: Ženske papuče - kategorija proizvoda
+home.categories.ms.alt: Muške papuče - kategorija proizvoda
+home.categories.wc.alt: Ženski klompe - kategorija proizvoda
+home.categories.mc.alt: Muški klompe - kategorija proizvoda
+home.categories.ks.alt: Dječje papuče - kategorija proizvoda
+home.categories.ws.text: Ženske papuče
+home.categories.ms.text: Muške papuče
+home.categories.wc.text: Ženski klompe
+home.categories.mc.text: Muški klompe
+home.categories.ks.text: Dječje papuče
+home.image.button.products: Provjerite proizvode
+home.categories.ws.description: Elegantna i udobna kućna obuća, izrađena od mekih, prozračnih materijala, koji pružaju udobnost.
+home.categories.ms.description: Čvrsta i udobna kućna obuća, izrađena od izdržljivih materijala, koji pružaju dugotrajnu udobnost.
+home.categories.wc.description: Elegantna i praktična obuća, izrađena od prirodnih materijala, idealna za kućnu i vanjsku uporabu.
+home.categories.mc.description: Izdržljiva i udobna obuća, koja kombinira tradicionalni stil s modernom udobnošću, pogodna za svakodnevnu uporabu.
+home.categories.ks.description: Meka i sigurna kućna obuća za djecu, dostupna u mnogim šarenim uzorcima, koja pruža udobnost i zaštitu malim stopalima.
+home.category.header: Naša Ponuda
+home.order.retail.header: Maloprodajne Narudžbe
+home.order.retail.description: Pružamo konkurentne cijene za individualne kupce zainteresirane za naše proizvode. Svi artikli na našoj stranici vode do ponuda dostupnih na Allegro. Za kupnju maloprodaje posjetite naš Allegro račun. Dostavljamo u sve zemlje EU. Kliknite na donji gumb za pregled naše ponude.
+home.order.wholesale.header: Veleprodajne Narudžbe
+home.order.wholesale.description: Nudimo atraktivne veleprodajne cijene za tvrtke koje žele prodavati naše proizvode u svojim fizičkim ili online trgovinama. Dostupna je međunarodna dostava. Ako ste zainteresirani za veleprodajne kupnje, kontaktirajte nas. Više informacija o veleprodaji možete pronaći na posvećenoj stranici ili nas kontaktirati putem odgovarajućeg gumba.
+home.order.retail.button: Provjerite Proizvode
+home.order.wholesale.button: Veleprodaja
+home.order.contact.button: Kontaktirajte Nas
+

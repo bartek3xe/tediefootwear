@@ -10,3 +10,30 @@ navigation.products.special: Offerte speciali
 navigation.wholesale: Vendita all'ingrosso
 navigation.contact: Contatto
 navigation.faq: FAQ
+home.image.alt: Lo sfondo della sezione principale di benvenuto contiene disegni di pantofole in diversi colori
+home.image.title: Comfort ad ogni passo
+home.image.description: Tedie è un'azienda a conduzione familiare che produce pantofole e zoccoli di qualità da oltre 20 anni. Siamo specializzati in calzature di comfort premium, con ammortizzazione extra e supporto dell'arco. I nostri prodotti sono realizzati con materiali sostenibili e progettati per il comfort tutto il giorno.
+home.categories.ws.alt: Pantofole da donna - categoria di prodotti
+home.categories.ms.alt: Pantofole da uomo - categoria di prodotti
+home.categories.wc.alt: Zoccoli da donna - categoria di prodotti
+home.categories.mc.alt: Zoccoli da uomo - categoria di prodotti
+home.categories.ks.alt: Pantofole per bambini - categoria di prodotti
+home.categories.ws.text: Pantofole da donna
+home.categories.ms.text: Pantofole da uomo
+home.categories.wc.text: Zoccoli da donna
+home.categories.mc.text: Zoccoli da uomo
+home.categories.ks.text: Pantofole per bambini
+home.image.button.products: Scopri i prodotti
+home.categories.ws.description: Calzature da casa eleganti e comode, realizzate con materiali morbidi e traspiranti, che garantiscono comfort.
+home.categories.ms.description: Calzature da casa solide e confortevoli, realizzate con materiali resistenti che offrono un comfort duraturo.
+home.categories.wc.description: Calzature eleganti e pratiche, realizzate con materiali naturali, ideali sia per l'uso domestico che per l'esterno.
+home.categories.mc.description: Calzature resistenti e comode, che combinano stile tradizionale e comfort moderno, adatte all'uso quotidiano.
+home.categories.ks.description: Calzature da casa morbide e sicure per bambini, disponibili in molti colori vivaci, che offrono comfort e protezione ai piedi piccoli.
+home.category.header: La Nostra Offerta
+home.order.retail.header: Ordini al Dettaglio
+home.order.retail.description: Offriamo prezzi competitivi per clienti individuali interessati ai nostri prodotti. Tutti gli articoli sul nostro sito portano a offerte disponibili su Allegro. Per effettuare un acquisto al dettaglio, visita il nostro account Allegro. Spediamo in tutti i paesi dell'UE. Clicca il pulsante qui sotto per vedere la nostra offerta.
+home.order.wholesale.header: Ordini all'Ingrosso
+home.order.wholesale.description: Offriamo prezzi all'ingrosso attraenti per aziende che desiderano vendere i nostri prodotti nei loro negozi fisici o online. Spedizione internazionale disponibile. Se sei interessato ad acquisti all'ingrosso, contattaci. Maggiori informazioni sulle vendite all'ingrosso sono disponibili sulla pagina dedicata o contattandoci tramite l'apposito pulsante.
+home.order.retail.button: Verifica Prodotti
+home.order.wholesale.button: Vendite all'ingrosso
+home.order.contact.button: Contattaci

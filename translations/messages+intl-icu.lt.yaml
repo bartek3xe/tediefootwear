@@ -10,3 +10,27 @@ navigation.products.special: Specialūs pasiūlymai
 navigation.wholesale: Didmeninė prekyba
 navigation.contact: Kontaktas
 navigation.faq: FAQ
+home.image.alt: Pagrindinės pasveikinimo skilties fonas yra piešiniai su įvairių spalvų šlepetėmis
+home.image.title: Komfortas kiekviename žingsnyje
+home.image.description: Tedie yra šeimos verslas, kuris jau daugiau nei 20 metų gamina kokybiškas šlepetes ir klumpes. Mes specializuojamės aukštos kokybės komforto avalynėje su papildomu paminkštinimu ir arkos atrama. Mūsų gaminiai yra pagaminti iš tvarių medžiagų ir skirti visos dienos komfortui.
+home.categories.ws.alt: Moteriškos šlepetės - produktų kategorija
+home.categories.ms.alt: Vyriškos šlepetės - produktų kategorija
+home.categories.wc.alt: Moteriški klumpės - produktų kategorija
+home.categories.mc.alt: Vyriški klumpės - produktų kategorija
+home.categories.ks.alt: Vaikiškos šlepetės - produktų kategorija
+home.categories.ws.text: Moteriškos šlepetės
+home.categories.ms.text: Vyriškos šlepetės
+home.categories.wc.text: Moteriški klumpės
+home.categories.mc.text: Vyriški klumpės
+home.categories.ks.text: Vaikiškos šlepetės
+home.image.button.products: Patikrinkite produktus
+home.categories.ws.description: Elegantiška ir patogi namų avalynė, pagaminta iš minkštų, kvėpuojančių medžiagų, užtikrinančių komfortą.
+home.categories.ms.description: Tvirta ir patogi namų avalynė, pagaminta iš patvarių medžiagų, kurios suteikia ilgalaikį komfortą.
+home.categories.wc.description: Stilinga ir praktiška avalynė, pagaminta iš natūralių medžiagų, idealiai tinka tiek namuose, tiek lauke.
+home.categories.mc.description: Patvari ir patogi avalynė, kuri sujungia tradicinį stilių su šiuolaikiniu komfortu, tinkama kasdieniam naudojimui.
+home.categories.ks.description: Minkšta ir saugi namų avalynė vaikams, prieinama daugelyje spalvingų raštų, suteikianti komfortą ir apsaugą mažoms pėdutėms.
+home.category.header: Mūsų Pasiūlymas
+home.order.retail.header: Mažmeninės Prekybos Užsakymai
+home.order.retail.description: Mes siūlome konkurencingas kainas individualiems klientams, besidomintiems mūsų produktais. Visi mūsų svetainės straipsniai nukreipia į pasiūlymus, esančius Allegro. Norėdami atlikti mažmeninį pirkimą, apsilankykite mūsų Allegro paskyroje. Mes siunčiame į visas ES šalis. Spustelėkite žemiau esantį mygtuką, kad pamatytumėte mūsų pasiūlymą.
+home.order.wholesale.header: Didmeninės Prekybos Užsakymai
+home.order.wholesale.description: Mes siūlome patrauklias didmenines kainas įmonėms, norinčioms parduoti mūsų produktus savo fizinėse ar internetinėse parduotuvėse. Tarptautinis pristatymas prieinamas. Jei jus domina didmeniniai pirkimai, susisiekite su mumis. Daugiau informacijos apie didmeninę prekybą rasite specialiame puslapyje arba susisiekę su mumis per atitinkamą mygtuką.

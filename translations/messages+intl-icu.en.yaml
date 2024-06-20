@@ -10,3 +10,30 @@ navigation.products.special: Special Offers
 navigation.wholesale: Wholesale
 navigation.contact: Contact
 navigation.faq: FAQ
+home.image.alt: The background of the main welcome section contains drawings of slippers in different colors
+home.image.title: Comfort at every step
+home.image.description: Tedie is a family-owned business that has been making quality slippers and clogs for over 20 years. We specialize in premium comfort footwear, featuring extra cushioning and arch support. Our products are made from sustainable materials and designed for all-day comfort.
+home.categories.ws.alt: Women's slippers - product category
+home.categories.ms.alt: Men's slippers - product category
+home.categories.wc.alt: Women's clogs - product category
+home.categories.mc.alt: Men's clogs - product category
+home.categories.ks.alt: Children's slippers - product category
+home.categories.ws.text: Women's slippers
+home.categories.ms.text: Men's slippers
+home.categories.wc.text: Women's clogs
+home.categories.mc.text: Men's clogs
+home.categories.ks.text: Children's slippers
+home.image.button.products: Check products
+home.categories.ws.description: Elegant and comfortable home footwear made from soft, breathable materials, providing comfort.
+home.categories.ms.description: Sturdy and comfortable home footwear made from durable materials that provide long-lasting comfort.
+home.categories.wc.description: Stylish and practical footwear made from natural materials, ideal for both home use and outdoor wear.
+home.categories.mc.description: Durable and comfortable footwear that combines traditional style with modern comfort, suitable for everyday use.
+home.categories.ks.description: Soft and safe home footwear for children, available in many colorful patterns, providing comfort and protection for little feet.
+home.category.header: Our Offer
+home.order.retail.header: Retail Orders
+home.order.retail.description: We provide competitive prices for individual customers interested in our products. All items on our site lead to offers available on Allegro. To make a retail purchase, visit our Allegro account. We ship to all EU countries. Click the button below to see our offer.
+home.order.wholesale.header: Wholesale Orders
+home.order.wholesale.description: We offer attractive wholesale prices for companies wanting to sell our products in their stationary or online stores. International shipping available. If you are interested in wholesale purchases, contact us. More information about wholesale sales can be found on the dedicated page or by contacting us via the appropriate button.
+home.order.retail.button: Check Products
+home.order.wholesale.button: Wholesale Sales
+home.order.contact.button: Contact Us

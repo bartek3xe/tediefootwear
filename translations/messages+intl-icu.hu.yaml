@@ -10,3 +10,30 @@ navigation.products.special: Különleges ajánlatok
 navigation.wholesale: Nagykereskedelem
 navigation.contact: Kapcsolat
 navigation.faq: FAQ
+home.image.alt: A fő üdvözlő szakasz háttere különböző színű papucsok rajzait tartalmazza
+home.image.title: Kényelem minden lépésben
+home.image.description: A Tedie egy családi vállalkozás, amely már több mint 20 éve gyárt minőségi papucsokat és klumpákat. Prémium komfort lábbelikre specializálódtunk, extra párnázással és ívtámogatással. Termékeink fenntartható anyagokból készülnek, és egész napos kényelmet biztosítanak.
+home.categories.ws.alt: Női papucsok - termékkategória
+home.categories.ms.alt: Férfi papucsok - termékkategória
+home.categories.wc.alt: Női klumpák - termékkategória
+home.categories.mc.alt: Férfi klumpák - termékkategória
+home.categories.ks.alt: Gyerek papucsok - termékkategória
+home.categories.ws.text: Női papucsok
+home.categories.ms.text: Férfi papucsok
+home.categories.wc.text: Női klumpák
+home.categories.mc.text: Férfi klumpák
+home.categories.ks.text: Gyerek papucsok
+home.image.button.products: Ellenőrizze a termékeket
+home.categories.ws.description: Elegáns és kényelmes otthoni lábbeli, puha, légáteresztő anyagokból, amelyek kényelmet biztosítanak.
+home.categories.ms.description: Szilárd és kényelmes otthoni lábbeli, tartós anyagokból, amelyek hosszú távú kényelmet biztosítanak.
+home.categories.wc.description: Stílusos és praktikus lábbeli, természetes anyagokból, ideális mind otthoni, mind kültéri használatra.
+home.categories.mc.description: Tartós és kényelmes lábbeli, amely ötvözi a hagyományos stílust a modern kényelemmel, mindennapi használatra alkalmas.
+home.categories.ks.description: Puha és biztonságos otthoni lábbeli gyerekeknek, sok színes mintával elérhető, amely kényelmet és védelmet nyújt a kis lábaknak.
+home.category.header: Ajánlatunk
+home.order.retail.header: Kiskereskedelmi Rendelések
+home.order.retail.description: Versenyképes árakat kínálunk azon egyéni vásárlók számára, akik érdeklődnek termékeink iránt. A weboldalunkon található összes cikk az Allegro-n elérhető ajánlatokra vezet. Kiskereskedelmi vásárláshoz látogassa meg Allegro-fiókunkat. Az EU összes országába szállítunk. Kattintson az alábbi gombra, hogy megtekinthesse ajánlatunkat.
+home.order.wholesale.header: Nagykereskedelmi Rendelések
+home.order.wholesale.description: Vonzó nagykereskedelmi árakat kínálunk azoknak a vállalatoknak, amelyek termékeinket saját üzleteikben vagy online áruházaikban kívánják értékesíteni. Nemzetközi szállítás elérhető. Ha érdeklődik a nagykereskedelmi vásárlások iránt, vegye fel velünk a kapcsolatot. További információk a nagykereskedelemről a dedikált oldalon találhatók, vagy vegye fel velünk a kapcsolatot a megfelelő gomb segítségével.
+home.order.retail.button: Ellenőrizze a Termékeket
+home.order.wholesale.button: Nagykereskedelmi Értékesítés
+home.order.contact.button: Lépjen Kapcsolatba Velünk

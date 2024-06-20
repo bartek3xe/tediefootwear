@@ -10,3 +10,30 @@ navigation.products.special: Špeciálne ponuky
 navigation.wholesale: Veľkoobchod
 navigation.contact: Kontakt
 navigation.faq: FAQ
+home.image.alt: Pozadie hlavnej uvítacej sekcie obsahuje kresby papúč v rôznych farbách
+home.image.title: Pohodlie na každom kroku
+home.image.description: Tedie je rodinný podnik, ktorý už viac ako 20 rokov vyrába kvalitné papuče a dreváky. Špecializujeme sa na prémiovú komfortnú obuv s extra polstrovaním a podporou klenby. Naše produkty sú vyrobené z udržateľných materiálov a navrhnuté pre celodenné pohodlie.
+home.categories.ws.alt: Dámske papuče - produktová kategória
+home.categories.ms.alt: Pánske papuče - produktová kategória
+home.categories.wc.alt: Dámske dreváky - produktová kategória
+home.categories.mc.alt: Pánske dreváky - produktová kategória
+home.categories.ks.alt: Detské papuče - produktová kategória
+home.categories.ws.text: Dámske papuče
+home.categories.ms.text: Pánske papuče
+home.categories.wc.text: Dámske dreváky
+home.categories.mc.text: Pánske dreváky
+home.categories.ks.text: Detské papuče
+home.image.button.products: Skontrolujte produkty
+home.categories.ws.description: Elegantná a pohodlná domáca obuv, vyrobená z mäkkých, priedušných materiálov, zabezpečujúcich pohodlie.
+home.categories.ms.description: Pevná a pohodlná domáca obuv, vyrobená z odolných materiálov, ktoré poskytujú dlhodobé pohodlie.
+home.categories.wc.description: Štýlová a praktická obuv vyrobená z prírodných materiálov, ideálna na použitie doma aj vonku.
+home.categories.mc.description: Odolná a pohodlná obuv, ktorá kombinuje tradičný štýl s moderným komfortom, vhodná na každodenné nosenie.
+home.categories.ks.description: Mäkká a bezpečná domáca obuv pre deti, dostupná v mnohých farebných vzoroch, poskytujúca pohodlie a ochranu malým nôžkam.
+home.category.header: Naša Ponuka
+home.order.retail.header: Maloobchodné Objednávky
+home.order.retail.description: Ponúkame konkurencieschopné ceny pre individuálnych zákazníkov, ktorí majú záujem o naše produkty. Všetky položky na našej stránke vedú k ponukám dostupným na Allegro. Ak chcete vykonať maloobchodný nákup, navštívte náš účet na Allegro. Dodávame do všetkých krajín EÚ. Kliknutím na tlačidlo nižšie zobrazíte našu ponuku.
+home.order.wholesale.header: Veľkoobchodné Objednávky
+home.order.wholesale.description: Ponúkame atraktívne veľkoobchodné ceny pre spoločnosti, ktoré chcú predávať naše produkty vo svojich kamenných alebo online obchodoch. Medzinárodná doprava k dispozícii. Ak máte záujem o veľkoobchodné nákupy, kontaktujte nás. Viac informácií o veľkoobchodnom predaji nájdete na vyhradenej stránke alebo nás kontaktujte prostredníctvom príslušného tlačidla.
+home.order.retail.button: Skontrolovať Produkty
+home.order.wholesale.button: Veľkoobchodný Predaj
+home.order.contact.button: Kontaktujte Nás
