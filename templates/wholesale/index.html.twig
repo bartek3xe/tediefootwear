@@ -1,5 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="home">
+        <div class="main-image-container">
+            <span class="main-image-overlay"></span>
+            <img class="main-image image-from-bottom" src="{{ asset('images/wholesale.png') }}"
+                 alt="{{ 'wholesale.image.alt'|trans }}">
+            <div class="main-text">
+                <h1>{{ 'wholesale.image.title'|trans }}</h1>
+                <p>{{ 'wholesale.image.description'|trans }}</p>
+            </div>
+        </div>
 
+        <h2 class="main-h2-header">{{ 'wholesale.benefits.title'|trans }}</h2>
+        <p class="wholesale-description">{{ 'wholesale.benefits.description'|trans }}</p>
+
+        <h2 class="main-h2-header">{{ 'wholesale.conditions.title'|trans }}</h2>
+        <p class="wholesale-description">{{ 'wholesale.conditions.description'|trans }}</p>
+
+        <h2 class="main-h2-header">{{ 'wholesale.process.title'|trans }}</h2>
+        <p class="wholesale-description">{{ 'wholesale.process.description'|trans }}</p>
+
+        <div class="home-order-container">
+            <div class="home-order-section">
+                <div class="home-order-section-left">
+                    <img class="home-order-image" src="{{ asset('images/wholesale.png') }}"
+                         alt="{{ 'home.order.wholesale.alt'|trans }}">
+                </div>
+                <div class="home-order-section-right">
+                    <h1>{{ 'home.order.wholesale.header'|trans }}</h1>
+                    <div class="flex-row-buttons">
+                        <a class="btn btn-primary" href="{{ path('app_contact') }}">{{ 'home.order.contact.button'|trans }}</a>
+                        <a class="btn btn-primary" href="{{ path('app_faq') }}">{{ 'wholesale.faq'|trans }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

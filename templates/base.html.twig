@@ -21,11 +21,11 @@
     <body>
         <!-- Begin page -->
         <div id="layout-wrapper">
-            {{ include('partials/navbar.html.twig') }}
+            {{ include('partials/_navbar.html.twig') }}
 
             <div class="main-content">
                 <div class="page-content">
-                    {% include 'partials/flashes.html.twig' with { 'flashes': app.flashes } %}
+                    {% include 'partials/_flashes.html.twig' with { 'flashes': app.flashes } %}
 
                     <!-- CONTENT -->
                     {% block body %}
@@ -35,7 +35,7 @@
             </div>
 
             <!-- FOOTER -->
-            {{ include('partials/footer.html.twig') }}
+            {{ include('partials/_footer.html.twig') }}
             <!-- FOOTER CLOSED-->
         </div>
     </body>
