@@ -15,6 +15,7 @@ Encore
     .addEntry('js/recaptcha', './assets/js/recaptcha.js')
     .addEntry('js/flash', './assets/js/flash.js')
     .addEntry('js/navbar', './assets/js/navbar.js')
+    .addEntry('js/faq', './assets/js/faq.js')
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()

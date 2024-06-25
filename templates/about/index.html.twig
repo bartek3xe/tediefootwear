@@ -1,5 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="home">
 
+        <div class="main-image-container">
+            <span class="main-image-overlay"></span>
+            <img class="main-image image-from-bottom" src="{{ asset('images/about.png') }}"
+                 alt="{{ 'about.image.alt'|trans }}">
+            <div class="main-text">
+                <h1>{{ 'about.image.title'|trans }}</h1>
+                <p>{{ 'about.image.description'|trans }}</p>
+            </div>
+        </div>
+
+        <h2 class="main-h2-header">{{ 'about.history.title'|trans }}</h2>
+        <p class="about-description">{{ 'about.history.description.first'|trans }}</p>
+        <p class="about-description">{{ 'about.history.description.second'|trans }}</p>
+
+        <h2 class="main-h2-header">{{ 'about.quality.title'|trans }}</h2>
+        <p class="about-description">{{ 'about.quality.description.first'|trans }}</p>
+        <p class="about-description">{{ 'about.quality.description.second'|trans }}</p>
+
+        {{ include('partials/_our_offer.html.twig') }}
+    </section>
 {% endblock %}

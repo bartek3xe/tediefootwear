@@ -1,5 +1,21 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="home">
+        <div class="faq">
+            <h1 class="main-h1-header">TEDIE FAQ</h1>
 
+            {% for faq in faq_items %}
+                <a href="javascript:void(0)" class="question-container">
+                    <h2><span class="question-number">{{ loop.index }}.</span> {{ faq.getQuestion()|trans }}</h2>
+                    <p>{{ faq.getAnswer()|trans }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('js/faq') }}
 {% endblock %}

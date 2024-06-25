@@ -23,7 +23,7 @@
         align-items: center;
         gap: 1rem;
 
-        @media only screen and (width < 1000px) {
+        @media only screen and (width < 1200px) {
             gap: 0;
             display: none;
             position: absolute;
@@ -232,6 +232,7 @@
             min-width: 120px;
             top: 85%;
             z-index: 98;
+            border-bottom: 1px solid $shadow-color-primary;
 
             a {
                 width: 100%;
@@ -246,7 +247,7 @@
         }
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1200px) {
         .nav-lang {
             display: flex;
             flex-direction: column;
