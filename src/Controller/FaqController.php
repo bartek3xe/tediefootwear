@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Enum\FaqEnum;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,8 @@ class FaqController extends AbstractController
     #[Route('/faq', name: 'faq')]
     public function index(Request $request): Response
     {
-        return $this->render('faq/index.html.twig');
+        return $this->render('faq/index.html.twig', [
+            'faq_items' => FaqEnum::cases(),
+        ]);
     }
 }
