@@ -37,3 +37,40 @@ home.order.wholesale.description: Tarjoamme houkuttelevia tukkumyyntihintoja yri
 home.order.retail.button: Tarkista Tuotteet
 home.order.wholesale.button: Tukkumyynti
 home.order.contact.button: Ota Yhteyttä
+about.history.title: Meidän historia
+about.history.description.first: TEDIE on yritys, jolla on yli 20 vuoden perinne, joka alkoi perheyrityksenä, joka keskittyi yksinomaan tohveleiden valmistukseen. Alussa yritystä johtivat veljekset, jotka osallistuivat henkilökohtaisesti jokaiseen tuotantovaiheeseen. Ajan myötä olemme vähitellen lisänneet koneiden määrää ja laajentaneet asiakaskuntaamme - ensin paikallisesti ja sitten koko Puolassa.
+about.history.description.second: Olemme aina erikoistuneet tukkumyyntiin ja saavuttaneet monien liikekumppaneiden luottamuksen. Tänään saavutamme uuden tason laajentamalla toimintaamme kattamaan vähittäismyynnin. Allegro-alustan ansiosta tohveleemme ovat saatavilla asiakkaille kaikkialla Euroopan unionissa. Tukkumyynnissä teemme yhteistyötä yritysten kanssa sijainnista riippumatta - ota vain yhteyttä meihin suoraan sähköpostitse.
+about.quality.title: Panostamme laatuun
+about.quality.description.first: TEDIE:n perustamisesta lähtien tuotteidemme laatu on ollut etusijalla. Kaikki tuotteemme ovat käsintehtyjä, yhä enemmän koneiden tukemana, mikä mahdollistaa äärimmäisen tarkan ja huolellisen työn. Vuosien saatossa hankittu käsityötaito ja kokemus takaavat, että jokainen tehtaaltamme lähtevä tuote täyttää korkeimmat laatustandardit.
+about.quality.description.second: Tuotteemme ovat osittain valmistettu aidosta nahasta, mikä tarjoaa poikkeuksellista mukavuutta ja kestävyyttä. Jokaisen tohvelin, kengän tai jalkineen sisäpuoli on aina vuorattu luonnonnahalla, kun taas ulkopuoli voi olla valmistettu synteettisistä materiaaleista riippuen mallista. Lisäksi tohveleissamme on erityinen jalkakuviointi ja ylimääräinen vaahtomuovi, mikä takaa maksimaalisen mukavuuden käyttäjälle. Asiakas voi olla varma, että saa ensiluokkaisen tuotteen, joka on viimeistelty kaikilta osin.
+about.image.title: Meistä
+about.image.description: Katso, miten yhdistämme perinteen ja nykyaikaisuuden korkealaatuisten tohveleiden valmistuksessa.
+wholesale.image.title: Tukkumyynti
+wholesale.image.description: TEDIE on yritys, jolla on yli 20 vuoden kokemus tohveleiden ja puukenkien tuotannosta ja myynnistä. Olemme ylpeitä laadustamme ja yksityiskohtien huomioimisesta, mikä tekee meistä luotettavan kumppanin monille tukkumyyntiasiakkaille.
+wholesale.benefits.title: Yhteistyön edut
+wholesale.benefits.description: Yhteistyö TEDIEn kanssa tarkoittaa pääsyä laajaan valikoimaan korkealaatuisia tuotteita, kilpailukykyisiä hintoja ja joustavia yhteistyöehtoja. Tarjoamme omistautunutta asiakaspalvelua ja nopeat tilauskäsittelyajat.
+wholesale.conditions.title: Vähimmäistilaukset ja yhteistyöehdot
+wholesale.conditions.description: Tukkumyynnin vähimmäistilaus on 50 paria tohveleita tai 25 paria puukenkiä. Tarjoamme mahdollisuuden mukauttaa tilauksia asiakkaan yksilöllisten tarpeiden mukaan. Ota yhteyttä keskustellaksesi yhteistyön yksityiskohdista.
+wholesale.process.title: Tilausprosessi
+wholesale.process.description: Tukkutilauksen tekemiseksi ota yhteyttä tukkumyyntiosastoomme sähköpostitse tai puhelimitse. Saatuamme kyselyn valmistamme yksilöllisen hintatarjouksen. Hyväksyttyäsi ehdot aloitamme tilauksen toteutuksen.
+wholesale.faq: Tarkista usein kysytyt kysymykset
+faq.question.1: Mitä tuotteita yrityksenne tarjoaa?
+faq.answer.1: Yrityksemme tarjoaa tohveleita ja puukenkiä miehille ja naisille sekä lasten tohveleita, jotka kaikki on käsintehty jokaiselle asiakkaalle.
+faq.question.2: Tarjoatteko tukkumyyntiä?
+faq.answer.2: Kyllä, tarjoamme tukkumyyntiä. Kehotamme sinua ottamaan yhteyttä sähköpostitse tai puhelimitse saadaksesi lisätietoja. Minimimääräys on 50 paria tohveleita tai 25 paria puukenkiä.
+faq.question.3: Mistä voin ostaa tuotteitanne vähittäismyyntinä?
+faq.answer.3: Tuotteitamme on saatavana Allegro.pl-alustalla. Verkkosivustollamme näytämme Allegron saatavilla olevat tuotteet. Napsauttamalla tiettyä tuotetta asiakas ohjataan kyseisen tuotteen sivulle Allegro.pl:ssä. Kehotamme sinua tutustumaan tarjouksiimme.
+faq.question.4: Tarjoatteko tohveleita ja puukenkiä lapsille?
+faq.answer.4: Kyllä, tarjoamme tohveleita lapsille. Tällä hetkellä meillä ei ole lasten puukenkiä, mutta aiomme laajentaa valikoimaamme tulevaisuudessa.
+faq.question.5: Kuinka voin ottaa yhteyttä asiakaspalveluun?
+faq.answer.5: Jos sinulla on kysyttävää tai huolenaiheita, kehotamme sinua ottamaan yhteyttä sähköpostitse tai puhelimitse. Yhteystiedot löytyvät verkkosivustomme "Yhteystiedot" -osiosta.
+faq.question.6: Tarjoatteko ostettujen tuotteiden palauttamista?
+faq.answer.6: Kyllä, tarjoamme mahdollisuuden palauttaa ostetut tuotteet Allegro.pl-verkkosivuston palautuskäytännön mukaisesti.
+faq.question.7: Toimitatteko kansainvälisesti?
+faq.answer.7: Kyllä, toimitamme kansainvälisesti koko Euroopan unionin alueella vähittäismyynnissä Allegro.pl:ssä olevien tarjousten mukaisesti. Tukkulähetysten osalta se riippuu tapauskohtaisesti. Ota meihin yhteyttä saadaksesi tietoja toimituskustannuksista ja toimitusajoista.
+faq.question.8: Onko tuotteillanne takuu?
+faq.answer.8: Kyllä, tuotteillamme on laatutakuu. Jos tuotteessa ilmenee ongelmia, ota yhteyttä saadaksesi apua.
+faq.question.9: Tarjoatteko tilausten räätälöintiä?
+faq.answer.9: Kyllä, tarjoamme mahdollisuuden räätälöidä tilaukset. Ota meihin yhteyttä keskustellaksesi yksityiskohdista ja saatavilla olevista vaihtoehdoista. Tällä hetkellä emme tarjoa kaiverruksia tai personoituja vaihtoehtoja.
+faq.question.10: Kuinka kauan tilauksen käsittely kestää?
+faq.answer.10: Tilauksen käsittelyaika voi vaihdella asiakkaan yksilöllisten mieltymysten ja tuotteiden saatavuuden mukaan. Yksityiskohtaiset tiedot odotusajasta saat tilauksen yhteydessä. Allegron vähittäismyynnissä käsittelyaika määräytyy alustan mukaan ja se löytyy tarjoussivulta.

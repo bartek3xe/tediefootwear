@@ -37,3 +37,40 @@ home.order.wholesale.description: Vonzó nagykereskedelmi árakat kínálunk azo
 home.order.retail.button: Ellenőrizze a Termékeket
 home.order.wholesale.button: Nagykereskedelmi Értékesítés
 home.order.contact.button: Lépjen Kapcsolatba Velünk
+about.history.title: Történetünk
+about.history.description.first: A TEDIE egy több mint 20 éves hagyománnyal rendelkező vállalat, amely családi vállalkozásként indult, kizárólag a papucsok gyártására összpontosítva. A kezdetekben a vállalatot testvérek vezették, akik személyesen részt vettek a gyártás minden szakaszában. Idővel fokozatosan növeltük a gépek számát és bővítettük ügyfélkörünket - kezdetben helyben, majd egész Lengyelországban.
+about.history.description.second: Mindig is a nagykereskedelemre specializálódtunk, és számos üzleti partner bizalmát elnyertük. Ma új szintre lépünk, és tevékenységünket kiskereskedelemre is kiterjesztjük. Az Allegro platformnak köszönhetően papucsaink elérhetőek az egész Európai Unióban. A nagykereskedelem esetében bármely vállalattal együttműködünk, függetlenül azok helyétől - csak vegye fel velünk a kapcsolatot e-mailben.
+about.quality.title: A minőségre összpontosítunk
+about.quality.description.first: A TEDIE megalakulása óta a termékeink minősége volt az elsődleges szempont. Minden termékünk kézzel készül, egyre több gépi támogatással, ami a legnagyobb pontosságot és gondosságot biztosítja. Az évek során megszerzett szakértelem és tapasztalat garantálja, hogy minden termékünk, amely elhagyja gyárunkat, megfelel a legmagasabb minőségi követelményeknek.
+about.quality.description.second: Termékeink részben valódi bőrből készülnek, ami kivételes kényelmet és tartósságot biztosít. Minden papucs, cipő vagy lábbeli belső része mindig természetes bőrrel van bélelve, míg a külső rész szintetikus anyagokból készülhet, a dizájntól függően. Ezenkívül papucsaink speciális lábbarázdákkal és extra habbal vannak ellátva, ami maximális kényelmet biztosít a felhasználónak. A vásárló biztos lehet benne, hogy kiváló minőségű, minden részletében tökéletesen kidolgozott terméket kap.
+about.image.title: Rólunk
+about.image.description: Nézze meg, hogyan ötvözzük a hagyományt és a modernitást a legmagasabb minőségű papucsok gyártásában.
+wholesale.image.title: Nagykereskedelem
+wholesale.image.description: A TEDIE egy több mint 20 éves tapasztalattal rendelkező vállalat, amely papucsok és klumpák gyártásával és értékesítésével foglalkozik. Büszkék vagyunk a minőségünkre és a részletekre való odafigyelésünkre, ami miatt sok nagykereskedelmi ügyfél megbízható partnerei vagyunk.
+wholesale.benefits.title: Együttműködési előnyök
+wholesale.benefits.description: Az együttműködés a TEDIE-vel hozzáférést biztosít a magas színvonalú termékek széles választékához, versenyképes árakhoz és rugalmas együttműködési feltételekhez. Különleges ügyfélszolgálatot és gyors rendelési feldolgozási időt kínálunk.
+wholesale.conditions.title: Minimális rendelések és együttműködési feltételek
+wholesale.conditions.description: A minimális nagykereskedelmi rendelés 50 pár papucs vagy 25 pár klumpa. Lehetőséget kínálunk a rendelések testreszabására az ügyfél egyedi igényeinek megfelelően. Lépjen kapcsolatba velünk az együttműködési részletek megbeszéléséhez.
+wholesale.process.title: Rendelési folyamat
+wholesale.process.description: A nagykereskedelmi rendelés leadásához kérjük, vegye fel a kapcsolatot nagykereskedelmi osztályunkkal e-mailben vagy telefonon. A kérés beérkezése után egyéni árajánlatot készítünk. A feltételek elfogadása után folytatjuk a rendelés végrehajtását.
+wholesale.faq: Nézze meg a gyakran feltett kérdéseket
+faq.question.1: Milyen termékeket kínál a cégük?
+faq.answer.1: Cégünk férfiak és nők számára kínál papucsokat és klumpákat, valamint gyerekpapucsokat, mindegyik kézzel készült minden egyes ügyfél számára.
+faq.question.2: Kínálnak nagykereskedelmet?
+faq.answer.2: Igen, kínálunk nagykereskedelmet. Javasoljuk, hogy lépjen kapcsolatba velünk e-mailben vagy telefonon további információkért. A minimális rendelés 50 pár papucs vagy 25 pár klumpa.
+faq.question.3: Hol vásárolhatom meg termékeiket kiskereskedelemben?
+faq.answer.3: Termékeink megvásárolhatók az Allegro.pl platformon. Weboldalunkon az Allegro-n elérhető termékeket jelenítjük meg. Egy adott termékre kattintva az ügyfél az Allegro.pl megfelelő termékoldalára irányítva. Meghívjuk, hogy tekintse meg ajánlatainkat.
+faq.question.4: Kínálnak papucsokat és klumpákat gyerekeknek?
+faq.answer.4: Igen, kínálunk papucsokat gyerekeknek. Jelenleg nincs gyerekklumpánk, de tervezzük kínálatunk bővítését a jövőben.
+faq.question.5: Hogyan léphetek kapcsolatba az ügyfélszolgálattal?
+faq.answer.5: Ha bármilyen kérdése vagy aggodalma van, javasoljuk, hogy lépjen kapcsolatba velünk e-mailben vagy telefonon. Elérhetőségeinket a weboldalunk "Kapcsolat" részében találja meg.
+faq.question.6: Kínálnak visszaküldést a megvásárolt termékekre?
+faq.answer.6: Igen, biztosítjuk a megvásárolt termékek visszaküldésének lehetőségét az Allegro.pl weboldal visszatérítési szabályzata szerint.
+faq.question.7: Szállítanak nemzetközileg?
+faq.answer.7: Igen, nemzetközileg szállítunk az egész Európai Unióban a kiskereskedelmi eladásokhoz az Allegro.pl ajánlatai szerint. A nagykereskedelmi szállítások esetében ez az adott esettől függ. Kérjük, lépjen kapcsolatba velünk a szállítási költségekről és a szállítási időkről szóló információkért.
+faq.question.8: Termékeik rendelkeznek garanciával?
+faq.answer.8: Igen, termékeink minőségi garanciával rendelkeznek. Ha problémák merülnek fel a termékkel, kérjük, lépjen kapcsolatba velünk segítségért.
+faq.question.9: Kínálnak rendelésre szabást?
+faq.answer.9: Igen, kínálunk lehetőséget a rendelések testreszabására. Kérjük, lépjen kapcsolatba velünk a részletek és a rendelkezésre álló lehetőségek megbeszélésére. Jelenleg nem kínálunk gravírozást vagy személyre szabott változatokat.
+faq.question.10: Mennyi ideig tart a rendelés feldolgozása?
+faq.answer.10: A rendelés feldolgozási ideje változhat az egyéni vásárlói preferenciák és a termékek elérhetősége alapján. A várakozási időre vonatkozó részletes információk a rendelés leadásakor érhetők el. Az Allegro kiskereskedelmi vásárlásai esetében a feldolgozási időt a platform határozza meg, és az ajánlat oldalon található.

@@ -37,3 +37,40 @@ home.order.wholesale.description: Pakume atraktiivseid hulgimüügi hindu ettev�
 home.order.retail.button: Kontrollige Tooted
 home.order.wholesale.button: Hulgimüük
 home.order.contact.button: Võta Meiega Ühendust
+about.history.title: Meie ajalugu
+about.history.description.first: TEDIE on ettevõte, millel on üle 20-aastane traditsioon, mis sai alguse pereettevõttena, keskendudes ainult susside tootmisele. Algusaegadel juhtisid ettevõtet vennad, kes olid isiklikult seotud iga tootmisetapiga. Aja jooksul oleme järk-järgult suurendanud masinate arvu ja laiendanud oma kliendibaasi - algselt kohalikult ja seejärel kogu Poolas.
+about.history.description.second: Oleme alati spetsialiseerunud hulgimüügile ja võitnud paljude äripartnerite usalduse. Täna jõuame uuele tasemele, laiendades oma tegevust jaekaubandusele. Tänu Allegro platvormile on meie sussid saadaval klientidele kogu Euroopa Liidus. Hulgimüügi jaoks teeme koostööd ettevõtetega, olenemata nende asukohast - lihtsalt võtke meiega otse e-posti teel ühendust.
+about.quality.title: Keskendume kvaliteedile
+about.quality.description.first: Alates TEDIE loomisest on meie toodete kvaliteet olnud prioriteet. Kõik meie tooted on käsitsi valmistatud, masinate kasvava toega, mis võimaldab maksimaalset täpsust ja hoolikust. Aastate jooksul omandatud oskused ja kogemused tagavad, et iga meie tehasest lahkuv toode vastab kõrgeimatele kvaliteedistandarditele.
+about.quality.description.second: Meie tooted on osaliselt valmistatud ehtsast nahast, pakkudes erakordset mugavust ja vastupidavust. Iga sussi, kinga või jalatsi sisemus on alati vooderdatud naturaalse nahaga, samas kui välispind võib olenevalt disainist olla valmistatud sünteetilistest materjalidest. Lisaks on meie sussid varustatud spetsiaalsete jalajälgedega ja lisavahtuga, mis tagab maksimaalse mugavuse kasutajale. Klient võib olla kindel, et saab tipptasemel toote, mis on täiuslikult viimistletud igas detailis.
+about.image.title: Meist
+about.image.description: Vaadake, kuidas me ühendame traditsiooni ja moodsa tootmise kõrgeima kvaliteediga susside valmistamisel.
+wholesale.image.title: Hulgimüük
+wholesale.image.description: TEDIE on ettevõte, millel on üle 20 aasta kogemust susside ja puukingade tootmises ja müügis. Oleme uhked oma kvaliteedi ja detailidele tähelepanu pööramise üle, mis teeb meist paljude hulgiklientide usaldusväärse partneri.
+wholesale.benefits.title: Koostöö eelised
+wholesale.benefits.description: Koostöö TEDIE-ga tähendab juurdepääsu laiale kvaliteetsete toodete valikule, konkurentsivõimelisi hindu ja paindlikke koostöötingimusi. Pakume pühendunud klienditeenindust ja kiireid tellimuste töötlemise aegu.
+wholesale.conditions.title: Miinimumtellimused ja koostöötingimused
+wholesale.conditions.description: Miinimumhulgimüük on 50 paari susse või 25 paari puukingi. Pakume võimalust kohandada tellimusi vastavalt kliendi individuaalsetele vajadustele. Koostöö üksikasjade arutamiseks võtke meiega ühendust.
+wholesale.process.title: Tellimisprotsess
+wholesale.process.description: Hulgimüügitellimuse esitamiseks võtke ühendust meie hulgimüügiosakonnaga e-posti või telefoni teel. Pärast päringu saamist valmistame ette individuaalse hinnapakkumise. Pärast tingimuste aktsepteerimist jätkame tellimuse täitmisega.
+wholesale.faq: Vaadake korduma kippuvaid küsimusi
+faq.question.1: Milliseid tooteid teie ettevõte pakub?
+faq.answer.1: Meie ettevõte pakub sussid ja puukingad meestele ja naistele, samuti laste sussid, kõik käsitsi valmistatud igale kliendile.
+faq.question.2: Kas pakute hulgimüüki?
+faq.answer.2: Jah, me pakume hulgimüüki. Soovitame teil saada lisateabe saamiseks meiega ühendust võtta e-posti või telefoni teel. Minimaalne tellimus on 50 paari susse või 25 paari puukingasid.
+faq.question.3: Kus ma saan teie tooteid jaemüügis osta?
+faq.answer.3: Meie tooted on saadaval Allegro.pl platvormil. Meie veebisaidil kuvame Allegro saadaval olevaid tooteid. Konkreetsele tootele klõpsates suunatakse klient vastavale tootelehele Allegro.pl. Kutsume teid tutvuma meie pakkumistega.
+faq.question.4: Kas pakute laste sussid ja puukingad?
+faq.answer.4: Jah, me pakume laste susse. Hetkel ei ole meil laste puukingasid, kuid plaanime tulevikus oma valikut laiendada.
+faq.question.5: Kuidas ma saan ühendust võtta klienditeenindusega?
+faq.answer.5: Kui teil on küsimusi või muresid, soovitame teil võtta meiega ühendust e-posti või telefoni teel. Kontaktandmed leiate meie veebisaidi jaotisest "Kontakt".
+faq.question.6: Kas pakute ostetud toodete tagastamist?
+faq.answer.6: Jah, me pakume ostetud toodete tagastamise võimalust vastavalt Allegro.pl veebisaidi tagastuspoliitikale.
+faq.question.7: Kas saadate rahvusvaheliselt?
+faq.answer.7: Jah, me saadame rahvusvaheliselt kogu Euroopa Liidus vastavalt Allegro.pl pakkumistele jaemüügis. Hulgisaadetiste puhul sõltub see konkreetsest juhtumist. Palun võtke meiega ühendust, et saada teavet saatmiskulude ja tarneaegade kohta.
+faq.question.8: Kas teie toodetel on garantii?
+faq.answer.8: Jah, meie toodetel on kvaliteedigarantii. Kui tootega tekib probleeme, võtke abi saamiseks meiega ühendust.
+faq.question.9: Kas pakute tellimuste kohandamist?
+faq.answer.9: Jah, me pakume tellimuste kohandamise võimalust. Palun võtke meiega ühendust, et arutada üksikasju ja saadaolevaid võimalusi. Hetkel ei paku me graveeringuid ega isikupärastatud variante.
+faq.question.10: Kui kaua tellimuse töötlemine aega võtab?
+faq.answer.10: Tellimuse töötlemise aeg võib varieeruda sõltuvalt kliendi individuaalsetest eelistustest ja toote saadavusest. Ooteaja üksikasjalikku teavet saab tellimisel. Allegro jaemüügiks määratakse töötlemisaeg platvormi järgi ja seda saab leida pakkumiste lehelt.
