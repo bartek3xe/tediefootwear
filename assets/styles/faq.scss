@@ -1,0 +1,50 @@
+@import '_variables';
+
+.faq {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .question-container {
+    text-decoration: none;
+    color: inherit;
+    height: auto;
+    word-wrap: break-word;
+    background-color: $button-color-secondary;
+    padding: 12px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: .5s ease-in-out;
+
+    .question-number {
+      color: $text-color-secondary;
+    }
+
+    p {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .2s ease-in-out, opacity .2s ease-in-out, padding .2s ease-in-out;
+      margin: 0;
+      padding: 0;
+    }
+
+    p.active {
+      max-height: 200px;
+      opacity: 1;
+      padding: 12px 0;
+    }
+
+    @media (max-width: 768px) {
+      width: 90%;
+      max-width: none;
+    }
+  }
+}
