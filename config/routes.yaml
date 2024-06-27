@@ -4,8 +4,17 @@ controllers:
         namespace: App\Controller
     type: attribute
 
+app_login:
+    path: /secret-login
+    controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /secret-logout
+    controller: App\Controller\SecurityController::logout
+
 _locale_prefix:
     resource: ../src/Controller/**/*
+    exclude: ../src/Controller/Admin/**/*
     type: attribute
     prefix: /{_locale}
     requirements:

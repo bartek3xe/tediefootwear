@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {{ encore_entry_link_tags('login') }}
+
+    {{ encore_entry_script_tags('js/flash') }}
+    {{ encore_entry_script_tags('login') }}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+{% include 'partials/_flashes.html.twig' with { 'flashes': app.flashes } %}
+<div class="login-content">
+    <form method="post">
+            <h1 class="h3 mb-3 font-weight-normal">Zaloguj</h1>
+            <label for="username">Email</label>
+            <input type="email" value="{{ last_username }}"name="_username" id="username" class="login-input"
+                   autocomplete="email" required autofocus>
+            <label for="password">Hasło</label>
+            <input type="password" name="_password" id="password" class="login-input"
+                   autocomplete="current-password" required>
+
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}"
+            >
+
+            <button class="btn btn-primary" type="submit">
+                Zaloguj
+            </button>
+        </form>
+</div>
+</body>
+</html>
