@@ -12,6 +12,7 @@ Encore
     .setOutputPath('public/build/')
     .setPublicPath('/build')
     .addEntry('app', './assets/app.js')
+    .addEntry('login', './assets/js/login.js')
     .addEntry('js/recaptcha', './assets/js/recaptcha.js')
     .addEntry('js/flash', './assets/js/flash.js')
     .addEntry('js/navbar', './assets/js/navbar.js')
