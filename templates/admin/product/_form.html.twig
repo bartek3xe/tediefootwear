@@ -1,0 +1,99 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-6">
+        {{ form_label(form.language) }}
+        {{ form_widget(form.language, {
+            'id': 'product_language',
+            'attr': {
+                'class': 'form-control',
+            }
+        }) }}
+
+        {% for lang in languages %}
+            {% set name = 'name_' ~ lang.value %}
+            {% set description = 'description_' ~ lang.value %}
+
+            <div class="language-fields" data-language="{{ lang.value }}" style="display: none;">
+                <div class="form-group mb-2">
+                    {{ form_label(attribute(form, name)) }}
+                    {{ form_widget(attribute(form, name), {
+                        'attr': {
+                            'class': 'form-control language-dependent-field'
+                        }
+                    }) }}
+                </div>
+            </div>
+
+            <div class="language-fields" data-language="{{ lang.value }}" style="display: none;">
+                <div class="form-group mb-4">
+                    {{ form_label(attribute(form, description)) }}
+                    {{ form_widget(attribute(form, description), {
+                        'attr': {
+                            'class': 'form-control language-dependent-field',
+                            'rows': '6'
+                        }
+                    }) }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-6">
+        <div class="form-group mb-2">
+            {{ form_label(form.category) }}
+            {{ form_widget(form.category, {
+                'attr': {
+                    'class': 'form-control'
+                }
+            }) }}
+        </div>
+
+        <div class="form-group mb-2">
+            {{ form_widget(form.is_new, {
+                'attr': {
+                    'class': 'form-check-input me-2'
+                }
+            }) }}
+            {{ form_label(form.is_new) }}
+        </div>
+
+        <div class="form-group mb-2">
+            {{ form_widget(form.is_top, {
+                'attr': {
+                    'class': 'form-check-input me-2'
+                }
+            }) }}
+            {{ form_label(form.is_top) }}
+        </div>
+
+        <div class="form-group mb-2">
+            {{ form_label(form.allegro_url) }}
+            {{ form_widget(form.allegro_url, {
+                'attr': {
+                    'class': 'form-control'
+                }
+            }) }}
+        </div>
+    </div>
+</div>
+
+{% if product is defined %}
+<div class="row col-12">
+    {% set files_attr = productFiles is defined ? productFiles|json_encode() : '' %}
+    {{ form_widget(form.images, {
+        'attr': {
+            'class': 'filepond',
+            'name': 'file',
+            'multiple': true,
+            'data-allow-reorder': 'true',
+            'data-max-file-size': '3MB',
+            'data-max-files': '10',
+            'data-product-id': product.id,
+            'data-product-files': files_attr,
+        }
+    }) }}
+</div>
+{% endif %}
+
+<button class="btn btn-success mb-2">{{ button_label|default('Zapisz') }}</button>
+
+{{ form_end(form) }}

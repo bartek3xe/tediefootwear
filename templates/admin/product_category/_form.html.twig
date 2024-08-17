@@ -1,0 +1,31 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-6">
+        {{ form_label(form.language) }}
+        {{ form_widget(form.language, {
+            'id': 'product_language',
+            'attr': {
+                'class': 'form-control',
+            }
+        }) }}
+
+        {% for lang in languages %}
+            {% set name = 'name_' ~ lang.value %}
+
+            <div class="language-fields" data-language="{{ lang.value }}" style="display: none;">
+                <div class="form-group mb-2">
+                    {{ form_label(attribute(form, name)) }}
+                    {{ form_widget(attribute(form, name), {
+                        'attr': {
+                            'class': 'form-control language-dependent-field'
+                        }
+                    }) }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<button class="btn btn-success mb-2">{{ button_label|default('Zapisz') }}</button>
+
+{{ form_end(form) }}

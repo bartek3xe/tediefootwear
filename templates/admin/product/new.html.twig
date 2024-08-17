@@ -1,0 +1,16 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Nowy Produkt{% endblock %}
+
+{% block body %}
+    <h1>Stwórz nowy produkt</h1>
+    {{ include('admin/product/_form.html.twig') }}
+
+    <a class="btn btn-dark" href="{{ path('app_admin_product_index') }}">Powrót do listy</a>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('admin/form-language-field') }}
+{% endblock %}

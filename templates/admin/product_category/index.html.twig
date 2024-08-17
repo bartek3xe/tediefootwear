@@ -1,0 +1,35 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Kategorie{% endblock %}
+
+{% block body %}
+    <h1>Kategorie</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identyfikator</th>
+                <th>Nazwa</th>
+                <th>Działania</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product_category in product_categories %}
+            <tr>
+                <td>{{ product_category.id }}</td>
+                <td>{{ product_category.getDisplayName() }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{{ path('app_admin_product_category_show', {'id': product_category.id}) }}">Detale</a>
+                    <a class="btn btn-warning" href="{{ path('app_admin_product_category_edit', {'id': product_category.id}) }}">Edytuj</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Brak rekordów</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-success" href="{{ path('app_admin_product_category_new') }}">Stwórz nową</a>
+{% endblock %}

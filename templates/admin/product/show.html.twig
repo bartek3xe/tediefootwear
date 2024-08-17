@@ -1,0 +1,52 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Produkt {{ product.getDisplayName() }}{% endblock %}
+
+{% block body %}
+    <h1>Produkt {{ product.getDisplayName() }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Nazwa</th>
+                <td>{{ product.getDisplayName() }}</td>
+            </tr>
+            <tr>
+                <th>Czy jest nowy?</th>
+                <td>{{ product.isNew ? 'Tak' : 'Nie' }}</td>
+            </tr>
+            <tr>
+                <th>Czy jest popularny?</th>
+                <td>{{ product.isTop ? 'Tak' : 'Nie' }}</td>
+            </tr>
+            <tr>
+                <th>Allegro Url</th>
+                <td>{{ product.allegroUrl }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Zdjęcia produktu</h2>
+    <div class="product-images">
+        {% set sortedFiles = product.files|sort((a, b) => a.position <=> b.position) %}
+        {% for file in sortedFiles %}
+            <a href="{{ asset('uploads/' ~ file.filename) }}" target="_blank">
+                <img src="{{ asset('uploads/' ~ file.filename) }}" alt="{{ product.getDisplayName() }}Image"
+                     class="img-fluid img-thumbnail" style="max-width: 200px;">
+            </a>
+        {% else %}
+            <p>Brak zdjęć dla tego produktu.</p>
+        {% endfor %}
+    </div>
+
+    <div class="d-flex gap-2">
+        <a class="btn btn-dark" href="{{ path('app_admin_product_index') }}">Powrót do listy</a>
+        <a class="btn btn-warning" href="{{ path('app_admin_product_edit', {'id': product.id}) }}">Edytuj</a>
+        {{ include('admin/product/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}
