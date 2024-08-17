@@ -5,24 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Tedie - Panel Administracyjny{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+
+        <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+        <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+        <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_link_tags('admin/app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('admin/app') }}
             {{ encore_entry_script_tags('js/flash') }}
+            {{ encore_entry_script_tags('js/sidebar') }}
 
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         {% endblock %}
     </head>
     <body>
-        <!-- Begin page -->
         <div id="layout-wrapper">
-            {{ include('partials/_navbar.html.twig') }}
+            {{ include('admin/partials/_sidebar.html.twig') }}
 
             <div class="main-content">
-                <div class="page-content">
+                <div class="page-content m-4 mt-0">
                     {% include 'partials/_flashes.html.twig' with { 'flashes': app.flashes } %}
 
                     <!-- CONTENT -->
@@ -31,6 +38,6 @@
                     <!-- CONTENT CLOSED-->
                 </div>
             </div>
-        </div>
+    </div>
     </body>
 </html>

@@ -3,6 +3,7 @@ parameters:
     google_recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
     recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
     recaptcha_secret_key: '%env(GOOGLE_RECAPTCHA_SECRET)%'
+    uploads_directory: '%kernel.project_dir%/public/uploads'
 
 services:
     _defaults:
@@ -23,3 +24,14 @@ services:
     App\Service\RecaptchaService:
         arguments:
             $secretKey: '%recaptcha_secret_key%'
+
+    App\EventListener\SlugListener:
+        arguments:
+            $slugger: '@slugger'
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: preUpdate }
+
+    App\Service\FileService:
+        arguments:
+            $uploadDirectory: '%uploads_directory%'

@@ -1,4 +1,4 @@
-@import '_variables';
+@import '../variables';
 
 html, body {
   margin: 0;
@@ -57,6 +57,7 @@ body {
       background-color: $button-color-primary;
       color: $text-color-primary;
       font-weight: 900;
+      cursor: pointer;
 
       &:focus, &hover {
         background: none;

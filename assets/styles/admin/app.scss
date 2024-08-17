@@ -1,0 +1,11 @@
+@import '../_variables.scss';
+@import 'sidebar.scss';
+@import 'crud/crud.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: FreeSans, sans-serif;
+  background-color: $background-color-primary;
+}

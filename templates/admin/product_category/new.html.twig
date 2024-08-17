@@ -1,0 +1,17 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Nowa Kategoria{% endblock %}
+
+{% block body %}
+    <h1>Stwórz nową kategorię</h1>
+
+    {{ include('admin/product_category/_form.html.twig') }}
+
+    <a class="btn btn-dark" href="{{ path('app_admin_product_category_index') }}">Powrót do listy</a>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('admin/form-language-field') }}
+{% endblock %}

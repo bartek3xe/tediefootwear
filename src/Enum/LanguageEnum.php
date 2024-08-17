@@ -91,4 +91,53 @@ enum LanguageEnum: string
             self::GREEK => 'gr',
         };
     }
+
+    public static function getPolishName(LanguageEnum $enum): string
+    {
+        return match($enum) {
+            self::POLISH => 'Polski',
+            self::ENGLISH => 'Angielski',
+            self::GERMAN => 'Niemiecki',
+            self::FRENCH => 'Francuski',
+            self::SPANISH => 'Hiszpański',
+            self::ITALIAN => 'Włoski',
+            self::UKRAINIAN => 'Ukraiński',
+            self::SWEDISH => 'Szwedzki',
+            self::FINNISH => 'Fiński',
+            self::NORWEGIAN => 'Norweski',
+            self::DUTCH => 'Niderlandzki',
+            self::LITHUANIAN => 'Litewski',
+            self::DANISH => 'Duński',
+            self::ESTONIAN => 'Estoński',
+            self::CZECH => 'Czeski',
+            self::SLOVAK => 'Słowacki',
+            self::LATVIAN => 'Łotewski',
+            self::ROMANIAN => 'Rumuński',
+            self::CROATIAN => 'Chorwacki',
+            self::HUNGARIAN => 'Węgierski',
+            self::BULGARIAN => 'Bułgarski',
+            self::SERBIAN => 'Serbski',
+            self::SLOVENIAN => 'Słoweński',
+            self::RUSSIAN => 'Rosyjski',
+            self::GREEK => 'Grecki',
+        };
+    }
+
+    public static function getPolishNames(): array
+    {
+        $names = [];
+        foreach (self::cases() as $enum) {
+            $names[$enum->value] = self::getPolishName($enum);
+        }
+        return $names;
+    }
+
+    public static function getNativeNames(): array
+    {
+        $names = [];
+        foreach (self::cases() as $enum) {
+            $names[$enum->value] = self::getNativeName($enum);
+        }
+        return $names;
+    }
 }

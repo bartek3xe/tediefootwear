@@ -1,0 +1,25 @@
+{% set currentPath = app.request.pathinfo %}
+
+<aside class="sidebar">
+    <div id="leftside-navigation" class="nano">
+        <ul class="nano-content">
+            <li class="text-center logo-container">
+               <span class="sidebar-logo">TEDIEFOOTWEAR</span>
+            </li>
+            <li class="sub-menu {% if currentPath == path('app_admin_dashboard') %}active{% endif %}">
+                <a href="{{ path('app_admin_dashboard') }}"><span>Panel Główny</span></a>
+            </li>
+            <li class="sub-menu {% if currentPath starts with '/product' %}active{% endif %}">
+                <a class="sub-header" href="{{ path('app_admin_product_index') }}">
+                    <span>Produkty</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:void(0);"><span>Słowniki</span> -></a>
+                <ul>
+                    <li><a href="{{ path('app_admin_product_category_index') }}">Kategorie Produktów</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>

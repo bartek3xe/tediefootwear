@@ -1,0 +1,20 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Edytuj Produkt{% endblock %}
+
+{% block body %}
+    <h1>Edytuj produkt</h1>
+
+    {{ include('admin/product/_form.html.twig', {'button_label': 'Zapisz'}) }}
+    <div class="d-flex gap-2">
+        <a class="btn btn-dark" href="{{ path('app_admin_product_index') }}">Powrót do listy</a>
+        {{ include('admin/product/_delete_form.html.twig') }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('admin/form-language-field') }}
+    {{ encore_entry_script_tags('admin/filepond') }}
+{% endblock %}

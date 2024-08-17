@@ -11,6 +11,7 @@
 /.env.*.prod
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
+/public/uploads/
 /var/
 /vendor/
 /.idea/*
