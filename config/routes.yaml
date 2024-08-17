@@ -5,11 +5,11 @@ controllers:
     type: attribute
 
 app_login:
-    path: /secret-login
+    path: /login
     controller: App\Controller\SecurityController::login
 
 app_logout:
-    path: /secret-logout
+    path: /logout
     controller: App\Controller\SecurityController::logout
 
 _locale_prefix:
@@ -20,6 +20,11 @@ _locale_prefix:
     requirements:
         _locale: pl|en|de|fr|es|it|sv|no|fi|uk|nl|lt|da|et|cs|sk|lv|ro|hr|hu|bg|sr|sl|ru|el
     defaults: { _locale: en }
+
+_admin_prefix:
+    resource: ../src/Controller/Admin/**/*
+    type: attribute
+    prefix: /admin
 
 default_redirect:
     path: /
