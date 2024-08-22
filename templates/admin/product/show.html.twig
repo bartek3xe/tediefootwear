@@ -16,6 +16,10 @@
                 <td>{{ product.getDisplayName() }}</td>
             </tr>
             <tr>
+                <th>Kategoria</th>
+                <td>{{ product.category.getDisplayName() ?? '' }}</td>
+            </tr>
+            <tr>
                 <th>Czy jest nowy?</th>
                 <td>{{ product.isNew ? 'Tak' : 'Nie' }}</td>
             </tr>

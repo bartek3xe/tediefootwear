@@ -7,20 +7,27 @@ namespace App\Controller\Admin;
 use App\Entity\File;
 use App\Entity\Product;
 use App\Enum\LanguageEnum;
+use App\Exception\NotFoundException;
 use App\Form\ProductType;
-use App\Repository\FileRepository;
 use App\Repository\ProductRepository;
+use App\Service\FileService;
+use App\Service\Handler\ProductHandler;
+use App\Service\ProductService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Throwable;
 
 #[Route('/product', name: 'app_admin_')]
 class AdminProductController extends AbstractController
 {
-    public function __construct(private readonly FileRepository $fileRepository)
-    {
+    public function __construct(
+        private readonly ProductHandler $handler,
+        private readonly FileService $fileService,
+        private readonly ProductService $service,
+    ) {
     }
 
     #[Route('/', name: 'product_index', methods: ['GET'])]
@@ -32,35 +39,14 @@ class AdminProductController extends AbstractController
     }
 
     #[Route('/new', name: 'product_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request): Response
     {
         $product = new Product();
-        $form = $this->createForm(ProductType::class, $product, [
-            'edition' => false,
-        ]);
+        $form = $this->createForm(ProductType::class, $product, ['edition' => false]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $names = [];
-            $descriptions = [];
-            foreach (LanguageEnum::cases() as $language) {
-                $fieldName = 'name_' . $language->value;
-                $fieldDesc = 'description_' . $language->value;
-                $name = $form->get($fieldName)->getData();
-                $description = $form->get($fieldDesc)->getData();
-                if ($name) {
-                    $names[$language->value] = $name;
-                }
-                if ($description) {
-                    $descriptions[$language->value] = $description;
-                }
-            }
-
-            $product->setName($names);
-            $product->setDescription($descriptions);
-
-            $entityManager->persist($product);
-            $entityManager->flush();
+            $this->handler->handleForm($form, $product);
 
             return $this->redirectToRoute('app_admin_product_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -82,64 +68,36 @@ class AdminProductController extends AbstractController
     #[Route('/{id}/edit', name: 'product_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Product $product, EntityManagerInterface $entityManager): Response
     {
-        $form = $this->createForm(ProductType::class, $product);
-        foreach (LanguageEnum::cases() as $language) {
-            $form->get('name_' . $language->value)
-                ->setData($product->getName()[$language->value] ?? '');
-            $form->get('description_' . $language->value)
-                ->setData($product->getDescription()[$language->value] ?? '');
-        }
+        $form = $this->handler->prepareData(
+            $this->createForm(ProductType::class, $product),
+            $product,
+        );
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $names = [];
-            $descriptions = [];
-            foreach (LanguageEnum::cases() as $language) {
-                $fieldName = 'name_' . $language->value;
-                $fieldDesc = 'description_' . $language->value;
-                $name = $form->get($fieldName)->getData();
-                $description = $form->get($fieldDesc)->getData();
-                if ($name) {
-                    $names[$language->value] = $name;
-                }
-                if ($description) {
-                    $descriptions[$language->value] = $description;
-                }
-            }
+            $this->handler->handleForm($form, $product);
 
-            $product->setName($names);
-            $product->setDescription($descriptions);
-
-            $entityManager->persist($product);
-            $entityManager->flush();
             return $this->redirectToRoute('app_admin_product_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        $files = $this->fileRepository->findBy(['product' => $product], ['position' => 'ASC']);
-        $productFiles = [];
-        /**@var File $file*/
-        foreach ($files as $file) {
-            $productFiles[] = [
-                'filename' => $file->getFilename(),
-                'size' => $file->getSize(),
-                'extension' => $file->getExtension(),
-            ];
         }
 
         return $this->render('admin/product/edit.html.twig', [
             'product' => $product,
             'form' => $form->createView(),
             'languages' => LanguageEnum::cases(),
-            'productFiles' => $productFiles,
+            'productFiles' => $this->fileService->prepareFilesForTemplate($product),
         ]);
     }
 
     #[Route('/{id}', name: 'product_delete', methods: ['POST'])]
-    public function delete(Request $request, Product $product, EntityManagerInterface $entityManager): Response
+    public function delete(int $id): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$product->getId(), $request->getPayload()->get('_token'))) {
-            $entityManager->remove($product);
-            $entityManager->flush();
+        try {
+            $this->service->delete($id);
+        } catch (NotFoundException $exception) {
+            return new Response('error', Response::HTTP_NOT_FOUND);
+        } catch (Throwable $exception) {
+            return new Response('error', Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
         return $this->redirectToRoute('app_admin_product_index', [], Response::HTTP_SEE_OTHER);

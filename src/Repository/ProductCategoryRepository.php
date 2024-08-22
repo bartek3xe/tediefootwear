@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repository;
 
 use App\Entity\ProductCategory;
@@ -16,28 +18,23 @@ class ProductCategoryRepository extends ServiceEntityRepository
         parent::__construct($registry, ProductCategory::class);
     }
 
-//    /**
-//     * @return ProductCategory[] Returns an array of ProductCategory objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('p.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    public function save(ProductCategory $productCategory): bool
+    {
+        $em = $this->getEntityManager();
 
-//    public function findOneBySomeField($value): ?ProductCategory
-//    {
-//        return $this->createQueryBuilder('p')
-//            ->andWhere('p.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+        $em->persist($productCategory);
+        $em->flush();
+
+        return true;
+    }
+
+    public function delete(ProductCategory $productCategory): bool
+    {
+        $em = $this->getEntityManager();
+
+        $em->remove($productCategory);
+        $em->flush();
+
+        return true;
+    }
 }

@@ -6,17 +6,27 @@ namespace App\Controller\Admin;
 
 use App\Entity\ProductCategory;
 use App\Enum\LanguageEnum;
+use App\Exception\NotFoundException;
 use App\Form\ProductCategoryType;
 use App\Repository\ProductCategoryRepository;
+use App\Service\Handler\ProductCategoryHandler;
+use App\Service\ProductCategoryService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Throwable;
 
 #[Route('/product/category', name: 'app_admin_')]
 class AdminProductCategoryController extends AbstractController
 {
+    public function __construct(
+        private readonly ProductCategoryHandler $handler,
+        private readonly ProductCategoryService $service,
+    ) {
+    }
+
     #[Route('/', name: 'product_category_index', methods: ['GET'])]
     public function index(ProductCategoryRepository $productCategoryRepository): Response
     {
@@ -33,19 +43,7 @@ class AdminProductCategoryController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $names = [];
-            foreach (LanguageEnum::cases() as $language) {
-                $fieldName = 'name_' . $language->value;
-                $name = $form->get($fieldName)->getData();
-                if ($name) {
-                    $names[$language->value] = $name;
-                }
-            }
-
-            $productCategory->setName($names);
-
-            $entityManager->persist($productCategory);
-            $entityManager->flush();
+            $this->handler->handleForm($form, $productCategory);
 
             return $this->redirectToRoute('app_admin_product_category_index');
         }
@@ -72,6 +70,11 @@ class AdminProductCategoryController extends AbstractController
             $form->get('name_' . $language->value)
                 ->setData($productCategory->getName()[$language->value] ?? '');
         }
+
+        $form = $this->handler->prepareData(
+            $this->createForm(ProductCategoryType::class, $productCategory),
+            $productCategory,
+        );
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -100,11 +103,14 @@ class AdminProductCategoryController extends AbstractController
     }
 
     #[Route('/{id}', name: 'product_category_delete', methods: ['POST'])]
-    public function delete(Request $request, ProductCategory $productCategory, EntityManagerInterface $entityManager): Response
+    public function delete(int $id): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$productCategory->getId(), $request->getPayload()->get('_token'))) {
-            $entityManager->remove($productCategory);
-            $entityManager->flush();
+        try {
+            $this->service->delete($id);
+        } catch (NotFoundException $exception) {
+            return new Response('error ' . $exception->getMessage(), Response::HTTP_NOT_FOUND);
+        } catch (Throwable $exception) {
+            return new Response('error ' . $exception->getMessage(), Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 
         return $this->redirectToRoute('app_admin_product_category_index', [], Response::HTTP_SEE_OTHER);
