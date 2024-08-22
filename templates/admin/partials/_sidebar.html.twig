@@ -4,7 +4,7 @@
     <div id="leftside-navigation" class="nano">
         <ul class="nano-content">
             <li class="text-center logo-container">
-               <span class="sidebar-logo">TEDIEFOOTWEAR</span>
+               <a href="{{ path('app_admin_dashboard') }}" class="sidebar-logo">TEDIEFOOTWEAR</a>
             </li>
             <li class="sub-menu {% if currentPath == path('app_admin_dashboard') %}active{% endif %}">
                 <a href="{{ path('app_admin_dashboard') }}"><span>Panel Główny</span></a>
