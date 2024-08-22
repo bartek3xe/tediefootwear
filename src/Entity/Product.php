@@ -31,7 +31,7 @@ class Product extends AbstractProduct
     private ?string $allegro_url = null;
 
     #[ORM\ManyToOne(targetEntity: ProductCategory::class)]
-    #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id', nullable: false)]
+    #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id', nullable: true, onDelete: 'SET NULL')]
     private ?ProductCategory $category = null;
 
     #[ORM\OneToMany(targetEntity: File::class, mappedBy: 'product', cascade: ['persist', 'remove'])]
