@@ -39,6 +39,7 @@ class FileService
     public function save(File $file): bool
     {
         $this->fileRepository->save($file);
+
         return true;
     }
 
@@ -130,5 +131,21 @@ class FileService
         }
 
         $this->entityManager->flush();
+    }
+
+    public function prepareFilesForTemplate(Product $product): array
+    {
+        $files = $this->fileRepository->findBy(['product' => $product], ['position' => 'ASC']);
+        $productFiles = [];
+        /**@var File $file*/
+        foreach ($files as $file) {
+            $productFiles[] = [
+                'filename' => $file->getFilename(),
+                'size' => $file->getSize(),
+                'extension' => $file->getExtension(),
+            ];
+        }
+
+        return $productFiles;
     }
 }
