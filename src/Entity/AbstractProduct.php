@@ -46,6 +46,10 @@ abstract class AbstractProduct
 
     public function getNameByLanguage(string $language): ?string
     {
-        return $this->name[$language] ?? null;
+        if (isset($this->name[$language])) {
+            return $this->name[$language];
+        }
+
+        return $this->name['en'] ?? null;
     }
 }

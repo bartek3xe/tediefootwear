@@ -32,21 +32,27 @@
             {# --- PRODUCTS DROPDOWN --- #}
             <a href="{{ path('app_products') }}" class="dropdown-btn link-btn">{{ 'navigation.products'|trans }}</a>
             <div class="dropdown-content">
-                <div class="column">
-                    <a class="link-btn" href="#">{{ 'navigation.products.women.slippers'|trans }}</a>
-                    <a class="link-btn" href="#">{{ 'navigation.products.men.slippers'|trans }}</a>
-                </div>
-                <div class="column">
-                    <a class="link-btn" href="#">{{ 'navigation.products.women.clogs'|trans }}</a>
-                    <a class="link-btn" href="#">{{ 'navigation.products.men.clogs'|trans }}</a>
-                </div>
-                <div class="column">
-                    <a class="link-btn" href="#">{{ 'navigation.products.children.slippers'|trans }}</a>
-                </div>
-                <div class="column">
-                    <a class="link-btn" href="#">{{ 'navigation.products.special'|trans }}</a>
-                </div>
+                {% set columns = 4 %}
+                {% set categories = product_categories %}
+                {% set items_per_column = (categories|length / columns)|round(0, 'ceil') %}
+
+                {% for column in 0..(columns - 1) %}
+                    <div class="column">
+                        {% for i in 0..(items_per_column - 1) %}
+                            {% set index = column * items_per_column + i %}
+                            {% if categories[index] is defined %}
+                                <a class="link-btn"
+                                   href="#"
+{#                                   href="{{ path('category_show', {id: categories[index].id}) }}"#}
+                                >
+                                    {{ categories[index].getNameByLanguage(get_locale()) }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endfor %}
             </div>
+
             {# --- END PRODUCTS DROPDOWN --- #}
         </div>
         <a href="{{ path('app_wholesale') }}" class="link-btn">{{ 'navigation.wholesale'|trans }}</a>
