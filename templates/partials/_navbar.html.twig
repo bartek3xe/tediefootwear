@@ -42,11 +42,8 @@
                             {% set index = column * items_per_column + i %}
                             {% if categories[index] is defined %}
                                 <a class="link-btn"
-                                   href="#"
-{#                                   href="{{ path('category_show', {id: categories[index].id}) }}"#}
-                                >
-                                    {{ categories[index].getNameByLanguage(get_locale()) }}
-                                </a>
+                                 href="{{ set_category_url('app_products', categories[index], selected_categories) }}"
+                                > {{ categories[index].getNameByLanguage(get_locale()) }}</a>
                             {% endif %}
                         {% endfor %}
                     </div>
