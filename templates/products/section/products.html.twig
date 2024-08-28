@@ -1,0 +1,26 @@
+<section class="products-section">
+    <h2>{{ 'products.header'|trans }}</h2>
+    <div class="products-box">
+        {% if products is empty %}
+            <div class="no-products-message">
+                <p>{{ app.request.locale == 'pl' ? 'Nie ma produktów w tej kategorii.' : 'There are no products in this category.' }}</p>
+            </div>
+        {% else %}
+            {% for product in products %}
+                <a href="#" class="btn btn-product">
+                    <span class="product-image">
+                    {% if product.files and product.files|first %}
+                        <img src="{{ product.files|first.filePath }}" alt="">
+                    {% else %}
+                        <img src="{{ asset('images/default-slipper.webp') }}" alt="">
+                    {% endif %}
+                    </span>
+                    <span class="product-title">
+                        {{ product.getDisplayName() }}
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</section>

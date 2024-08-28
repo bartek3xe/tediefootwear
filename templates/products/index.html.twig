@@ -1,5 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="index-products-container">
+        {% include('products/section/categories.html.twig') %}
+        {% include('products/section/products.html.twig') %}
+    </section>
+{% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('js/mobile-categories') }}
 {% endblock %}

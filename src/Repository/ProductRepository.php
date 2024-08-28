@@ -35,4 +35,14 @@ class ProductRepository extends ServiceEntityRepository
 
         return true;
     }
+
+    public function findByCategories(array $categories): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where('p.category IN (:categories)')
+            ->setParameter('categories', $categories)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
