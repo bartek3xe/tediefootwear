@@ -1,7 +1,5 @@
 const Encore = require('@symfony/webpack-encore');
 
-// Manually configure the runtime environment if not already configured yet by the "encore" command.
-// It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
 }
@@ -16,11 +14,12 @@ Encore
     .addEntry('admin/login', './assets/js/admin/login.js')
     .addEntry('admin/form-language-field', './assets/js/admin/form-language-field.js')
     .addEntry('admin/filepond', './assets/js/admin/filepond.js')
+    .addEntry('admin/sidebar', './assets/js/admin/sidebar.js')
     .addEntry('js/recaptcha', './assets/js/recaptcha.js')
     .addEntry('js/flash', './assets/js/flash.js')
     .addEntry('js/navbar', './assets/js/navbar.js')
     .addEntry('js/faq', './assets/js/faq.js')
-    .addEntry('js/sidebar', './assets/js/admin/sidebar.js')
+    .addEntry('js/mobile-categories', './assets/js/mobile-categories.js')
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
@@ -37,7 +36,6 @@ Encore
         to: 'images/[path][name].[ext]',
     })
 
-    // enables Sass/SCSS support
     .enableSassLoader()
 
     // uncomment if you use TypeScript

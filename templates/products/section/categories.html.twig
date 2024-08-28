@@ -1,0 +1,12 @@
+<section class="product-categories-section">
+    <h2>{{ 'products.categories.header'|trans }}</h2>
+    <div class="product-categories-container">
+        {% for category in product_categories %}
+            {% set isActive = category.slug in selected_categories %}
+            <a href="{{ update_category_url('app_products', category, selected_categories) }}"
+               class="btn btn-category {{ isActive ? 'active' : '' }}">
+                {{ category.getNameByLanguage(get_locale()) }}
+            </a>
+        {% endfor %}
+    </div>
+</section>
