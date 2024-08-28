@@ -18,6 +18,7 @@ class CategoryExtension extends AbstractExtension
     {
         return [
             new TwigFunction('update_category_url', [$this->categoryService, 'updateCategoryUrl']),
+            new TwigFunction('set_category_url', [$this->categoryService, 'setCategoryUrl']),
         ];
     }
 
