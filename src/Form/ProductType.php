@@ -64,16 +64,14 @@ class ProductType extends AbstractType
         }
 
         $builder
-            ->add('categories', EntityType::class, [
-                'label' => 'Kategorie',
+            ->add('category', EntityType::class, [
+                'label' => 'Kategoria',
                 'class' => ProductCategory::class,
                 'choice_label' => function(ProductCategory $category) {
                     return $category->getNameByLanguage('en');
                 },
-                'placeholder' => 'Wybierz kategorie',
+                'placeholder' => 'Wybierz kategorię',
                 'required' => true,
-                'multiple' => true,
-                'expanded' => false,
             ])
             ->add('is_new', CheckboxType::class, [
                 'label' => 'Czy jest nowym produktem?',

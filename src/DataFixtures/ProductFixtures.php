@@ -49,7 +49,7 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
                throw new RuntimeException('Invalid apartment reference obtained');
            }
 
-           $product->addCategory($productCategoryReference);
+           $product->setCategory($productCategoryReference);
            $manager->persist($product);
        }
 

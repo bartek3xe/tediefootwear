@@ -39,11 +39,10 @@
     </div>
     <div class="col-6">
         <div class="form-group mb-2">
-            {{ form_label(form.categories) }}
-            {{ form_widget(form.categories, {
+            {{ form_label(form.category) }}
+            {{ form_widget(form.category, {
                 'attr': {
-                    'class': 'form-control',
-                    'multiple': true,
+                    'class': 'form-control'
                 }
             }) }}
         </div>

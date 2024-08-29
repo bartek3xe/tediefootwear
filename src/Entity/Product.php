@@ -30,9 +30,9 @@ class Product extends AbstractProduct
     #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
     private ?string $allegro_url = null;
 
-    #[ORM\ManyToMany(targetEntity: ProductCategory::class, inversedBy: 'products')]
-    #[ORM\JoinTable(name: 'products_categories')]
-    private Collection $categories;
+    #[ORM\ManyToOne(targetEntity: ProductCategory::class)]
+    #[ORM\JoinColumn(name: 'category_id', referencedColumnName: 'id', nullable: true, onDelete: 'SET NULL')]
+    private ?ProductCategory $category = null;
 
     #[ORM\OneToMany(targetEntity: File::class, mappedBy: 'product', cascade: ['persist', 'remove'])]
     private Collection $files;
@@ -40,7 +40,6 @@ class Product extends AbstractProduct
     public function __construct()
     {
         $this->files = new ArrayCollection();
-        $this->categories = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -96,26 +95,14 @@ class Product extends AbstractProduct
         return $this;
     }
 
-    public function getCategories(): Collection
+    public function getCategory(): ?ProductCategory
     {
-        return $this->categories;
+        return $this->category;
     }
 
-    public function addCategory(ProductCategory $category): static
+    public function setCategory(?ProductCategory $category): static
     {
-        if (!$this->categories->contains($category)) {
-            $this->categories->add($category);
-            $category->addProduct($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCategory(ProductCategory $category): static
-    {
-        if ($this->categories->removeElement($category)) {
-            $category->removeProduct($this);
-        }
+        $this->category = $category;
 
         return $this;
     }
