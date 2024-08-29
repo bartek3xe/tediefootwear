@@ -39,10 +39,12 @@ class ProductRepository extends ServiceEntityRepository
     public function findByCategories(array $categories): array
     {
         return $this->createQueryBuilder('p')
-            ->where('p.category IN (:categories)')
+            ->innerJoin('p.categories', 'c')
+            ->where('c.id IN (:categories)')
             ->setParameter('categories', $categories)
             ->getQuery()
             ->getResult()
         ;
     }
+
 }
