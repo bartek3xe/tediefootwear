@@ -17,7 +17,17 @@
             </tr>
             <tr>
                 <th>Kategoria</th>
-                <td>{{ product.category.getDisplayName() ?? '' }}</td>
+                <td>
+                    {% for category in product.categories %}
+                        <a href="{{ path('app_admin_product_category_show', { 'id': category.id }) }}">
+                        {{ category == product.categories|last
+                            ? category.getDisplayName()
+                            : category.getDisplayName() ~ ','
+                        }}
+                        </a>
+{#                        {{ category.getDisplayName() ?? '' }}#}
+                    {% endfor %}
+                </td>
             </tr>
             <tr>
                 <th>Czy jest nowy?</th>
