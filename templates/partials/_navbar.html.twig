@@ -42,7 +42,7 @@
                             {% set index = column * items_per_column + i %}
                             {% if categories[index] is defined %}
                                 <a class="link-btn"
-                                 href="{{ set_category_url('app_products', categories[index], selected_categories) }}"
+                                 href="{{ set_category_url('app_products', categories[index]) }}"
                                 > {{ categories[index].getNameByLanguage(get_locale()) }}</a>
                             {% endif %}
                         {% endfor %}

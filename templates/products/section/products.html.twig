@@ -7,7 +7,7 @@
             </div>
         {% else %}
             {% for product in products %}
-                <a href="#" class="btn btn-product">
+                <a href="{{ path('app_products_show', { 'slug': product.slug }) }}" class="btn btn-product">
                     <span class="product-image">
                     {% if product.files and product.files|first %}
                         <img src="{{ product.files|first.filePath }}" alt="">
