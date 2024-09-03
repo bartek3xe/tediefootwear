@@ -30,6 +30,9 @@ class Product extends AbstractProduct
     #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
     private ?string $allegro_url = null;
 
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: true)]
+    private ?string $etsy_url = null;
+
     #[ORM\ManyToMany(targetEntity: ProductCategory::class, inversedBy: 'products')]
     #[ORM\JoinTable(name: 'products_categories')]
     private Collection $categories;
@@ -94,6 +97,16 @@ class Product extends AbstractProduct
         $this->allegro_url = $allegro_url;
 
         return $this;
+    }
+
+    public function getEtsyUrl(): ?string
+    {
+        return $this->etsy_url;
+    }
+
+    public function setEtsyUrl(?string $etsy_url): void
+    {
+        $this->etsy_url = $etsy_url;
     }
 
     public function getCategories(): Collection

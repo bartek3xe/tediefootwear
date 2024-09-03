@@ -68,7 +68,7 @@ class ProductType extends AbstractType
                 'label' => 'Kategorie',
                 'class' => ProductCategory::class,
                 'choice_label' => function(ProductCategory $category) {
-                    return $category->getNameByLanguage('en');
+                    return $category->getNameByLanguage('pl');
                 },
                 'placeholder' => 'Wybierz kategorie',
                 'required' => true,
@@ -85,6 +85,10 @@ class ProductType extends AbstractType
             ])
             ->add('allegro_url', TextType::class, [
                 'label' => 'Link do produktu Allegro',
+                'required' => false,
+            ])
+            ->add('etsy_url', TextType::class, [
+                'label' => 'Link do produktu Etsy',
                 'required' => false,
             ]);
     }

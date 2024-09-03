@@ -36,6 +36,7 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
                ->setIsNew($faker->boolean)
                ->setIsTop($faker->boolean)
                ->setAllegroUrl($faker->url)
+               ->setEtsyUrl($faker->url)
            ;
 
            $productCategoryReference = $this->getReference(

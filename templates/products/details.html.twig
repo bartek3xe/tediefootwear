@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="{{ path('app_products') }}">Produkty</a></li>
+            <li>{{ product.name[get_locale()] }}</li>
+        </ul>
+    </div>
+    <div class="product-details-container">
+        <div class="product-gallery">
+            <div class="product-image">
+                {% if product.files and product.files|first %}
+                    <img src="{{ product.files|first.filepath }}" alt="">
+                {% else %}
+                    <img src="{{ asset('images/default-slipper.webp') }}" alt="">
+                {% endif %}
+            </div>
+        </div>
+        <div class="product-main">
+            <div class="product-labels">
+                {% if product.isNew %}
+                    <span class="label new-label">Nowość</span>
+                {% endif %}
+                {% if product.isTop %}
+                    <span class="label top-label">Top</span>
+                {% endif %}
+            </div>
+            <h1 class="product-title">{{ product.name[get_locale()] }}</h1>
+        </div>
+        <div class="product-info">
+            <div class="product-description">
+                <div id="description-content" class="description-content">
+                    {{ product.description[get_locale()]|raw }}
+                </div>
+                <button id="toggle-description-btn" class="toggle-description-btn"
+                    data-button-more="Pokaż więcej" data-button-less="Pokaż mniej"></button>
+            </div>
+
+            <div class="product-actions">
+                {% if product.allegroUrl %}
+                    <a href="{{ product.allegroUrl }}" class="btn allegro-btn" target="_blank">Kup na Allegro.pl</a>
+                {% endif %}
+                {% if product.etsyUrl %}
+                    <a href="{{ product.etsyUrl }}" class="btn etsy-btn">Kup na Etsy.com</a>
+                {% endif %}
+                {% if not product.allegroUrl and not product.etsyUrl %}
+                    <span class="product-text-info">Produkt niedostępny w sprzedaży</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('js/product-details') }}
+{% endblock %}
