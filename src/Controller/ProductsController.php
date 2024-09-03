@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Entity\Product;
 use App\Repository\ProductCategoryRepository;
 use App\Service\ProductCategoryService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,6 +29,14 @@ class ProductsController extends AbstractController
             'products' => $this->service->getProductsByCategories($request, $slugsArray),
             'product_categories' => $allCategories,
             'selected_categories' => $slugsArray,
+        ]);
+    }
+
+    #[Route('/products/{slug}', name: 'products_show')]
+    public function show(Product $product): Response
+    {
+        return $this->render('products/details.html.twig', [
+            'product' => $product,
         ]);
     }
 }
