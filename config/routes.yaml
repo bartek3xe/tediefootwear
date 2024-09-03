@@ -18,7 +18,7 @@ _locale_prefix:
     type: attribute
     prefix: /{_locale}
     requirements:
-        _locale: pl|en|de|fr|es|it|sv|no|fi|uk|nl|lt|da|et|cs|sk|lv|ro|hr|hu|bg|sr|sl|ru|el
+        _locale: pl|en|de|fr|es|uk
     defaults: { _locale: en }
 
 _admin_prefix:

@@ -231,7 +231,7 @@
             flex-direction: column;
             list-style: none;
             min-width: 120px;
-            top: 85%;
+            top: 100%;
             z-index: 98;
             border-bottom: 1px solid $shadow-color-primary;
 
@@ -259,8 +259,8 @@
             .flag-dropdown {
                 position: static;
                 width: 100%;
-                padding: 0;
                 justify-content: center;
+                padding: 0 0 12px;
 
                 a {
                     display: block;
