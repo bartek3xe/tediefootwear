@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="{{ get_locale() }}">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,7 @@
             {{ encore_entry_script_tags('js/flash') }}
             {{ encore_entry_script_tags('js/recaptcha') }}
             {{ encore_entry_script_tags('js/navbar') }}
+            {{ encore_entry_script_tags('js/search') }}
 
             <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         {% endblock %}

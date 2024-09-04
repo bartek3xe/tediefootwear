@@ -4,7 +4,11 @@
     <div class="breadcrumb">
         <ul>
             <li><a href="{{ path('app_products') }}">Produkty</a></li>
-            <li>{{ product.name[get_locale()] }}</li>
+            <li>
+                {{ product.name[get_locale()] is defined
+                    ? product.name[get_locale()]
+                    : product.name[get_default_locale()] }}
+            </li>
         </ul>
     </div>
     <div class="product-details-container">
@@ -26,12 +30,18 @@
                     <span class="label top-label">Top</span>
                 {% endif %}
             </div>
-            <h1 class="product-title">{{ product.name[get_locale()] }}</h1>
+            <h1 class="product-title">
+                {{ product.name[get_locale()] is defined
+                    ? product.name[get_locale()]
+                    : product.name[get_default_locale()] }}
+            </h1>
         </div>
         <div class="product-info">
             <div class="product-description">
                 <div id="description-content" class="description-content">
-                    {{ product.description[get_locale()]|raw }}
+                    {{ product.description[get_locale()] is defined
+                        ? product.description[get_locale()]|raw
+                        : product.description[get_default_locale()]|raw }}
                 </div>
                 <button id="toggle-description-btn" class="toggle-description-btn"
                     data-button-more="Pokaż więcej" data-button-less="Pokaż mniej"></button>
