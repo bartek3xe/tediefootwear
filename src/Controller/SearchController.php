@@ -10,12 +10,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\RouterInterface;
 
 class SearchController extends AbstractController
 {
     public function __construct(
         private readonly ProductRepository $productRepository,
-        private readonly ProductCategoryRepository $categoryRepository
+        private readonly ProductCategoryRepository $categoryRepository,
     ) {
     }
 
@@ -30,7 +31,6 @@ class SearchController extends AbstractController
 
         $products = $this->productRepository->findBySearchQuery($query);
         $categories = $this->categoryRepository->findBySearchQuery($query);
-        $pages = $pageRepository->findBySearchQuery($query);
 
         $results = [];
         foreach ($products as $product) {
@@ -51,16 +51,6 @@ class SearchController extends AbstractController
             ];
         }
 
-        foreach ($pages as $page) {
-            $results[] = [
-                'type' => 'page',
-                'label' => $page->getTitle(),
-                'link' => $this->generateUrl('app_page_show', ['slug' => $page->getSlug()]),
-                'icon' => 'fa-file-alt'
-            ];
-        }
-
-        // Zwróć wyniki jako JSON
         return new JsonResponse($results);
     }
 }
