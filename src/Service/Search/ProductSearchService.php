@@ -9,15 +9,17 @@ use App\Entity\Product;
 use App\Repository\ProductRepository;
 use App\Service\LanguageService;
 use Symfony\Component\Routing\RouterInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ProductSearchService
 {
-    private const DEFAULT_PHOTO_FILE_PATH = '/assets/images/default-slipper.webp';
+    private const DEFAULT_PHOTO_FILE_PATH = '/build/images/default-slipper.webp';
 
     public function __construct(
         private readonly ProductRepository $productRepository,
         private readonly LanguageService $languageService,
         private readonly RouterInterface $router,
+        private readonly TranslatorInterface $translator,
     ) {
     }
 
@@ -37,6 +39,7 @@ class ProductSearchService
             $photo = $product->getFiles()->first() ?: null;
             $results[] = [
                 'type' => 'product',
+                'title' => $product->getName()[$this->languageService->getLocale()],
                 'link' => $this->router->generate('app_products_show', ['slug' => $product->getSlug()]),
                 'photo' => $photo?->getFilepath() ?? self::DEFAULT_PHOTO_FILE_PATH,
                 'is_new' => $product->isNew(),

@@ -24,6 +24,7 @@ class LanguageExtension extends AbstractExtension
         return [
             new TwigFunction('get_all_locales', [$this->languageService, 'getAllLocales']),
             new TwigFunction('get_locale', [$this->languageService, 'getLocale']),
+            new TwigFunction('get_default_locale', [$this->languageService, 'getDefaultLocale']),
             new TwigFunction('get_locale_name', [$this->languageService, 'getLocaleName']),
             new TwigFunction('get_locale_flag', [$this->languageService, 'getLocaleFlag']),
         ];

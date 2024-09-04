@@ -9,8 +9,15 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class LanguageService
 {
+    private const DEFAULT_LOCALE = 'en';
+
     public function __construct(private readonly RequestStack $requestStack)
     {
+    }
+
+    public function getDefaultLocale(): string
+    {
+        return self::DEFAULT_LOCALE;
     }
 
     public function getAllLocales(): array
