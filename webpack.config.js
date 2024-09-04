@@ -21,6 +21,7 @@ Encore
     .addEntry('js/faq', './assets/js/faq.js')
     .addEntry('js/mobile-categories', './assets/js/mobile-categories.js')
     .addEntry('js/product-details', './assets/js/product-details.js')
+    .addEntry('js/search', './assets/js/search.js')
     .splitEntryChunks()
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
