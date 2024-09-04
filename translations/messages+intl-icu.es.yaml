@@ -74,3 +74,7 @@ faq.question.9: ¿Ofrecen personalización de pedidos?
 faq.answer.9: Sí, ofrecemos la posibilidad de personalizar pedidos. Por favor, contáctenos para discutir los detalles y las opciones disponibles. Actualmente, no ofrecemos grabados ni variantes personalizadas.
 faq.question.10: ¿Cuánto tiempo tarda el procesamiento del pedido?
 faq.answer.10: El tiempo de procesamiento del pedido puede variar según las preferencias individuales del cliente y la disponibilidad del producto. Se puede obtener información detallada sobre el tiempo de espera al realizar el pedido. Para compras al por menor en Allegro, el tiempo de procesamiento está especificado por la plataforma y se puede encontrar en la página de la oferta.
+category.singular: Categoría
+category.plural: Categorías
+product.singular: Producto
+product.plural: Productos

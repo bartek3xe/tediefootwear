@@ -75,3 +75,7 @@ faq.answer.9: Tak, oferujemy możliwość personalizacji zamówień. Prosimy o k
 faq.question.10: Jak długo trwa proces realizacji zamówienia?
 faq.answer.10: Czas realizacji zamówienia może się różnić w zależności od indywidualnych preferencji klienta oraz dostępności produktów. Szczegółowe informacje na temat czasu oczekiwania można uzyskać podczas składania zamówienia. Dla zakupów detalicznych na Allegro, czas realizacji jest określany przez platformę i można go znaleźć na stronie oferty.
 products.categories.header: Wybierz Kategorie
+category.singular: Kategoria
+category.plural: Kategorie
+product.singular: Produkt
+product.plural: Produkty
