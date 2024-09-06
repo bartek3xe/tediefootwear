@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Product;
+use App\Entity\ProductCategory;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -47,4 +48,25 @@ class ProductRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findBySearchQuery(string $query, string $locale): array
+    {
+        return $this->createQueryBuilder('p')
+            ->where("LOWER(JSON_UNQUOTE(JSON_EXTRACT(p.name, :locale))) LIKE LOWER(:query)")
+            ->setParameter('locale', '$.' . $locale)
+            ->setParameter('query', '%' . $query . '%')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function countProductsByCategory(ProductCategory $productCategory): int
+    {
+        return $this->createQueryBuilder('p')
+            ->select('COUNT(p.id)')
+            ->join('p.categories', 'c')
+            ->where('c = :category')
+            ->setParameter('category', $productCategory)
+            ->getQuery()
+            ->getSingleScalarResult()
+        ;
+    }
 }

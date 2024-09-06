@@ -1,5 +1,22 @@
 @import '_variables.scss';
 
+.navbar-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    background-color: #00000093;
+    display: none;
+
+    &.active {
+        display: unset;
+    }
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
 #page-navbar {
     display: flex;
     justify-content: space-between;
@@ -169,11 +186,6 @@
     .search-btn {
         display: flex;
         align-items: center;
-    }
-
-    .search-btn {
-        display: flex;
-        align-items: center;
         justify-content: center;
         background-color: $button-color-secondary;
         height: 40px;
@@ -282,15 +294,18 @@
         }
 
         .search-btn {
+            display: grid;
+            grid-template-columns: 40px 1fr;
             width: 100%;
             height: auto;
             box-sizing: border-box;
-            padding: 12px 0;
+            padding: 12px;
 
             button {
                 background: none;
                 border: none;
                 width: 40px;
+                grid-column: 0;
 
                 img {
                     left: 0;
@@ -301,7 +316,26 @@
             input {
                 background-color: $background-color-primary;
                 height: 50px;
-                width: 70%;
+                width: 100%;
+                grid-column: 1;
+            }
+
+            .search-results-container {
+                grid-column: 1 / span 2;
+                width: 100%;
+                display: flex!important;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 12px;
+
+                .not-found-container {
+                    width: 50%;
+                }
+
+                .search-result-item {
+                    width: 100%;
+                }
             }
         }
 
@@ -322,4 +356,123 @@
             display: none !important;
         }
     }
+}
+
+.search-results-container {
+    position: absolute;
+    background-color: #fff;
+    border-bottom: 1px solid $shadow-color-primary;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    top: 125%;
+    scrollbar-width: thin;
+
+
+    @media only screen and (max-width: 1200px) {
+        position: static;
+        max-height: none;
+    }
+
+    .not-found-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 12px;
+
+        img {
+            width: 50%;
+        }
+
+        a {
+            font-size: 10px;
+            color: $text-color-primary;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.search-result-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #eee;
+
+    a {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: $text-color-primary;
+
+        .main {
+            display: flex;
+        }
+
+        .label {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+    }
+
+    &:hover {
+        background-color: $button-color-secondary;
+    }
+
+    img.search-result-photo {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
+
+    i {
+        margin-right: 10px;
+        font-size: 18px;
+        color: #1e3050;
+    }
+
+    span {
+        display: block;
+        font-size: 14px;
+    }
+}
+
+.badge {
+    color: white;
+    padding: 6px 6px;
+    margin-left: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 100%;
+    width: 50px;
+}
+
+.badge-new {
+    background-color: green;
+}
+
+.badge-top {
+    background-color: red;
+}
+
+.badge-count {
+    background-color: #0d6efd;
 }

@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageDropdown = document.querySelector('.flag-dropdown');
     const navigation = document.querySelector('#page-navbar .navigation');
     const mobileNavBtn = document.querySelector('.mobile-menu-btn');
+    const body = document.querySelector('body');
+    const overlay = document.querySelector('.navbar-overlay');
 
     productsDropdownBtn.addEventListener('click', (e) => {
         if (window.innerWidth >= 1000) {
@@ -35,14 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     mobileNavBtn.addEventListener('click', () => {
-        mobileNavBtn.classList.toggle('active');
         navigation.classList.toggle('active');
+        mobileNavBtn.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('no-scroll');
     });
 
     document.addEventListener('click', (e) => {
         if (!navigation.contains(e.target) && !mobileNavBtn.contains(e.target)) {
             navigation.classList.remove('active');
             mobileNavBtn.classList.remove('active');
+            overlay.classList.remove('active');
+            body.classList.remove('no-scroll');
         }
     });
 
