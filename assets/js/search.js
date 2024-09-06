@@ -28,13 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayResults(data);
                 resultsContainer.style.display = 'block';
             } else {
-                resultsContainer.innerHTML = '<p>No results found</p>';
+                resultsContainer.innerHTML = `
+                    <div class="not-found-container">
+                        <img class="not-found" alt="not found image from freepik.com" src="/build/images/not-found.jpg"/>
+                        <a href="https://www.freepik.com/">Designed by Freepik</a>
+                     </div>
+                `;
                 resultsContainer.style.display = 'block';
             }
         } catch (error) {
-            console.error('Error fetching search results:', error);
-            resultsContainer.innerHTML = '<p>Error fetching results. Please try again later.</p>';
-            resultsContainer.style.display = 'block';
+            resultsContainer.style.display = 'none';
+
+           throw new Error('8169ab69-1477-4abd-8af5-d93c9fc1b1eb');
         }
     };
 
@@ -90,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultItem.innerHTML = `
                     <a href="${item.link}">
                         <div class="main">
-                            <i class="${item.icon}"></i>
+                            <i class="icon ${item.icon}"></i>
                             <span class="title">${item.title}</span>
                         </div>
                         <div class="label"> 
