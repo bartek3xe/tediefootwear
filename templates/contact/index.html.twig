@@ -1,5 +1,82 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section class="contact-section">
+        <h2>{{ 'contact.title'|trans }}</h2>
 
+        {% include('contact/partials/_google_map.html.twig') %}
+
+        <div class="contact-info">
+            <div class="contact-help contact-tile">
+                <h3>{{ 'contact.wholesale.title'|trans }}</h3>
+                <p class="company-name">BARTOSZ NOWAK "BANO"</p>
+                <p>
+                    <span class="title">NIP:</span>
+                    <span class="value">7372241459</span>
+                </p>
+                <p>
+                    <span class="title">REGON:</span>
+                    <span class="value">526706508</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.address.title'|trans }}:</span>
+                    <span class="value">Konina 428</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.postal_code.title'|trans }}:</span>
+                    <span class="value">34-735 Niedźwiedź</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.country.title'|trans }}:</span>
+                    <span class="value">Poland</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.phone.title'|trans }}:</span>
+                    <span class="value"><a href="tel:+48575777047">+48 575777047</a></span>
+                </p>
+            </div>
+            <div class="contact-address contact-tile">
+                <h3>{{ 'contact.retail.title'|trans }}</h3>
+                <p class="company-name">TADEUSZ NOWAK F.P.H.U. "TEDIE"</p>
+                <p>
+                    <span class="title">NIP:</span>
+                    <span class="value">7371086146</span>
+                </p>
+                <p>
+                    <span class="title">REGON:</span>
+                    <span class="value">120110879</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.address.title'|trans }}:</span>
+                    <span class="value">Konina 428</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.postal_code.title'|trans }}:</span>
+                    <span class="value">34-735 Niedźwiedź</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.country.title'|trans }}:</span>
+                    <span class="value">Poland</span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.phone.title'|trans }}:</span>
+                    <span class="value"><a href="tel:+48697164481">+48 697164481</a></span>
+                </p>
+                <p>
+                    <span class="title">{{ 'contact.phone.title'|trans }}:</span>
+                    <span class="value"><a href="tel:+48693819387">+48 693819387</a></span>
+                </p>
+            </div>
+        </div>
+        <div class="contact-form contact-tile">
+            <h3>{{ 'contact.form.title'|trans }}</h3>
+            {% include('contact/partials/_form.html.twig') %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {{ encore_entry_script_tags('js/recaptcha')}}
 {% endblock %}
