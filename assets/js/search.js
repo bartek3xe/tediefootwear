@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultsContainer.innerHTML = `
                     <div class="not-found-container">
                         <img class="not-found" alt="not found image from freepik.com" src="/build/images/not-found.jpg"/>
-                        <a href="https://www.freepik.com/">Designed by Freepik</a>
+                        <a href="https://www.freepik.com/" target="_blank">Designed by Freepik</a>
                      </div>
                 `;
                 resultsContainer.style.display = 'block';
