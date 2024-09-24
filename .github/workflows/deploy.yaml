@@ -1,0 +1,28 @@
+name: Staging deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd domains/tediefootwear.com/public_html
+            source ~/.bashrc
+            git fetch
+            git reset --hard origin/main
+            composer install
+            npx yarn install
+            npx yarn build
+            php bin/console doctrine:migrations:migrate --no-interaction
