@@ -1,80 +1,90 @@
 navigation.home: Startseite
 navigation.about: Über uns
 navigation.products: Produkte
-navigation.products.women.slippers: Damen Hausschuhe
-navigation.products.women.clogs: Damen Clogs
-navigation.products.men.slippers: Herren Hausschuhe
-navigation.products.men.clogs: Herren Clogs
-navigation.products.children.slippers: Kinder Hausschuhe
+navigation.products.women.slippers: Damenslipper
+navigation.products.women.clogs: Damenclogs
+navigation.products.men.slippers: Herrenslipper
+navigation.products.men.clogs: Herrenclogs
+navigation.products.children.slippers: Kinderslipper
 navigation.products.special: Sonderangebote
 navigation.wholesale: Großhandel
 navigation.contact: Kontakt
 navigation.faq: FAQ
-home.image.alt: Der Hintergrund des Hauptbegrüßungsbereichs enthält Zeichnungen von Hausschuhen in verschiedenen Farben
+home.image.alt: Der Hintergrund des Hauptbegrüßungsabschnitts enthält Zeichnungen von Hausschuhen in verschiedenen Farben
 home.image.title: Komfort bei jedem Schritt
-home.image.description: Tedie ist ein familiengeführtes Unternehmen, das seit über 20 Jahren hochwertige Hausschuhe und Clogs herstellt. Wir sind auf komfortables Schuhwerk spezialisiert, das zusätzliche Polsterung und Fußgewölbeunterstützung bietet. Unsere Produkte bestehen aus nachhaltigen Materialien und sind für ganztägigen Tragekomfort konzipiert.
-home.categories.ws.alt: Damenhausschuhe - Produktkategorie
-home.categories.ms.alt: Herrenhausschuhe - Produktkategorie
+home.image.description: Tedie ist ein familiengeführtes Unternehmen, das seit über 20 Jahren hochwertige Hausschuhe und Clogs herstellt. Wir spezialisieren uns auf Komfortschuhe mit zusätzlicher Dämpfung und Fußgewölbestütze. Unsere Produkte bestehen aus umweltfreundlichen Materialien und sind für ganztägigen Tragekomfort ausgelegt.
+home.categories.ws.alt: Damenslipper - Produktkategorie
+home.categories.ms.alt: Herrenslipper - Produktkategorie
 home.categories.wc.alt: Damenclogs - Produktkategorie
 home.categories.mc.alt: Herrenclogs - Produktkategorie
-home.categories.ks.alt: Kinderhausschuhe - Produktkategorie
-home.categories.ws.text: Damenhausschuhe
-home.categories.ms.text: Herrenhausschuhe
+home.categories.ks.alt: Kinderslipper - Produktkategorie
+home.categories.ws.text: Damenslipper
+home.categories.ms.text: Herrenslipper
 home.categories.wc.text: Damenclogs
 home.categories.mc.text: Herrenclogs
-home.categories.ks.text: Kinderhausschuhe
-home.image.button.products: Überprüfen Sie Produkte
-home.categories.ws.description: Elegantes und bequemes Hausschuhwerk aus weichen, atmungsaktiven Materialien, das Komfort bietet.
-home.categories.ms.description: Robustes und bequemes Hausschuhwerk aus strapazierfähigen Materialien, die lang anhaltenden Komfort bieten.
-home.categories.wc.description: Stilvolles und praktisches Schuhwerk aus natürlichen Materialien, ideal sowohl für den Hausgebrauch als auch für den Außeneinsatz.
-home.categories.mc.description: Langlebiges und bequemes Schuhwerk, das traditionellen Stil mit modernem Komfort verbindet und für den täglichen Gebrauch geeignet ist.
-home.categories.ks.description: Weiches und sicheres Hausschuhwerk für Kinder, erhältlich in vielen bunten Mustern, das Komfort und Schutz für kleine Füße bietet.
+home.categories.ks.text: Kinderslipper
+home.image.button.products: Produkte ansehen
+home.categories.ws.description: Elegante und bequeme Hausschuhe aus natürlichen Materialien wie Leder und Kunstleder. Atmungsaktiv und bieten vollen Komfort.
+home.categories.ms.description: Robuste und bequeme Hausschuhe, hergestellt aus langlebigen und bewährten Materialien, die langanhaltenden Tragekomfort und Haltbarkeit bieten.
+home.categories.wc.description: Stilvolle und praktische Schuhe aus natürlichen Materialien, ideal für den Innen- und Außenbereich.
+home.categories.mc.description: Robuste und bequeme Schuhe, die traditionellen Stil mit modernem Komfort verbinden, geeignet für den täglichen Gebrauch.
+home.categories.ks.description: Weiche und sichere Hausschuhe für Kinder, erhältlich in vielen bunten Designs, die Komfort und Schutz für kleine Füße bieten.
 home.category.header: Unser Angebot
-home.order.retail.header: Einzelhandelsbestellungen
-home.order.retail.description: Wir bieten wettbewerbsfähige Preise für Einzelkunden, die an unseren Produkten interessiert sind. Alle Artikel auf unserer Seite führen zu Angeboten auf Allegro. Um einen Einzelhandelskauf zu tätigen, besuchen Sie unser Allegro-Konto. Wir versenden in alle EU-Länder. Klicken Sie auf die Schaltfläche unten, um unser Angebot zu sehen.
+home.order.retail.header: Einzelhandelseinkäufe
+home.order.retail.description: Wir bieten wettbewerbsfähige Preise für Einzelkunden, die an unseren Produkten interessiert sind. Alle Artikel auf unserer Website führen zu Angeboten auf Allegro und Etsy. Um einen Einzelkauf zu tätigen, besuchen Sie unsere Konten auf diesen Plattformen. Wir versenden in alle EU-Länder. Klicken Sie auf die Schaltfläche unten, um unser Angebot zu sehen.
 home.order.wholesale.header: Großhandelsbestellungen
-home.order.wholesale.description: Wir bieten attraktive Großhandelspreise für Unternehmen, die unsere Produkte in ihren stationären oder Online-Shops verkaufen möchten. Internationaler Versand verfügbar. Wenn Sie an Großhandelskäufen interessiert sind, kontaktieren Sie uns. Weitere Informationen zum Großhandel finden Sie auf der entsprechenden Seite oder indem Sie uns über die entsprechende Schaltfläche kontaktieren.
-home.order.retail.button: Produkte überprüfen
-home.order.wholesale.button: Großhandelsverkauf
+home.order.wholesale.description: Wir bieten attraktive Großhandelspreise für Unternehmen, die unsere Produkte in ihren stationären oder Online-Geschäften verkaufen möchten. Internationaler Versand verfügbar. Wenn Sie an Großhandelsbestellungen interessiert sind, kontaktieren Sie uns. Weitere Informationen zum Großhandel finden Sie auf der entsprechenden Seite oder indem Sie uns über den entsprechenden Button kontaktieren.
+home.order.retail.button: Produkte ansehen
+home.order.wholesale.button: Großhandel
 home.order.contact.button: Kontaktieren Sie uns
 about.history.title: Unsere Geschichte
-about.history.description.first: TEDIE ist ein Unternehmen mit über 20 Jahren Tradition, das als Familienunternehmen begann und sich ausschließlich auf die Herstellung von Hausschuhen konzentrierte. In den frühen Tagen wurde das Unternehmen von Brüdern geführt, die persönlich in jede Produktionsphase involviert waren. Im Laufe der Zeit haben wir die Anzahl der Maschinen schrittweise erhöht und unsere Kundenbasis erweitert - zunächst lokal und dann in ganz Polen.
-about.history.description.second: Wir haben uns schon immer auf den Großhandel spezialisiert und das Vertrauen vieler Geschäftspartner gewonnen. Heute erreichen wir ein neues Niveau, indem wir unser Tätigkeitsfeld auf den Einzelhandel ausweiten. Dank der Allegro-Plattform sind unsere Hausschuhe für Kunden in der gesamten Europäischen Union erhältlich. Für den Großhandel arbeiten wir mit Unternehmen unabhängig von ihrem Standort zusammen - kontaktieren Sie uns einfach direkt per E-Mail.
+about.history.description.first: TEDIE ist ein Unternehmen mit über 20 Jahren Tradition, dessen Ursprünge auf ein Familienunternehmen zurückgehen, das sich ausschließlich auf die Herstellung von Hausschuhen konzentrierte. Zu Beginn unserer Reise wurde das Unternehmen von Brüdern geführt, die persönlich in jede Phase der Produktion involviert waren. Im Laufe der Zeit haben wir die Anzahl der Maschinen schrittweise erhöht und unsere Kundenzahl erweitert – zunächst lokal, dann in ganz Polen.
+about.history.description.second: Wir haben uns immer auf den Großhandel spezialisiert und das Vertrauen vieler Geschäftspartner gewonnen. Heute steigen wir auf eine neue Ebene auf und erweitern unser Geschäft auf den Einzelhandel. Dank Plattformen wie Allegro und Etsy sind unsere Hausschuhe nun weltweit erhältlich. Für Großhandelsverkäufe arbeiten wir mit Unternehmen unabhängig von deren Standort zusammen – kontaktieren Sie uns einfach direkt per E-Mail.
 about.quality.title: Wir setzen auf Qualität
-about.quality.description.first: Seit der Gründung von TEDIE hat die Qualität unserer Produkte oberste Priorität. Alle unsere Produkte sind handgefertigt, mit zunehmender Unterstützung durch Maschinen, was höchste Präzision und Sorgfalt ermöglicht. Die im Laufe der Jahre erworbene Handwerkskunst und Erfahrung stellen sicher, dass jedes Produkt, das unsere Fabrik verlässt, den höchsten Qualitätsstandards entspricht.
-about.quality.description.second: Unsere Produkte bestehen teilweise aus echtem Leder, was außergewöhnlichen Komfort und Haltbarkeit bietet. Das Innere jedes Hausschuhs, Schuhs oder Schuhwerks ist immer mit natürlichem Leder ausgekleidet, während der äußere Teil je nach Design aus synthetischen Materialien bestehen kann. Zusätzlich sind unsere Hausschuhe mit speziellen Fußrillen und zusätzlichem Schaum ausgestattet, um maximalen Komfort für den Benutzer zu gewährleisten. Der Kunde kann sicher sein, dass er ein erstklassiges Produkt erhält, das in jedem Detail perfektioniert ist.
+about.quality.description.first: Seit Bestehen von TEDIE ist die Qualität unserer Produkte oberste Priorität. Alle unsere Waren werden von Hand gefertigt, mit zunehmender Unterstützung durch Maschinen, die höchste Präzision und Sorgfalt ermöglichen. Das über die Jahre erworbene Handwerkswissen und die Erfahrung stellen sicher, dass jedes Produkt, das unsere Fabrik verlässt, den höchsten Qualitätsstandards entspricht.
+about.quality.description.second: Unsere Produkte bestehen teilweise aus echtem Leder, was für außergewöhnlichen Komfort und Langlebigkeit sorgt. Das Innenfutter jedes Hausschuhs, jeder Clogs oder Schuhe besteht immer aus Naturleder, während der äußere Teil je nach Design aus synthetischen Materialien gefertigt sein kann. Darüber hinaus sind unsere Hausschuhe mit speziellen Fußvertiefungen und zusätzlicher Polsterung ausgestattet, die maximalen Komfort bieten. Der Kunde kann sicher sein, ein erstklassiges Produkt zu erhalten, das in jedem Detail durchdacht ist.
 about.image.title: Über uns
-about.image.description: Sehen Sie, wie wir Tradition mit Moderne in der Herstellung von Hausschuhen höchster Qualität verbinden.
+about.image.description: Sehen Sie, wie wir Tradition und Moderne bei der Herstellung von Hausschuhen höchster Qualität vereinen.
 wholesale.image.title: Großhandel
-wholesale.image.description: TEDIE ist ein Unternehmen mit über 20 Jahren Erfahrung in der Herstellung und im Verkauf von Hausschuhen und Clogs. Wir sind stolz auf unsere Qualität und Liebe zum Detail, was uns zu einem vertrauenswürdigen Partner für viele Großhandelskunden macht.
-wholesale.benefits.title: Vorteile der Zusammenarbeit
-wholesale.benefits.description: Die Zusammenarbeit mit TEDIE bedeutet Zugang zu einer breiten Palette hochwertiger Produkte, wettbewerbsfähige Preise und flexible Kooperationsbedingungen. Wir bieten einen dedizierten Kundenservice und schnelle Bestellabwicklung.
+wholesale.image.description: TEDIE ist ein Unternehmen mit über 20 Jahren Erfahrung in der Produktion und dem Verkauf von Hausschuhen und Clogs. Wir sind stolz auf unsere Qualität und Liebe zum Detail, was uns zu einem vertrauenswürdigen Partner für viele Großhandelskunden macht.
+wholesale.benefits.title: Vorteile einer Zusammenarbeit
+wholesale.benefits.description: Die Zusammenarbeit mit TEDIE bietet Zugang zu einer breiten Palette hochwertiger Produkte, wettbewerbsfähige Preise und flexible Kooperationsbedingungen. Wir bieten einen engagierten Kundenservice und schnelle Lieferzeiten.
 wholesale.conditions.title: Mindestbestellungen und Kooperationsbedingungen
-wholesale.conditions.description: Die Mindestbestellmenge im Großhandel beträgt 50 Paar Hausschuhe oder 25 Paar Clogs. Wir bieten die Möglichkeit, Bestellungen an die individuellen Bedürfnisse des Kunden anzupassen. Kontaktieren Sie uns, um die Details der Zusammenarbeit zu besprechen.
+wholesale.conditions.description: Die Mindestbestellmenge im Großhandel beträgt 100 Paar Hausschuhe oder 50 Paar Clogs. Wir bieten die Möglichkeit, Bestellungen an die individuellen Bedürfnisse des Kunden anzupassen. Kontaktieren Sie uns, um die Details der Zusammenarbeit zu besprechen.
 wholesale.process.title: Bestellprozess
-wholesale.process.description: Um eine Großhandelsbestellung aufzugeben, kontaktieren Sie bitte unsere Großhandelsabteilung per E-Mail oder Telefon. Nach Erhalt der Anfrage erstellen wir ein individuelles Preisangebot. Nach Annahme der Bedingungen fahren wir mit der Auftragsabwicklung fort.
+wholesale.process.description: Um eine Großhandelsbestellung aufzugeben, kontaktieren Sie bitte unseren Großhandelsverkaufsabteilung per E-Mail oder Telefon. Nach Erhalt einer Anfrage erstellen wir ein individuelles Preisangebot. Nach Annahme der Bedingungen beginnen wir mit der Ausführung der Bestellung.
 wholesale.faq: Häufig gestellte Fragen
 faq.question.1: Welche Produkte bietet Ihr Unternehmen an?
-faq.answer.1: Unser Unternehmen bietet Hausschuhe und Clogs für Männer und Frauen sowie Kinderschuhe, alle handgefertigt für jeden Kunden.
+faq.answer.1: Unser Unternehmen bietet Hausschuhe und Clogs für Männer und Frauen sowie handgefertigte Kinderschuhe an.
 faq.question.2: Bieten Sie Großhandel an?
-faq.answer.2: Ja, wir bieten Großhandel an. Wir ermutigen Sie, uns per E-Mail oder Telefon zu kontaktieren, um weitere Informationen zu erhalten. Die Mindestbestellmenge beträgt 50 Paar Hausschuhe oder 25 Paar Clogs.
+faq.answer.2: Ja, wir bieten Großhandel an. Bitte kontaktieren Sie uns per E-Mail oder Telefon für weitere Informationen. Die Mindestbestellmenge beträgt 100 Paar Hausschuhe oder 50 Paar Clogs.
 faq.question.3: Wo kann ich Ihre Produkte im Einzelhandel kaufen?
-faq.answer.3: Unsere Produkte sind auf der Plattform Allegro.pl erhältlich. Auf unserer Website zeigen wir verfügbare Produkte von Allegro an. Durch Klicken auf ein bestimmtes Produkt wird der Kunde auf die jeweilige Produktseite auf Allegro.pl weitergeleitet. Wir laden Sie ein, unsere Angebote zu überprüfen.
+faq.answer.3: Unsere Produkte sind auf den Plattformen Allegro.pl und Etsy.com erhältlich. Auf unserer Website zeigen wir alle unsere Produkte an, unabhängig von deren Verfügbarkeit auf anderen Plattformen. Auf der Produktseite finden Sie Links zum jeweiligen Produkt auf Allegro oder Etsy. Wir laden Sie ein, sich unsere Angebote anzusehen.
 faq.question.4: Bieten Sie Hausschuhe und Clogs für Kinder an?
-faq.answer.4: Ja, wir bieten Hausschuhe für Kinder an. Derzeit haben wir keine Kinderschuhe, aber wir planen, unser Sortiment in Zukunft zu erweitern.
+faq.answer.4: Ja, wir bieten Kinderschuhe an. Derzeit haben wir keine Clogs für Kinder im Sortiment, planen jedoch, unser Angebot in Zukunft zu erweitern.
 faq.question.5: Wie kann ich den Kundenservice kontaktieren?
-faq.answer.5: Wenn Sie Fragen oder Bedenken haben, ermutigen wir Sie, uns per E-Mail oder Telefon zu kontaktieren. Kontaktdaten finden Sie auf unserer Website im Bereich "Kontakt".
-faq.question.6: Bieten Sie Rückgaben für gekaufte Produkte an?
-faq.answer.6: Ja, wir bieten die Möglichkeit, gekaufte Produkte gemäß der Rückgabebestimmungen der Allegro.pl-Website zurückzugeben.
-faq.question.7: Versenden Sie international?
-faq.answer.7: Ja, wir versenden international innerhalb der gesamten Europäischen Union für Einzelhandelsverkäufe gemäß den Angeboten auf Allegro.pl. Bei Großhandelslieferungen hängt dies vom jeweiligen Fall ab. Bitte kontaktieren Sie uns für Informationen zu Versandkosten und Lieferzeiten.
+faq.answer.5: Bei Fragen oder Unklarheiten können Sie uns gerne per E-Mail oder Telefon kontaktieren. Die Kontaktdaten finden Sie auf unserer Website im Bereich „Kontakt“.
+faq.question.6: Bieten Sie Rücksendungen für gekaufte Produkte an?
+faq.answer.6: Ja, wir bieten Rücksendungen für gekaufte Produkte gemäß den Rückgabebedingungen von Allegro.pl und Etsy.com an.
+faq.question.7: Bieten Sie internationale Bestellungen an?
+faq.answer.7: Ja, wir bearbeiten internationale Bestellungen für den Einzelhandel gemäß dem Angebot auf Allegro.pl und Etsy.com. Bei Großhandelsbestellungen hängt alles vom jeweiligen Fall ab. Bitte kontaktieren Sie uns, um Informationen zu Versandkosten und Lieferzeiten zu erhalten.
 faq.question.8: Haben Ihre Produkte eine Garantie?
-faq.answer.8: Ja, unsere Produkte haben eine Qualitätsgarantie. Wenn es Probleme mit dem Produkt gibt, kontaktieren Sie uns bitte für Unterstützung.
-faq.question.9: Bieten Sie eine Auftragsanpassung an?
-faq.answer.9: Ja, wir bieten die Möglichkeit, Bestellungen anzupassen. Bitte kontaktieren Sie uns, um Details und verfügbare Optionen zu besprechen. Derzeit bieten wir keine Gravuren oder personalisierten Varianten an.
+faq.answer.8: Ja, unsere Produkte haben eine Qualitätsgarantie. Bei Problemen mit dem Produkt wenden Sie sich bitte an uns, um Unterstützung zu erhalten.
+faq.question.9: Bieten Sie die Personalisierung von Bestellungen an?
+faq.answer.9: Ja, wir bieten die Möglichkeit zur Personalisierung von Bestellungen. Bitte kontaktieren Sie uns, um die Details und verfügbaren Optionen zu besprechen. Derzeit bieten wir keine Gravuren oder personalisierten Varianten an.
 faq.question.10: Wie lange dauert die Auftragsabwicklung?
-faq.answer.10: Die Auftragsabwicklungszeit kann je nach individuellen Kundenwünschen und Produktverfügbarkeit variieren. Detaillierte Informationen zur Wartezeit erhalten Sie bei der Bestellung. Für Einzelhandelskäufe auf Allegro ist die Bearbeitungszeit von der Plattform angegeben und kann auf der Angebotsseite gefunden werden.
+faq.answer.10: Die Bearbeitungszeit kann je nach individuellen Kundenwünschen und Produktverfügbarkeit variieren. Detaillierte Informationen zur Wartezeit erhalten Sie bei der Bestellung. Für den Einzelhandel auf Allegro oder Etsy wird die Bearbeitungszeit von der Plattform festgelegt und kann auf der Angebotsseite eingesehen werden.
+products.categories.header: Wählen Sie Kategorie
 category.singular: Kategorie
 category.plural: Kategorien
 product.singular: Produkt
 product.plural: Produkte
+contact.title: Kontaktieren Sie uns
+contact.form.title: Senden Sie uns eine Nachricht
+contact.form.email.placeholder: E-Mail-Adresse
+contact.form.subject.placeholder: Betreff
+contact.form.message.placeholder: Nachricht
+contact.wholesale.title: Großhandelsunternehmen
+contact.retail.title: Einzelhandelsunternehmen
+products.header: Produktliste
+contact.form.submit.placeholder: Absenden

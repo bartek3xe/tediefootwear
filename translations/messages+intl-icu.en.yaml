@@ -1,5 +1,5 @@
 navigation.home: Home
-navigation.about: About
+navigation.about: About Us
 navigation.products: Products
 navigation.products.women.slippers: Women's Slippers
 navigation.products.women.clogs: Women's Clogs
@@ -10,71 +10,81 @@ navigation.products.special: Special Offers
 navigation.wholesale: Wholesale
 navigation.contact: Contact
 navigation.faq: FAQ
-home.image.alt: The background of the main welcome section contains drawings of slippers in different colors
-home.image.title: Comfort at every step
-home.image.description: Tedie is a family-owned business that has been making quality slippers and clogs for over 20 years. We specialize in premium comfort footwear, featuring extra cushioning and arch support. Our products are made from sustainable materials and designed for all-day comfort.
-home.categories.ws.alt: Women's slippers - product category
-home.categories.ms.alt: Men's slippers - product category
-home.categories.wc.alt: Women's clogs - product category
-home.categories.mc.alt: Men's clogs - product category
-home.categories.ks.alt: Children's slippers - product category
-home.categories.ws.text: Women's slippers
-home.categories.ms.text: Men's slippers
-home.categories.wc.text: Women's clogs
-home.categories.mc.text: Men's clogs
-home.categories.ks.text: Children's slippers
-home.image.button.products: Check products
-home.categories.ws.description: Elegant and comfortable home footwear made from soft, breathable materials, providing comfort.
-home.categories.ms.description: Sturdy and comfortable home footwear made from durable materials that provide long-lasting comfort.
-home.categories.wc.description: Stylish and practical footwear made from natural materials, ideal for both home use and outdoor wear.
+home.image.alt: The background of the main welcome section contains drawings of slippers in various colors
+home.image.title: Comfort at Every Step
+home.image.description: Tedie is a family-owned business that has been producing high-quality slippers and clogs for over 20 years. We specialize in high-comfort footwear with extra cushioning and arch support. Our products are made from eco-friendly materials and designed for all-day comfort.
+home.categories.ws.alt: Women's Slippers - product category
+home.categories.ms.alt: Men's Slippers - product category
+home.categories.wc.alt: Women's Clogs - product category
+home.categories.mc.alt: Men's Clogs - product category
+home.categories.ks.alt: Children's Slippers - product category
+home.categories.ws.text: Women's Slippers
+home.categories.ms.text: Men's Slippers
+home.categories.wc.text: Women's Clogs
+home.categories.mc.text: Men's Clogs
+home.categories.ks.text: Children's Slippers
+home.image.button.products: Check Products
+home.categories.ws.description: Elegant and comfortable home footwear made from natural materials like leather and eco-leather. Breathable and providing full comfort.
+home.categories.ms.description: Durable and comfortable home footwear made from strong and proven materials that provide long-lasting comfort and wear.
+home.categories.wc.description: Stylish and practical footwear made from natural materials, ideal for both home and outdoor use.
 home.categories.mc.description: Durable and comfortable footwear that combines traditional style with modern comfort, suitable for everyday use.
-home.categories.ks.description: Soft and safe home footwear for children, available in many colorful patterns, providing comfort and protection for little feet.
+home.categories.ks.description: Soft and safe home footwear for children, available in many colorful designs, providing comfort and protection for small feet.
 home.category.header: Our Offer
-home.order.retail.header: Retail Orders
-home.order.retail.description: We provide competitive prices for individual customers interested in our products. All items on our site lead to offers available on Allegro. To make a retail purchase, visit our Allegro account. We ship to all EU countries. Click the button below to see our offer.
+home.order.retail.header: Retail Shopping
+home.order.retail.description: We offer competitive prices for individual customers interested in our products. All items on our website lead to offers available on Allegro and Etsy. To make a retail purchase, visit our accounts on these platforms. We ship to all EU countries. Click the button below to view our offer.
 home.order.wholesale.header: Wholesale Orders
-home.order.wholesale.description: We offer attractive wholesale prices for companies wanting to sell our products in their stationary or online stores. International shipping available. If you are interested in wholesale purchases, contact us. More information about wholesale sales can be found on the dedicated page or by contacting us via the appropriate button.
+home.order.wholesale.description: We offer attractive wholesale prices for companies that want to sell our products in their stores or online. International shipping is available. If you're interested in wholesale, contact us. More information on wholesale sales can be found on the dedicated page or by contacting us via the appropriate button.
 home.order.retail.button: Check Products
 home.order.wholesale.button: Wholesale Sales
 home.order.contact.button: Contact Us
 about.history.title: Our History
-about.history.description.first: TEDIE is a company with over 20 years of tradition, which began as a family business solely focused on the production of slippers. In the early days, the company was run by brothers who were personally involved in every stage of production. Over time, we gradually increased the number of machines and expanded our customer base - initially local, and then throughout Poland.
-about.history.description.second: We have always specialized in wholesale sales, gaining the trust of many business partners. Today, we are reaching a new level by expanding our activities to include retail sales. Thanks to the Allegro platform, our slippers are available to customers across the European Union. For wholesale sales, we work with companies regardless of their location - just contact us directly via email.
+about.history.description.first: TEDIE is a company with over 20 years of tradition, whose origins go back to a family business focused exclusively on slipper production. At the beginning of our journey, the company was run by brothers who personally engaged in every stage of production. Over time, we gradually increased the number of machines and expanded our customer base—initially local, then across all of Poland.
+about.history.description.second: We have always specialized in wholesale, gaining the trust of many business partners. Today, we are stepping up to a new level by expanding into retail. Thanks to platforms like Allegro and Etsy, our slippers are available to customers worldwide. For wholesale sales, we work with companies regardless of their location—just contact us directly via email.
 about.quality.title: We Focus on Quality
-about.quality.description.first: Since the inception of TEDIE, the priority has been the quality of our products. All our products are handmade, with increasing support from machines, which allows for the highest precision and care. The craftsmanship and experience gained over the years ensure that every product leaving our factory meets the highest quality standards.
-about.quality.description.second: Our products are partially made of genuine leather, providing exceptional comfort and durability. The interior of every slipper, shoe, or footwear is always lined with natural leather, while the outer part can be made of synthetic materials, depending on the design. Additionally, our slippers are equipped with special foot grooves and extra foam, ensuring maximum comfort for the user. The customer can be sure they are receiving a top-class product, perfected in every detail.
+about.quality.description.first: From the very beginning of TEDIE’s existence, the priority has been the quality of our products. All our goods are handmade, with increasing machine support, allowing for the highest precision and care. Years of acquired craftsmanship and experience ensure that every product leaving our factory meets the highest quality standards.
+about.quality.description.second: Our products are partly made of genuine leather, ensuring exceptional comfort and durability. The interior of each slipper, clog, or footwear is always lined with natural leather, while the outer part may be made of synthetic materials, depending on the design. Additionally, our slippers are equipped with special foot shaping and extra foam, ensuring maximum comfort. The customer can be sure of receiving a top-class product, crafted in every detail.
 about.image.title: About Us
-about.image.description: See how we combine tradition with modernity in the production of the highest quality slippers.
-wholesale.image.title: Wholesale
-wholesale.image.description: TEDIE is a company with over 20 years of experience in the production and sale of slippers and clogs. We pride ourselves on our quality and attention to detail, making us a trusted partner for many wholesale customers.
-wholesale.benefits.title: Benefits of Cooperation
-wholesale.benefits.description: Cooperation with TEDIE means access to a wide range of high-quality products, competitive prices, and flexible cooperation terms. We offer dedicated customer service and fast order processing times.
+about.image.description: See how we combine tradition with modernity in producing the highest quality slippers.
+wholesale.image.title: Wholesale Sales
+wholesale.image.description: TEDIE is a company with over 20 years of experience in the production and sale of slippers and clogs. We are proud of our quality and attention to detail, which makes us a trusted partner for many wholesale customers.
+wholesale.benefits.title: Benefits of Partnership
+wholesale.benefits.description: Partnering with TEDIE means access to a wide range of high-quality products, competitive prices, and flexible cooperation terms. We offer dedicated customer service and fast order fulfillment times.
 wholesale.conditions.title: Minimum Orders and Terms of Cooperation
-wholesale.conditions.description: The minimum wholesale order is 50 pairs of slippers or 25 pairs of clogs. We offer the possibility of customizing orders to meet the individual needs of the client. Contact us to discuss the details of cooperation.
+wholesale.conditions.description: The minimum wholesale order is 100 pairs of slippers or 50 pairs of clogs. We offer the ability to customize orders to the client’s individual needs. Contact us to discuss the details of cooperation.
 wholesale.process.title: Ordering Process
-wholesale.process.description: To place a wholesale order, please contact our wholesale sales department via email or phone. After receiving the inquiry, we will prepare an individual price offer. After accepting the terms, we proceed with the order fulfillment.
+wholesale.process.description: To place a wholesale order, please contact our wholesale sales department by email or phone. Upon receiving an inquiry, we will prepare an individual price offer. Once the conditions are accepted, we will proceed with the order fulfillment.
 wholesale.faq: Check Frequently Asked Questions
 faq.question.1: What products does your company offer?
-faq.answer.1: Our company offers slippers and clogs for men and women, as well as children's slippers, all handmade for each customer.
+faq.answer.1: Our company offers slippers and clogs for men and women, as well as children's slippers, handmade for every customer.
 faq.question.2: Do you offer wholesale?
-faq.answer.2: Yes, we offer wholesale. We encourage you to contact us by email or phone for more information. The minimum order is 50 pairs of slippers or 25 pairs of clogs.
-faq.question.3: Where can I purchase your products at retail?
-faq.answer.3: Our products are available for purchase on the Allegro.pl platform. On our website, we display products available from Allegro. By clicking on a specific product, the customer is redirected to the respective product page on Allegro.pl. We invite you to check out our offers.
+faq.answer.2: Yes, we offer wholesale. Please contact us via email or phone for more information. The minimum order is 100 pairs of slippers or 50 pairs of clogs.
+faq.question.3: Where can I make a retail purchase of your products?
+faq.answer.3: Our products are available for purchase on platforms Allegro.pl and Etsy.com. On our website, we display all our products regardless of availability on other platforms. On the product page, there are links to the same product on Allegro or Etsy. We invite you to check out our offers.
 faq.question.4: Do you offer slippers and clogs for children?
-faq.answer.4: Yes, we offer slippers for children. Currently, we do not have children's clogs, but we plan to expand our range in the future.
+faq.answer.4: Yes, we offer children's slippers. Currently, we do not have children's clogs, but we plan to expand our range in the future.
 faq.question.5: How can I contact customer service?
-faq.answer.5: If you have any questions or concerns, we encourage you to contact us by email or phone. Contact details can be found on our website under the "Contact" section.
+faq.answer.5: If you have any questions or concerns, we encourage you to contact us via email or phone. Contact information can be found on our website under the "Contact" tab.
 faq.question.6: Do you offer returns for purchased products?
-faq.answer.6: Yes, we offer the possibility to return purchased products in accordance with the return policy of the Allegro.pl website.
-faq.question.7: Do you ship internationally?
-faq.answer.7: Yes, we ship internationally within the entire European Union for retail sales in accordance with the offers on Allegro.pl. For wholesale shipments, it depends on the specific case. Please contact us for information on shipping costs and delivery times.
+faq.answer.6: Yes, we offer returns for purchased products in accordance with the return policy of Allegro.pl and Etsy.com.
+faq.question.7: Do you handle international orders?
+faq.answer.7: Yes, we handle international orders for retail sales in accordance with the offer on Allegro.pl and Etsy.com. For wholesale orders, it all depends on the specific case. Please contact us for information on shipping costs and delivery times.
 faq.question.8: Do your products come with a warranty?
-faq.answer.8: Yes, our products come with a quality guarantee. If there are any issues with the product, please contact us for assistance.
+faq.answer.8: Yes, our products come with a quality warranty. If you encounter any issues with the product, please contact us for assistance.
 faq.question.9: Do you offer order customization?
-faq.answer.9: Yes, we offer the possibility to customize orders. Please contact us to discuss details and available options. Currently, we do not offer engravings or personalized variants.
-faq.question.10: How long does the order processing take?
-faq.answer.10: The order processing time may vary depending on individual customer preferences and product availability. Detailed information about the waiting time can be obtained when placing an order. For retail purchases on Allegro, the processing time is specified by the platform and can be found on the offer page.
+faq.answer.9: Yes, we offer the possibility of customizing orders. Please contact us to discuss the details and available options. Currently, we do not offer engravings or personalized variants.
+faq.question.10: How long does it take to process an order?
+faq.answer.10: The order processing time may vary depending on the client’s individual preferences and product availability. Detailed information about the waiting time can be obtained when placing the order. For retail purchases on Allegro or Etsy, the processing time is specified by the platform and can be found on the offer page.
+products.categories.header: Choose Category
 category.singular: Category
 category.plural: Categories
 product.singular: Product
 product.plural: Products
+contact.title: Contact Us
+contact.form.title: Send Us a Message
+contact.form.email.placeholder: Email Address
+contact.form.subject.placeholder: Subject
+contact.form.message.placeholder: Message Content
+contact.wholesale.title: Wholesale Company
+contact.retail.title: Retail Company
+products.header: Product List
+contact.form.submit.placeholder: Submit

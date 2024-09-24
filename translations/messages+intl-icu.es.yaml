@@ -5,76 +5,86 @@ navigation.products.women.slippers: Zapatillas de mujer
 navigation.products.women.clogs: Zuecos de mujer
 navigation.products.men.slippers: Zapatillas de hombre
 navigation.products.men.clogs: Zuecos de hombre
-navigation.products.children.slippers: Zapatillas de niño
+navigation.products.children.slippers: Zapatillas infantiles
 navigation.products.special: Ofertas especiales
 navigation.wholesale: Venta al por mayor
 navigation.contact: Contacto
-navigation.faq: FAQ
-home.image.alt: El fondo de la sección principal de bienvenida contiene dibujos de pantuflas en diferentes colores
+navigation.faq: Preguntas frecuentes
+home.image.alt: El fondo de la sección de bienvenida principal contiene dibujos de zapatillas en varios colores
 home.image.title: Comodidad en cada paso
-home.image.description: Tedie es una empresa familiar que lleva más de 20 años fabricando pantuflas y zuecos de calidad. Nos especializamos en calzado de comodidad premium, con acolchado adicional y soporte para el arco. Nuestros productos están hechos de materiales sostenibles y diseñados para brindar comodidad durante todo el día.
-home.categories.ws.alt: Zapatillas de mujer - categoría de productos
-home.categories.ms.alt: Zapatillas de hombre - categoría de productos
-home.categories.wc.alt: Zuecos de mujer - categoría de productos
-home.categories.mc.alt: Zuecos de hombre - categoría de productos
-home.categories.ks.alt: Zapatillas de niños - categoría de productos
+home.image.description: Tedie es una empresa familiar que lleva más de 20 años produciendo zapatillas y zuecos de alta calidad. Nos especializamos en calzado de gran comodidad, con acolchado adicional y soporte para el arco del pie. Nuestros productos están hechos con materiales ecológicos y diseñados para garantizar confort durante todo el día.
+home.categories.ws.alt: Zapatillas de mujer - categoría de producto
+home.categories.ms.alt: Zapatillas de hombre - categoría de producto
+home.categories.wc.alt: Zuecos de mujer - categoría de producto
+home.categories.mc.alt: Zuecos de hombre - categoría de producto
+home.categories.ks.alt: Zapatillas infantiles - categoría de producto
 home.categories.ws.text: Zapatillas de mujer
 home.categories.ms.text: Zapatillas de hombre
 home.categories.wc.text: Zuecos de mujer
 home.categories.mc.text: Zuecos de hombre
-home.categories.ks.text: Zapatillas de niños
+home.categories.ks.text: Zapatillas infantiles
 home.image.button.products: Ver productos
-home.categories.ws.description: Calzado de interior elegante y cómodo, hecho de materiales suaves y transpirables, que brinda confort.
-home.categories.ms.description: Calzado de interior sólido y cómodo, hecho de materiales duraderos que brindan comodidad duradera.
-home.categories.wc.description: Calzado estiloso y práctico, hecho de materiales naturales, ideal tanto para uso doméstico como para uso exterior.
-home.categories.mc.description: Calzado duradero y cómodo, que combina estilo tradicional con comodidad moderna, adecuado para el uso diario.
-home.categories.ks.description: Calzado de interior suave y seguro para niños, disponible en muchos patrones coloridos, que brinda comodidad y protección a los pies pequeños.
-home.category.header: Nuestra Oferta
-home.order.retail.header: Pedidos al por Menor
-home.order.retail.description: Ofrecemos precios competitivos para clientes individuales interesados en nuestros productos. Todos los artículos de nuestro sitio llevan a ofertas disponibles en Allegro. Para realizar una compra al por menor, visite nuestra cuenta de Allegro. Enviamos a todos los países de la UE. Haga clic en el botón de abajo para ver nuestra oferta.
-home.order.wholesale.header: Pedidos al por Mayor
-home.order.wholesale.description: Ofrecemos precios mayoristas atractivos para empresas que deseen vender nuestros productos en sus tiendas físicas o en línea. Envío internacional disponible. Si está interesado en compras al por mayor, contáctenos. Más información sobre ventas al por mayor se encuentra en la página dedicada o contactándonos a través del botón correspondiente.
-home.order.retail.button: Verificar productos
-home.order.wholesale.button: Ventas al por mayor
-home.order.contact.button: Contáctenos
+home.categories.ws.description: Calzado doméstico elegante y cómodo, hecho con materiales naturales como cuero y cuero sintético. Transpirable y proporcionando total comodidad.
+home.categories.ms.description: Calzado doméstico resistente y cómodo, hecho con materiales duraderos y probados que garantizan comodidad y uso prolongado.
+home.categories.wc.description: Calzado estiloso y práctico, hecho con materiales naturales, ideal tanto para el uso doméstico como al aire libre.
+home.categories.mc.description: Calzado resistente y cómodo que combina estilo tradicional con confort moderno, adecuado para el uso diario.
+home.categories.ks.description: Calzado suave y seguro para niños, disponible en varios diseños coloridos, que proporciona comodidad y protección para los pies pequeños.
+home.category.header: Nuestra oferta
+home.order.retail.header: Compras minoristas
+home.order.retail.description: Ofrecemos precios competitivos para los clientes individuales interesados en nuestros productos. Todos los artículos en nuestro sitio web conducen a ofertas disponibles en Allegro y Etsy. Para realizar una compra minorista, visita nuestras cuentas en estas plataformas. Enviamos a todos los países de la UE. Haz clic en el botón a continuación para ver nuestra oferta.
+home.order.wholesale.header: Pedidos al por mayor
+home.order.wholesale.description: Ofrecemos precios atractivos al por mayor para empresas que quieran vender nuestros productos en sus tiendas físicas o en línea. Envíos internacionales disponibles. Si estás interesado en pedidos al por mayor, contáctanos. Puedes encontrar más información sobre la venta al por mayor en la página dedicada o contactándonos a través del botón correspondiente.
+home.order.retail.button: Ver productos
+home.order.wholesale.button: Venta al por mayor
+home.order.contact.button: Contáctanos
 about.history.title: Nuestra historia
-about.history.description.first: TEDIE es una empresa con más de 20 años de tradición, que comenzó como un negocio familiar centrado exclusivamente en la producción de pantuflas. En los primeros días, la empresa era dirigida por hermanos que estaban personalmente involucrados en cada etapa de la producción. Con el tiempo, aumentamos gradualmente el número de máquinas y ampliamos nuestra base de clientes, inicialmente local, y luego en toda Polonia.
-about.history.description.second: Siempre nos hemos especializado en ventas al por mayor, ganando la confianza de muchos socios comerciales. Hoy, estamos alcanzando un nuevo nivel al expandir nuestras actividades para incluir ventas minoristas. Gracias a la plataforma Allegro, nuestras pantuflas están disponibles para clientes de toda la Unión Europea. Para ventas al por mayor, trabajamos con empresas independientemente de su ubicación; solo necesitan contactarnos directamente por correo electrónico.
-about.quality.title: Nos centramos en la calidad
-about.quality.description.first: Desde la creación de TEDIE, la prioridad ha sido la calidad de nuestros productos. Todos nuestros productos están hechos a mano, con un creciente apoyo de máquinas, lo que permite la máxima precisión y cuidado. La artesanía y la experiencia adquirida a lo largo de los años aseguran que cada producto que sale de nuestra fábrica cumple con los más altos estándares de calidad.
-about.quality.description.second: Nuestros productos están parcialmente hechos de cuero genuino, lo que proporciona una comodidad y durabilidad excepcionales. El interior de cada pantufla, zapato o calzado está siempre forrado con cuero natural, mientras que la parte exterior puede estar hecha de materiales sintéticos, dependiendo del diseño. Además, nuestras pantuflas están equipadas con un hueco especial para el pie y espuma adicional, lo que garantiza la máxima comodidad para el usuario. El cliente puede estar seguro de que recibirá un producto de primera clase, perfeccionado en cada detalle.
+about.history.description.first: TEDIE es una empresa con más de 20 años de tradición, cuyos orígenes se remontan a un negocio familiar centrado exclusivamente en la producción de zapatillas. Al principio de nuestro viaje, la empresa estaba dirigida por hermanos que se involucraban personalmente en cada etapa de la producción. Con el tiempo, aumentamos gradualmente el número de máquinas y ampliamos nuestra base de clientes, primero a nivel local y luego en toda Polonia.
+about.history.description.second: Siempre nos hemos especializado en la venta al por mayor, ganando la confianza de muchos socios comerciales. Hoy, damos un nuevo paso ampliando nuestras actividades al comercio minorista. Gracias a plataformas como Allegro y Etsy, nuestras zapatillas están ahora disponibles para clientes de todo el mundo. Para ventas al por mayor, trabajamos con empresas sin importar su ubicación—basta con contactarnos directamente por correo electrónico.
+about.quality.title: Apostamos por la calidad
+about.quality.description.first: Desde el inicio de TEDIE, la calidad de nuestros productos ha sido una prioridad. Todos nuestros artículos son hechos a mano, con un creciente apoyo de maquinaria, lo que permite una mayor precisión y esmero. Los años de experiencia adquirida aseguran que cada producto que sale de nuestra fábrica cumple con los más altos estándares de calidad.
+about.quality.description.second: Nuestros productos están parcialmente hechos de cuero genuino, lo que garantiza una comodidad y durabilidad excepcionales. El interior de cada zapatilla, zueco o calzado siempre está forrado con cuero natural, mientras que la parte exterior puede estar hecha de materiales sintéticos, dependiendo del diseño. Además, nuestras zapatillas están equipadas con un molde especial para el pie y una espuma adicional que garantiza la máxima comodidad. El cliente puede estar seguro de que recibirá un producto de primera calidad, elaborado con atención al detalle.
 about.image.title: Sobre nosotros
-about.image.description: Vea cómo combinamos la tradición con la modernidad en la producción de pantuflas de la más alta calidad.
+about.image.description: Descubre cómo combinamos la tradición con la modernidad en la producción de zapatillas de la más alta calidad.
 wholesale.image.title: Venta al por mayor
-wholesale.image.description: TEDIE es una empresa con más de 20 años de experiencia en la producción y venta de pantuflas y zuecos. Nos enorgullecemos de nuestra calidad y atención al detalle, lo que nos convierte en un socio de confianza para muchos clientes mayoristas.
-wholesale.benefits.title: Beneficios de la cooperación
-wholesale.benefits.description: La cooperación con TEDIE significa acceso a una amplia gama de productos de alta calidad, precios competitivos y condiciones de cooperación flexibles. Ofrecemos un servicio al cliente dedicado y tiempos de procesamiento de pedidos rápidos.
-wholesale.conditions.title: Pedidos mínimos y condiciones de cooperación
-wholesale.conditions.description: El pedido mínimo al por mayor es de 50 pares de pantuflas o 25 pares de zuecos. Ofrecemos la posibilidad de personalizar los pedidos para satisfacer las necesidades individuales del cliente. Contáctenos para discutir los detalles de la cooperación.
+wholesale.image.description: TEDIE es una empresa con más de 20 años de experiencia en la producción y venta de zapatillas y zuecos. Estamos orgullosos de nuestra calidad y atención al detalle, lo que nos convierte en un socio confiable para muchos clientes mayoristas.
+wholesale.benefits.title: Beneficios de la colaboración
+wholesale.benefits.description: Colaborar con TEDIE significa acceder a una amplia gama de productos de alta calidad, precios competitivos y condiciones de cooperación flexibles. Ofrecemos un servicio al cliente dedicado y tiempos de entrega rápidos.
+wholesale.conditions.title: Pedidos mínimos y condiciones de colaboración
+wholesale.conditions.description: El pedido mínimo al por mayor es de 100 pares de zapatillas o 50 pares de zuecos. Ofrecemos la posibilidad de adaptar los pedidos a las necesidades individuales del cliente. Contáctanos para discutir los detalles de la colaboración.
 wholesale.process.title: Proceso de pedido
-wholesale.process.description: Para realizar un pedido al por mayor, comuníquese con nuestro departamento de ventas al por mayor por correo electrónico o teléfono. Después de recibir la consulta, prepararemos una oferta de precio individual. Después de aceptar los términos, procedemos con la ejecución del pedido.
-wholesale.faq: Consulte las preguntas frecuentes
+wholesale.process.description: Para realizar un pedido al por mayor, por favor contacta con nuestro departamento de ventas mayoristas por correo electrónico o teléfono. Una vez recibido el pedido, prepararemos una oferta de precio personalizada. Una vez aceptadas las condiciones, comenzamos con la ejecución del pedido.
+wholesale.faq: Consulta las preguntas frecuentes
 faq.question.1: ¿Qué productos ofrece su empresa?
-faq.answer.1: Nuestra empresa ofrece zapatillas y zuecos para hombres y mujeres, así como zapatillas para niños, todas hechas a mano para cada cliente.
-faq.question.2: ¿Ofrecen ventas al por mayor?
-faq.answer.2: Sí, ofrecemos ventas al por mayor. Le animamos a contactarnos por correo electrónico o teléfono para obtener más información. El pedido mínimo es de 50 pares de zapatillas o 25 pares de zuecos.
+faq.answer.1: Nuestra empresa ofrece zapatillas y zuecos para hombres y mujeres, así como zapatillas infantiles, hechas a mano para cada cliente.
+faq.question.2: ¿Ofrecen venta al por mayor?
+faq.answer.2: Sí, ofrecemos venta al por mayor. Te invitamos a contactarnos por correo electrónico o teléfono para más información. El pedido mínimo es de 100 pares de zapatillas o 50 pares de zuecos.
 faq.question.3: ¿Dónde puedo comprar sus productos al por menor?
-faq.answer.3: Nuestros productos están disponibles para su compra en la plataforma Allegro.pl. En nuestro sitio web, mostramos productos disponibles de Allegro. Al hacer clic en un producto específico, el cliente es redirigido a la página del producto correspondiente en Allegro.pl. Le invitamos a revisar nuestras ofertas.
+faq.answer.3: Nuestros productos están disponibles para la compra en las plataformas Allegro.pl y Etsy.com. En nuestro sitio web mostramos todos nuestros productos independientemente de su disponibilidad en otras plataformas. En la página del producto hay enlaces al mismo producto en Allegro o Etsy. Te invitamos a consultar nuestras ofertas.
 faq.question.4: ¿Ofrecen zapatillas y zuecos para niños?
-faq.answer.4: Sí, ofrecemos zapatillas para niños. Actualmente, no tenemos zuecos para niños, pero planeamos expandir nuestra gama en el futuro.
+faq.answer.4: Sí, ofrecemos zapatillas para niños. Actualmente no tenemos zuecos infantiles, pero planeamos ampliar nuestro catálogo en el futuro.
 faq.question.5: ¿Cómo puedo contactar con el servicio de atención al cliente?
-faq.answer.5: Si tiene alguna pregunta o inquietud, le animamos a contactarnos por correo electrónico o teléfono. Los datos de contacto se encuentran en nuestro sitio web en la sección "Contacto".
-faq.question.6: ¿Ofrecen devoluciones de productos comprados?
-faq.answer.6: Sí, ofrecemos la posibilidad de devolver los productos comprados de acuerdo con la política de devoluciones del sitio web de Allegro.pl.
+faq.answer.5: Si tienes preguntas o dudas, te invitamos a contactarnos por correo electrónico o teléfono. Los datos de contacto se encuentran en nuestro sitio web, en la sección "Contacto".
+faq.question.6: ¿Ofrecen devoluciones de los productos comprados?
+faq.answer.6: Sí, ofrecemos devoluciones de los productos comprados según la política de devoluciones de Allegro.pl y Etsy.com.
 faq.question.7: ¿Realizan envíos internacionales?
-faq.answer.7: Sí, realizamos envíos internacionales dentro de toda la Unión Europea para ventas al por menor de acuerdo con las ofertas en Allegro.pl. Para envíos al por mayor, depende del caso específico. Por favor, contáctenos para obtener información sobre los costos de envío y los tiempos de entrega.
+faq.answer.7: Sí, realizamos envíos internacionales dentro del comercio minorista, de acuerdo con la oferta disponible en Allegro.pl y Etsy.com. En el caso de envíos al por mayor, depende del caso específico. Contáctanos para obtener información sobre los costos de envío y plazos de entrega.
 faq.question.8: ¿Sus productos tienen garantía?
-faq.answer.8: Sí, nuestros productos tienen garantía de calidad. Si hay algún problema con el producto, por favor contáctenos para obtener asistencia.
+faq.answer.8: Sí, nuestros productos tienen garantía de calidad. Si tienes algún problema con el producto, por favor contáctanos para recibir ayuda.
 faq.question.9: ¿Ofrecen personalización de pedidos?
-faq.answer.9: Sí, ofrecemos la posibilidad de personalizar pedidos. Por favor, contáctenos para discutir los detalles y las opciones disponibles. Actualmente, no ofrecemos grabados ni variantes personalizadas.
-faq.question.10: ¿Cuánto tiempo tarda el procesamiento del pedido?
-faq.answer.10: El tiempo de procesamiento del pedido puede variar según las preferencias individuales del cliente y la disponibilidad del producto. Se puede obtener información detallada sobre el tiempo de espera al realizar el pedido. Para compras al por menor en Allegro, el tiempo de procesamiento está especificado por la plataforma y se puede encontrar en la página de la oferta.
+faq.answer.9: Sí, ofrecemos la posibilidad de personalizar los pedidos. Por favor, contáctanos para discutir los detalles y las opciones disponibles. Actualmente no ofrecemos grabados ni variantes personalizadas.
+faq.question.10: ¿Cuánto tiempo tarda el proceso de pedido?
+faq.answer.10: El tiempo de procesamiento del pedido puede variar según las preferencias individuales del cliente y la disponibilidad del producto. La información detallada sobre el tiempo de espera está disponible al realizar el pedido. Para compras al por menor en Allegro o Etsy, el tiempo de procesamiento lo establece la plataforma y se puede encontrar en la página de la oferta.
+products.categories.header: Elige una categoría
 category.singular: Categoría
 category.plural: Categorías
 product.singular: Producto
 product.plural: Productos
+contact.title: Contáctanos
+contact.form.title: Envíanos un mensaje
+contact.form.email.placeholder: Dirección de correo electrónico
+contact.form.subject.placeholder: Asunto
+contact.form.message.placeholder: Contenido del mensaje
+contact.wholesale.title: Empresa de venta al por mayor
+contact.retail.title: Empresa de venta al por menor
+products.header: Lista de productos
+contact.form.submit.placeholder: Enviar
