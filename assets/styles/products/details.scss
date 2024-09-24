@@ -87,6 +87,13 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+
+  .product-text-info {
+    background-color: #ffeff2;
+    color: red;
+    border-radius: 12px;
+    padding: 12px;
+  }
 }
 
 .add-to-cart-btn {

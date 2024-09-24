@@ -1,6 +1,15 @@
 @import "~flag-icons/css/flag-icons.min.css";
 @import "_variables.scss";
 
+@import "navbar.scss";
+@import "home.scss";
+@import "faq.scss";
+@import "contact.scss";
+@import "about.scss";
+@import "wholesale.scss";
+@import "footer.scss";
+@import "products/index.scss";
+
 body {
   margin: 0;
   padding: 0;
@@ -242,9 +251,3 @@ body {
     }
   }
 }
-
-@import "navbar.scss";
-@import "home.scss";
-@import "faq.scss";
-@import "footer.scss";
-@import "products/index.scss";

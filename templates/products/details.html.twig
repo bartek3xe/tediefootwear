@@ -55,7 +55,8 @@
                     <a href="{{ product.etsyUrl }}" class="btn etsy-btn">Kup na Etsy.com</a>
                 {% endif %}
                 {% if not product.allegroUrl and not product.etsyUrl %}
-                    <span class="product-text-info">Produkt niedostępny w sprzedaży</span>
+                    <span class="product-text-info">Produkt niedostępny w sprzedaży detalicznej</span>
+                    <a href="{{ path('app_contact') }}" class="btn btn-primary">Zapytaj o produkt</a>
                 {% endif %}
             </div>
         </div>

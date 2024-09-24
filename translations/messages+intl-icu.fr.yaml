@@ -1,80 +1,90 @@
 navigation.home: Accueil
 navigation.about: À propos
 navigation.products: Produits
-navigation.products.women.slippers: Pantoufles pour femmes
+navigation.products.women.slippers: Chaussons pour femmes
 navigation.products.women.clogs: Sabots pour femmes
-navigation.products.men.slippers: Pantoufles pour hommes
+navigation.products.men.slippers: Chaussons pour hommes
 navigation.products.men.clogs: Sabots pour hommes
-navigation.products.children.slippers: Pantoufles pour enfants
+navigation.products.children.slippers: Chaussons pour enfants
 navigation.products.special: Offres spéciales
 navigation.wholesale: Vente en gros
 navigation.contact: Contact
 navigation.faq: FAQ
-home.image.alt: L'arrière-plan de la section d'accueil principale contient des dessins de pantoufles de différentes couleurs
+home.image.alt: L'arrière-plan de la section d'accueil principale contient des dessins de chaussons de différentes couleurs
 home.image.title: Confort à chaque pas
-home.image.description: Tedie est une entreprise familiale qui fabrique des pantoufles et des sabots de qualité depuis plus de 20 ans. Nous sommes spécialisés dans les chaussures de confort haut de gamme, avec un amorti supplémentaire et un soutien de la voûte plantaire. Nos produits sont fabriqués à partir de matériaux durables et conçus pour un confort tout au long de la journée.
-home.categories.ws.alt: Chaussons pour femmes - catégorie de produits
-home.categories.ms.alt: Chaussons pour hommes - catégorie de produits
-home.categories.wc.alt: Sabots pour femmes - catégorie de produits
-home.categories.mc.alt: Sabots pour hommes - catégorie de produits
-home.categories.ks.alt: Chaussons pour enfants - catégorie de produits
+home.image.description: Tedie est une entreprise familiale qui produit des chaussons et des sabots de haute qualité depuis plus de 20 ans. Nous nous spécialisons dans les chaussures confortables avec un amorti supplémentaire et un soutien de la voûte plantaire. Nos produits sont fabriqués à partir de matériaux écologiques et conçus pour un confort toute la journée.
+home.categories.ws.alt: Chaussons pour femmes - catégorie de produit
+home.categories.ms.alt: Chaussons pour hommes - catégorie de produit
+home.categories.wc.alt: Sabots pour femmes - catégorie de produit
+home.categories.mc.alt: Sabots pour hommes - catégorie de produit
+home.categories.ks.alt: Chaussons pour enfants - catégorie de produit
 home.categories.ws.text: Chaussons pour femmes
 home.categories.ms.text: Chaussons pour hommes
 home.categories.wc.text: Sabots pour femmes
 home.categories.mc.text: Sabots pour hommes
 home.categories.ks.text: Chaussons pour enfants
-home.image.button.products: Découvrez les produits
-home.categories.ws.description: Chaussures d'intérieur élégantes et confortables, fabriquées à partir de matériaux doux et respirants, offrant un grand confort.
-home.categories.ms.description: Chaussures d'intérieur solides et confortables, fabriquées à partir de matériaux durables qui offrent un confort durable.
-home.categories.wc.description: Chaussures stylées et pratiques, fabriquées à partir de matériaux naturels, idéales pour une utilisation à la maison comme à l'extérieur.
-home.categories.mc.description: Chaussures durables et confortables, qui allient style traditionnel et confort moderne, adaptées à un usage quotidien.
-home.categories.ks.description: Chaussures d'intérieur douces et sûres pour enfants, disponibles dans de nombreux motifs colorés, offrant confort et protection aux petits pieds.
-home.category.header: Notre Offre
-home.order.retail.header: Commandes au Détail
-home.order.retail.description: Nous offrons des prix compétitifs pour les clients individuels intéressés par nos produits. Tous les articles de notre site mènent à des offres disponibles sur Allegro. Pour effectuer un achat au détail, visitez notre compte Allegro. Nous expédions vers tous les pays de l'UE. Cliquez sur le bouton ci-dessous pour voir notre offre.
-home.order.wholesale.header: Commandes en Gros
-home.order.wholesale.description: Nous offrons des prix de gros attractifs pour les entreprises souhaitant vendre nos produits dans leurs magasins physiques ou en ligne. Expédition internationale disponible. Si vous êtes intéressé par des achats en gros, contactez-nous. Plus d'informations sur les ventes en gros sont disponibles sur la page dédiée ou en nous contactant via le bouton approprié.
-home.order.retail.button: Vérifier les produits
+home.image.button.products: Voir les produits
+home.categories.ws.description: Chaussures d'intérieur élégantes et confortables fabriquées à partir de matériaux naturels tels que le cuir et le cuir synthétique. Respirants et offrant un confort total.
+home.categories.ms.description: Chaussures d'intérieur solides et confortables fabriquées à partir de matériaux durables et éprouvés qui garantissent un confort et une durabilité à long terme.
+home.categories.wc.description: Chaussures stylées et pratiques fabriquées à partir de matériaux naturels, idéales à la fois pour l'intérieur et l'extérieur.
+home.categories.mc.description: Chaussures robustes et confortables alliant style traditionnel et confort moderne, adaptées à une utilisation quotidienne.
+home.categories.ks.description: Chaussures d'intérieur douces et sûres pour enfants, disponibles dans de nombreux motifs colorés, offrant confort et protection pour les petits pieds.
+home.category.header: Notre offre
+home.order.retail.header: Achats au détail
+home.order.retail.description: Nous offrons des prix compétitifs pour les clients individuels intéressés par nos produits. Tous les articles de notre site mènent à des offres disponibles sur Allegro et Etsy. Pour effectuer un achat au détail, visitez nos comptes sur ces plateformes. Nous livrons dans tous les pays de l'UE. Cliquez sur le bouton ci-dessous pour voir notre offre.
+home.order.wholesale.header: Commandes en gros
+home.order.wholesale.description: Nous offrons des prix de gros attractifs pour les entreprises qui souhaitent vendre nos produits dans leurs magasins physiques ou en ligne. Livraison internationale disponible. Si vous êtes intéressé par des commandes en gros, contactez-nous. Plus d'informations sur la vente en gros sont disponibles sur la page dédiée ou en nous contactant via le bouton approprié.
+home.order.retail.button: Voir les produits
 home.order.wholesale.button: Vente en gros
 home.order.contact.button: Contactez-nous
 about.history.title: Notre histoire
-about.history.description.first: TEDIE est une entreprise avec plus de 20 ans de tradition, qui a commencé comme une entreprise familiale exclusivement axée sur la production de pantoufles. Au début, l'entreprise était dirigée par des frères qui étaient personnellement impliqués dans chaque étape de la production. Au fil du temps, nous avons progressivement augmenté le nombre de machines et élargi notre base de clients - d'abord localement, puis dans toute la Pologne.
-about.history.description.second: Nous avons toujours été spécialisés dans la vente en gros, gagnant la confiance de nombreux partenaires commerciaux. Aujourd'hui, nous atteignons un nouveau niveau en élargissant nos activités à la vente au détail. Grâce à la plateforme Allegro, nos pantoufles sont disponibles pour les clients de toute l'Union européenne. Pour la vente en gros, nous travaillons avec des entreprises quel que soit leur emplacement - il suffit de nous contacter directement par e-mail.
-about.quality.title: Nous nous concentrons sur la qualité
-about.quality.description.first: Depuis la création de TEDIE, la priorité a été la qualité de nos produits. Tous nos produits sont faits à la main, avec un soutien croissant des machines, ce qui permet une précision et un soin extrêmes. L'artisanat et l'expérience acquis au fil des ans garantissent que chaque produit quittant notre usine répond aux normes de qualité les plus élevées.
-about.quality.description.second: Nos produits sont en partie fabriqués en cuir véritable, offrant un confort et une durabilité exceptionnels. L'intérieur de chaque pantoufle, chaussure ou autre chaussure est toujours doublé de cuir naturel, tandis que la partie extérieure peut être fabriquée en matériaux synthétiques, selon le design. De plus, nos pantoufles sont équipées d'un renfoncement spécial pour le pied et d'une mousse supplémentaire, garantissant un confort maximal pour l'utilisateur. Le client peut être sûr de recevoir un produit de premier ordre, perfectionné dans les moindres détails.
+about.history.description.first: TEDIE est une entreprise avec plus de 20 ans de tradition, dont les origines remontent à une entreprise familiale axée uniquement sur la production de chaussons. Au début de notre aventure, l'entreprise était dirigée par des frères qui s'impliquaient personnellement à chaque étape de la production. Au fil du temps, nous avons progressivement augmenté le nombre de machines et élargi notre clientèle – d'abord locale, puis à l'échelle nationale.
+about.history.description.second: Nous nous sommes toujours spécialisés dans la vente en gros, gagnant la confiance de nombreux partenaires commerciaux. Aujourd'hui, nous franchissons une nouvelle étape en étendant nos activités à la vente au détail. Grâce à des plateformes comme Allegro et Etsy, nos chaussons sont désormais disponibles pour des clients du monde entier. Pour la vente en gros, nous travaillons avec des entreprises, quelle que soit leur localisation – il suffit de nous contacter directement par e-mail.
+about.quality.title: Nous misons sur la qualité
+about.quality.description.first: Depuis la création de TEDIE, la qualité de nos produits a toujours été une priorité. Tous nos articles sont fabriqués à la main, avec un soutien de plus en plus important des machines, ce qui permet de garantir une précision et un soin optimaux. Le savoir-faire acquis au fil des ans et l'expérience garantissent que chaque produit quittant notre usine répond aux normes de qualité les plus élevées.
+about.quality.description.second: Nos produits sont partiellement fabriqués en cuir véritable, assurant un confort et une durabilité exceptionnels. L'intérieur de chaque chausson, sabot ou chaussure est toujours doublé de cuir naturel, tandis que l'extérieur peut être fabriqué à partir de matériaux synthétiques, en fonction du modèle. De plus, nos chaussons sont équipés d'une forme spéciale pour le pied et d'une mousse supplémentaire, garantissant un confort maximal. Le client peut être assuré de recevoir un produit haut de gamme, conçu dans les moindres détails.
 about.image.title: À propos de nous
-about.image.description: Découvrez comment nous allions tradition et modernité dans la production de pantoufles de la plus haute qualité.
+about.image.description: Découvrez comment nous allions tradition et modernité dans la production de chaussons de haute qualité.
 wholesale.image.title: Vente en gros
-wholesale.image.description: TEDIE est une entreprise avec plus de 20 ans d'expérience dans la production et la vente de pantoufles et de sabots. Nous sommes fiers de notre qualité et de notre attention aux détails, ce qui fait de nous un partenaire de confiance pour de nombreux clients de gros.
-wholesale.benefits.title: Avantages de la coopération
-wholesale.benefits.description: La coopération avec TEDIE signifie l'accès à une large gamme de produits de haute qualité, des prix compétitifs et des conditions de coopération flexibles. Nous offrons un service client dédié et des délais de traitement des commandes rapides.
-wholesale.conditions.title: Commandes minimales et conditions de coopération
-wholesale.conditions.description: La commande minimum en gros est de 50 paires de pantoufles ou de 25 paires de sabots. Nous offrons la possibilité de personnaliser les commandes pour répondre aux besoins individuels du client. Contactez-nous pour discuter des détails de la coopération.
+wholesale.image.description: TEDIE est une entreprise forte de plus de 20 ans d'expérience dans la production et la vente de chaussons et de sabots. Nous sommes fiers de la qualité et de l'attention aux détails que nous apportons, ce qui fait de nous un partenaire de confiance pour de nombreux clients en gros.
+wholesale.benefits.title: Avantages de la collaboration
+wholesale.benefits.description: La collaboration avec TEDIE signifie un accès à une large gamme de produits de haute qualité, des prix compétitifs et des conditions de coopération flexibles. Nous offrons un service client dédié et des délais de traitement rapides.
+wholesale.conditions.title: Commandes minimales et conditions de collaboration
+wholesale.conditions.description: La commande minimale en gros est de 100 paires de chaussons ou 50 paires de sabots. Nous offrons la possibilité d'adapter les commandes aux besoins individuels du client. Contactez-nous pour discuter des détails de la collaboration.
 wholesale.process.title: Processus de commande
-wholesale.process.description: Pour passer une commande en gros, veuillez contacter notre service des ventes en gros par e-mail ou par téléphone. Après réception de la demande, nous préparerons une offre de prix individuelle. Après acceptation des conditions, nous procédons à l'exécution de la commande.
-wholesale.faq: Consultez les questions fréquemment posées
-faq.question.1: Quels produits votre entreprise propose-t-elle?
-faq.answer.1: Notre entreprise propose des chaussons et des sabots pour hommes et femmes, ainsi que des chaussons pour enfants, tous faits à la main pour chaque client.
-faq.question.2: Proposez-vous de la vente en gros?
-faq.answer.2: Oui, nous proposons de la vente en gros. Nous vous encourageons à nous contacter par e-mail ou par téléphone pour plus d'informations. La commande minimum est de 50 paires de chaussons ou 25 paires de sabots.
-faq.question.3: Où puis-je acheter vos produits au détail?
-faq.answer.3: Nos produits sont disponibles à l'achat sur la plateforme Allegro.pl. Sur notre site, nous affichons les produits disponibles d'Allegro. En cliquant sur un produit spécifique, le client est redirigé vers la page produit respective sur Allegro.pl. Nous vous invitons à consulter nos offres.
-faq.question.4: Proposez-vous des chaussons et des sabots pour enfants?
-faq.answer.4: Oui, nous proposons des chaussons pour enfants. Actuellement, nous n'avons pas de sabots pour enfants, mais nous prévoyons d'élargir notre gamme à l'avenir.
-faq.question.5: Comment puis-je contacter le service client?
-faq.answer.5: Si vous avez des questions ou des préoccupations, nous vous encourageons à nous contacter par e-mail ou par téléphone. Les coordonnées se trouvent sur notre site dans la section "Contact".
-faq.question.6: Proposez-vous des retours pour les produits achetés?
-faq.answer.6: Oui, nous offrons la possibilité de retourner les produits achetés conformément à la politique de retour du site Allegro.pl.
-faq.question.7: Expédiez-vous à l'international?
-faq.answer.7: Oui, nous expédions à l'international dans toute l'Union européenne pour les ventes au détail conformément aux offres sur Allegro.pl. Pour les expéditions en gros, cela dépend du cas spécifique. Veuillez nous contacter pour des informations sur les coûts d'expédition et les délais de livraison.
-faq.question.8: Vos produits sont-ils garantis?
-faq.answer.8: Oui, nos produits sont couverts par une garantie de qualité. En cas de problème avec le produit, veuillez nous contacter pour obtenir de l'aide.
-faq.question.9: Proposez-vous une personnalisation des commandes?
-faq.answer.9: Oui, nous proposons la possibilité de personnaliser les commandes. Veuillez nous contacter pour discuter des détails et des options disponibles. Actuellement, nous n'offrons pas de gravures ou de variantes personnalisées.
-faq.question.10: Combien de temps dure le traitement des commandes?
-faq.answer.10: Le délai de traitement des commandes peut varier en fonction des préférences individuelles des clients et de la disponibilité des produits. Des informations détaillées sur le délai d'attente peuvent être obtenues lors de la commande. Pour les achats au détail sur Allegro, le délai de traitement est indiqué par la plateforme et peut être trouvé sur la page de l'offre.
+wholesale.process.description: Pour passer une commande en gros, veuillez contacter notre service de vente en gros par e-mail ou téléphone. Après avoir reçu une demande, nous préparerons une offre de prix personnalisée. Une fois les conditions acceptées, nous procédons à l'exécution de la commande.
+wholesale.faq: Consultez les questions fréquentes
+faq.question.1: Quels produits propose votre entreprise ?
+faq.answer.1: Notre entreprise propose des chaussons et des sabots pour hommes et femmes, ainsi que des chaussons pour enfants, fabriqués à la main pour chaque client.
+faq.question.2: Faites-vous de la vente en gros ?
+faq.answer.2: Oui, nous faisons de la vente en gros. Nous vous encourageons à nous contacter par e-mail ou téléphone pour plus d'informations. La commande minimale est de 100 paires de chaussons ou 50 paires de sabots.
+faq.question.3: Où puis-je acheter vos produits au détail ?
+faq.answer.3: Nos produits sont disponibles à l'achat sur les plateformes Allegro.pl et Etsy.com. Sur notre site, nous affichons tous nos produits, quelle que soit leur disponibilité sur d'autres plateformes. Sur la page du produit, des liens vers le même produit sur Allegro ou Etsy sont disponibles. Nous vous invitons à consulter nos offres.
+faq.question.4: Proposez-vous des chaussons et sabots pour enfants ?
+faq.answer.4: Oui, nous proposons des chaussons pour enfants. Actuellement, nous n'avons pas de sabots pour enfants en stock, mais nous prévoyons d'élargir notre gamme à l'avenir.
+faq.question.5: Comment puis-je contacter le service client ?
+faq.answer.5: En cas de questions ou d'inquiétudes, nous vous encourageons à nous contacter par e-mail ou téléphone. Les coordonnées se trouvent sur notre site, dans l'onglet "Contact".
+faq.question.6: Proposez-vous des retours pour les produits achetés ?
+faq.answer.6: Oui, nous proposons des retours pour les produits achetés, conformément à la politique de retour des sites Allegro.pl et Etsy.com.
+faq.question.7: Livrez-vous à l'international ?
+faq.answer.7: Oui, nous traitons les commandes internationales dans le cadre de la vente au détail, conformément à l'offre sur Allegro.pl et Etsy.com. Pour les commandes en gros, tout dépend du cas spécifique. Veuillez nous contacter pour obtenir des informations sur les frais de livraison et les délais de livraison.
+faq.question.8: Vos produits sont-ils garantis ?
+faq.answer.8: Oui, nos produits sont couverts par une garantie qualité. En cas de problème avec le produit, veuillez nous contacter pour obtenir de l'aide.
+faq.question.9: Proposez-vous la personnalisation des commandes ?
+faq.answer.9: Oui, nous offrons la possibilité de personnaliser les commandes. Veuillez nous contacter pour discuter des détails et des options disponibles. Nous n'offrons actuellement pas de gravures ou de variantes personnalisées.
+faq.question.10: Combien de temps prend le traitement d'une commande ?
+faq.answer.10: Le temps de traitement d'une commande peut varier en fonction des préférences individuelles du client et de la disponibilité des produits. Des informations détaillées sur le délai d'attente sont disponibles lors de la passation de la commande. Pour les achats au détail sur Allegro ou Etsy, le délai de traitement est défini par la plateforme et peut être consulté sur la page de l'offre.
+products.categories.header: Choisissez une catégorie
 category.singular: Catégorie
 category.plural: Catégories
 product.singular: Produit
 product.plural: Produits
+contact.title: Contactez-nous
+contact.form.title: Envoyez-nous un message
+contact.form.email.placeholder: Adresse e-mail
+contact.form.subject.placeholder: Sujet
+contact.form.message.placeholder: Contenu du message
+contact.wholesale.title: Entreprise de vente en gros
+contact.retail.title: Entreprise de vente au détail
+products.header: Liste des produits
+contact.form.submit.placeholder: Envoyer

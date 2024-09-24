@@ -27,6 +27,12 @@ section.home {
         }
         .home-order-section-right {
           order: 2;
+
+          .btn {
+            @media only screen and (width < 435px) {
+              width: 100%;
+            }
+          }
         }
       }
 

@@ -13,25 +13,25 @@ navigation.faq: FAQ
 home.image.alt: Tło głównej sekcji powitalnej zawiera rysunki kapci w różnych kolorach
 home.image.title: Komfort na każdym kroku
 home.image.description: Tedie to rodzinna firma, która od ponad 20 lat produkuje wysokiej jakości kapcie i chodaki. Specjalizujemy się w obuwiu o wysokim komforcie, z dodatkowym amortyzowaniem i wsparciem łuku stopy. Nasze produkty są wykonane z ekologicznych materiałów i zaprojektowane dla całodziennego komfortu.
-home.categories.ws.alt: Pantofle damskie - kategoria produktów
-home.categories.ms.alt: Pantofle męskie - kategoria produktów
+home.categories.ws.alt: Kapcie damskie - kategoria produktów
+home.categories.ms.alt: Kapcie męskie - kategoria produktów
 home.categories.wc.alt: Drewniaki damskie - kategoria produktów
 home.categories.mc.alt: Drewniaki męskie - kategoria produktów
-home.categories.ks.alt: Pantofle dziecięce - kategoria produktów
-home.categories.ws.text: Pantofle damskie
-home.categories.ms.text: Pantofle męskie
+home.categories.ks.alt: Kapcie dziecięce - kategoria produktów
+home.categories.ws.text: Kapcie damskie
+home.categories.ms.text: Kapcie męskie
 home.categories.wc.text: Drewniaki damskie
 home.categories.mc.text: Drewniaki męskie
-home.categories.ks.text: Pantofle dziecięce
+home.categories.ks.text: Kapcie dziecięce
 home.image.button.products: Sprawdź produkty
-home.categories.ws.description: Eleganckie i wygodne obuwie domowe, wykonane z miękkich, oddychających materiałów, zapewniających komfort.
-home.categories.ms.description: Solidne i komfortowe obuwie domowe, wykonane z wytrzymałych materiałów, które zapewniają długotrwałą wygodę.
+home.categories.ws.description: Eleganckie i wygodne obuwie domowe, wykonane z naturalnych materiałów takich jak skóra i ekoskóra. Oddychające i gwarantujące pełny komfort.
+home.categories.ms.description: Solidne i komfortowe obuwie domowe, wykonane z wytrzymałych i sprawdzonych materiałów, które zapewniają długotrwałą wygodę i użytkowanie.
 home.categories.wc.description: Stylowe i praktyczne obuwie, wykonane z naturalnych materiałów, idealne zarówno do użytku domowego, jak i na zewnątrz.
 home.categories.mc.description: Wytrzymałe i wygodne obuwie, które łączy tradycyjny styl z nowoczesnym komfortem, odpowiednie do codziennego użytku.
 home.categories.ks.description: Miękkie i bezpieczne obuwie domowe dla dzieci, dostępne w wielu kolorowych wzorach, które zapewniają wygodę i ochronę małych stóp.
 home.category.header: Nasza Oferta
 home.order.retail.header: Zakupy Detaliczne
-home.order.retail.description: Zapewniamy konkurencyjne ceny dla klientów indywidualnych zainteresowanych naszymi produktami. Wszystkie artykuły na naszej stronie prowadzą do ofert dostępnych na Allegro. Aby dokonać zakupu detalicznego, odwiedź nasze konto na Allegro. Wysyłamy do wszystkich krajów UE. Kliknij poniższy przycisk, aby zobaczyć naszą ofertę.
+home.order.retail.description: Zapewniamy konkurencyjne ceny dla klientów indywidualnych zainteresowanych naszymi produktami. Wszystkie artykuły na naszej stronie prowadzą do ofert dostępnych na Allegro oraz Etsy. Aby dokonać zakupu detalicznego, odwiedź nasze konta na tych platformach. Wysyłamy do wszystkich krajów UE. Kliknij poniższy przycisk, aby zobaczyć naszą ofertę.
 home.order.wholesale.header: Zamówienia Hurtowe
 home.order.wholesale.description: Oferujemy atrakcyjne ceny hurtowe dla firm chcących sprzedawać nasze produkty w swoich sklepach stacjonarnych lub internetowych. Wysyłka międzynarodowa dostępna. Jeśli jesteś zainteresowany zakupem hurtowym, skontaktuj się z nami. Więcej informacji o sprzedaży hurtowej znajdziesz na dedykowanej stronie lub kontaktując się z nami przez odpowiedni przycisk.
 home.order.retail.button: Sprawdź produkty
@@ -39,10 +39,10 @@ home.order.wholesale.button: Sprzedaż hurtowa
 home.order.contact.button: Skontaktuj się z nami
 about.history.title: Nasza historia
 about.history.description.first: TEDIE to firma z ponad 20-letnią tradycją, której początki sięgają rodzinnego interesu skoncentrowanego wyłącznie na produkcji pantofli. Na początku naszej drogi, firma była prowadzona przez braci, którzy osobiście angażowali się w każdy etap produkcji. Z czasem, stopniowo zwiększaliśmy liczbę maszyn oraz rozszerzaliśmy grono naszych klientów - początkowo lokalnych, a następnie z całej Polski.
-about.history.description.second:  Od zawsze specjalizowaliśmy się w sprzedaży hurtowej, zdobywając zaufanie wielu partnerów biznesowych. Dzisiaj, wkraczamy na nowy poziom, rozszerzając naszą działalność o sprzedaż detaliczną. Dzięki platformie Allegro, nasze pantofle są dostępne dla klientów z całej Unii Europejskiej. W przypadku sprzedaży hurtowej, współpracujemy z firmami niezależnie od ich lokalizacji - wystarczy skontaktować się z nami bezpośrednio poprzez wiadomość e-mail.
+about.history.description.second:  Od zawsze specjalizowaliśmy się w sprzedaży hurtowej, zdobywając zaufanie wielu partnerów biznesowych. Dzisiaj, wkraczamy na nowy poziom, rozszerzając naszą działalność o sprzedaż detaliczną. Dzięki platformom jak Allegro oraz Etsy, nasze kapcie są dostępne dla klientów z każdego zakątka świata. W przypadku sprzedaży hurtowej, współpracujemy z firmami niezależnie od ich lokalizacji - wystarczy skontaktować się z nami bezpośrednio poprzez wiadomość e-mail.
 about.quality.title: Stawiamy na jakość
 about.quality.description.first: Od samego początku istnienia TEDIE, priorytetem była jakość naszych produktów. Wszystkie nasze wyroby są ręcznie wykonywane, z coraz większym wsparciem maszyn, co pozwala na zachowanie najwyższej precyzji i staranności. Nabyty przez lata kunszt oraz doświadczenie sprawiają, że każdy produkt opuszczający naszą fabrykę spełnia najwyższe standardy jakości.
-about.quality.description.second: Nasze produkty są częściowo wykonane z prawdziwej skóry, co zapewnia wyjątkowy komfort i trwałość. Wnętrze każdego pantofla, kapcia czy obuwia jest zawsze wyłożone naturalną skórą, podczas gdy zewnętrzna część może być wykonana z materiałów syntetycznych, w zależności od wzoru. Dodatkowo, nasze pantofle są wyposażone w specjalne wyżłobienie na stopę oraz dodatkową piankę, co zapewnia maksymalną wygodę użytkowania. Klient może być pewien, że otrzyma produkt najwyższej klasy, dopracowany w każdym detalu.
+about.quality.description.second: Nasze produkty są częściowo wykonane z prawdziwej skóry, co zapewnia wyjątkowy komfort i trwałość. Wnętrze każdego pantofla, kapcia czy obuwia jest zawsze wyłożone naturalną skórą, podczas gdy zewnętrzna część może być wykonana z materiałów syntetycznych, w zależności od wzoru. Dodatkowo, nasze kapcie są wyposażone w specjalne wyżłobienie na stopę oraz dodatkową piankę, co zapewnia maksymalną wygodę użytkowania.Elient może być pewien, że otrzyma produkt najwyższej klasy, dopracowany w każdym detalu.
 about.image.title: O nas
 about.image.description: Zobacz, jak łączymy tradycję z nowoczesnością w produkcji najwyższej jakości pantofli.
 wholesale.image.title: Sprzedaż hurtowa
@@ -50,32 +50,41 @@ wholesale.image.description: TEDIE to firma z ponad 20-letnim doświadczeniem w 
 wholesale.benefits.title: Korzyści ze współpracy
 wholesale.benefits.description: Współpraca z TEDIE oznacza dostęp do szerokiej gamy produktów wysokiej jakości, konkurencyjne ceny oraz elastyczne warunki współpracy. Oferujemy dedykowaną obsługę klienta i szybkie terminy realizacji zamówień.
 wholesale.conditions.title: Minimalne zamówienia i warunki współpracy
-wholesale.conditions.description: Minimalne zamówienie hurtowe to 50 par pantofli lub 25 par drewniaków. Oferujemy możliwość dostosowania zamówień do indywidualnych potrzeb klienta. Skontaktuj się z nami, aby omówić szczegóły współpracy.
+wholesale.conditions.description: Minimalne zamówienie hurtowe to 100 par pantofli lub 50 par drewniaków. Oferujemy możliwość dostosowania zamówień do indywidualnych potrzeb klienta. Skontaktuj się z nami, aby omówić szczegóły współpracy.
 wholesale.process.title: Proces zamawiania
 wholesale.process.description: Aby złożyć zamówienie hurtowe, prosimy o kontakt z naszym działem sprzedaży hurtowej poprzez e-mail lub telefon. Po otrzymaniu zapytania, przygotujemy indywidualną ofertę cenową. Po zaakceptowaniu warunków, przystępujemy do realizacji zamówienia.
 wholesale.faq: Sprawdź najczęściej zadawane pytania
 faq.question.1: Jakie produkty oferuje Wasza firma?
-faq.answer.1: Nasza firma oferuje kapcie i chodaki dla mężczyzn i kobiet, a także pantofle dziecięce, wykonane ręcznie dla każdego klienta.
+faq.answer.1: Nasza firma oferuje kapcie i chodaki dla mężczyzn i kobiet, a także kapcie dziecięce, wykonane ręcznie dla każdego klienta.
 faq.question.2: Czy prowadzicie sprzedaż hurtową?
-faq.answer.2: Tak, prowadzimy sprzedaż hurtową. Zachęcamy do kontaktu mailowego bądź telefonicznego w celu uzyskania więcej informacji. Minimalne zamówienie wynosi 50 par pantofli bądź 25 par drewniaków.
+faq.answer.2: Tak, prowadzimy sprzedaż hurtową. Zachęcamy do kontaktu mailowego bądź telefonicznego w celu uzyskania więcej informacji. Minimalne zamówienie wynosi 100 par pantofli bądź 50 par drewniaków.
 faq.question.3: Gdzie mogę dokonać zakupu detalicznego Waszych produktów?
-faq.answer.3: Nasze produkty są dostępne do zakupu na platformie Allegro.pl. Na naszej stronie wyświetlamy dostępne produkty zaciągnięte z Allegro. Po kliknięciu na konkretny produkt, klient zostaje przeniesiony na odpowiednią stronę produktu na Allegro.pl. Zapraszamy do zapoznania się z naszymi ofertami.
+faq.answer.3: Nasze produkty są dostępne do zakupu na platformach Allegro.pl oraz Etsy.com. Na naszej stronie wyświetlamy wszystkie nasze produkty niezależnie od dostępności na innych platformach. Na stronie produktu znajdują się odnośniki do tego samego produktu na ALlegro bądź Etsy. Zapraszamy do zapoznania się z naszymi ofertami.
 faq.question.4: Czy oferujecie kapcie i chodaki dla dzieci?
 faq.answer.4: Tak, oferujemy kapcie dla dzieci. Obecnie nie mamy w ofercie chodaków dziecięcych, ale planujemy rozszerzenie asortymentu w przyszłości.
 faq.question.5: Jak mogę skontaktować się z działem obsługi klienta?
 faq.answer.5: W razie pytań lub wątpliwości zachęcamy do kontaktu drogą mailową lub telefoniczną. Dane kontaktowe znajdują się na naszej stronie w zakładce "Kontakt".
 faq.question.6: Czy oferujecie możliwość zwrotu zakupionych produktów?
-faq.answer.6: Tak, zapewniamy możliwość zwrotu zakupionych produktów zgodnie z polityką zwrotów strony internetowej Allegro.pl.
+faq.answer.6: Tak, zapewniamy możliwość zwrotu zakupionych produktów zgodnie z polityką zwrotów strony internetowej Allegro.pl oraz Etsy.com.
 faq.question.7: Czy realizujecie zamówienia zagraniczne?
-faq.answer.7: Tak, realizujemy zamówienia zagraniczne na terenie całej Unii Europejskiej w ramach sprzedaży detalicznej zgodnie z ofertą na Allegro.pl. W przypadku wysyłek hurtowych wszystko zależy od konkretnego przypadku. Prosimy o kontakt w celu uzyskania informacji dotyczących kosztów wysyłki i terminów dostawy.
+faq.answer.7: Tak, realizujemy zamówienia zagraniczne w ramach sprzedaży detalicznej zgodnie z ofertą na Allegro.pl oraz Etsy.com. W przypadku wysyłek hurtowych wszystko zależy od konkretnego przypadku. Prosimy o kontakt w celu uzyskania informacji dotyczących kosztów wysyłki i terminów dostawy.
 faq.question.8: Czy Wasze produkty posiadają gwarancję?
 faq.answer.8: Tak, nasze produkty objęte są gwarancją jakości. W razie problemów z produktem prosimy o kontakt w celu uzyskania pomocy.
 faq.question.9: Czy oferujecie personalizację zamówień?
 faq.answer.9: Tak, oferujemy możliwość personalizacji zamówień. Prosimy o kontakt w celu omówienia szczegółów i dostępnych opcji. Obecnie nie oferujemy grawerów ani personalizowanych wariantów.
 faq.question.10: Jak długo trwa proces realizacji zamówienia?
-faq.answer.10: Czas realizacji zamówienia może się różnić w zależności od indywidualnych preferencji klienta oraz dostępności produktów. Szczegółowe informacje na temat czasu oczekiwania można uzyskać podczas składania zamówienia. Dla zakupów detalicznych na Allegro, czas realizacji jest określany przez platformę i można go znaleźć na stronie oferty.
+faq.answer.10: Czas realizacji zamówienia może się różnić w zależności od indywidualnych preferencji klienta oraz dostępności produktów. Szczegółowe informacje na temat czasu oczekiwania można uzyskać podczas składania zamówienia. Dla zakupów detalicznych na Allegro lub Etsy, czas realizacji jest określany przez platformę i można go znaleźć na stronie oferty.
 products.categories.header: Wybierz Kategorie
 category.singular: Kategoria
 category.plural: Kategorie
 product.singular: Produkt
 product.plural: Produkty
+contact.title: Skontaktuj się z nami
+contact.form.title: Wyślij nam wiadomość
+contact.form.email.placeholder: Adres e-mail
+contact.form.subject.placeholder: Tytuł
+contact.form.message.placeholder: Treść wiadomości
+contact.wholesale.title: Firma zajmująca się sprzedażą hurtową
+contact.retail.title: Firma zajmująca się sprzedażą detaliczną
+products.header: Lista Produktów
+contact.form.submit.placeholder: Wyślij
