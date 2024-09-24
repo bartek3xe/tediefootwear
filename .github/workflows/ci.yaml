@@ -1,0 +1,38 @@
+name: Continuous Integration
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '>=20.10.0'
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Install Composer dependencies
+        run: composer install
+
+      - name: Install dependencies
+        run: npm install
+
+#      - name: Run ESLint
+#        run: npx eslint assets/
+#
+#      - name: Run Stylelint
+#        run: npx stylelint "assets/styles/**/*.scss"
+#
+#      - name: Run PHPCsFixer
+#        run: vendor/bin/php-cs-fixer fix --diff --dry-run --allow-risky=yes
+#
+#      - name: Run PHPStan
+#        run: vendor/bin/phpstan analyse
