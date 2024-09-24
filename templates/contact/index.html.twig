@@ -4,6 +4,11 @@
     <section class="contact-section">
         <h2>{{ 'contact.title'|trans }}</h2>
 
+        <div class="contact-form contact-tile">
+            <h3>{{ 'contact.form.title'|trans }}</h3>
+            {% include('contact/partials/_form.html.twig') %}
+        </div>
+
         {% include('contact/partials/_google_map.html.twig') %}
 
         <div class="contact-info">
@@ -67,10 +72,6 @@
                     <span class="value"><a href="tel:+48693819387">+48 693819387</a></span>
                 </p>
             </div>
-        </div>
-        <div class="contact-form contact-tile">
-            <h3>{{ 'contact.form.title'|trans }}</h3>
-            {% include('contact/partials/_form.html.twig') %}
         </div>
     </section>
 {% endblock %}

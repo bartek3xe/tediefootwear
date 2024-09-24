@@ -13,13 +13,19 @@
             </div>
         </div>
 
-        <h2 class="main-h2-header">{{ 'about.history.title'|trans }}</h2>
-        <p class="about-description">{{ 'about.history.description.first'|trans }}</p>
-        <p class="about-description">{{ 'about.history.description.second'|trans }}</p>
+        <div class="about-section">
+            <div class="about-container">
+                <h2 class="main-h2-header">{{ 'about.history.title'|trans }}</h2>
+                <p class="about-description">{{ 'about.history.description.first'|trans }}</p>
+                <p class="about-description">{{ 'about.history.description.second'|trans }}</p>
+            </div>
+            <div class="about-container">
+                <h2 class="main-h2-header">{{ 'about.quality.title'|trans }}</h2>
+                <p class="about-description">{{ 'about.quality.description.first'|trans }}</p>
+                <p class="about-description">{{ 'about.quality.description.second'|trans }}</p>
+            </div>
+        </div>
 
-        <h2 class="main-h2-header">{{ 'about.quality.title'|trans }}</h2>
-        <p class="about-description">{{ 'about.quality.description.first'|trans }}</p>
-        <p class="about-description">{{ 'about.quality.description.second'|trans }}</p>
 
         {{ include('partials/_our_offer.html.twig') }}
     </section>

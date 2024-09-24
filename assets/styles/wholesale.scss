@@ -1,0 +1,16 @@
+.wholesale-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.wholesale-description {
+  text-align: justify;
+  max-width: 1100px;
+}
+
+@media only screen and (width < 1200px) {
+  .wholesale-section {
+    flex-direction: column;
+    gap: 0;
+  }
+}

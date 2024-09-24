@@ -1,0 +1,15 @@
+.about-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.about-description {
+  text-align: justify;
+}
+
+@media only screen and (width < 1200px) {
+  .about-section {
+    flex-direction: column;
+    gap: 0;
+  }
+}
