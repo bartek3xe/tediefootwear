@@ -15,7 +15,7 @@ enum LanguageEnum: string
 
     public static function getNativeName(LanguageEnum $enum): string
     {
-        return match($enum) {
+        return match ($enum) {
             self::POLISH => 'Polski',
             self::ENGLISH => 'English',
             self::GERMAN => 'Deutsch',
@@ -27,7 +27,7 @@ enum LanguageEnum: string
 
     public static function getFlagCode(LanguageEnum $enum): string
     {
-        return match($enum) {
+        return match ($enum) {
             self::POLISH => 'pl',
             self::ENGLISH => 'gb',
             self::GERMAN => 'de',
@@ -39,7 +39,7 @@ enum LanguageEnum: string
 
     public static function getPolishName(LanguageEnum $enum): string
     {
-        return match($enum) {
+        return match ($enum) {
             self::POLISH => 'Polski',
             self::ENGLISH => 'Angielski',
             self::GERMAN => 'Niemiecki',
@@ -55,6 +55,7 @@ enum LanguageEnum: string
         foreach (self::cases() as $enum) {
             $names[$enum->value] = self::getPolishName($enum);
         }
+
         return $names;
     }
 
@@ -64,6 +65,7 @@ enum LanguageEnum: string
         foreach (self::cases() as $enum) {
             $names[$enum->value] = self::getNativeName($enum);
         }
+
         return $names;
     }
 }

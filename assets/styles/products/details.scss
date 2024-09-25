@@ -176,7 +176,7 @@
   color: #6c757d;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .product-details-container {
     grid-template-columns: 1fr;
     gap: 20px;

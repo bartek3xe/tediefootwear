@@ -42,6 +42,8 @@ phpstan() {
 
 # Global quality check
 quality() {
+    npx eslint assets/js/
+    npx stylelint assets/styles/**/*.scss
     php bin/console lint:twig templates
     php bin/console doctrine:schema:validate
     vendor/bin/php-cs-fixer fix --diff --allow-risky=yes

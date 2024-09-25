@@ -25,7 +25,7 @@ class ProductService
     public function delete(int $id): bool
     {
         $product = $this->repository->findOneBy([
-            'id' => $id
+            'id' => $id,
         ]);
 
         if (null === $product) {

@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class FileService
 {
-    const ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png'];
+    public const ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png'];
 
     public function __construct(
         private readonly string $uploadDirectory,
@@ -33,6 +33,7 @@ class FileService
     {
         $preparedFile = $this->prepare($file, $product);
         $this->save($preparedFile);
+
         return $preparedFile;
     }
 
@@ -75,6 +76,7 @@ class FileService
     public function checkExtension(UploadedFile $file): bool
     {
         $extension = $this->getExtension($file);
+
         return in_array($extension, self::ALLOWED_EXTENSIONS, true);
     }
 
@@ -137,7 +139,7 @@ class FileService
     {
         $files = $this->fileRepository->findBy(['product' => $product], ['position' => 'ASC']);
         $productFiles = [];
-        /**@var File $file*/
+        /** @var File $file */
         foreach ($files as $file) {
             $productFiles[] = [
                 'filename' => $file->getFilename(),

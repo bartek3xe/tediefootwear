@@ -14,52 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resultsContainer = searchContainer.querySelector('.search-results-container');
 
-    const performSearch = async () => {
-        const query = input.value.trim();
-
-        if (query === '') {
-            return;
-        }
-
-        try {
-            const data = await fetchSearchResults(query);
-
-            if (data.length > 0) {
-                displayResults(data);
-                resultsContainer.style.display = 'block';
-            } else {
-                resultsContainer.innerHTML = `
-                    <div class="not-found-container">
-                        <img class="not-found" alt="not found image from freepik.com" src="/build/images/not-found.jpg"/>
-                        <a href="https://www.freepik.com/" target="_blank">Designed by Freepik</a>
-                     </div>
-                `;
-                resultsContainer.style.display = 'block';
-            }
-        } catch (error) {
-            resultsContainer.style.display = 'none';
-
-           throw new Error('8169ab69-1477-4abd-8af5-d93c9fc1b1eb');
-        }
-    };
-
-    button.addEventListener('click', async () => {
-        await performSearch()
-    });
-
-    input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            performSearch();
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!searchContainer.contains(e.target) && resultsContainer.style.display === 'block') {
-            resultsContainer.style.display = 'none';
-        }
-    });
-
     async function fetchSearchResults(query) {
         const baseUrl = window.location.origin;
         const locale = document.querySelector('html').getAttribute('lang');
@@ -68,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-        return await response.json();
+        return response.json();
     }
 
     function displayResults(data) {
         resultsContainer.innerHTML = '';
 
         data.forEach((item) => {
-            let resultItem = document.createElement('div');
+            const resultItem = document.createElement('div');
             resultItem.classList.add('search-result-item');
 
             if (item.type === 'product') {
@@ -108,4 +62,50 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsContainer.appendChild(resultItem);
         });
     }
+
+    const performSearch = async () => {
+        const query = input.value.trim();
+
+        if (query === '') {
+            return;
+        }
+
+        try {
+            const data = await fetchSearchResults(query);
+
+            if (data.length > 0) {
+                displayResults(data);
+                resultsContainer.style.display = 'block';
+            } else {
+                resultsContainer.innerHTML = `
+                    <div class="not-found-container">
+                        <img class="not-found" alt="not found image from freepik.com" src="/build/images/not-found.jpg"/>
+                        <a href="https://www.freepik.com/" target="_blank">Designed by Freepik</a>
+                     </div>
+                `;
+                resultsContainer.style.display = 'block';
+            }
+        } catch (error) {
+            resultsContainer.style.display = 'none';
+
+            throw new Error('8169ab69-1477-4abd-8af5-d93c9fc1b1eb');
+        }
+    };
+
+    button.addEventListener('click', async () => {
+        await performSearch();
+    });
+
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            performSearch();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!searchContainer.contains(e.target) && resultsContainer.style.display === 'block') {
+            resultsContainer.style.display = 'none';
+        }
+    });
 });

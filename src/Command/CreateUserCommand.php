@@ -11,10 +11,10 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
-use Symfony\Component\Console\Input\InputOption;
 
 #[AsCommand(name: 'create:user')]
 class CreateUserCommand extends Command
@@ -60,23 +60,23 @@ class CreateUserCommand extends Command
         array $role,
         QuestionHelper $helper,
         InputInterface $input,
-        OutputInterface $output
+        OutputInterface $output,
     ): void {
         $emailQuestion = new ChoiceQuestion(
             sprintf('Do you want to change address email for %s?', $user->getEmail()),
             ['y', 'n'],
-            'n'
+            'n',
         );
 
         if ($this->isPositive($emailQuestion, $helper, $input, $output)) {
             $email = $helper->ask($input, $output, new Question('Enter email: '));
         }
 
-        $password         = null;
+        $password = null;
         $passwordQuestion = new ChoiceQuestion(
             sprintf('Do you want to change password for %s?', $user->getEmail()),
             ['y', 'n'],
-            'n'
+            'n',
         );
 
         if ($this->isPositive($passwordQuestion, $helper, $input, $output)) {
@@ -88,14 +88,14 @@ class CreateUserCommand extends Command
         $user = $this->prepareUser($email, $password, $role, $user);
         $this->saveUser($user);
 
-        $output->writeln("User has been added properly.");
+        $output->writeln('User has been added properly.');
     }
 
     private function createNewUser(
         string $email,
         array $role,
         InputInterface $input,
-        OutputInterface $output
+        OutputInterface $output,
     ): void {
         while (!$this->isSamePasswords) {
             $password = $this->setPassword($input, $output);
@@ -106,7 +106,7 @@ class CreateUserCommand extends Command
             $this->saveUser($user);
         }
 
-        $output->writeln("User has been added properly.");
+        $output->writeln('User has been added properly.');
     }
 
     private function setPassword(InputInterface $input, OutputInterface $output): string
@@ -126,7 +126,7 @@ class CreateUserCommand extends Command
     private function askAboutPassword(
         string $question,
         InputInterface $input,
-        OutputInterface $output
+        OutputInterface $output,
     ): string {
         $helper = new QuestionHelper();
         $question = new Question($question);
@@ -139,7 +139,7 @@ class CreateUserCommand extends Command
         ?string $email,
         ?string $password,
         ?array $role,
-        User $user = new User()
+        User $user = new User(),
     ): User {
         $email && $user->setEmail($email);
         $password && $user->setPassword($password);
@@ -159,10 +159,10 @@ class CreateUserCommand extends Command
         Question $question,
         QuestionHelper $helper,
         InputInterface $input,
-        OutputInterface $output
+        OutputInterface $output,
     ): bool {
         $answer = $helper->ask($input, $output, $question);
 
-        return $answer === 'y';
+        return 'y' === $answer;
     }
 }

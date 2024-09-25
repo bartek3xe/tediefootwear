@@ -1,2 +1,2 @@
-import '../../bootstrap.js';
+import '../../bootstrap';
 import '../../styles/admin/app.scss';

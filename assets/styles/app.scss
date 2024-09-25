@@ -1,6 +1,5 @@
 @import "~flag-icons/css/flag-icons.min.css";
 @import "_variables.scss";
-
 @import "navbar.scss";
 @import "home.scss";
 @import "faq.scss";
@@ -30,7 +29,7 @@ body {
   }
 
   .main-content {
-      margin: 65px 10% 0 10%;
+      margin: 65px 10% 0;
   }
 
   .btn {
@@ -130,28 +129,28 @@ body {
     }
   }
 
-  @media (max-width: 1314px) {
+  @media (width <= 1314px) {
     .main-categories-container .main-category {
       flex: 1 1 calc(25% - 10px);
       max-width: calc(25% - 10px);
     }
   }
 
-  @media (max-width: 1052px) {
+  @media (width <= 1052px) {
     .main-categories-container .main-category {
       flex: 1 1 calc(33.33% - 10px);
       max-width: calc(33.33% - 10px);
     }
   }
 
-  @media (max-width: 789px) {
+  @media (width <= 789px) {
     .main-categories-container .main-category {
       flex: 1 1 calc(50% - 10px);
       max-width: calc(50% - 10px);
     }
   }
 
-  @media (max-width: 527px) {
+  @media (width <= 527px) {
     .main-categories-container .main-category {
       flex: 1 1 100%;
       max-width: 100%;
@@ -234,10 +233,11 @@ body {
         max-width: 300px;
       }
 
-      @media (max-width: 500px) {
+      @media (width <= 500px) {
         h1 {
           font-size: 2rem;
         }
+
         p {
           font-size: 1rem;
         }
@@ -245,7 +245,7 @@ body {
     }
   }
 
-  @media (max-width: 500px) {
+  @media (width <= 500px) {
     .btn {
       font-size: 0.5rem;
     }

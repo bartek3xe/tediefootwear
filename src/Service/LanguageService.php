@@ -22,7 +22,7 @@ class LanguageService
 
     public function getAllLocales(): array
     {
-        return array_map(function (LanguageEnum $language) {
+        return array_map(function(LanguageEnum $language) {
             return [
                 'code' => $language->value,
                 'name' => LanguageEnum::getNativeName($language),

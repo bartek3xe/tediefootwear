@@ -27,7 +27,6 @@ class ProductCategoryHandler
 
     public function prepareData(FormInterface $form, ProductCategory $productCategory): FormInterface
     {
-
         foreach (LanguageEnum::cases() as $language) {
             $form->get('name_' . $language->value)
                 ->setData($productCategory->getName()[$language->value] ?? '');

@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const subMenuLinks = document.querySelectorAll('#leftside-navigation .sub-menu > a');
 
-    subMenuLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            const nextSubMenu = this.nextElementSibling;
+    subMenuLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const nextSubMenu = link.nextElementSibling;
 
             if (nextSubMenu && nextSubMenu.nodeType === 1) {
-                document.querySelectorAll('#leftside-navigation ul ul').forEach(subMenu => {
+                document.querySelectorAll('#leftside-navigation ul ul').forEach((menu) => {
+                    const subMenu = menu;
+
                     if (subMenu !== nextSubMenu) {
                         subMenu.style.display = 'none';
                     }

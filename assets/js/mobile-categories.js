@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.product-categories-container');
     let isDown = false;
     let startX;

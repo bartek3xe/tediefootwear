@@ -1,21 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-        let alerts = document.querySelectorAll('.alert');
-        alerts.forEach(function(alert) {
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        const alerts = document.querySelectorAll('.alert');
+        alerts.forEach((alert) => {
             alert.classList.remove('show');
-            setTimeout(function() {
+            setTimeout(() => {
                 alert.remove();
             }, 500);
         });
     }, 20000);
 
-    document.querySelectorAll('.btn-close').forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            let alert = event.target.closest('.alert');
+    document.querySelectorAll('.btn-close').forEach((button) => {
+        button.addEventListener('click', (event) => {
+            const alert = event.target.closest('.alert');
             alert.classList.remove('show');
-            setTimeout(function() {
+            setTimeout(() => {
                 alert.remove();
-            }, 500);n
+            }, 500);
         });
     });
 });
