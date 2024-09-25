@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-scss"
+  ],
+  "ignoreFiles": [
+    "assets/styles/overrides/**/*"
+  ],
+  "rules": {
+    "no-descending-specificity": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "import-notation": "string",
+    "function-no-unknown": [true, {"ignoreFunctions": ["darken"]}]
+  }
+}
