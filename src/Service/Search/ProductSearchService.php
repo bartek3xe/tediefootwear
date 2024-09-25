@@ -21,9 +21,7 @@ class ProductSearchService
     ) {
     }
 
-
     /**
-     * @param string $query
      * @return array<int, array<string, mixed>>
      */
     public function search(string $query): array
@@ -35,6 +33,7 @@ class ProductSearchService
 
     /**
      * @param Product[] $products
+     *
      * @return array<int, array<string, mixed>>
      */
     private function getResults(array $products): array
