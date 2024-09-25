@@ -25,14 +25,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-#      - name: Run ESLint
-#        run: npx eslint assets/
-#
-#      - name: Run Stylelint
-#        run: npx stylelint "assets/styles/**/*.scss"
-#
-#      - name: Run PHPCsFixer
-#        run: vendor/bin/php-cs-fixer fix --diff --dry-run --allow-risky=yes
-#
-#      - name: Run PHPStan
-#        run: vendor/bin/phpstan analyse
+      - name: Run ESLint
+        run: npx eslint assets/
+
+      - name: Run Stylelint
+        run: npx stylelint "assets/styles/**/*.scss"
+
+      - name: Run PHPCsFixer
+        run: vendor/bin/php-cs-fixer fix --diff --dry-run --allow-risky=yes
+
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse

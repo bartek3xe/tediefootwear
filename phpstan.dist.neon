@@ -1,6 +1,9 @@
 parameters:
-    level: 5
+    level: max
     paths:
         - bin/
         - config/
         - src/
+    excludePaths:
+        analyse:
+            - %currentWorkingDirectory%/var
