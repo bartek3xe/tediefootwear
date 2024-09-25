@@ -31,7 +31,7 @@ class ProductType extends AbstractType
 
         foreach (LanguageEnum::cases() as $language) {
             $constraints = [];
-            if (in_array($language, [LanguageEnum::POLISH, LanguageEnum::ENGLISH])) {
+            if (in_array($language, [LanguageEnum::POLISH, LanguageEnum::ENGLISH], true)) {
                 $constraints = [new NotBlank()];
             }
 
@@ -58,7 +58,7 @@ class ProductType extends AbstractType
                 'multiple' => true,
                 'attr' => [
                     'class' => 'form-control',
-                    'accept' => 'image/*'
+                    'accept' => 'image/*',
                 ],
             ]);
         }
@@ -101,4 +101,3 @@ class ProductType extends AbstractType
         ]);
     }
 }
-

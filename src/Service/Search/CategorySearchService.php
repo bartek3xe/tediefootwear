@@ -13,7 +13,6 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 
 class CategorySearchService
 {
-
     public function __construct(
         private readonly ProductCategoryRepository $categoryRepository,
         private readonly ProductRepository $productRepository,

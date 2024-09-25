@@ -16,7 +16,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use Throwable;
 
 #[Route('/product/category', name: 'app_admin_')]
 class AdminProductCategoryController extends AbstractController
@@ -109,7 +108,7 @@ class AdminProductCategoryController extends AbstractController
             $this->service->delete($id);
         } catch (NotFoundException $exception) {
             return new Response('error ' . $exception->getMessage(), Response::HTTP_NOT_FOUND);
-        } catch (Throwable $exception) {
+        } catch (\Throwable $exception) {
             return new Response('error ' . $exception->getMessage(), Response::HTTP_INTERNAL_SERVER_ERROR);
         }
 

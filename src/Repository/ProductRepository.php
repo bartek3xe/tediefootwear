@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repository;
 
 use App\Entity\Product;
@@ -51,7 +53,7 @@ class ProductRepository extends ServiceEntityRepository
     public function findBySearchQuery(string $query, string $locale): array
     {
         return $this->createQueryBuilder('p')
-            ->where("LOWER(JSON_UNQUOTE(JSON_EXTRACT(p.name, :locale))) LIKE LOWER(:query)")
+            ->where('LOWER(JSON_UNQUOTE(JSON_EXTRACT(p.name, :locale))) LIKE LOWER(:query)')
             ->setParameter('locale', '$.' . $locale)
             ->setParameter('query', '%' . $query . '%')
             ->getQuery()

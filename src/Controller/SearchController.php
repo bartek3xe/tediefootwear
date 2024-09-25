@@ -4,16 +4,12 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Repository\ProductCategoryRepository;
-use App\Repository\ProductRepository;
-use App\Service\LanguageService;
 use App\Service\Search\CategorySearchService;
 use App\Service\Search\ProductSearchService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Component\Routing\RouterInterface;
 
 class SearchController extends AbstractController
 {

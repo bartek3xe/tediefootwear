@@ -6,7 +6,6 @@ namespace App\Entity;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use PHPUnit\Util\Type;
 
 #[ORM\Entity]
 class File

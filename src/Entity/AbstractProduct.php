@@ -12,7 +12,7 @@ abstract class AbstractProduct
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
-    #[ORM\Column(type: "json")]
+    #[ORM\Column(type: 'json')]
     private array $name = [];
 
     public function getSlug(): ?string

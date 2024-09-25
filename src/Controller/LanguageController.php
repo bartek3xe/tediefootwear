@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Enum\LanguageEnum;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Enum\LanguageEnum;
 
 class LanguageController extends AbstractController
 {
     #[Route('/change-language/{locale}', name: 'app_language_changer', methods: ['GET'])]
     public function changeLanguage(Request $request, string $locale): Response
     {
-        $availableLocales = array_map(fn(LanguageEnum $lang) => $lang->value, LanguageEnum::cases());
+        $availableLocales = array_map(fn (LanguageEnum $lang) => $lang->value, LanguageEnum::cases());
 
         if (in_array($locale, $availableLocales, true)) {
             $request->getSession()->set('_locale', $locale);
@@ -27,7 +27,7 @@ class LanguageController extends AbstractController
             $parsedUrl = parse_url($referer);
             $pathSegments = explode('/', $parsedUrl['path']);
 
-            if (in_array($pathSegments[1], $availableLocales)) {
+            if (in_array($pathSegments[1], $availableLocales, true)) {
                 $pathSegments[1] = $locale;
             } else {
                 array_unshift($pathSegments, $locale);
@@ -51,6 +51,7 @@ class LanguageController extends AbstractController
     public function redirectToDefaultLanguage(Request $request): Response
     {
         $locale = $request->getSession()->get('_locale', 'en');
+
         return $this->redirectToRoute('app', ['_locale' => $locale]);
     }
 }

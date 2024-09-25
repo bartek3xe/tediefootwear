@@ -47,6 +47,7 @@ class FileUploadController extends AbstractController
     {
         try {
             $this->fileService->revertFile($filename);
+
             return new JsonResponse(['status' => 'File deleted'], Response::HTTP_OK);
         } catch (\Exception $e) {
             return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
@@ -68,6 +69,7 @@ class FileUploadController extends AbstractController
     {
         try {
             $this->fileService->reorderFiles($product, $request);
+
             return new JsonResponse(['success' => true]);
         } catch (\Exception $e) {
             return new JsonResponse(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);

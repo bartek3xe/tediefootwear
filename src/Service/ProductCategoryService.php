@@ -31,7 +31,7 @@ class ProductCategoryService
     public function delete(int $id): bool
     {
         $productCategory = $this->productCategoryRepository->findOneBy([
-            'id' => $id
+            'id' => $id,
         ]);
 
         if (null === $productCategory) {
@@ -43,10 +43,10 @@ class ProductCategoryService
 
     public function updateCategoryUrl(string $routeName, ProductCategory $category, array $selectedCategories): string
     {
-        $isActive = in_array($category->getSlug(), $selectedCategories);
+        $isActive = in_array($category->getSlug(), $selectedCategories, true);
 
         $updatedCategories = $isActive
-            ? array_filter($selectedCategories, fn($slug) => $slug !== $category->getSlug())
+            ? array_filter($selectedCategories, fn ($slug) => $slug !== $category->getSlug())
             : array_merge($selectedCategories, [$category->getSlug()]);
 
         return $this->urlGenerator->generate($routeName, [
@@ -60,7 +60,6 @@ class ProductCategoryService
             'categories' => $category->getSlug(),
         ]);
     }
-
 
     public function getSlugsInArray(Request $request): array
     {

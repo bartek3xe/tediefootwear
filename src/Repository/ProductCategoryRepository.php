@@ -41,7 +41,7 @@ class ProductCategoryRepository extends ServiceEntityRepository
     public function findBySearchQuery(string $query, string $locale): array
     {
         return $this->createQueryBuilder('pc')
-            ->where("LOWER(JSON_UNQUOTE(JSON_EXTRACT(pc.name, :locale))) LIKE LOWER(:query)")
+            ->where('LOWER(JSON_UNQUOTE(JSON_EXTRACT(pc.name, :locale))) LIKE LOWER(:query)')
             ->setParameter('locale', '$.' . $locale)
             ->setParameter('query', '%' . $query . '%')
             ->getQuery()

@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Enum;
 
-enum FaqEnum: int {
+enum FaqEnum: int
+{
     case QUESTION_1 = 1;
     case QUESTION_2 = 2;
     case QUESTION_3 = 3;
@@ -16,8 +17,9 @@ enum FaqEnum: int {
     case QUESTION_9 = 9;
     case QUESTION_10 = 10;
 
-    public function getQuestion(): string {
-        return match($this) {
+    public function getQuestion(): string
+    {
+        return match ($this) {
             self::QUESTION_1 => 'faq.question.1',
             self::QUESTION_2 => 'faq.question.2',
             self::QUESTION_3 => 'faq.question.3',
@@ -31,8 +33,9 @@ enum FaqEnum: int {
         };
     }
 
-    public function getAnswer(): string {
-        return match($this) {
+    public function getAnswer(): string
+    {
+        return match ($this) {
             self::QUESTION_1 => 'faq.answer.1',
             self::QUESTION_2 => 'faq.answer.2',
             self::QUESTION_3 => 'faq.answer.3',
