@@ -1,6 +1,6 @@
-/assets/trello/
 /node_modules/.yarn-integrity
 /.cron.lock
+/.ssh
 
 ###> symfony/framework-bundle ###
 /.env.prod
