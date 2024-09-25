@@ -9,7 +9,6 @@ use App\Entity\Product;
 use App\Repository\ProductRepository;
 use App\Service\LanguageService;
 use Symfony\Component\Routing\RouterInterface;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 class ProductSearchService
 {
@@ -19,10 +18,14 @@ class ProductSearchService
         private readonly ProductRepository $productRepository,
         private readonly LanguageService $languageService,
         private readonly RouterInterface $router,
-        private readonly TranslatorInterface $translator,
     ) {
     }
 
+
+    /**
+     * @param string $query
+     * @return array<int, array<string, mixed>>
+     */
     public function search(string $query): array
     {
         $products = $this->productRepository->findBySearchQuery($query, $this->languageService->getLocale());
@@ -30,10 +33,13 @@ class ProductSearchService
         return $this->getResults($products);
     }
 
+    /**
+     * @param Product[] $products
+     * @return array<int, array<string, mixed>>
+     */
     private function getResults(array $products): array
     {
         $results = [];
-        /** @var Product $product */
         foreach ($products as $product) {
             /** @var File $photo */
             $photo = $product->getFiles()->first() ?: null;
@@ -41,7 +47,7 @@ class ProductSearchService
                 'type' => 'product',
                 'title' => $product->getName()[$this->languageService->getLocale()],
                 'link' => $this->router->generate('app_products_show', ['slug' => $product->getSlug()]),
-                'photo' => $photo?->getFilepath() ?? self::DEFAULT_PHOTO_FILE_PATH,
+                'photo' => $product->getFiles()->isEmpty() ? self::DEFAULT_PHOTO_FILE_PATH : $photo->getFilepath(),
                 'is_new' => $product->isNew(),
                 'is_top' => $product->isTop(),
             ];
