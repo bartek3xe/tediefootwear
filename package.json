@@ -29,6 +29,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
+        "filepond": "^4.31.4",
         "flag-icons": "^7.2.3"
     }
 }

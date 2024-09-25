@@ -1,2 +1,2 @@
-import '../bootstrap.js';
-import '../styles/login.scss';
+import '../bootstrap';
+import '../styles/admin/login.scss';

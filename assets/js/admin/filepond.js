@@ -6,67 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const productId = filepond.getAttribute('data-product-id');
-    const jsonFiles = filepond.getAttribute('data-product-files');
+    const productJsonFiles = filepond.getAttribute('data-product-files');
 
-    if (!jsonFiles) {
+    if (!productJsonFiles) {
         throw new Error('e2162bc3-90b9-4221-b632-82d5abbcf9db');
     }
-
-    const files = parseJsonFiles(jsonFiles);
-    const existingFiles = mapExistingFiles(files);
-
-    const deleteFile = (filename, load, error) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open('DELETE', `/admin/upload/revert/${filename}`);
-
-        xhr.onload = () => handleXhrOnLoad(xhr, load, error, 'a9d2f9b8-d3e0-4f9e-8610-bc1e99d263c2');
-        xhr.onerror = () => handleXhrOnError(error, 'b16d8f20-3d95-4b9c-85cf-2c2d8f2a2f0c');
-
-        xhr.send();
-    };
-
-    const reorderFiles = (files) => {
-        const orderedFiles = files.map(item => item.file.name);
-
-        fetch(`/admin/upload/reorder/${productId}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest',
-            },
-            body: JSON.stringify({ order: orderedFiles }),
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (!data.success) {
-                    throw new Error('ba7fda5a-b9dc-41c6-b8c0-d43c65207621');
-                }
-            });
-    };
-
-    FilePond.create(filepond, {
-        maxFiles: 10,
-        allowMultiple: true,
-        files: existingFiles,
-        server: {
-            process: {
-                url: `/admin/upload/process/${productId}`,
-                method: 'POST',
-                withCredentials: false,
-                timeout: 7000,
-            },
-            remove: (source, load, error) => deleteFile(source, load, error),
-            revert: (uniqueFileId, load, error) => {
-                const filename = extractFilenameFromUniqueFileId(uniqueFileId);
-                deleteFile(filename, load, error);
-            },
-            load: (source, load, error) => loadFile(source, load, error),
-        },
-        allowReorder: true,
-        allowProcess: true,
-        allowRemove: true,
-        onreorderfiles: reorderFiles,
-    });
 
     function parseJsonFiles(jsonFiles) {
         try {
@@ -77,16 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function mapExistingFiles(files) {
-        return files.map(file => ({
+        return files.map((file) => ({
             source: file.filename,
             options: {
                 type: 'local',
                 file: {
                     name: file.filename,
                     size: file.size,
-                    type: 'image/' + file.extension,
-                }
-            }
+                    type: `image/${file.extension}`,
+                },
+            },
         }));
     }
 
@@ -94,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
             load();
         } else {
-            error('Could not complete the request: ' + xhr.statusText);
+            error(`Could not complete the request: ${xhr.statusText}`);
             throw new Error(uuid);
         }
     }
@@ -118,9 +62,66 @@ document.addEventListener('DOMContentLoaded', () => {
     function extractFilenameFromUniqueFileId(uniqueFileId) {
         try {
             const parsed = JSON.parse(uniqueFileId);
-            return parsed['id'];
+            return parsed.id;
         } catch (e) {
             throw new Error('23ef15c4-33d3-4a2e-b6e1-3f4a3f0a9e92');
         }
     }
+
+    const parsedFiles = parseJsonFiles(productJsonFiles);
+    const existingFiles = mapExistingFiles(parsedFiles);
+
+    const deleteFile = (filename, load, error) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('DELETE', `/admin/upload/revert/${filename}`);
+
+        xhr.onload = () => handleXhrOnLoad(xhr, load, error, 'a9d2f9b8-d3e0-4f9e-8610-bc1e99d263c2');
+        xhr.onerror = () => handleXhrOnError(error, 'b16d8f20-3d95-4b9c-85cf-2c2d8f2a2f0c');
+
+        xhr.send();
+    };
+
+    const reorderFiles = (fileList) => {
+        const orderedFiles = fileList.map((item) => item.file.name);
+
+        fetch(`/admin/upload/reorder/${productId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest',
+            },
+            body: JSON.stringify({ order: orderedFiles }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (!data.success) {
+                    throw new Error('ba7fda5a-b9dc-41c6-b8c0-d43c65207621');
+                }
+            });
+    };
+
+    // eslint-disable-next-line no-undef
+    FilePond.create(filepond, {
+        maxFiles: 10,
+        allowMultiple: true,
+        files: existingFiles,
+        server: {
+            process: {
+                url: `/admin/upload/process/${productId}`,
+                method: 'POST',
+                withCredentials: false,
+                timeout: 7000,
+            },
+            remove: (source, load, error) => deleteFile(source, load, error),
+            revert: (uniqueFileId, load, error) => {
+                const filename = extractFilenameFromUniqueFileId(uniqueFileId);
+                deleteFile(filename, load, error);
+            },
+            load: (source, load, error) => loadFile(source, load, error),
+        },
+        allowReorder: true,
+        allowProcess: true,
+        allowRemove: true,
+        onreorderfiles: reorderFiles,
+    });
 });

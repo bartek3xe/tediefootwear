@@ -25,6 +25,7 @@ section.home {
         .home-order-section-left {
           order: 1;
         }
+
         .home-order-section-right {
           order: 2;
 
@@ -40,12 +41,13 @@ section.home {
         .home-order-section-left {
           order: 2;
         }
+
         .home-order-section-right {
           order: 1;
         }
       }
 
-      @media (max-width: 1000px) {
+      @media (width <= 1000px) {
         flex-direction: column;
         align-items: stretch;
 
@@ -53,6 +55,7 @@ section.home {
           .home-order-section-left {
             order: 2;
           }
+
           .home-order-section-right {
             order: 1;
           }
@@ -62,6 +65,7 @@ section.home {
           .home-order-section-left {
             order: 2;
           }
+
           .home-order-section-right {
             order: 1;
           }
@@ -81,6 +85,7 @@ section.home {
         .home-order-section-right {
           width: 100%;
           padding: 1rem;
+
           h1 {
             font-size: 1.5rem;
           }

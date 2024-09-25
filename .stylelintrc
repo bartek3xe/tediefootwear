@@ -7,8 +7,6 @@
     "assets/styles/overrides/**/*"
   ],
   "rules": {
-    "indentation": 2,
-    "string-quotes": "double",
     "no-descending-specificity": null,
     "color-function-notation": null,
     "alpha-value-notation": null,

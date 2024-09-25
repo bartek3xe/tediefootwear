@@ -74,7 +74,7 @@
                     box-sizing: border-box;
                 }
 
-                .dropdown-btn:after {
+                .dropdown-btn::after {
                     display: none;
                 }
 
@@ -122,7 +122,7 @@
         gap: 1rem;
         width: auto;
         border-bottom: 1px solid $shadow-color-primary;
-        padding: 12px 12px ;
+        padding: 12px;
         z-index: 98;
     }
 
@@ -182,7 +182,7 @@
         display: none;
         cursor: pointer;
 
-        @media only screen and (max-width: 1000px) {
+        @media only screen and (width <= 1000px) {
             display: block;
         }
     }
@@ -264,7 +264,7 @@
         }
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (width <= 1200px) {
         .nav-lang {
             display: flex;
             flex-direction: column;
@@ -291,8 +291,7 @@
 
                 &.active {
                     display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
+                    flex-flow: row wrap;
                 }
             }
         }
@@ -375,7 +374,7 @@
     scrollbar-width: thin;
 
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (width <= 1200px) {
         position: static;
         max-height: none;
     }
@@ -461,7 +460,7 @@
 
 .badge {
     color: white;
-    padding: 6px 6px;
+    padding: 6px;
     margin-left: 10px;
     font-size: 12px;
     border-radius: 4px;
