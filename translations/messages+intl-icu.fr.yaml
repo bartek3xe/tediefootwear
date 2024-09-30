@@ -88,3 +88,6 @@ contact.wholesale.title: Entreprise de vente en gros
 contact.retail.title: Entreprise de vente au détail
 products.header: Liste des produits
 contact.form.submit.placeholder: Envoyer
+alt.first.image: Image principale du produit
+alt.default.image: Image par défaut du produit
+alt.loop: Loupe comme bouton de recherche

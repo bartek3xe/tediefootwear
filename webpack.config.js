@@ -15,7 +15,6 @@ Encore
     .addEntry('admin/form-language-field', './assets/js/admin/form-language-field.js')
     .addEntry('admin/filepond', './assets/js/admin/filepond.js')
     .addEntry('admin/sidebar', './assets/js/admin/sidebar.js')
-    .addEntry('js/recaptcha', './assets/js/recaptcha.js')
     .addEntry('js/flash', './assets/js/flash.js')
     .addEntry('js/navbar', './assets/js/navbar.js')
     .addEntry('js/faq', './assets/js/faq.js')

@@ -79,5 +79,11 @@
 {% block javascripts %}
     {{ parent() }}
 
-    {{ encore_entry_script_tags('js/recaptcha')}}
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ get_recaptcha_key() }}', {action: 'homepage'}).then(function(token) {
+                document.querySelector('input[name="contact[recaptcha]"]').value = token;
+            });
+        });
+    </script>
 {% endblock %}
