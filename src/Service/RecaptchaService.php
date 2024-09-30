@@ -27,11 +27,13 @@ class RecaptchaService
                 'body' => [
                     'secret' => $this->secretKey,
                     'response' => $recaptchaResponse,
+                    'remoteip' => $_SERVER['REMOTE_ADDR'],
                 ],
             ]);
+
             $responseData = json_decode($response->getContent(), true);
 
-            return $responseData['success'];
+            return $responseData['success'] && $responseData['score'] >= 0.5;
         } catch (
             ClientExceptionInterface|
             TransportExceptionInterface|
@@ -40,5 +42,10 @@ class RecaptchaService
         ) {
             return false;
         }
+    }
+
+    public function getRecaptchaKey(): string
+    {
+        return $this->secretKey;
     }
 }
