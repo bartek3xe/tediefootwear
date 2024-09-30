@@ -10,9 +10,9 @@
                 <a href="{{ path('app_products_show', { 'slug': product.slug }) }}" class="btn btn-product">
                     <span class="product-image">
                     {% if product.files and product.files|first %}
-                        <img src="{{ product.files|first.filePath }}" alt="{{ alt.first.image|trans }}">
+                        <img src="{{ product.files|first.filePath }}" alt="{{ 'alt.first.image'|trans }}">
                     {% else %}
-                        <img src="{{ asset('images/default-slipper.webp') }}" alt="{{ alt.default.image|trans }}">
+                        <img src="{{ asset('images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
                     {% endif %}
                     </span>
                     <span class="product-title">
