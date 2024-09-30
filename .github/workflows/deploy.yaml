@@ -25,4 +25,5 @@ jobs:
             composer install
             npx yarn install
             npx yarn build
+            php bin/console sass:build
             php bin/console doctrine:migrations:migrate --no-interaction
