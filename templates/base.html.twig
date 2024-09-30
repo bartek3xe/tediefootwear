@@ -13,11 +13,10 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
             {{ encore_entry_script_tags('js/flash') }}
-            {{ encore_entry_script_tags('js/recaptcha') }}
             {{ encore_entry_script_tags('js/navbar') }}
             {{ encore_entry_script_tags('js/search') }}
 
-            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            <script src="https://www.google.com/recaptcha/api.js?render={{ get_recaptcha_key() }}" async defer></script>
         {% endblock %}
     </head>
     <body>
