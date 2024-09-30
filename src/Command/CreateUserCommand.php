@@ -37,9 +37,7 @@ class CreateUserCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $helper = new QuestionHelper();
-        $role = ['ROLE_USER'];
-        $role = $input->getOption('manager') ? ['ROLE_MANAGER'] : $role;
-        $role = $input->getOption('admin') ? ['ROLE_ADMIN'] : $role;
+        $role = ['ROLE_ADMIN'];
         $email = $helper->ask($input, $output, new Question('Enter email: '));
 
         if ($user = $this->userRepository->findOneBy(['email' => $email])) {
