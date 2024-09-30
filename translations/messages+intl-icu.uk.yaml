@@ -88,3 +88,6 @@ contact.wholesale.title: Компанія оптової торгівлі
 contact.retail.title: Компанія роздрібної торгівлі
 products.header: Список товарів
 contact.form.submit.placeholder: Надіслати
+alt.first.image: Головне зображення продукту
+alt.default.image: Зображення за замовчуванням продукту
+alt.loop: Лупа як кнопка пошуку

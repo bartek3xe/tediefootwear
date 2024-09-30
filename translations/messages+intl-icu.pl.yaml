@@ -88,3 +88,6 @@ contact.wholesale.title: Firma zajmująca się sprzedażą hurtową
 contact.retail.title: Firma zajmująca się sprzedażą detaliczną
 products.header: Lista Produktów
 contact.form.submit.placeholder: Wyślij
+alt.first.image: Zdjęcie główne produktu
+alt.default.image: Zdjęcie domyślne produktu
+alt.loop: Lupa jako przycisk wyszukiwarki

@@ -88,3 +88,6 @@ contact.wholesale.title: Großhandelsunternehmen
 contact.retail.title: Einzelhandelsunternehmen
 products.header: Produktliste
 contact.form.submit.placeholder: Absenden
+alt.first.image: Hauptproduktbild
+alt.default.image: Standardproduktbild
+alt.loop: Lupe als Suchschaltfläche

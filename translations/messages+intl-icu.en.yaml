@@ -88,3 +88,6 @@ contact.wholesale.title: Wholesale Company
 contact.retail.title: Retail Company
 products.header: Product List
 contact.form.submit.placeholder: Submit
+alt.first.image: Main product image
+alt.default.image: Default product image
+alt.loop: Magnifying glass as search button
