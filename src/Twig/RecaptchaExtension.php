@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Twig;
 
-use App\Service\LanguageService;
 use App\Service\RecaptchaService;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
