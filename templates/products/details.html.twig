@@ -17,7 +17,7 @@
                 {% if product.files and product.files|first %}
                     <img src="{{ product.files|first.filepath }}" alt="{{ 'alt.first.image'|trans }}">
                 {% else %}
-                    <img src="{{ asset('images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
+                    <img src="{{ asset('build/images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
                 {% endif %}
             </div>
         </div>
