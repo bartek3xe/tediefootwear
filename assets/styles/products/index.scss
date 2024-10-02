@@ -27,11 +27,6 @@
     position: unset;
   }
 
-  .products-section {
-    width: 100%;
-    margin-left: 0;
-  }
-
   .index-products-container {
     flex-direction: column;
   }
@@ -71,8 +66,6 @@
         }
       }
 
-
-
       .product-title {
         display: flex;
         justify-content: space-between;
@@ -97,6 +90,7 @@
 
   .products-section {
     width: 100%;
+    margin-left: 0;
   }
 
   .index-products-container {
