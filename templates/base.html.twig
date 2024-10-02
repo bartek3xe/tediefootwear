@@ -15,8 +15,6 @@
             {{ encore_entry_script_tags('js/flash') }}
             {{ encore_entry_script_tags('js/navbar') }}
             {{ encore_entry_script_tags('js/search') }}
-
-            <script src="https://www.google.com/recaptcha/api.js?render={{ get_recaptcha_key() }}" async defer></script>
         {% endblock %}
     </head>
     <body>
@@ -25,6 +23,8 @@
             {{ include('partials/_navbar.html.twig') }}
 
             <div class="main-content">
+                {% include 'partials/_flashes.html.twig' %}
+
                 <div class="page-content">
                     {% include 'partials/_flashes.html.twig' with { 'flashes': app.flashes } %}
 

@@ -91,3 +91,9 @@ contact.form.submit.placeholder: Absenden
 alt.first.image: Hauptproduktbild
 alt.default.image: Standardproduktbild
 alt.loop: Lupe als Suchschaltfläche
+products.empty: Es gibt keine Produkte in dieser Kategorie.
+contact.success_message: Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.
+contact.recaptcha_failed: Die reCAPTCHA-Überprüfung ist fehlgeschlagen. Bitte versuchen Sie es erneut.
+contact.submission_problem: Es gab ein Problem mit Ihrer Einsendung. Bitte überprüfen Sie das Formular auf Fehler und versuchen Sie es erneut.
+home.order.wholesale.alt: Bild im Zusammenhang mit dem Großhandel
+home.order.retail.alt: Bild im Zusammenhang mit Einzelhandelseinkäufen

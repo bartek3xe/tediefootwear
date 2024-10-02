@@ -25,13 +25,7 @@
     }})
 }}
 
-<div class="g-recaptcha"
-     data-sitekey="{{ recaptcha_site_key }}"
-     data-callback="onReCaptchaSuccess"
-     data-expired-callback="onReCaptchaExpired">
-</div>
-
-{{ form_row(form.recaptcha) }}
+<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 
 {{ form_widget(form.submit, {
     'label': 'contact.form.submit.placeholder'|trans,

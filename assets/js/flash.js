@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert.remove();
             }, 500);
         });
-    }, 20000);
+    }, 10000);
 
     document.querySelectorAll('.btn-close').forEach((button) => {
         button.addEventListener('click', (event) => {

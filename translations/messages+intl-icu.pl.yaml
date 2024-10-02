@@ -91,3 +91,9 @@ contact.form.submit.placeholder: Wyślij
 alt.first.image: Zdjęcie główne produktu
 alt.default.image: Zdjęcie domyślne produktu
 alt.loop: Lupa jako przycisk wyszukiwarki
+products.empty: Nie ma produktów w tej kategorii.
+contact.success_message: Twoja wiadomość została pomyślnie wysłana! Skontaktujemy się z Tobą wkrótce.
+contact.recaptcha_failed: Weryfikacja reCAPTCHA nie powiodła się. Spróbuj ponownie.
+contact.submission_problem: Wystąpił problem z Twoim zgłoszeniem. Sprawdź formularz pod kątem błędów i spróbuj ponownie.
+home.order.wholesale.alt: Obrazek związany z dystrybucją hurtową
+home.order.retail.alt: Obrazek związany z zakupami detalicznymi

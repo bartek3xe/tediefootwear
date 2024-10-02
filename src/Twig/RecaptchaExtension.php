@@ -20,7 +20,7 @@ class RecaptchaExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('get_recaptcha_key', [$this->recaptchaService, 'getRecaptchaKey']),
+            new TwigFunction('get_recaptcha_key', [$this->recaptchaService, 'getRecaptchaSiteKey']),
         ];
     }
 }

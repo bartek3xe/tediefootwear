@@ -91,3 +91,9 @@ contact.form.submit.placeholder: Enviar
 alt.first.image: Imagen principal del producto
 alt.default.image: Imagen predeterminada del producto
 alt.loop: Lupa como botón de búsqueda
+products.empty: No hay productos en esta categoría.
+contact.success_message: ¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto contigo pronto.
+contact.recaptcha_failed: La verificación de reCAPTCHA falló. Por favor, inténtalo de nuevo.
+contact.submission_problem: Hubo un problema con tu envío. Por favor, revisa el formulario para detectar errores y vuelve a intentarlo.
+home.order.wholesale.alt: Imagen relacionada con la distribución al por mayor
+home.order.retail.alt: Imagen relacionada con las compras al por menor
