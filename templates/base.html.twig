@@ -25,6 +25,8 @@
             {{ include('partials/_navbar.html.twig') }}
 
             <div class="main-content">
+                {% include 'partials/_flashes.html.twig' %}
+
                 <div class="page-content">
                     {% include 'partials/_flashes.html.twig' with { 'flashes': app.flashes } %}
 

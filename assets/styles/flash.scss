@@ -9,12 +9,13 @@
   background-color: $button-color-secondary;
   color: white;
   padding: 1rem 2.5rem 1rem 1rem;
-  max-width: 300px;
+  max-width: 80%;
   margin-bottom: 1rem;
   border-radius: .25rem;
   box-shadow: 5px 5px 10px 0 $shadow-color-primary;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+  z-index: 100;
 
   &::before {
     content: '';
@@ -44,7 +45,7 @@
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-  z-index: 2;
+  z-index: 101;
   padding: 0.75rem 1rem;
   color: white;
   font-weight: 700;
@@ -54,6 +55,7 @@
   line-height: 1;
   cursor: pointer;
   transition: ease-in-out .1s;
+  opacity: 1;
 
   &:hover {
     opacity: .7;
