@@ -13,7 +13,9 @@ use Symfony\Component\Form\Exception\RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route(name: 'app_')]
 class ContactController extends AbstractController
@@ -21,6 +23,7 @@ class ContactController extends AbstractController
     public function __construct(
         private readonly MailerService $mailerService,
         private readonly RecaptchaService $recaptchaService,
+        private readonly TranslatorInterface $translator,
     ) {
     }
 
@@ -35,23 +38,21 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $recaptchaResponse = $form->get('recaptcha')->getData();
+            $recaptchaResponse = $request->get('g-recaptcha-response');
 
-            if (!$this->recaptchaService->verify($recaptchaResponse)) {
-                $this->addFlash('error', 'reCAPTCHA verification failed. Please try again.');
+            if ($this->recaptchaService->verify($recaptchaResponse)) {
+                $this->mailerService->sendContactUsData($form->getData(), $mailer);
 
-                return $this->redirectToRoute('app');
+                $this->addFlash('success', $this->translator->trans('contact.success_message'));
+
+                $form = $this->createForm(ContactType::class);
+            } else {
+                $this->addFlash('error', $this->translator->trans('contact.recaptcha_failed'));
             }
-
-            $this->mailerService->sendContactUsData($form->getData(), $mailer);
-
-            $this->addFlash('success', 'Your message has been sent successfully! We will get back to you soon.');
-
-            return $this->redirectToRoute('app');
         }
 
         if ($form->isSubmitted() && !$form->isValid()) {
-            $this->addFlash('error', 'There was a problem with your submission. Please check the form for errors and try again.');
+            $this->addFlash('error', $this->translator->trans('contact.submission_problem'));
         }
 
         return $this->render('contact/index.html.twig', [
