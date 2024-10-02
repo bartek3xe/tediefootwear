@@ -16,6 +16,7 @@ class RecaptchaService
 
     public function __construct(
         private readonly HttpClientInterface $httpClient,
+        private readonly string $siteKey,
         private readonly string $secretKey,
     ) {
     }
@@ -44,8 +45,8 @@ class RecaptchaService
         }
     }
 
-    public function getRecaptchaKey(): string
+    public function getRecaptchaSiteKey(): string
     {
-        return $this->secretKey;
+        return $this->siteKey;
     }
 }

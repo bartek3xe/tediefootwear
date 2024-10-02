@@ -23,6 +23,7 @@ services:
 
     App\Service\RecaptchaService:
         arguments:
+            $siteKey: '%recaptcha_site_key%'
             $secretKey: '%recaptcha_secret_key%'
 
     App\EventListener\SlugListener:
