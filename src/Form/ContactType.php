@@ -29,12 +29,6 @@ class ContactType extends AbstractType
             ->add('body', TextareaType::class, [
                 'required' => true,
             ])
-            ->add('recaptcha', HiddenType::class, [
-                'mapped' => false,
-                'constraints' => [
-                    new Assert\NotBlank(),
-                ],
-            ])
             ->add('submit', SubmitType::class)
         ;
     }
