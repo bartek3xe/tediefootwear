@@ -91,3 +91,9 @@ contact.form.submit.placeholder: Надіслати
 alt.first.image: Головне зображення продукту
 alt.default.image: Зображення за замовчуванням продукту
 alt.loop: Лупа як кнопка пошуку
+products.empty: У цій категорії немає товарів.
+contact.success_message: Ваше повідомлення було успішно надіслано! Ми зв'яжемося з вами найближчим часом.
+contact.recaptcha_failed: Перевірка reCAPTCHA не вдалася. Будь ласка, спробуйте ще раз.
+contact.submission_problem: Виникла проблема з вашою заявкою. Перевірте форму на помилки та спробуйте ще раз.
+home.order.wholesale.alt: Зображення, пов'язане з оптовою дистрибуцією
+home.order.retail.alt: Зображення, пов'язане з роздрібними покупками

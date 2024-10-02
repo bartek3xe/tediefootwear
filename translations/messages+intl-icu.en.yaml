@@ -91,3 +91,9 @@ contact.form.submit.placeholder: Submit
 alt.first.image: Main product image
 alt.default.image: Default product image
 alt.loop: Magnifying glass as search button
+products.empty: There are no products in this category.
+contact.success_message: Your message has been sent successfully! We will get back to you soon.
+contact.recaptcha_failed: reCAPTCHA verification failed. Please try again.
+contact.submission_problem: There was a problem with your submission. Please check the form for errors and try again.
+home.order.wholesale.alt: Image related to wholesale distribution
+home.order.retail.alt: Image related to retail purchases
