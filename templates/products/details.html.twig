@@ -12,15 +12,8 @@
         </ul>
     </div>
     <div class="product-details-container">
-        <div class="product-gallery">
-            <div class="product-image">
-                {% if product.files and product.files|first %}
-                    <img src="{{ product.files|first.filepath }}" alt="{{ 'alt.first.image'|trans }}">
-                {% else %}
-                    <img src="{{ asset('build/images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
-                {% endif %}
-            </div>
-        </div>
+        {% include 'products/partials/_product_images.html.twig' %}
+
         <div class="product-main">
             <div class="product-labels">
                 {% if product.isNew %}

@@ -1,0 +1,19 @@
+<div class="product-gallery">
+    <div class="product-image">
+        {% if not product.files and not product.files|first %}
+            <img id="mainImage" src="{{ asset('build/images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
+        {% else %}
+            <img id="mainImage" src="{{ product.files|first.filepath }}" alt="{{ 'alt.first.image'|trans }}">
+        {% endif %}
+    </div>
+    <div class="product-image-strip-container">
+        {% if product.files and product.files|first %}
+            <div class="product-image-strip">
+                {% for image in product.files %}
+                    <img src="{{ image.filepath }}" alt="{{ 'alt.strip.image'|trans }}"
+                         data-large-src="{{ image.filepath }}" class="thumbnail {% if image == product.files|first %}active{% endif %}">
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
