@@ -35,6 +35,7 @@
   width: 100%;
   padding-top: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .product-image img {
@@ -45,6 +46,40 @@
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    cursor: zoom-in;
+    transform: scale(2);
+  }
+}
+
+.product-image-strip-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.product-image-strip {
+  display: flex;
+  width: 100%;
+}
+
+.product-image-strip img {
+  width: calc(100% / 3);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.product-image-strip img:hover {
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  border: 3px solid black;
 }
 
 .product-title {
