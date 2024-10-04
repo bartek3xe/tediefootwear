@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     thumbnails.forEach((thumbnail) => {
         thumbnail.addEventListener('click', () => {
-            const newSrc = this.getAttribute('data-large-src');
+            const newSrc = thumbnail.getAttribute('data-large-src');
             mainImage.setAttribute('src', newSrc);
 
             const prev = thumbnailContainer.querySelector('.active');
