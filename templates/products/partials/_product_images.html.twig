@@ -1,6 +1,6 @@
 <div class="product-gallery">
     <div class="product-image">
-        {% if not product.files and not product.files|first %}
+        {% if not product.files or not product.files|first %}
             <img id="mainImage" src="{{ asset('build/images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
         {% else %}
             <img id="mainImage" src="{{ product.files|first.filepath }}" alt="{{ 'alt.first.image'|trans }}">

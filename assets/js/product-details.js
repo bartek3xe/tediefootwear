@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleBtn.style.display = 'none';
     }
 
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
+    thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener('click', () => {
             const newSrc = this.getAttribute('data-large-src');
             mainImage.setAttribute('src', newSrc);
 
@@ -41,7 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-// Obsługa przesuwania myszką na komputerze
+    function handleImageMove(pageX, pageY, container) {
+        const {
+            left, top, width, height,
+        } = container.getBoundingClientRect();
+        const x = ((pageX - left) / width) * 100;
+        const y = ((pageY - top) / height) * 100;
+
+        mainImage.style.transformOrigin = `${x}% ${y}%`;
+    }
+
     productImageContainer.addEventListener('mousemove', (e) => {
         handleImageMove(e.pageX, e.pageY, productImageContainer);
         mainImage.style.transform = 'scale(2)';
@@ -51,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mainImage.style.transform = 'scale(1)';
         mainImage.style.transformOrigin = 'center center';
     });
-
 
     productImageContainer.addEventListener('touchstart', (e) => {
         const touch = e.touches[0];
@@ -69,12 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
         mainImage.style.transform = 'scale(1)';
         mainImage.style.transformOrigin = 'center center';
     });
-
-    function handleImageMove(pageX, pageY, container) {
-        const { left, top, width, height } = container.getBoundingClientRect();
-        const x = (pageX - left) / width * 100;
-        const y = (pageY - top) / height * 100;
-
-        mainImage.style.transformOrigin = `${x}% ${y}%`;
-    }
 });
