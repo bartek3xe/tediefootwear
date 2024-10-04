@@ -97,3 +97,13 @@ contact.recaptcha_failed: Перевірка reCAPTCHA не вдалася. Бу
 contact.submission_problem: Виникла проблема з вашою заявкою. Перевірте форму на помилки та спробуйте ще раз.
 home.order.wholesale.alt: Зображення, пов'язане з оптовою дистрибуцією
 home.order.retail.alt: Зображення, пов'язане з роздрібними покупками
+alt.strip.image: Додаткове зображення продукту
+breadcrumb.products: Продукти
+product.new_label: Новинка
+product.top_label: Топ
+product.description.more_button: Показати більше
+product.description.less_button: Показати менше
+product.actions.allegro: Купити на Allegro.pl
+product.actions.etsy: Купити на Etsy.com
+product.actions.unavailable_retail: Товар недоступний для роздрібного продажу
+product.actions.inquiry_button: Запитати про продукт

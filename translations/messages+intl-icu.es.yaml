@@ -97,3 +97,13 @@ contact.recaptcha_failed: La verificación de reCAPTCHA falló. Por favor, inté
 contact.submission_problem: Hubo un problema con tu envío. Por favor, revisa el formulario para detectar errores y vuelve a intentarlo.
 home.order.wholesale.alt: Imagen relacionada con la distribución al por mayor
 home.order.retail.alt: Imagen relacionada con las compras al por menor
+alt.strip.image: Imagen adicional del producto
+breadcrumb.products: Productos
+product.new_label: Nuevo
+product.top_label: Top
+product.description.more_button: Mostrar más
+product.description.less_button: Mostrar menos
+product.actions.allegro: Comprar en Allegro.pl
+product.actions.etsy: Comprar en Etsy.com
+product.actions.unavailable_retail: Producto no disponible para venta minorista
+product.actions.inquiry_button: Consultar sobre el producto

@@ -97,3 +97,13 @@ contact.recaptcha_failed: reCAPTCHA verification failed. Please try again.
 contact.submission_problem: There was a problem with your submission. Please check the form for errors and try again.
 home.order.wholesale.alt: Image related to wholesale distribution
 home.order.retail.alt: Image related to retail purchases
+alt.strip.image: Additional product image
+breadcrumb.products: Products
+product.new_label: New
+product.top_label: Top
+product.description.more_button: Show more
+product.description.less_button: Show less
+product.actions.allegro: Buy on Allegro.pl
+product.actions.etsy: Buy on Etsy.com
+product.actions.unavailable_retail: Product unavailable for retail sale
+product.actions.inquiry_button: Inquire about the product

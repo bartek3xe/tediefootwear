@@ -9,8 +9,9 @@
             {% for product in products %}
                 <a href="{{ path('app_products_show', { 'slug': product.slug }) }}" class="btn btn-product">
                     <span class="product-image">
-                    {% if product.files and product.files|first %}
-                        <img src="{{ product.files|first.filePath }}" alt="{{ 'alt.first.image'|trans }}">
+                    {% if product.files and get_first_image(product.files) %}
+                        {% set first_image = get_first_image(product.files) %}
+                        <img src="{{ first_image.filePath }}" alt="{{ 'alt.first.image'|trans }}">
                     {% else %}
                         <img src="{{ asset('build/images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
                     {% endif %}

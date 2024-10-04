@@ -1,0 +1,22 @@
+<div class="product-gallery">
+    <div class="product-image">
+        {% if not product.files or not get_first_image(product.files) %}
+            <img id="mainImage" src="{{ asset('build/images/default-slipper.webp') }}" alt="{{ 'alt.default.image'|trans }}">
+        {% else %}
+            {% set firstImage = get_first_image(product.files) %}
+            <img id="mainImage" src="{{ firstImage.filepath }}" alt="{{ 'alt.first.image'|trans }}">
+        {% endif %}
+    </div>
+    <div class="product-image-strip-container">
+        {% if product.files and get_first_image(product.files) %}
+            {% set firstImage = get_first_image(product.files) %}
+            {% set sortedFiles = sort_by_position(product.files) %}
+            <div class="product-image-strip">
+                {% for image in sortedFiles %}
+                    <img src="{{ image.filepath }}" alt="{{ 'alt.strip.image'|trans }}"
+                         data-large-src="{{ image.filepath }}" class="thumbnail {% if image == firstImage %}active{% endif %}">
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
