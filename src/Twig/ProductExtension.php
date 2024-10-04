@@ -21,8 +21,8 @@ class ProductExtension extends AbstractExtension
     }
 
     /**
-    * @param Collection<File> $files
-    */
+     * @param Collection<File> $files
+     */
     public function getFirstImage(Collection $files): ?File
     {
         if ($files->isEmpty()) {
@@ -46,7 +46,7 @@ class ProductExtension extends AbstractExtension
     {
         $filesArray = $files->toArray();
 
-        usort($filesArray, function (File $a, File $b) {
+        usort($filesArray, function(File $a, File $b) {
             return $a->getPosition() <=> $b->getPosition();
         });
 
