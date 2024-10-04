@@ -3,7 +3,7 @@
 {% block body %}
     <div class="breadcrumb">
         <ul>
-            <li><a href="{{ path('app_products') }}">Produkty</a></li>
+            <li><a href="{{ path('app_products') }}">{{ 'breadcrumb.products'|trans }}</a></li>
             <li>
                 {{ product.name[get_locale()] is defined
                     ? product.name[get_locale()]
@@ -17,10 +17,10 @@
         <div class="product-main">
             <div class="product-labels">
                 {% if product.isNew %}
-                    <span class="label new-label">Nowość</span>
+                    <span class="label new-label">{{ 'product.new_label'|trans }}</span>
                 {% endif %}
                 {% if product.isTop %}
-                    <span class="label top-label">Top</span>
+                    <span class="label top-label">{{ 'product.top_label'|trans }}</span>
                 {% endif %}
             </div>
             <h1 class="product-title">
@@ -37,19 +37,20 @@
                         : product.description[get_default_locale()]|raw }}
                 </div>
                 <button id="toggle-description-btn" class="toggle-description-btn"
-                    data-button-more="Pokaż więcej" data-button-less="Pokaż mniej"></button>
+                        data-button-more="{{ 'product.description.more_button'|trans }}"
+                        data-button-less="{{ 'product.description.less_button'|trans }}"></button>
             </div>
 
             <div class="product-actions">
                 {% if product.allegroUrl %}
-                    <a href="{{ product.allegroUrl }}" class="btn allegro-btn" target="_blank">Kup na Allegro.pl</a>
+                    <a href="{{ product.allegroUrl }}" class="btn allegro-btn" target="_blank">{{ 'product.actions.allegro'|trans }}</a>
                 {% endif %}
                 {% if product.etsyUrl %}
-                    <a href="{{ product.etsyUrl }}" class="btn etsy-btn">Kup na Etsy.com</a>
+                    <a href="{{ product.etsyUrl }}" class="btn etsy-btn">{{ 'product.actions.etsy'|trans }}</a>
                 {% endif %}
                 {% if not product.allegroUrl and not product.etsyUrl %}
-                    <span class="product-text-info">Produkt niedostępny w sprzedaży detalicznej</span>
-                    <a href="{{ path('app_contact') }}" class="btn btn-primary">Zapytaj o produkt</a>
+                    <span class="product-text-info">{{ 'product.actions.unavailable_retail'|trans }}</span>
+                    <a href="{{ path('app_contact') }}" class="btn btn-primary">{{ 'product.actions.inquiry_button'|trans }}</a>
                 {% endif %}
             </div>
         </div>
