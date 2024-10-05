@@ -39,7 +39,9 @@
   .products-box {
     display: grid;
     gap: .5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: start;
+    justify-content: start;
 
     a.btn-product {
       display: flex;
@@ -47,7 +49,6 @@
       background-color: $background-color-pink-light;
       border: none;
       gap: 1rem;
-      max-width: 400px;
       width: 100%;
 
       .product-image {
