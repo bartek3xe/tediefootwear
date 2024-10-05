@@ -33,8 +33,8 @@
             <div class="product-description">
                 <div id="description-content" class="description-content">
                     {{ product.description[get_locale()] is defined
-                        ? product.description[get_locale()]|raw
-                        : product.description[get_default_locale()]|raw }}
+                        ? product.description[get_locale()]|nl2br
+                        : product.description[get_default_locale()]|nl2br }}
                 </div>
                 <button id="toggle-description-btn" class="toggle-description-btn"
                         data-button-more="{{ 'product.description.more_button'|trans }}"
