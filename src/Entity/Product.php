@@ -38,6 +38,7 @@ class Product extends AbstractProduct
     private Collection $categories;
 
     #[ORM\OneToMany(targetEntity: File::class, mappedBy: 'product', cascade: ['persist', 'remove'])]
+    #[ORM\OrderBy(['position' => 'ASC'])]
     private Collection $files;
 
     public function __construct()
