@@ -29,24 +29,24 @@ class TwigGlobalCategorySubscriber implements EventSubscriberInterface
     public function onKernelController(ControllerEvent $event): void
     {
         try {
-            $categories = $this->cache->get('product_categories', function (ItemInterface $item) {
+            $categories = $this->cache->get('product_categories', function(ItemInterface $item) {
                 $item->expiresAfter(3600);
 
                 return $this->serializer->serialize(
                     $this->categoryRepository->findAll(),
                     'json',
-                    ['circular_reference_handler' => function ($object) {
+                    ['circular_reference_handler' => function($object) {
                         return $object->getId();
-                    }]
+                    }],
                 );
             });
 
             if (is_string($categories)) {
                 $categories = $this->serializer->deserialize($categories, 'App\Entity\ProductCategory[]', 'json');
             }
-
         } catch (InvalidArgumentException $e) {
             $this->logger->error('Cache problem: ' . $e->getMessage());
+
             return;
         }
 
