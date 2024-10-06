@@ -10,6 +10,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 use Twig\Environment;
@@ -21,6 +22,7 @@ class TwigGlobalCategorySubscriber implements EventSubscriberInterface
         private readonly Environment $twig,
         private readonly CacheInterface $cache,
         private readonly LoggerInterface $logger,
+        private readonly SerializerInterface $serializer,
     ) {
     }
 
@@ -30,8 +32,18 @@ class TwigGlobalCategorySubscriber implements EventSubscriberInterface
             $categories = $this->cache->get('product_categories', function(ItemInterface $item) {
                 $item->expiresAfter(3600);
 
-                return $this->categoryRepository->findAll();
+                return $this->serializer->serialize(
+                    $this->categoryRepository->findAll(),
+                    'json',
+                    ['circular_reference_handler' => function($object) {
+                        return $object->getId();
+                    }],
+                );
             });
+
+            if (is_string($categories)) {
+                $categories = $this->serializer->deserialize($categories, 'App\Entity\ProductCategory[]', 'json');
+            }
         } catch (InvalidArgumentException $e) {
             $this->logger->error('Cache problem: ' . $e->getMessage());
 
