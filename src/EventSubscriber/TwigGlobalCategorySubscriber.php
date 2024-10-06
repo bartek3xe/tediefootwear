@@ -27,12 +27,14 @@ class TwigGlobalCategorySubscriber implements EventSubscriberInterface
     public function onKernelController(ControllerEvent $event): void
     {
         try {
-            $categories = $this->cache->get('product_categories', function (ItemInterface $item) {
+            $categories = $this->cache->get('product_categories', function(ItemInterface $item) {
                 $item->expiresAfter(3600);
+
                 return $this->categoryRepository->findAll();
             });
         } catch (InvalidArgumentException $e) {
             $this->logger->error('Cache problem: ' . $e->getMessage());
+
             return;
         }
 
