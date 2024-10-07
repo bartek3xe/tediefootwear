@@ -31,7 +31,7 @@ class ContactController extends AbstractController
      * @throws LogicException
      */
     #[Route('/contact', name: 'contact')]
-    public function index(Request $request, MailerInterface $mailer): Response
+    public function index(Request $request): Response
     {
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
@@ -40,7 +40,7 @@ class ContactController extends AbstractController
             $recaptchaResponse = $request->get('g-recaptcha-response');
 
             if ($this->recaptchaService->verify($recaptchaResponse)) {
-                $this->mailerService->sendContactUsData($form->getData(), $mailer);
+                $this->mailerService->sendContactUsData($form->getData());
 
                 $this->addFlash('success', $this->translator->trans('contact.success_message'));
 
