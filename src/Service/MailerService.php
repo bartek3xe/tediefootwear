@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\MailerInterface;
+use App\Message\SendEmailMessage;
+use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Mime\Email;
 
 class MailerService
 {
-    public function __construct(private readonly string $contactEmail)
-    {
+    public function __construct(
+        private readonly MessageBusInterface $bus,
+        private readonly string $contactEmail,
+    ) {
     }
 
-    public function sendContactUsData(array $data, MailerInterface $mailer): void
+    public function sendContactUsData(array $data): void
     {
         $email = (new Email())
             ->from($data['email'])
@@ -22,10 +24,6 @@ class MailerService
             ->subject($data['subject'])
             ->text('From: ' . $data['email'] . "\n\n" . $data['body']);
 
-        try {
-            $mailer->send($email);
-        } catch (TransportExceptionInterface $e) {
-            return;
-        }
+        $this->bus->dispatch(new SendEmailMessage($email));
     }
 }
