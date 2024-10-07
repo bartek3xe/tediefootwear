@@ -8,8 +8,12 @@ use App\Entity\ProductCategory;
 use App\Exception\NotFoundException;
 use App\Repository\ProductCategoryRepository;
 use App\Repository\ProductRepository;
+use Psr\Cache\InvalidArgumentException;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Contracts\Cache\CacheInterface;
+use Symfony\Contracts\Cache\ItemInterface;
 
 class ProductCategoryService
 {
@@ -17,6 +21,8 @@ class ProductCategoryService
         private readonly ProductCategoryRepository $productCategoryRepository,
         private readonly ProductRepository $productRepository,
         private readonly UrlGeneratorInterface $urlGenerator,
+        private readonly CacheInterface $cache,
+        private readonly LoggerInterface $logger,
     ) {
     }
 
@@ -79,5 +85,31 @@ class ProductCategoryService
         }
 
         return $products;
+    }
+
+    public function getCategories(): array
+    {
+        try {
+            return $this->cache->get('product_categories', function(ItemInterface $item) {
+                $item->expiresAfter(3600);
+
+                $this->logger->info('Fetching categories from the database.');
+
+                return $this->productCategoryRepository->findAll();
+            });
+        } catch (InvalidArgumentException $e) {
+            $this->logger->error('Cache problem: ' . $e->getMessage());
+
+            return $this->productCategoryRepository->findAll();
+        }
+    }
+
+    public function invalidateCategoryCache(): void
+    {
+        try {
+            $this->cache->delete('product_categories');
+        } catch (InvalidArgumentException $e) {
+            $this->logger->error('Cache problem during invalidation: ' . $e->getMessage());
+        }
     }
 }
