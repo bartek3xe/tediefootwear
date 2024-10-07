@@ -35,7 +35,7 @@
             <a href="{{ path('app_products') }}" class="dropdown-btn link-btn">{{ 'navigation.products'|trans }}</a>
             <div class="dropdown-content">
                 {% set columns = 4 %}
-                {% set categories = product_categories %}
+                {% set categories = product_category_service.getCategories() %}
                 {% set items_per_column = (categories|length / columns)|round(0, 'ceil') %}
 
                 {% for column in 0..(columns - 1) %}
