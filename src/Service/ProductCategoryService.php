@@ -8,12 +8,12 @@ use App\Entity\ProductCategory;
 use App\Exception\NotFoundException;
 use App\Repository\ProductCategoryRepository;
 use App\Repository\ProductRepository;
+use Psr\Cache\InvalidArgumentException;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
-use Psr\Cache\InvalidArgumentException;
-use Psr\Log\LoggerInterface;
 
 class ProductCategoryService
 {
@@ -92,6 +92,8 @@ class ProductCategoryService
         try {
             return $this->cache->get('product_categories', function(ItemInterface $item) {
                 $item->expiresAfter(3600);
+
+                $this->logger->info('Fetching categories from the database.');
 
                 return $this->productCategoryRepository->findAll();
             });
