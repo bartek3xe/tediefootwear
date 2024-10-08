@@ -1,0 +1,46 @@
+{% set start_page = start_page > total_pages ? total_pages : start_page %}
+{% set end_page = end_page > total_pages ? total_pages : end_page %}
+{% set page_number = page_number > total_pages ? total_pages : page_number %}
+{% set page_number = page_number < 1 ? 1 : page_number %}
+
+<div class="pagination">
+    {% if page_number > 1 %}
+        <a class="btn" href="{{ path('app_products', { 'page': page_number - 1 }) }}">{{ 'pagination.prev'|trans }}</a>
+    {% else %}
+        <span class="btn current-page">{{ 'pagination.prev'|trans }}</span>
+    {% endif %}
+
+    <div class="desktop-pagination">
+        {% if start_page > 1 %}
+            <a class="btn" href="{{ path('app_products', { 'page': 1 }) }}">1</a>
+            {% if start_page > 2 %}
+                <span>...</span>
+            {% endif %}
+        {% endif %}
+
+        {% for page in start_page..end_page %}
+            {% if page == page_number %}
+                <span class="btn current-page">{{ page }}</span>
+            {% else %}
+                <a class="btn" href="{{ path('app_products', { 'page': page }) }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if end_page < total_pages %}
+            {% if end_page < total_pages - 1 %}
+                <span>...</span>
+            {% endif %}
+            <a class="btn" href="{{ path('app_products', { 'page': total_pages }) }}">{{ total_pages }}</a>
+        {% endif %}
+    </div>
+
+    <div class="mobile-pagination">
+        <span class="btn current-page">{{ page_number }}</span>
+    </div>
+
+    {% if page_number < total_pages %}
+        <a class="btn" href="{{ path('app_products', { 'page': page_number + 1 }) }}">{{ 'pagination.next'|trans }}</a>
+    {% else %}
+        <span class="btn current-page">{{ 'pagination.next'|trans }}</span>
+    {% endif %}
+</div>
