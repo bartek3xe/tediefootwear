@@ -15,6 +15,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 #[AsCommand(name: 'create:user')]
 class CreateUserCommand extends Command
@@ -24,6 +25,7 @@ class CreateUserCommand extends Command
     public function __construct(
         private readonly ManagerRegistry $doctrine,
         private readonly UserRepository $userRepository,
+        private readonly UserPasswordHasherInterface $passwordHasher,
     ) {
         parent::__construct();
     }
@@ -79,7 +81,7 @@ class CreateUserCommand extends Command
 
         if ($this->isPositive($passwordQuestion, $helper, $input, $output)) {
             while (!$this->isSamePasswords) {
-                $password = $this->setPassword($input, $output);
+                $password = $this->setPassword($user, $input, $output);
             }
         }
 
@@ -95,19 +97,21 @@ class CreateUserCommand extends Command
         InputInterface $input,
         OutputInterface $output,
     ): void {
+        $user = new User();
+
         while (!$this->isSamePasswords) {
-            $password = $this->setPassword($input, $output);
+            $password = $this->setPassword($user, $input, $output);
         }
 
         if (!empty($password)) {
-            $user = $this->prepareUser($email, $password, $role);
+            $user = $this->prepareUser($email, $password, $role, $user);
             $this->saveUser($user);
         }
 
         $output->writeln('User has been added properly.');
     }
 
-    private function setPassword(InputInterface $input, OutputInterface $output): string
+    private function setPassword(User $user, InputInterface $input, OutputInterface $output): string
     {
         $password = $this->askAboutPassword('Enter password: ', $input, $output);
         $rePassword = $this->askAboutPassword('Re-Enter password: ', $input, $output);
@@ -118,7 +122,7 @@ class CreateUserCommand extends Command
             $output->writeln('Incorrect passwords');
         }
 
-        return password_hash($password, PASSWORD_DEFAULT);
+        return $this->passwordHasher->hashPassword($user, $password);
     }
 
     private function askAboutPassword(
