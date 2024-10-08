@@ -12,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\MappedSuperclass]
 abstract class AbstractProduct
 {
+    abstract public function getTranslation(string $locale): ProductTranslation|ProductCategoryTranslation|null;
+
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
@@ -45,8 +47,6 @@ abstract class AbstractProduct
 
     public function getDefaultTranslation(): ProductTranslation|ProductCategoryTranslation|null
     {
-        /* @var Product|ProductCategory $this */
-
         return $this->getTranslation(LanguageEnum::DEFAULT_LOCALE_VALUE);
     }
 }
