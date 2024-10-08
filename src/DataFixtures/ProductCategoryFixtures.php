@@ -39,7 +39,7 @@ class ProductCategoryFixtures extends Fixture
     ];
 
     public function __construct(
-        private readonly ProductCategoryTranslationFactory $productCategoryTranslationFactory
+        private readonly ProductCategoryTranslationFactory $productCategoryTranslationFactory,
     ) {
     }
 
@@ -52,12 +52,12 @@ class ProductCategoryFixtures extends Fixture
 
             $categoryTranslationPl = $this->productCategoryTranslationFactory->create(
                 $category['pl'],
-                'pl'
+                'pl',
             );
 
             $categoryTranslationEn = $this->productCategoryTranslationFactory->create(
                 $category['en'],
-                'en'
+                'en',
             );
 
             $productCategory->addTranslation($categoryTranslationPl);

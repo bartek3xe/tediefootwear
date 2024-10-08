@@ -85,9 +85,9 @@ class ProductCategory extends AbstractProduct
     {
         $filteredTranslations = array_filter(
             $this->translations->toArray(),
-            function (ProductCategoryTranslation $translation) use ($locale) {
+            function(ProductCategoryTranslation $translation) use ($locale) {
                 return $translation->getLanguage() === $locale;
-            }
+            },
         );
 
         return array_shift($filteredTranslations) ?: null;

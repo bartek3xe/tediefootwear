@@ -29,23 +29,23 @@ abstract class AbstractProduct
 
     public function getNameByLanguage(string $language): ?string
     {
-        /**@var Product|ProductCategory $this*/
+        /** @var Product|ProductCategory $this */
         $translation = $this->getTranslation($language);
 
-        return !!$translation ? $translation->getName() : $this->getDefaultTranslation()?->getName();
+        return (bool) $translation ? $translation->getName() : $this->getDefaultTranslation()?->getName();
     }
 
     public function getDescriptionByLanguage(string $language): ?string
     {
-        /**@var Product $this*/
+        /** @var Product $this */
         $translation = $this->getTranslation($language);
 
         return $translation ? $translation->getDescription() : $this->getDefaultTranslation()?->getDescription();
     }
 
-    public function getDefaultTranslation(): null|ProductTranslation|ProductCategoryTranslation
+    public function getDefaultTranslation(): ProductTranslation|ProductCategoryTranslation|null
     {
-        /**@var Product|ProductCategory $this*/
+        /** @var Product|ProductCategory $this */
 
         return $this->getTranslation(LanguageEnum::DEFAULT_LOCALE_VALUE);
     }

@@ -11,7 +11,7 @@ use Symfony\Component\Form\FormInterface;
 abstract class AbstractTranslationHandler
 {
     public function __construct(
-        protected readonly ManagerRegistry $doctrine
+        protected readonly ManagerRegistry $doctrine,
     ) {
     }
 

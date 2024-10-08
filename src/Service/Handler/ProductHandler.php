@@ -14,14 +14,14 @@ class ProductHandler extends AbstractTranslationHandler
 {
     public function __construct(
         private readonly ProductService $service,
-        ManagerRegistry $doctrine
+        ManagerRegistry $doctrine,
     ) {
         parent::__construct($doctrine);
     }
 
     public function handleForm(FormInterface $form, Product $product): void
     {
-        $this->handleTranslations($form, $product, function ($name, $description, $language) {
+        $this->handleTranslations($form, $product, function($name, $description, $language) {
             return ProductTranslationFactory::create($name, $description, $language);
         });
 

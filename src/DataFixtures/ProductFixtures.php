@@ -26,13 +26,13 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
             $productTranslationPl = ProductTranslationFactory::create(
                 'Produkt ' . $productNumber . ': ' . $faker->word,
                 $faker->sentence,
-                'pl'
+                'pl',
             );
 
             $productTranslationEn = ProductTranslationFactory::create(
                 'Product ' . $productNumber . ': ' . $faker->word,
                 $faker->sentence,
-                'en'
+                'en',
             );
 
             $product->addTranslation($productTranslationPl);
@@ -48,7 +48,7 @@ class ProductFixtures extends Fixture implements DependentFixtureInterface
                 sprintf(
                     'category_%s',
                     random_int(1, count(ProductCategoryFixtures::CATEGORIES)),
-                )
+                ),
             );
 
             if (!$productCategoryReference instanceof ProductCategory) {

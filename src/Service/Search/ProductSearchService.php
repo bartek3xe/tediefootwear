@@ -44,7 +44,7 @@ class ProductSearchService
             $photo = $product->getFiles()->first() ?: null;
             $results[] = [
                 'type' => 'product',
-                'title' => $product->getName()[$this->languageService->getLocale()],
+                'title' => $product->getNameByLanguage($this->languageService->getLocale()),
                 'link' => $this->router->generate('app_products_show', ['slug' => $product->getSlug()]),
                 'photo' => $product->getFiles()->isEmpty() ? self::DEFAULT_PHOTO_FILE_PATH : $photo->getFilepath(),
                 'is_new' => $product->isNew(),

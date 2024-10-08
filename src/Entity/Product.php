@@ -177,9 +177,9 @@ class Product extends AbstractProduct
     {
         $filteredTranslations = array_filter(
             $this->translations->toArray(),
-            function (ProductTranslation $translation) use ($locale) {
+            function(ProductTranslation $translation) use ($locale) {
                 return $translation->getLanguage() === $locale;
-            }
+            },
         );
 
         return array_shift($filteredTranslations) ?: null;
