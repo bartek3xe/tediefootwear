@@ -10,7 +10,6 @@
             <tr>
                 <th>Id</th>
                 <th>Nazwa</th>
-                <th>Kategoria</th>
                 <th>Czy jest nowy?</th>
                 <th>Czy jest popularny?</th>
                 <th>Allegro Url</th>
@@ -21,8 +20,7 @@
         {% for product in products %}
             <tr>
                 <td>{{ product.id }}</td>
-                <td>{{ product.getDisplayName }}</td>
-                <td>{{ product.category.getDisplayName ?? '' }}</td>
+                <td>{{ product.getNameByLanguage('pl')}}</td>
                 <td>{{ product.isNew ? 'Tak' : 'Nie' }}</td>
                 <td>{{ product.isTop ? 'Tak' : 'Nie' }}</td>
                 <td>

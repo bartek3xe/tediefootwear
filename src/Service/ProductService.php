@@ -28,7 +28,7 @@ class ProductService
             'id' => $id,
         ]);
 
-        if (null === $product) {
+        if (!$product) {
             throw new NotFoundException();
         }
 

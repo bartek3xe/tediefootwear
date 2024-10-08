@@ -34,7 +34,9 @@ class RecaptchaService
 
             $responseData = json_decode($response->getContent(), true);
 
-            return $responseData['success'] && $responseData['score'] >= 0.5;
+            return isset($responseData['success'], $responseData['score']) &&
+                $responseData['success'] &&
+                $responseData['score'] >= 0.5;
         } catch (
             ClientExceptionInterface|
             TransportExceptionInterface|

@@ -40,7 +40,7 @@ class ProductCategoryService
             'id' => $id,
         ]);
 
-        if (null === $productCategory) {
+        if (!$productCategory) {
             throw new NotFoundException();
         }
 
@@ -95,12 +95,12 @@ class ProductCategoryService
 
                 $this->logger->info('Fetching categories from the database.');
 
-                return $this->productCategoryRepository->findAll();
+                return $this->productCategoryRepository->findAllWithTranslations();
             });
         } catch (InvalidArgumentException $e) {
             $this->logger->error('Cache problem: ' . $e->getMessage());
 
-            return $this->productCategoryRepository->findAll();
+            return $this->productCategoryRepository->findAllWithTranslations();
         }
     }
 }

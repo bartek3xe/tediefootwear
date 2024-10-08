@@ -5,9 +5,9 @@
         <ul>
             <li><a href="{{ path('app_products') }}">{{ 'breadcrumb.products'|trans }}</a></li>
             <li>
-                {{ product.name[get_locale()] is defined
-                    ? product.name[get_locale()]
-                    : product.name[get_default_locale()] }}
+                {{ product.getTranslation(get_locale())
+                    ? product.getTranslation(get_locale()).name
+                    : product.getTranslation(get_default_locale()).name }}
             </li>
         </ul>
     </div>
@@ -24,17 +24,17 @@
                 {% endif %}
             </div>
             <h1 class="product-title">
-                {{ product.name[get_locale()] is defined
-                    ? product.name[get_locale()]
-                    : product.name[get_default_locale()] }}
+                {{ product.getNameByLanguage(get_locale())
+                    ? product.getNameByLanguage(get_locale())
+                    : product.getDefaultTranslation().name }}
             </h1>
         </div>
         <div class="product-info">
             <div class="product-description">
                 <div id="description-content" class="description-content">
-                    {{ product.description[get_locale()] is defined
-                        ? product.description[get_locale()]|nl2br
-                        : product.description[get_default_locale()]|nl2br }}
+                    {{ product.getTranslation(get_locale())
+                        ? product.getTranslation(get_locale()).description|nl2br
+                        : product.getTranslation(get_default_locale()).description|nl2br }}
                 </div>
                 <button id="toggle-description-btn" class="toggle-description-btn"
                         data-button-more="{{ 'product.description.more_button'|trans }}"
