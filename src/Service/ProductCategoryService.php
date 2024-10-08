@@ -103,13 +103,4 @@ class ProductCategoryService
             return $this->productCategoryRepository->findAll();
         }
     }
-
-    public function invalidateCategoryCache(): void
-    {
-        try {
-            $this->cache->delete('product_categories');
-        } catch (InvalidArgumentException $e) {
-            $this->logger->error('Cache problem during invalidation: ' . $e->getMessage());
-        }
-    }
 }

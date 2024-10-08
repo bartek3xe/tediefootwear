@@ -37,11 +37,11 @@ services:
         arguments:
             $uploadDirectory: '%uploads_directory%'
 
-    App\Service\ProductCategoryService:
+    App\Listener\ProductCategoryCacheListener:
         tags:
-            - { name: doctrine.event_listener, event: postPersist, method: invalidateCategoryCache }
-            - { name: doctrine.event_listener, event: postUpdate, method: invalidateCategoryCache }
-            - { name: doctrine.event_listener, event: postRemove, method: invalidateCategoryCache }
+            - { name: doctrine.event_listener, event: postPersist }
+            - { name: doctrine.event_listener, event: postUpdate }
+            - { name: doctrine.event_listener, event: postRemove }
 
 twig:
     globals:
