@@ -51,7 +51,7 @@ class ProductCategoryService
         string $routeName,
         ?ProductCategory $category,
         array $selectedCategories,
-        int $pageNumber = 1
+        int $pageNumber = 1,
     ): string {
         $updatedCategories = $selectedCategories;
 
@@ -68,7 +68,6 @@ class ProductCategoryService
             'page' => $pageNumber,
         ]);
     }
-
 
     public function setCategoryUrl(string $routeName, ProductCategory $category): string
     {
