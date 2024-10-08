@@ -47,7 +47,7 @@ jobs:
             source ~/.bashrc
             git fetch
             git reset --hard origin/main
-            composer install
+            composer install --no-dev --optimize-autoloader
             npx yarn install
             npx yarn build
             php bin/console sass:build
