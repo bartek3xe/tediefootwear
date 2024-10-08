@@ -8,7 +8,7 @@ use App\Entity\File;
 use App\Entity\Product;
 use App\Repository\FileRepository;
 use App\Service\Factory\FileFactory;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +20,7 @@ class FileService
     public function __construct(
         private readonly string $uploadDirectory,
         private readonly FileRepository $fileRepository,
-        private readonly EntityManagerInterface $entityManager,
+        private readonly ManagerRegistry $doctrine,
     ) {
     }
 
@@ -94,8 +94,10 @@ class FileService
         }
 
         unlink($filePath);
-        $this->entityManager->remove($fileEntity);
-        $this->entityManager->flush();
+
+        $em = $this->doctrine->getManager();
+        $em->remove($fileEntity);
+        $em->flush();
     }
 
     public function loadFile(string $filename): Response
@@ -119,6 +121,7 @@ class FileService
     public function reorderFiles(Product $product, Request $request): void
     {
         $data = json_decode($request->getContent(), true);
+        $em = $this->doctrine->getManager();
 
         foreach ($data['order'] as $position => $filename) {
             $file = $this->fileRepository->findOneBy([
@@ -128,17 +131,18 @@ class FileService
 
             if ($file) {
                 $file->setPosition($position);
-                $this->entityManager->persist($file);
+                $em->persist($file);
             }
         }
 
-        $this->entityManager->flush();
+        $em->flush();
     }
 
     public function prepareFilesForTemplate(Product $product): array
     {
         $files = $this->fileRepository->findBy(['product' => $product], ['position' => 'ASC']);
         $productFiles = [];
+
         /** @var File $file */
         foreach ($files as $file) {
             $productFiles[] = [
