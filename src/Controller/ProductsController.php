@@ -22,13 +22,24 @@ class ProductsController extends AbstractController
     #[Route('/products', name: 'products')]
     public function filterProducts(Request $request, ProductCategoryRepository $categoryRepository): Response
     {
+        $pageNumber = $request->query->get('page', 1);
+        $pageNumber = filter_var($pageNumber, FILTER_VALIDATE_INT, ['options' => ['default' => 1, 'min_range' => 1]]);
         $slugsArray = $this->service->getSlugsInArray($request);
-        $allCategories = $categoryRepository->findAll();
+        $paginatedProducts = $this->service->getProductsByCategories($slugsArray, $pageNumber);
+
+        if ($pageNumber > $paginatedProducts['total_pages']) {
+            $pageNumber = $paginatedProducts['total_pages'];
+        }
 
         return $this->render('products/index.html.twig', [
-            'products' => $this->service->getProductsByCategories($slugsArray),
-            'product_categories' => $allCategories,
+            'products' => $paginatedProducts['data'],
+            'total_pages' => $paginatedProducts['total_pages'],
+            'total_elements' => $paginatedProducts['total_elements'],
+            'page_number' => $pageNumber,
+            'product_categories' => $categoryRepository->findAll(),
             'selected_categories' => $slugsArray,
+            'start_page' => max(1, $pageNumber - 2),
+            'end_page' => min($paginatedProducts['total_pages'], $pageNumber + 2),
         ]);
     }
 
