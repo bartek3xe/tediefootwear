@@ -47,18 +47,28 @@ class ProductCategoryService
         return $this->productCategoryRepository->delete($productCategory);
     }
 
-    public function updateCategoryUrl(string $routeName, ProductCategory $category, array $selectedCategories): string
-    {
-        $isActive = in_array($category->getSlug(), $selectedCategories, true);
+    public function updateCategoryUrl(
+        string $routeName,
+        ?ProductCategory $category,
+        array $selectedCategories,
+        int $pageNumber = 1
+    ): string {
+        $updatedCategories = $selectedCategories;
 
-        $updatedCategories = $isActive
-            ? array_filter($selectedCategories, fn ($slug) => $slug !== $category->getSlug())
-            : array_merge($selectedCategories, [$category->getSlug()]);
+        if ($category) {
+            $isActive = in_array($category->getSlug(), $selectedCategories, true);
+
+            $updatedCategories = $isActive
+                ? array_filter($selectedCategories, fn ($slug) => $slug !== $category->getSlug())
+                : array_merge($selectedCategories, [$category->getSlug()]);
+        }
 
         return $this->urlGenerator->generate($routeName, [
             'categories' => implode(',', $updatedCategories),
+            'page' => $pageNumber,
         ]);
     }
+
 
     public function setCategoryUrl(string $routeName, ProductCategory $category): string
     {
