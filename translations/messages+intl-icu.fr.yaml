@@ -110,3 +110,7 @@ product.actions.inquiry_button: Demander des informations sur le produit
 contact.mailer_error: Une erreur s'est produite lors de l'envoi de l'e-mail. Veuillez réessayer plus tard.
 pagination.next: Suivant
 pagination.prev: Précédent
+contact.address.title: Adresse
+contact.postal_code.title: Code Postal
+contact.country.title: Pays
+contact.phone.title: Numéro de Téléphone
