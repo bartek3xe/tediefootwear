@@ -21,6 +21,14 @@ jobs:
           echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add id_rsa
         shell: bash
 
+      - name: Install dependencies on CI
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Install frontend dependencies
+        run: |
+          npm install
+          npm run build
+
       - name: Deploy to Server
         uses: appleboy/ssh-action@master
         with:
@@ -33,7 +41,6 @@ jobs:
             source ~/.bashrc
             git fetch
             git reset --hard origin/main
-            composer install
             npx yarn install
             npx yarn build
             php bin/console sass:build
