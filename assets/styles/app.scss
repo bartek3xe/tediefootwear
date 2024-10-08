@@ -57,6 +57,37 @@ body {
         border: 1px solid $button-color-primary;
       }
     }
+
+    &.btn-primary-reverse {
+      font-weight: bold;
+      color: $button-color-primary;
+      background: none;
+      border: 1px solid $button-color-primary;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        color: white;
+        background-color: $button-color-primary;
+        border: 1px solid $button-color-primary;
+      }
+    }
+    &.btn-secondary {
+      font-weight: bold;
+      color: $button-color-secondary;
+      background: none;
+      border: 1px solid $button-color-secondary;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        color: white;
+        background-color: $button-color-secondary;
+        border: 1px solid $button-color-secondary;
+      }
+    }
   }
 
   .allegro-btn {
