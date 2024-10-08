@@ -36,7 +36,7 @@ jobs:
         run: npx stylelint "assets/styles/**/*.scss"
 
       - name: Run PHPCsFixer
-        run: vendor/bin/php-cs-fixer fix --diff --dry-run --allow-risky=yes
+        run: vendor/bin/php-cs-fixer --diff --dry-run --allow-risky=yes
 
       - name: Run PHPStan
         run: vendor/bin/phpstan analyse

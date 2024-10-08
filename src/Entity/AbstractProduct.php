@@ -32,7 +32,7 @@ abstract class AbstractProduct
         /** @var Product|ProductCategory $this */
         $translation = $this->getTranslation($language);
 
-        return (bool) $translation ? $translation->getName() : $this->getDefaultTranslation()?->getName();
+        return $translation ? $translation->getName() : $this->getDefaultTranslation()?->getName();
     }
 
     public function getDescriptionByLanguage(string $language): ?string
