@@ -110,4 +110,7 @@ product.actions.inquiry_button: Inquire about the product
 contact.mailer_error: There was an error sending the email. Please try again later.
 pagination.next: Next
 pagination.prev: Previous
-
+contact.address.title: Address
+contact.postal_code.title: Postal Code
+contact.country.title: Country
+contact.phone.title: Phone Number

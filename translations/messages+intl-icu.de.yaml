@@ -110,3 +110,7 @@ product.actions.inquiry_button: Produktanfrage
 contact.mailer_error: Es gab einen Fehler beim Senden der E-Mail. Bitte versuchen Sie es später noch einmal.
 pagination.next: Weiter
 pagination.prev: Zurück
+contact.address.title: Adresse
+contact.postal_code.title: Postleitzahl
+contact.country.title: Land
+contact.phone.title: Telefonnummer

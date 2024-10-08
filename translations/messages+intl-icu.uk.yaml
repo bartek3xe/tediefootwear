@@ -110,3 +110,7 @@ product.actions.inquiry_button: Запитати про продукт
 contact.mailer_error: Сталася помилка під час відправки електронного листа. Будь ласка, спробуйте пізніше.
 pagination.next: Наступна
 pagination.prev: Попередня
+contact.address.title: Адреса
+contact.postal_code.title: Поштовий індекс
+contact.country.title: Країна
+contact.phone.title: Номер телефону
