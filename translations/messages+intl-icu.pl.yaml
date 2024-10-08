@@ -107,3 +107,4 @@ product.actions.allegro: Kup na Allegro.pl
 product.actions.etsy: Kup na Etsy.com
 product.actions.unavailable_retail: Produkt niedostępny w sprzedaży detalicznej
 product.actions.inquiry_button: Zapytaj o produkt
+contact.mailer_error: Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.
