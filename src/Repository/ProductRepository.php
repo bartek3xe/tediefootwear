@@ -98,11 +98,12 @@ class ProductRepository extends ServiceEntityRepository
 
     private function includeByCategories(array $categories, QueryBuilder $queryBuilder): QueryBuilder
     {
+        $alias = $queryBuilder->getRootAliases()[0];
+
         return $queryBuilder
-            ->innerJoin(':alias.categories', 'c')
+            ->innerJoin($alias . '.categories', 'c')
             ->where('c.id IN (:categories)')
             ->setParameter('categories', $categories)
-            ->setParameter('alias', $queryBuilder->getRootAliases()[0])
         ;
     }
 }
