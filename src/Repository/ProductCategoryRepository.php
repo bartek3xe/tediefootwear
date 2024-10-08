@@ -50,7 +50,6 @@ class ProductCategoryRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-
     public function findAllWithTranslations(): array
     {
         return $this->createQueryBuilder('pc')
