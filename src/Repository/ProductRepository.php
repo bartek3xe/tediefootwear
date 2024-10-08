@@ -6,7 +6,9 @@ namespace App\Repository;
 
 use App\Entity\Product;
 use App\Entity\ProductCategory;
+use App\Service\Helper\PaginationHelper;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -14,8 +16,12 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class ProductRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
-    {
+    private const int DEFAULT_MAX_ELEMENTS_PER_PAGE = 8;
+
+    public function __construct(
+        ManagerRegistry $registry,
+        private readonly PaginationHelper $paginationHelper,
+    ) {
         parent::__construct($registry, Product::class);
     }
 
@@ -39,12 +45,30 @@ class ProductRepository extends ServiceEntityRepository
         return true;
     }
 
+    public function findAllPaginated(
+        int $pageNumber,
+        int $perPage = self::DEFAULT_MAX_ELEMENTS_PER_PAGE,
+    ): array {
+        $queryBuilder = $this->createQueryBuilder('p');
+
+        return $this->paginationHelper->paginate($queryBuilder, $pageNumber, $perPage);
+    }
+
+    public function findByCategoriesPaginated(
+        array $categories,
+        int $pageNumber,
+        int $perPage = self::DEFAULT_MAX_ELEMENTS_PER_PAGE,
+    ): array {
+        $queryBuilder = $this->includeByCategories($categories, $this->createQueryBuilder('p'));
+
+        return $this->paginationHelper->paginate($queryBuilder, $pageNumber, $perPage);
+    }
+
     public function findByCategories(array $categories): array
     {
-        return $this->createQueryBuilder('p')
-            ->innerJoin('p.categories', 'c')
-            ->where('c.id IN (:categories)')
-            ->setParameter('categories', $categories)
+        $queryBuilder = $this->includeByCategories($categories, $this->createQueryBuilder('p'));
+
+        return $queryBuilder
             ->getQuery()
             ->getResult()
         ;
@@ -70,5 +94,15 @@ class ProductRepository extends ServiceEntityRepository
             ->getQuery()
             ->getSingleScalarResult()
         ;
+    }
+
+    private function includeByCategories(array $categories, QueryBuilder $queryBuilder): QueryBuilder
+    {
+         return $queryBuilder
+             ->innerJoin(':alias.categories', 'c')
+             ->where('c.id IN (:categories)')
+             ->setParameter('categories', $categories)
+             ->setParameter('alias', $queryBuilder->getRootAliases()[0])
+         ;
     }
 }

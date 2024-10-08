@@ -74,14 +74,13 @@ class ProductCategoryService
         return $slugs ? explode(',', $slugs) : [];
     }
 
-    public function getProductsByCategories(array $slugsArray): array
+    public function getProductsByCategories(array $slugsArray, int $pageNumber): array
     {
         if (!empty($slugsArray)) {
             $categories = $this->productCategoryRepository->findBy(['slug' => $slugsArray]);
-
-            $products = $this->productRepository->findByCategories($categories);
+            $products = $this->productRepository->findByCategoriesPaginated($categories, $pageNumber);
         } else {
-            $products = $this->productRepository->findAll();
+            $products = $this->productRepository->findAllPaginated($pageNumber);
         }
 
         return $products;
