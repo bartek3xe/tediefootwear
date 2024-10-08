@@ -108,3 +108,5 @@ product.actions.etsy: Купити на Etsy.com
 product.actions.unavailable_retail: Товар недоступний для роздрібного продажу
 product.actions.inquiry_button: Запитати про продукт
 contact.mailer_error: Сталася помилка під час відправки електронного листа. Будь ласка, спробуйте пізніше.
+pagination.next: Наступна
+pagination.prev: Попередня

@@ -47,16 +47,25 @@ class ProductCategoryService
         return $this->productCategoryRepository->delete($productCategory);
     }
 
-    public function updateCategoryUrl(string $routeName, ProductCategory $category, array $selectedCategories): string
-    {
-        $isActive = in_array($category->getSlug(), $selectedCategories, true);
+    public function updateCategoryUrl(
+        string $routeName,
+        ?ProductCategory $category,
+        array $selectedCategories,
+        int $pageNumber = 1,
+    ): string {
+        $updatedCategories = $selectedCategories;
 
-        $updatedCategories = $isActive
-            ? array_filter($selectedCategories, fn ($slug) => $slug !== $category->getSlug())
-            : array_merge($selectedCategories, [$category->getSlug()]);
+        if ($category) {
+            $isActive = in_array($category->getSlug(), $selectedCategories, true);
+
+            $updatedCategories = $isActive
+                ? array_filter($selectedCategories, fn ($slug) => $slug !== $category->getSlug())
+                : array_merge($selectedCategories, [$category->getSlug()]);
+        }
 
         return $this->urlGenerator->generate($routeName, [
             'categories' => implode(',', $updatedCategories),
+            'page' => $pageNumber,
         ]);
     }
 
@@ -74,14 +83,13 @@ class ProductCategoryService
         return $slugs ? explode(',', $slugs) : [];
     }
 
-    public function getProductsByCategories(array $slugsArray): array
+    public function getProductsByCategories(array $slugsArray, int $pageNumber): array
     {
         if (!empty($slugsArray)) {
             $categories = $this->productCategoryRepository->findBy(['slug' => $slugsArray]);
-
-            $products = $this->productRepository->findByCategories($categories);
+            $products = $this->productRepository->findByCategoriesPaginated($categories, $pageNumber);
         } else {
-            $products = $this->productRepository->findAll();
+            $products = $this->productRepository->findAllPaginated($pageNumber);
         }
 
         return $products;

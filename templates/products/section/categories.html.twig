@@ -5,9 +5,7 @@
             {% set isActive = category.slug in selected_categories %}
             <a href="{{ update_category_url('app_products', category, selected_categories) }}"
                class="btn btn-category {{ isActive ? 'active' : '' }}">
-                {{ category.getNameByLanguage(get_locale())
-                    ? category.getNameByLanguage(get_locale())
-                    : category.getDefaultTranslation().name }}
+                {{ category.getNameByLanguage(get_locale()) }}
             </a>
         {% endfor %}
     </div>
