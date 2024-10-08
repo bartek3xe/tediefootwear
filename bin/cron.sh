@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if pgrep -f "messenger:consume async" > /dev/null
+if pgrep -f "messenger:consume"
 then
     echo "Command already running."
 else
