@@ -11,7 +11,6 @@ use App\Form\ProductCategoryType;
 use App\Repository\ProductCategoryRepository;
 use App\Service\Handler\ProductCategoryHandler;
 use App\Service\ProductCategoryService;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -35,12 +34,12 @@ class AdminProductCategoryController extends AbstractController
     }
 
     #[Route('/new', name: 'product_category_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request): Response
     {
         $productCategory = new ProductCategory();
         $form = $this->createForm(ProductCategoryType::class, $productCategory);
-        $form->handleRequest($request);
 
+        $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $this->handler->handleForm($form, $productCategory);
 
@@ -65,11 +64,12 @@ class AdminProductCategoryController extends AbstractController
     public function edit(Request $request, ProductCategory $productCategory): Response
     {
         $form = $this->handler->prepareData(
-            $this->createForm(ProductCategoryType::class),
+            $this->createForm(ProductCategoryType::class, $productCategory),
             $productCategory,
         );
 
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $this->handler->handleForm($form, $productCategory);
 

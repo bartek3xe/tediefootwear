@@ -40,8 +40,8 @@ class AdminProductController extends AbstractController
     {
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product, ['edition' => false]);
-        $form->handleRequest($request);
 
+        $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $this->handler->handleForm($form, $product);
 

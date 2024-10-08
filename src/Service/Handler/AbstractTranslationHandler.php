@@ -23,9 +23,18 @@ abstract class AbstractTranslationHandler
                 ? $form->get('description_' . $language->value)->getData()
                 : null;
 
+            $translation = $entity->getTranslation($language->value);
+
             if ($name || $description) {
-                $translation = $entity->getTranslation($language->value) ?? $translationFactory($name, $description, $language->value);
-                $entity->addTranslation($translation);
+                if ($translation) {
+                    $translation->setName($name);
+                    if (null !== $description) {
+                        $translation->setDescription($description);
+                    }
+                } else {
+                    $translation = $translationFactory($name, $description, $language->value);
+                    $entity->addTranslation($translation);
+                }
 
                 $em = $this->doctrine->getManager();
                 $em->persist($translation);
