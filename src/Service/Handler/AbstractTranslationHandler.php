@@ -28,7 +28,7 @@ abstract class AbstractTranslationHandler
             if ($name || $description) {
                 if ($translation) {
                     $translation->setName($name);
-                    if ($description !== null) {
+                    if (null !== $description) {
                         $translation->setDescription($description);
                     }
                 } else {
