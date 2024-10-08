@@ -45,7 +45,7 @@ abstract class AbstractProduct
 
     public function getDefaultTranslation(): ProductTranslation|ProductCategoryTranslation|null
     {
-        /** @var Product|ProductCategory $this */
+        /* @var Product|ProductCategory $this */
 
         return $this->getTranslation(LanguageEnum::DEFAULT_LOCALE_VALUE);
     }
