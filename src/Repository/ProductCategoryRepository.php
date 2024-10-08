@@ -47,4 +47,13 @@ class ProductCategoryRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function findAllWithTranslations(): array
+    {
+        return $this->createQueryBuilder('pc')
+            ->leftJoin('pc.translations', 't')
+            ->addSelect('t')
+            ->getQuery()
+            ->getResult();
+    }
 }

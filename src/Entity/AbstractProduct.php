@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use App\Entity\Translation\ProductCategoryTranslation;
+use App\Entity\Translation\ProductTranslation;
+use App\Enum\LanguageEnum;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\MappedSuperclass]
@@ -11,9 +14,6 @@ abstract class AbstractProduct
 {
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
-
-    #[ORM\Column(type: 'json')]
-    private array $name = [];
 
     public function getSlug(): ?string
     {
@@ -27,29 +27,26 @@ abstract class AbstractProduct
         return $this;
     }
 
-    public function getName(): array
-    {
-        return $this->name;
-    }
-
-    public function setName(array $name): static
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    public function getDisplayName(): ?string
-    {
-        return $this->name['pl'] ?? $this->name['en'] ?? null;
-    }
-
     public function getNameByLanguage(string $language): ?string
     {
-        if (isset($this->name[$language])) {
-            return $this->name[$language];
-        }
+        /**@var Product|ProductCategory $this*/
+        $translation = $this->getTranslation($language);
 
-        return $this->name['en'] ?? null;
+        return !!$translation ? $translation->getName() : $this->getDefaultTranslation()?->getName();
+    }
+
+    public function getDescriptionByLanguage(string $language): ?string
+    {
+        /**@var Product $this*/
+        $translation = $this->getTranslation($language);
+
+        return $translation ? $translation->getDescription() : $this->getDefaultTranslation()?->getDescription();
+    }
+
+    public function getDefaultTranslation(): null|ProductTranslation|ProductCategoryTranslation
+    {
+        /**@var Product|ProductCategory $this*/
+
+        return $this->getTranslation(LanguageEnum::DEFAULT_LOCALE_VALUE);
     }
 }
