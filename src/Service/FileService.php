@@ -9,6 +9,8 @@ use App\Entity\Product;
 use App\Repository\FileRepository;
 use App\Service\Factory\FileFactory;
 use Doctrine\Persistence\ManagerRegistry;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\FilesystemOperator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,6 +23,7 @@ class FileService
         private readonly string $uploadDirectory,
         private readonly FileRepository $fileRepository,
         private readonly ManagerRegistry $doctrine,
+        private readonly FilesystemOperator $defaultStorage,
     ) {
     }
 
@@ -47,10 +50,17 @@ class FileService
     public function prepare(UploadedFile $file, Product $product): File
     {
         $filesCount = $this->fileRepository->countFilesByProduct($product);
-        $filename = uniqid() . '-' . $file->getClientOriginalName();
-
+        $filename = sprintf('%s-%s', uniqid(), $file->getClientOriginalName());
         $fileSize = $file->getSize();
-        $file->move($this->uploadDirectory, $filename);
+        $stream = fopen($file->getPathname(), 'r+');
+        try {
+            $this->defaultStorage->writeStream($filename, $stream);
+            if (is_resource($stream)) {
+                fclose($stream);
+            }
+        } catch (FilesystemException $e) {
+            throw new \RuntimeException('File could not be saved: ' . $e->getMessage());
+        }
 
         return FileFactory::create(
             $filename,
@@ -93,27 +103,30 @@ class FileService
             throw new \RuntimeException('File not found');
         }
 
-        unlink($filePath);
+        try {
+            $this->defaultStorage->delete($filename);
+        } catch (FilesystemException $e) {
+            throw new \RuntimeException('Could not delete file: ' . $e->getMessage());
+        }
 
         $em = $this->doctrine->getManager();
         $em->remove($fileEntity);
         $em->flush();
     }
 
+    /**
+     * @throws FilesystemException
+     */
     public function loadFile(string $filename): Response
     {
         if (str_contains($filename, '../')) {
             throw new \InvalidArgumentException('Invalid file path');
         }
 
-        $filePath = $this->uploadDirectory . '/' . $filename;
+        $fileContents = $this->defaultStorage->read($filename);
 
-        if (!file_exists($filePath)) {
-            throw new \RuntimeException('File not found');
-        }
-
-        return new Response(file_get_contents($filePath), Response::HTTP_OK, [
-            'Content-Type' => mime_content_type($filePath),
+        return new Response($fileContents, Response::HTTP_OK, [
+            'Content-Type' => $this->defaultStorage->mimeType($filename),
             'Content-Disposition' => 'inline; filename="' . $filename . '"',
         ]);
     }
