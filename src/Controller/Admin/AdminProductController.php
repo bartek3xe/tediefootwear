@@ -12,7 +12,6 @@ use App\Repository\ProductRepository;
 use App\Service\FileService;
 use App\Service\Handler\ProductHandler;
 use App\Service\ProductService;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -64,7 +63,7 @@ class AdminProductController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'product_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Product $product, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, Product $product): Response
     {
         $form = $this->handler->prepareData(
             $this->createForm(ProductType::class, $product),
@@ -72,7 +71,6 @@ class AdminProductController extends AbstractController
         );
 
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $this->handler->handleForm($form, $product);
 

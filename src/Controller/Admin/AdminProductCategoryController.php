@@ -62,41 +62,23 @@ class AdminProductCategoryController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'product_category_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, ProductCategory $productCategory, EntityManagerInterface $entityManager): Response
+    public function edit(Request $request, ProductCategory $productCategory): Response
     {
-        $form = $this->createForm(ProductCategoryType::class, $productCategory);
-        foreach (LanguageEnum::cases() as $language) {
-            $form->get('name_' . $language->value)
-                ->setData($productCategory->getName()[$language->value] ?? '');
-        }
-
         $form = $this->handler->prepareData(
-            $this->createForm(ProductCategoryType::class, $productCategory),
+            $this->createForm(ProductCategoryType::class),
             $productCategory,
         );
+
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
-            $names = [];
-            foreach (LanguageEnum::cases() as $language) {
-                $fieldName = 'name_' . $language->value;
-                $name = $form->get($fieldName)->getData();
-                if ($name) {
-                    $names[$language->value] = $name;
-                }
-            }
-
-            $productCategory->setName($names);
-
-            $entityManager->persist($productCategory);
-            $entityManager->flush();
+            $this->handler->handleForm($form, $productCategory);
 
             return $this->redirectToRoute('app_admin_product_category_index');
         }
 
         return $this->render('admin/product_category/edit.html.twig', [
             'product_category' => $productCategory,
-            'form' => $form,
+            'form' => $form->createView(),
             'languages' => LanguageEnum::cases(),
         ]);
     }
