@@ -27,8 +27,14 @@ jobs:
           echo "${{ secrets.SSH_PASSPHRASE }}" | ssh-add id_rsa
         shell: bash
 
+      - name: Set environment to production
+        run: export APP_ENV=prod
+
       - name: Install dependencies on CI
-        run: composer install --no-dev --optimize-autoloader
+        run: composer install --no-dev --optimize-autoloader --no-scripts
+
+      - name: Clear cache in production mode
+        run: php bin/console cache:clear --env=prod --no-debug
 
       - name: Install frontend dependencies
         run: |
@@ -47,8 +53,9 @@ jobs:
             source ~/.bashrc
             git fetch
             git reset --hard origin/main
-            composer install --no-dev --optimize-autoloader
+            composer install --no-dev --optimize-autoloader --no-scripts
             npx yarn install
             npx yarn build
+            php bin/console cache:clear --env=prod --no-debug
             php bin/console sass:build
             php bin/console doctrine:migrations:migrate --no-interaction
