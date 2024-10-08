@@ -35,6 +35,6 @@ class SlugListener
 
     private function generateSlug(ProductCategory|Product $entity): void
     {
-        $entity->setSlug((string) $this->slugger->slug($entity->getName()['en'])->lower());
+        $entity->setSlug((string) $this->slugger->slug($entity->getTranslation('en')->getName())->lower());
     }
 }

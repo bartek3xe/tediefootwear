@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ProductCategoryType extends AbstractType
 {
@@ -24,10 +25,16 @@ class ProductCategoryType extends AbstractType
         ]);
 
         foreach (LanguageEnum::cases() as $language) {
+            $constraints = [];
+            if (in_array($language, [LanguageEnum::POLISH, LanguageEnum::ENGLISH], true)) {
+                $constraints[] = new NotBlank(['message' => 'Pole dla tego języka jest wymagane.']);
+            }
+
             $builder->add('name_' . $language->value, TextType::class, [
                 'label' => 'Nazwa (' . LanguageEnum::getPolishName($language) . ')',
                 'mapped' => false,
-                'required' => false,
+                'required' => !empty($constraints),
+                'constraints' => $constraints,
             ]);
         }
     }

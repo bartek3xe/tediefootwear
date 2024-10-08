@@ -5,33 +5,31 @@ declare(strict_types=1);
 namespace App\Service\Handler;
 
 use App\Entity\ProductCategory;
-use App\Enum\LanguageEnum;
+use App\Service\Factory\Translation\ProductCategoryTranslationFactory;
 use App\Service\ProductCategoryService;
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Form\FormInterface;
 
-class ProductCategoryHandler
+class ProductCategoryHandler extends AbstractTranslationHandler
 {
     public function __construct(
         private readonly ProductCategoryService $service,
-        private readonly MultiLanguageHelper $multiLanguageHelper,
+        ManagerRegistry $doctrine,
     ) {
+        parent::__construct($doctrine);
     }
 
     public function handleForm(FormInterface $form, ProductCategory $productCategory): void
     {
-        $names = $this->multiLanguageHelper->prepareMultipleNames($form);
+        $this->handleTranslations($form, $productCategory, function($name, $description, $language) {
+            return ProductCategoryTranslationFactory::create($name, $language);
+        });
 
-        $productCategory->setName($names);
         $this->service->save($productCategory);
     }
 
     public function prepareData(FormInterface $form, ProductCategory $productCategory): FormInterface
     {
-        foreach (LanguageEnum::cases() as $language) {
-            $form->get('name_' . $language->value)
-                ->setData($productCategory->getName()[$language->value] ?? '');
-        }
-
-        return $form;
+        return $this->prepareFormData($form, $productCategory);
     }
 }

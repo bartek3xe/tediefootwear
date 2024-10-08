@@ -17,7 +17,9 @@
                     {% endif %}
                     </span>
                     <span class="product-title">
-                        {{ product.getNameByLanguage(get_locale()) }}
+                        {{ product.getNameByLanguage(get_locale())
+                            ? product.getNameByLanguage(get_locale())
+                            : product.getDefaultTranslation().name }}
                         <i class="fas fa-chevron-right"></i>
                     </span>
                 </a>

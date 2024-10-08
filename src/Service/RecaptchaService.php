@@ -12,7 +12,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class RecaptchaService
 {
-    public const RECAPTCHA_VERIFICATION_SITE_URL = 'https://www.google.com/recaptcha/api/siteverify';
+    public const string RECAPTCHA_VERIFICATION_SITE_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
     public function __construct(
         private readonly HttpClientInterface $httpClient,
@@ -34,7 +34,9 @@ class RecaptchaService
 
             $responseData = json_decode($response->getContent(), true);
 
-            return $responseData['success'] && $responseData['score'] >= 0.5;
+            return isset($responseData['success'], $responseData['score'])
+                && $responseData['success']
+                && $responseData['score'] >= 0.5;
         } catch (
             ClientExceptionInterface|
             TransportExceptionInterface|

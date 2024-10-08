@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use App\Entity\Translation\ProductTranslation;
 use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -17,9 +18,6 @@ class Product extends AbstractProduct
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-
-    #[ORM\Column(type: Types::JSON)]
-    private array $description = [];
 
     #[ORM\Column(type: Types::BOOLEAN)]
     private bool $isNew = false;
@@ -41,27 +39,19 @@ class Product extends AbstractProduct
     #[ORM\OrderBy(['position' => 'ASC'])]
     private Collection $files;
 
+    #[ORM\OneToMany(targetEntity: ProductTranslation::class, mappedBy: 'product', cascade: ['persist', 'remove'])]
+    private Collection $translations;
+
     public function __construct()
     {
         $this->files = new ArrayCollection();
         $this->categories = new ArrayCollection();
+        $this->translations = new ArrayCollection();
     }
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getDescription(): array
-    {
-        return $this->description;
-    }
-
-    public function setDescription(array $description): static
-    {
-        $this->description = $description;
-
-        return $this;
     }
 
     public function isNew(): bool
@@ -105,9 +95,11 @@ class Product extends AbstractProduct
         return $this->etsy_url;
     }
 
-    public function setEtsyUrl(?string $etsy_url): void
+    public function setEtsyUrl(?string $etsy_url): static
     {
         $this->etsy_url = $etsy_url;
+
+        return $this;
     }
 
     public function getCategories(): Collection
@@ -156,6 +148,51 @@ class Product extends AbstractProduct
                 $file->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function addTranslation(ProductTranslation $translation): static
+    {
+        if (!$this->translations->contains($translation)) {
+            $this->translations[] = $translation;
+            $translation->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTranslation(ProductTranslation $translation): static
+    {
+        if ($this->translations->removeElement($translation)) {
+            if ($translation->getProduct() === $this) {
+                $translation->setProduct(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getTranslation(string $locale): ?ProductTranslation
+    {
+        $filteredTranslations = array_filter(
+            $this->translations->toArray(),
+            function(ProductTranslation $translation) use ($locale) {
+                return $translation->getLanguage() === $locale;
+            },
+        );
+
+        return array_shift($filteredTranslations) ?: null;
+    }
+
+    public function getTranslations(): Collection
+    {
+        return $this->translations;
+    }
+
+    public function setTranslations(Collection $translations): static
+    {
+        $this->translations = $translations;
 
         return $this;
     }

@@ -8,19 +8,22 @@ use App\Entity\File;
 use App\Entity\Product;
 use App\Repository\FileRepository;
 use App\Service\Factory\FileFactory;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Persistence\ManagerRegistry;
+use League\Flysystem\FilesystemException;
+use League\Flysystem\FilesystemOperator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class FileService
 {
-    public const ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png'];
+    public const array ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png'];
 
     public function __construct(
         private readonly string $uploadDirectory,
         private readonly FileRepository $fileRepository,
-        private readonly EntityManagerInterface $entityManager,
+        private readonly ManagerRegistry $doctrine,
+        private readonly FilesystemOperator $defaultStorage,
     ) {
     }
 
@@ -47,10 +50,17 @@ class FileService
     public function prepare(UploadedFile $file, Product $product): File
     {
         $filesCount = $this->fileRepository->countFilesByProduct($product);
-        $filename = uniqid() . '-' . $file->getClientOriginalName();
-
+        $filename = sprintf('%s-%s', uniqid(), $file->getClientOriginalName());
         $fileSize = $file->getSize();
-        $file->move($this->uploadDirectory, $filename);
+        $stream = fopen($file->getPathname(), 'r+');
+        try {
+            $this->defaultStorage->writeStream($filename, $stream);
+            if (is_resource($stream)) {
+                fclose($stream);
+            }
+        } catch (FilesystemException $e) {
+            throw new \RuntimeException('File could not be saved: ' . $e->getMessage());
+        }
 
         return FileFactory::create(
             $filename,
@@ -93,25 +103,30 @@ class FileService
             throw new \RuntimeException('File not found');
         }
 
-        unlink($filePath);
-        $this->entityManager->remove($fileEntity);
-        $this->entityManager->flush();
+        try {
+            $this->defaultStorage->delete($filename);
+        } catch (FilesystemException $e) {
+            throw new \RuntimeException('Could not delete file: ' . $e->getMessage());
+        }
+
+        $em = $this->doctrine->getManager();
+        $em->remove($fileEntity);
+        $em->flush();
     }
 
+    /**
+     * @throws FilesystemException
+     */
     public function loadFile(string $filename): Response
     {
         if (str_contains($filename, '../')) {
             throw new \InvalidArgumentException('Invalid file path');
         }
 
-        $filePath = $this->uploadDirectory . '/' . $filename;
+        $fileContents = $this->defaultStorage->read($filename);
 
-        if (!file_exists($filePath)) {
-            throw new \RuntimeException('File not found');
-        }
-
-        return new Response(file_get_contents($filePath), Response::HTTP_OK, [
-            'Content-Type' => mime_content_type($filePath),
+        return new Response($fileContents, Response::HTTP_OK, [
+            'Content-Type' => $this->defaultStorage->mimeType($filename),
             'Content-Disposition' => 'inline; filename="' . $filename . '"',
         ]);
     }
@@ -119,6 +134,7 @@ class FileService
     public function reorderFiles(Product $product, Request $request): void
     {
         $data = json_decode($request->getContent(), true);
+        $em = $this->doctrine->getManager();
 
         foreach ($data['order'] as $position => $filename) {
             $file = $this->fileRepository->findOneBy([
@@ -128,17 +144,18 @@ class FileService
 
             if ($file) {
                 $file->setPosition($position);
-                $this->entityManager->persist($file);
+                $em->persist($file);
             }
         }
 
-        $this->entityManager->flush();
+        $em->flush();
     }
 
     public function prepareFilesForTemplate(Product $product): array
     {
         $files = $this->fileRepository->findBy(['product' => $product], ['position' => 'ASC']);
         $productFiles = [];
+
         /** @var File $file */
         foreach ($files as $file) {
             $productFiles[] = [

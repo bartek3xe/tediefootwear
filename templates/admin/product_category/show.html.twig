@@ -1,9 +1,9 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title %}Kategoria {{ product_category.getDisplayName() }}{% endblock %}
+{% block title %}Kategoria {{ product_category.getNameByLanguage('pl')}}{% endblock %}
 
 {% block body %}
-    <h1>Kategoria {{ product_category.getDisplayName() }}</h1>
+    <h1>Kategoria {{ product_category.getNameByLanguage('pl') }}</h1>
 
     <table class="table">
         <tbody>
@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <th>Name</th>
-                <td>{{ product_category.getDisplayName() }}</td>
+                <td>{{ product_category.getNameByLanguage('pl') }}</td>
             </tr>
             <tr>
                 <th>Slug</th>

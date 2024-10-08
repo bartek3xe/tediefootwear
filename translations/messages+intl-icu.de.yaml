@@ -107,3 +107,4 @@ product.actions.allegro: Kaufen auf Allegro.pl
 product.actions.etsy: Kaufen auf Etsy.com
 product.actions.unavailable_retail: Produkt im Einzelhandel nicht verfügbar
 product.actions.inquiry_button: Produktanfrage
+contact.mailer_error: Es gab einen Fehler beim Senden der E-Mail. Bitte versuchen Sie es später noch einmal.

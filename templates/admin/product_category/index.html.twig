@@ -17,7 +17,7 @@
         {% for product_category in product_categories %}
             <tr>
                 <td>{{ product_category.id }}</td>
-                <td>{{ product_category.getDisplayName() }}</td>
+                <td>{{ product_category.getNameByLanguage('pl') }}</td>
                 <td>
                     <a class="btn btn-primary" href="{{ path('app_admin_product_category_show', {'id': product_category.id}) }}">Detale</a>
                     <a class="btn btn-warning" href="{{ path('app_admin_product_category_edit', {'id': product_category.id}) }}">Edytuj</a>

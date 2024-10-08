@@ -8,8 +8,6 @@ use App\Form\ContactType;
 use App\Service\MailerService;
 use App\Service\RecaptchaService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Exception\LogicException;
-use Symfony\Component\Form\Exception\RuntimeException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -25,28 +23,24 @@ class ContactController extends AbstractController
     ) {
     }
 
-    /**
-     * @throws RuntimeException
-     * @throws LogicException
-     */
     #[Route('/contact', name: 'contact')]
     public function index(Request $request): Response
     {
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $recaptchaResponse = $request->get('g-recaptcha-response');
-
-            if ($this->recaptchaService->verify($recaptchaResponse)) {
+        $recaptchaResponse = $request->get('g-recaptcha-response');
+        if ($form->isSubmitted() && $form->isValid() && $this->recaptchaService->verify($recaptchaResponse)) {
+            try {
                 $this->mailerService->sendContactUsData($form->getData());
-
                 $this->addFlash('success', $this->translator->trans('contact.success_message'));
 
-                $form = $this->createForm(ContactType::class);
-            } else {
-                $this->addFlash('error', $this->translator->trans('contact.recaptcha_failed'));
+                return $this->redirectToRoute('app_contact');
+            } catch (\Exception $e) {
+                $this->addFlash('error', $this->translator->trans('contact.mailer_error'));
             }
+        } elseif ($form->isSubmitted() && !$this->recaptchaService->verify($recaptchaResponse)) {
+            $this->addFlash('error', $this->translator->trans('contact.recaptcha_failed'));
         }
 
         if ($form->isSubmitted() && !$form->isValid()) {

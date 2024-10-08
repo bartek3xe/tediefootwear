@@ -40,7 +40,7 @@ class ProductCategoryService
             'id' => $id,
         ]);
 
-        if (null === $productCategory) {
+        if (!$productCategory) {
             throw new NotFoundException();
         }
 
@@ -74,7 +74,7 @@ class ProductCategoryService
         return $slugs ? explode(',', $slugs) : [];
     }
 
-    public function getProductsByCategories(Request $request, array $slugsArray): array
+    public function getProductsByCategories(array $slugsArray): array
     {
         if (!empty($slugsArray)) {
             $categories = $this->productCategoryRepository->findBy(['slug' => $slugsArray]);
@@ -95,21 +95,12 @@ class ProductCategoryService
 
                 $this->logger->info('Fetching categories from the database.');
 
-                return $this->productCategoryRepository->findAll();
+                return $this->productCategoryRepository->findAllWithTranslations();
             });
         } catch (InvalidArgumentException $e) {
             $this->logger->error('Cache problem: ' . $e->getMessage());
 
-            return $this->productCategoryRepository->findAll();
-        }
-    }
-
-    public function invalidateCategoryCache(): void
-    {
-        try {
-            $this->cache->delete('product_categories');
-        } catch (InvalidArgumentException $e) {
-            $this->logger->error('Cache problem during invalidation: ' . $e->getMessage());
+            return $this->productCategoryRepository->findAllWithTranslations();
         }
     }
 }

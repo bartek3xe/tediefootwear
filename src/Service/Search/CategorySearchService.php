@@ -39,7 +39,7 @@ class CategorySearchService
                 'title' => sprintf(
                     '%s: %s',
                     $this->translator->trans('category.singular'),
-                    $category->getName()[$this->languageService->getLocale()],
+                    $category->getNameByLanguage($this->languageService->getLocale()),
                 ),
                 'product_count' => $this->productRepository->countProductsByCategory($category),
                 'link' => $this->router->generate('app_products', ['categories' => $category->getSlug()]),

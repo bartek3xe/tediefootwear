@@ -45,7 +45,7 @@
                             {% if categories[index] is defined %}
                                 <a class="link-btn"
                                  href="{{ set_category_url('app_products', categories[index]) }}"
-                                > {{ categories[index].getNameByLanguage(get_locale()) }}</a>
+                                > {{  categories[index].getDefaultTranslation().name }}</a>
                             {% endif %}
                         {% endfor %}
                     </div>
