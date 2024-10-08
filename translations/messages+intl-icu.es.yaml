@@ -108,3 +108,5 @@ product.actions.etsy: Comprar en Etsy.com
 product.actions.unavailable_retail: Producto no disponible para venta minorista
 product.actions.inquiry_button: Consultar sobre el producto
 contact.mailer_error: Hubo un error al enviar el correo electrónico. Por favor, inténtelo de nuevo más tarde.
+pagination.next: Siguiente
+pagination.prev: Anterior

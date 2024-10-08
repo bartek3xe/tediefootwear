@@ -108,4 +108,6 @@ product.actions.etsy: Buy on Etsy.com
 product.actions.unavailable_retail: Product unavailable for retail sale
 product.actions.inquiry_button: Inquire about the product
 contact.mailer_error: There was an error sending the email. Please try again later.
+pagination.next: Next
+pagination.prev: Previous
 
