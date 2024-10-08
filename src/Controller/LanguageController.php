@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Enum\LanguageEnum;
+use App\Service\LanguageService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,34 +14,20 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LanguageController extends AbstractController
 {
+    public function __construct(private readonly LanguageService $languageService)
+    {
+    }
+
     #[Route('/change-language/{locale}', name: 'app_language_changer', methods: ['GET'])]
     public function changeLanguage(Request $request, string $locale): Response
     {
-        $availableLocales = array_map(fn (LanguageEnum $lang) => $lang->value, LanguageEnum::cases());
+        $availableLocales = $this->languageService->getAvailableLocales();
 
-        if (in_array($locale, $availableLocales, true)) {
-            $request->getSession()->set('_locale', $locale);
-        }
+        $this->languageService->changeLocale($request, $locale, $availableLocales);
 
         $referer = $request->headers->get('referer');
         if ($referer) {
-            $parsedUrl = parse_url($referer);
-            $pathSegments = explode('/', $parsedUrl['path']);
-
-            if (in_array($pathSegments[1], $availableLocales, true)) {
-                $pathSegments[1] = $locale;
-            } else {
-                array_unshift($pathSegments, $locale);
-            }
-
-            $newPath = implode('/', $pathSegments);
-            $port = isset($parsedUrl['port']) ? ':' . $parsedUrl['port'] : '';
-            $newReferer = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $port . $newPath;
-
-            if (isset($parsedUrl['query'])) {
-                $newReferer .= '?' . $parsedUrl['query'];
-            }
-
+            $newReferer = $this->languageService->generateNewReferer($referer, $locale, $availableLocales);
             return new RedirectResponse($newReferer);
         }
 
@@ -50,7 +37,7 @@ class LanguageController extends AbstractController
     #[Route('/', name: 'app_default_redirect')]
     public function redirectToDefaultLanguage(Request $request): Response
     {
-        $locale = $request->getSession()->get('_locale', 'en');
+        $locale = $this->languageService->getLocaleFromSession($request->getSession());
 
         return $this->redirectToRoute('app', ['_locale' => $locale]);
     }

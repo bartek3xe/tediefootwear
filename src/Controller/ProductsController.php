@@ -26,7 +26,7 @@ class ProductsController extends AbstractController
         $allCategories = $categoryRepository->findAll();
 
         return $this->render('products/index.html.twig', [
-            'products' => $this->service->getProductsByCategories($request, $slugsArray),
+            'products' => $this->service->getProductsByCategories($slugsArray),
             'product_categories' => $allCategories,
             'selected_categories' => $slugsArray,
         ]);
