@@ -24,9 +24,7 @@
                 {% endif %}
             </div>
             <h1 class="product-title">
-                {{ product.getNameByLanguage(get_locale())
-                    ? product.getNameByLanguage(get_locale())
-                    : product.getDefaultTranslation().name }}
+                {{ product.getNameByLanguage(get_locale()) }}
             </h1>
         </div>
         <div class="product-info">
