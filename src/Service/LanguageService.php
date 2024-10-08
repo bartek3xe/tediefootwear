@@ -50,7 +50,7 @@ class LanguageService
 
     public function getAvailableLocales(): array
     {
-        return array_map(fn(LanguageEnum $lang) => $lang->value, LanguageEnum::cases());
+        return array_map(fn (LanguageEnum $lang) => $lang->value, LanguageEnum::cases());
     }
 
     public function changeLocale(Request $request, string $locale, array $availableLocales): void

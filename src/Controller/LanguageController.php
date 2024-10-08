@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Enum\LanguageEnum;
 use App\Service\LanguageService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -28,6 +27,7 @@ class LanguageController extends AbstractController
         $referer = $request->headers->get('referer');
         if ($referer) {
             $newReferer = $this->languageService->generateNewReferer($referer, $locale, $availableLocales);
+
             return new RedirectResponse($newReferer);
         }
 

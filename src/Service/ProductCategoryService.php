@@ -74,7 +74,7 @@ class ProductCategoryService
         return $slugs ? explode(',', $slugs) : [];
     }
 
-    public function getProductsByCategories(Request $request, array $slugsArray): array
+    public function getProductsByCategories(array $slugsArray): array
     {
         if (!empty($slugsArray)) {
             $categories = $this->productCategoryRepository->findBy(['slug' => $slugsArray]);
