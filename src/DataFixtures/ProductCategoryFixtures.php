@@ -10,7 +10,7 @@ use Doctrine\Persistence\ObjectManager;
 
 class ProductCategoryFixtures extends Fixture
 {
-    public const CATEGORIES = [
+    public const array CATEGORIES = [
         [
             'pl' => 'Kapcie damskie',
             'en' => 'Women slippers',

@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class FileService
 {
-    public const ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png'];
+    public const array ALLOWED_EXTENSIONS = ['jpeg', 'jpg', 'png'];
 
     public function __construct(
         private readonly string $uploadDirectory,

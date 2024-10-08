@@ -6,7 +6,7 @@ namespace App\Enum;
 
 enum LanguageEnum: string
 {
-    public const DEFAULT_LOCALE_VALUE = self::ENGLISH->value;
+    public const string DEFAULT_LOCALE_VALUE = self::ENGLISH->value;
 
     case POLISH = 'pl';
     case ENGLISH = 'en';

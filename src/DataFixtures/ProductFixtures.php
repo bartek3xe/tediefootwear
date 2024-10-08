@@ -13,7 +13,7 @@ use Faker\Factory;
 
 class ProductFixtures extends Fixture implements DependentFixtureInterface
 {
-    public const NUMBER_OF_PRODUCTS = 50;
+    public const int NUMBER_OF_PRODUCTS = 50;
 
     public function load(ObjectManager $manager): void
     {

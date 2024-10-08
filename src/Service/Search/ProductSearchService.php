@@ -12,7 +12,7 @@ use Symfony\Component\Routing\RouterInterface;
 
 class ProductSearchService
 {
-    private const DEFAULT_PHOTO_FILE_PATH = '/build/images/default-slipper.webp';
+    private const string DEFAULT_PHOTO_FILE_PATH = '/build/images/default-slipper.webp';
 
     public function __construct(
         private readonly ProductRepository $productRepository,

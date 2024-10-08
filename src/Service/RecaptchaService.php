@@ -12,7 +12,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class RecaptchaService
 {
-    public const RECAPTCHA_VERIFICATION_SITE_URL = 'https://www.google.com/recaptcha/api/siteverify';
+    public const string RECAPTCHA_VERIFICATION_SITE_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
     public function __construct(
         private readonly HttpClientInterface $httpClient,
