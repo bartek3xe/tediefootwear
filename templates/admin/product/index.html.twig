@@ -4,7 +4,7 @@
 
 {% block body %}
     <h1>Produkty</h1>
-
+    <a class="btn btn-success" href="{{ path('app_admin_product_new') }}">Stwórz nowy</a>
     <table class="table">
         <thead>
             <tr>
@@ -40,6 +40,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a class="btn btn-success" href="{{ path('app_admin_product_new') }}">Stwórz nowy</a>
+    {{ include('products/partials/_pagination.html.twig', { 'route_name': 'app_admin_product_index' }) }}
 {% endblock %}

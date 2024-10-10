@@ -1,13 +1,17 @@
+{% if options.selectedCategories is not defined %}
+    {% set options = options|merge({'selectedCategories': []}) %}
+{% endif %}
+
 <div class="pagination">
     {% if page_number > 1 %}
-        <a class="btn" href="{{ update_category_url('app_products', null, selected_categories, page_number - 1) }}">{{ 'pagination.prev'|trans }}</a>
+        <a class="btn" href="{{ generate_url(route_name, options|merge({'page': page_number - 1})) }}">{{ 'pagination.prev'|trans }}</a>
     {% else %}
-        <span class="btn current-page">{{ 'pagination.prev'|trans }}</span>
+        <span class="btn prev-next-btn">{{ 'pagination.prev'|trans }}</span>
     {% endif %}
 
     <div class="desktop-pagination">
         {% if start_page > 1 %}
-            <a class="btn" href="{{ update_category_url('app_products', null, selected_categories, 1) }}">1</a>
+            <a class="btn" href="{{ generate_url(route_name, options|merge({'page': 1})) }}">1</a>
             {% if start_page > 2 %}
                 <span>...</span>
             {% endif %}
@@ -17,7 +21,7 @@
             {% if page == page_number %}
                 <span class="btn current-page">{{ page }}</span>
             {% else %}
-                <a class="btn" href="{{ update_category_url('app_products', null, selected_categories, page) }}">{{ page }}</a>
+                <a class="btn" href="{{ generate_url(route_name, options|merge({'page': page})) }}">{{ page }}</a>
             {% endif %}
         {% endfor %}
 
@@ -25,17 +29,19 @@
             {% if end_page < total_pages - 1 %}
                 <span>...</span>
             {% endif %}
-            <a class="btn" href="{{ update_category_url('app_products', null, selected_categories, total_pages) }}">{{ total_pages }}</a>
+            <a class="btn" href="{{ generate_url(route_name, options|merge({'page': total_pages})) }}">{{ total_pages }}</a>
         {% endif %}
     </div>
 
-    <div class="mobile-pagination">
-        <span class="btn current-page">{{ page_number }}</span>
-    </div>
+    {% if show_mobile is defined %}
+        <div class="mobile-pagination">
+            <span class="btn current-page">{{ page_number }}</span>
+        </div>
+    {% endif %}
 
     {% if page_number < total_pages %}
-        <a class="btn" href="{{ update_category_url('app_products', null, selected_categories, page_number + 1) }}">{{ 'pagination.next'|trans }}</a>
+        <a class="btn" href="{{ generate_url(route_name, options|merge({'page': page_number + 1})) }}">{{ 'pagination.next'|trans }}</a>
     {% else %}
-        <span class="btn current-page">{{ 'pagination.next'|trans }}</span>
+        <span class="btn prev-next-btn">{{ 'pagination.next'|trans }}</span>
     {% endif %}
 </div>
