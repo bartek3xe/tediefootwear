@@ -26,5 +26,8 @@
             {% endfor %}
         {% endif %}
     </div>
-    {{ include('products/partials/_pagination.html.twig') }}
+    {{ include('products/partials/_pagination.html.twig', {
+        'route_name': 'app_products',
+        'show_mobile': true,
+    }) }}
 </section>
