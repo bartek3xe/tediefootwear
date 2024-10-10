@@ -8,9 +8,9 @@ use App\Entity\Product;
 use App\Enum\LanguageEnum;
 use App\Exception\NotFoundException;
 use App\Form\ProductType;
-use App\Repository\ProductRepository;
 use App\Service\FileService;
 use App\Service\Handler\ProductHandler;
+use App\Service\ProductControllerService;
 use App\Service\ProductService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,15 +24,16 @@ class AdminProductController extends AbstractController
         private readonly ProductHandler $handler,
         private readonly FileService $fileService,
         private readonly ProductService $service,
+        private readonly ProductControllerService $controllerService,
     ) {
     }
 
-    #[Route('/', name: 'product_index', methods: ['GET'])]
-    public function index(ProductRepository $productRepository): Response
+    #[Route('', name: 'product_index', methods: ['GET'])]
+    public function index(Request $request): Response
     {
-        return $this->render('admin/product/index.html.twig', [
-            'products' => $productRepository->findAll(),
-        ]);
+        $data = $this->controllerService->handleProductRequest($request);
+
+        return $this->render('admin/product/index.html.twig', $data);
     }
 
     #[Route('/new', name: 'product_new', methods: ['GET', 'POST'])]

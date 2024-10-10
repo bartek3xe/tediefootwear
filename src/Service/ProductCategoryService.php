@@ -7,7 +7,6 @@ namespace App\Service;
 use App\Entity\ProductCategory;
 use App\Exception\NotFoundException;
 use App\Repository\ProductCategoryRepository;
-use App\Repository\ProductRepository;
 use Psr\Cache\InvalidArgumentException;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,7 +18,6 @@ class ProductCategoryService
 {
     public function __construct(
         private readonly ProductCategoryRepository $productCategoryRepository,
-        private readonly ProductRepository $productRepository,
         private readonly UrlGeneratorInterface $urlGenerator,
         private readonly CacheInterface $cache,
         private readonly LoggerInterface $logger,
@@ -81,18 +79,6 @@ class ProductCategoryService
         $slugs = $request->query->get('categories', '');
 
         return $slugs ? explode(',', $slugs) : [];
-    }
-
-    public function getProductsByCategories(array $slugsArray, int $pageNumber): array
-    {
-        if (!empty($slugsArray)) {
-            $categories = $this->productCategoryRepository->findBy(['slug' => $slugsArray]);
-            $products = $this->productRepository->findByCategoriesPaginated($categories, $pageNumber);
-        } else {
-            $products = $this->productRepository->findAllPaginated($pageNumber);
-        }
-
-        return $products;
     }
 
     public function getCategories(): array
