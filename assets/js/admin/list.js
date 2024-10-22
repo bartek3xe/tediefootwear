@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     row.remove();
                 } else {
-                    alert('Błąd podczas usuwania produktu');
+                    alert('Błąd podczas usuwania elementu');
                 }
             })
             .catch(() => {

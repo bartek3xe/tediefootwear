@@ -16,17 +16,7 @@
         </div>
         <div class="card-body">
             <table class="table table-responsive table-striped table-hover category-list-js" id="entityListId"
-                   data-field-values='{
-                       "id": {"source": "direct"},
-                        "name": {
-                            "source": "api",
-                            "url": "/api/product_category_translations",
-                            "parameters": {
-                               "category": "id",
-                               "language": "pl"
-                            }
-                        }
-                   }'
+                   data-field-values="{{ list_fields }}"
                    data-api-url="/api/product_categories"
                    data-default-url="/admin/product/category/"
                    data-items-per-page="{{ per_page }}"
