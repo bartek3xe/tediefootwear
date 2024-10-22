@@ -8,7 +8,6 @@ use App\Entity\ProductCategory;
 use App\Enum\LanguageEnum;
 use App\Exception\NotFoundException;
 use App\Form\ProductCategoryType;
-use App\Repository\ProductCategoryRepository;
 use App\Service\Handler\ProductCategoryHandler;
 use App\Service\ProductCategoryService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

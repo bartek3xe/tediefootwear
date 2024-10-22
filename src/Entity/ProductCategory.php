@@ -34,7 +34,7 @@ class ProductCategory extends AbstractProduct
     #[ORM\OneToMany(
         targetEntity: ProductCategoryTranslation::class,
         mappedBy: 'category',
-        cascade: ['persist', 'remove']
+        cascade: ['persist', 'remove'],
     )]
     private Collection $translations;
 

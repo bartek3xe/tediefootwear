@@ -12,7 +12,7 @@ trait CommonPropertiesTrait
         QueryBuilder $queryBuilder,
         string $property,
         mixed $value,
-        string $alias
+        string $alias,
     ): void {
         $properties = $this->getFilterableProperties();
 
@@ -38,7 +38,7 @@ trait CommonPropertiesTrait
         QueryBuilder $queryBuilder,
         string $property,
         mixed $value,
-        string $alias
+        string $alias,
     ): void {
         $relations = $this->getFilterableRelations();
 
@@ -62,5 +62,6 @@ trait CommonPropertiesTrait
     }
 
     abstract protected function getFilterableProperties(): array;
+
     abstract protected function getFilterableRelations(): array;
 }

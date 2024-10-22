@@ -13,7 +13,7 @@ trait SortableTrait
         string $property,
         mixed $value,
         array $context,
-        string $alias
+        string $alias,
     ): void {
         if ('sort' === $property) {
             $sortDirection = $context['filters']['direction'] ?? 'asc';
@@ -25,9 +25,9 @@ trait SortableTrait
         QueryBuilder $queryBuilder,
         mixed $sortField,
         string $sortDirection,
-        string $alias
+        string $alias,
     ): void {
-        if (!in_array($sortDirection, ['asc', 'desc'])) {
+        if (!in_array($sortDirection, ['asc', 'desc'], true)) {
             $sortDirection = 'asc';
         }
 
@@ -66,11 +66,12 @@ trait SortableTrait
     {
         /** @var literal-string $relationAlias */
         $relationAlias = $alias . '_' . $relation;
-        if (!in_array($relationAlias, $queryBuilder->getAllAliases())) {
+        if (!in_array($relationAlias, $queryBuilder->getAllAliases(), true)) {
             /** @var literal-string $statement */
             $statement = sprintf('%s.%s', $alias, $relation);
             $queryBuilder->leftJoin($statement, $relationAlias);
         }
+
         return $relationAlias;
     }
 

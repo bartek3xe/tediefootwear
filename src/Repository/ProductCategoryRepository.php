@@ -13,7 +13,7 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class ProductCategoryRepository extends ServiceEntityRepository
 {
-    const int DEFAULT_MAX_ELEMENTS_PER_PAGE = 8;
+    public const int DEFAULT_MAX_ELEMENTS_PER_PAGE = 8;
 
     public function __construct(ManagerRegistry $registry)
     {

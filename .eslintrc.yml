@@ -7,6 +7,9 @@ parserOptions:
   sourceType: module
 rules:
   indent: ['error', 4]
+  no-alert: 'off'
+  no-param-reassign: 'off'
+  no-use-before-define: 'off'
 globals:
   $: readonly
   jQuery: readonly
