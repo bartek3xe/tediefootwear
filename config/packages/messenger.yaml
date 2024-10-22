@@ -25,4 +25,4 @@ framework:
             Symfony\Component\Mailer\Messenger\SendEmailMessage: redis_async
             Symfony\Component\Notifier\Message\ChatMessage: redis_async
             Symfony\Component\Notifier\Message\SmsMessage: redis_async
-            App\Message\SendEmailMessage: redis_async
+            App\Service\Message\SendEmailMessage: redis_async

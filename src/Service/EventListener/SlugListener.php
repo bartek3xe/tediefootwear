@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\EventListener;
+namespace App\Service;
 
 use App\Entity\Product;
 use App\Entity\ProductCategory;
