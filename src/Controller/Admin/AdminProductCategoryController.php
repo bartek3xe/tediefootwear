@@ -83,7 +83,7 @@ class AdminProductCategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'product_category_delete', methods: ['POST'])]
+    #[Route('/{id}', name: 'product_category_delete', methods: ['POST', 'DELETE'])]
     public function delete(int $id): Response
     {
         try {
