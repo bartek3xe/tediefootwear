@@ -1,7 +1,24 @@
 api_platform:
     title: Hello API Platform
     version: 1.0.0
+    formats:
+        jsonld: ['application/ld+json'],
+        json: ['application/json']
+    docs_formats:
+        jsonld: ['application/ld+json']
+        jsonopenapi: ['application/vnd.openapi+json']
+        html: ['text/html']
     defaults:
-        stateless: true
+        stateless: false
         cache_headers:
             vary: ['Content-Type', 'Authorization', 'Origin']
+        extra_properties:
+            standard_put: true
+            rfc_7807_compliant_errors: true
+        event_listeners_backward_compatibility_layer: false
+        keep_legacy_inflector: false
+    collection:
+        pagination:
+            enabled: true
+            page_parameter_name: 'page'
+            items_per_page_parameter_name: 'limit'
