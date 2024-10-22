@@ -9,6 +9,7 @@ use App\Enum\LanguageEnum;
 use App\Exception\NotFoundException;
 use App\Form\ProductCategoryType;
 use App\Service\Handler\ProductCategoryHandler;
+use App\Service\ListFieldService;
 use App\Service\ProductCategoryService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,13 +22,18 @@ class AdminProductCategoryController extends AbstractController
     public function __construct(
         private readonly ProductCategoryHandler $handler,
         private readonly ProductCategoryService $service,
+        private readonly ListFieldService $listFieldService,
     ) {
     }
 
     #[Route('/', name: 'product_category_index', methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('admin/product_category/index.html.twig');
+        $listFields = $this->listFieldService->getFieldsForEntity(ProductCategory::class);
+
+        return $this->render('admin/product_category/index.html.twig', [
+            'list_fields' => json_encode($listFields),
+        ]);
     }
 
     #[Route('/new', name: 'product_category_new', methods: ['GET', 'POST'])]

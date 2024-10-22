@@ -10,6 +10,7 @@ use App\Exception\NotFoundException;
 use App\Form\ProductType;
 use App\Service\FileService;
 use App\Service\Handler\ProductHandler;
+use App\Service\ListFieldService;
 use App\Service\ProductService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,13 +24,18 @@ class AdminProductController extends AbstractController
         private readonly ProductHandler $handler,
         private readonly FileService $fileService,
         private readonly ProductService $service,
+        private readonly ListFieldService $listFieldService,
     ) {
     }
 
     #[Route('', name: 'product_index', methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('admin/product/index.html.twig');
+        $listFields = $this->listFieldService->getFieldsForEntity(Product::class);
+
+        return $this->render('admin/product/index.html.twig', [
+            'list_fields' => json_encode($listFields),
+        ]);
     }
 
     #[Route('/new', name: 'product_new', methods: ['GET', 'POST'])]

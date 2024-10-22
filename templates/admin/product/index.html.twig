@@ -16,21 +16,7 @@
         </div>
         <div class="card-body">
             <table class="table table-responsive table-striped table-hover product-list-js" id="entityListId"
-                   data-field-values='{
-                       "id": {"source": "direct"},
-                        "name": {
-                            "source": "api",
-                            "url": "/api/product_translations",
-                            "parameters": {
-                               "product": "id",
-                               "language": "pl"
-                            }
-                        },
-                        "new": {"source": "direct"},
-                        "top": {"source": "direct"},
-                        "allegro_url": {"source": "direct"},
-                        "etsy_url": {"source": "direct"}
-                   }'
+                   data-field-values="{{ list_fields }}"
                    data-api-url="/api/products"
                    data-default-url="/admin/product/"
                    data-items-per-page="{{ per_page }}"
