@@ -4,14 +4,23 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiFilter;
+use ApiPlatform\Metadata\ApiResource;
 use App\Entity\Translation\ProductCategoryTranslation;
 use App\Repository\ProductCategoryRepository;
+use App\Service\Filter\ProductCategoryFilter;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductCategoryRepository::class)]
 #[ORM\HasLifecycleCallbacks]
+#[ApiResource(
+    paginationClientItemsPerPage: true,
+    paginationEnabled: true,
+    paginationItemsPerPage: ProductCategoryRepository::DEFAULT_MAX_ELEMENTS_PER_PAGE,
+)]
+#[ApiFilter(ProductCategoryFilter::class)]
 class ProductCategory extends AbstractProduct
 {
     #[ORM\Id]
@@ -22,7 +31,11 @@ class ProductCategory extends AbstractProduct
     #[ORM\ManyToMany(targetEntity: Product::class, mappedBy: 'categories')]
     private Collection $products;
 
-    #[ORM\OneToMany(targetEntity: ProductCategoryTranslation::class, mappedBy: 'category', cascade: ['persist', 'remove'])]
+    #[ORM\OneToMany(
+        targetEntity: ProductCategoryTranslation::class,
+        mappedBy: 'category',
+        cascade: ['persist', 'remove']
+    )]
     private Collection $translations;
 
     public function __construct()

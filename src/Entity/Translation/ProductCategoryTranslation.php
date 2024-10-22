@@ -4,11 +4,16 @@ declare(strict_types=1);
 
 namespace App\Entity\Translation;
 
+use ApiPlatform\Metadata\ApiFilter;
+use ApiPlatform\Metadata\ApiResource;
 use App\Entity\ProductCategory;
+use App\Service\Filter\ProductCategoryTranslationFilter;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
+#[ApiResource(stateless: false)]
+#[ApiFilter(ProductCategoryTranslationFilter::class)]
 class ProductCategoryTranslation
 {
     #[ORM\Id]

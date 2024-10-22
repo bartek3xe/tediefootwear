@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Listener;
+namespace App\Service\Listener;
 
 use App\Entity\ProductCategory;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
