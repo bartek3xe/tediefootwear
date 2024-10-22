@@ -26,11 +26,9 @@ class AdminProductCategoryController extends AbstractController
     }
 
     #[Route('/', name: 'product_category_index', methods: ['GET'])]
-    public function index(ProductCategoryRepository $productCategoryRepository): Response
+    public function index(): Response
     {
-        return $this->render('admin/product_category/index.html.twig', [
-            'product_categories' => $productCategoryRepository->findAll(),
-        ]);
+        return $this->render('admin/product_category/index.html.twig');
     }
 
     #[Route('/new', name: 'product_category_new', methods: ['GET', 'POST'])]
