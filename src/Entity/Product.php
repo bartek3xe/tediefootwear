@@ -4,14 +4,23 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiFilter;
+use ApiPlatform\Metadata\ApiResource;
 use App\Entity\Translation\ProductTranslation;
 use App\Repository\ProductRepository;
+use App\Service\Filter\ProductFilter;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
+#[ApiResource(
+    paginationClientItemsPerPage: true,
+    paginationEnabled: true,
+    paginationItemsPerPage: ProductRepository::DEFAULT_MAX_ELEMENTS_PER_PAGE,
+)]
+#[ApiFilter(ProductFilter::class)]
 class Product extends AbstractProduct
 {
     #[ORM\Id]

@@ -8,7 +8,6 @@ use App\Entity\ProductCategory;
 use App\Enum\LanguageEnum;
 use App\Exception\NotFoundException;
 use App\Form\ProductCategoryType;
-use App\Repository\ProductCategoryRepository;
 use App\Service\Handler\ProductCategoryHandler;
 use App\Service\ProductCategoryService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -26,11 +25,9 @@ class AdminProductCategoryController extends AbstractController
     }
 
     #[Route('/', name: 'product_category_index', methods: ['GET'])]
-    public function index(ProductCategoryRepository $productCategoryRepository): Response
+    public function index(): Response
     {
-        return $this->render('admin/product_category/index.html.twig', [
-            'product_categories' => $productCategoryRepository->findAll(),
-        ]);
+        return $this->render('admin/product_category/index.html.twig');
     }
 
     #[Route('/new', name: 'product_category_new', methods: ['GET', 'POST'])]
@@ -83,7 +80,7 @@ class AdminProductCategoryController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'product_category_delete', methods: ['POST'])]
+    #[Route('/{id}', name: 'product_category_delete', methods: ['POST', 'DELETE'])]
     public function delete(int $id): Response
     {
         try {

@@ -1,9 +1,9 @@
 {% extends 'admin/base.html.twig' %}
 
-{% block title %}Produkt {{ product.getDisplayName() }}{% endblock %}
+{% block title %}Produkt {{ product.getTranslation('pl').name }}{% endblock %}
 
 {% block body %}
-    <h1>Produkt {{ product.getDisplayName() }}</h1>
+    <h1>Produkt {{ product.getTranslation('pl').name }}</h1>
 
     <table class="table">
         <tbody>
@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <th>Nazwa</th>
-                <td>{{ product.getDisplayName() }}</td>
+                <td>{{ product.getTranslation('pl').name }}</td>
             </tr>
             <tr>
                 <th>Kategoria</th>
@@ -21,11 +21,10 @@
                     {% for category in product.categories %}
                         <a href="{{ path('app_admin_product_category_show', { 'id': category.id }) }}">
                         {{ category == product.categories|last
-                            ? category.getDisplayName()
-                            : category.getDisplayName() ~ ','
+                            ? category.getTranslation('pl').name
+                            : category.getTranslation('pl').name ~ ','
                         }}
                         </a>
-{#                        {{ category.getDisplayName() ?? '' }}#}
                     {% endfor %}
                 </td>
             </tr>

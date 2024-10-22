@@ -26,7 +26,7 @@ services:
             $siteKey: '%recaptcha_site_key%'
             $secretKey: '%recaptcha_secret_key%'
 
-    App\EventListener\SlugListener:
+    App\Service\EventListener\SlugListener:
         arguments:
             $slugger: '@slugger'
         tags:
@@ -37,7 +37,7 @@ services:
         arguments:
             $uploadDirectory: '%uploads_directory%'
 
-    App\Listener\ProductCategoryCacheListener:
+    App\Service\Listener\ProductCategoryCacheListener:
         tags:
             - { name: doctrine.event_listener, event: postPersist }
             - { name: doctrine.event_listener, event: postUpdate }
